@@ -1,0 +1,63 @@
+/* HTML Course Layout Styles - Complete Isolation */
+.html-course-module {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+  
+  /* Reset and override ALL global styles */
+  font-family: "Inter", system-ui, -apple-system, sans-serif !important;
+  background: #fff8f5 !important;
+  color: #1a1a2e !important;
+}
+
+/* Dark mode for HTML course */
+html.dark .html-course-module {
+  background: #0d0d0d !important;
+  color: #f0f0f0 !important;
+}
+
+.html-course-main {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure the home page content fills the main area */
+.html-course-main .home {
+  min-height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Reset any global styles that might interfere */
+.html-course-module *,
+.html-course-module *::before,
+.html-course-module *::after {
+  box-sizing: border-box;
+}
+
+/* Override global button and link styles */
+.html-course-module a,
+.html-course-module button {
+  cursor: pointer !important;
+}
+
+/* Force HTML course color scheme */
+.html-course-module .btn--primary {
+  background: linear-gradient(135deg, #e34f26, #f16529) !important;
+  color: #fff !important;
+}
+
+.html-course-module i {
+  color: inherit;
+}
+
+/* Override any global primary color */
+.html-course-module {
+  --primary: #e34f26 !important;
+  --secondary: #f16529 !important;
+  --accent: #ff7043 !important;
+}

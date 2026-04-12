@@ -1,0 +1,257 @@
+/* Fonts are imported globally in index.css */
+
+/* ── Java Brand Variables ──────────────────────────────────── */
+.fsjava-module {
+  --java-orange:      #f89820;
+  --java-blue:        #5382a1;
+  --java-dark:        #0b0f1e;
+  --java-darker:      #070b17;
+  --java-green:       #3ddc84;
+
+  /* Glassmorphism card */
+  --glass-bg:         rgba(15, 22, 45, 0.55);
+  --glass-border:     rgba(248, 152, 32, 0.14);
+  --glass-border-alt: rgba(83, 130, 161, 0.18);
+  --glass-blur:       blur(18px);
+
+  /* Glow */
+  --glow-orange:      rgba(248, 152, 32, 0.28);
+  --glow-blue:        rgba(83, 130, 161, 0.28);
+}
+
+/* ── Body — Java themed background ────────────────────────── */
+.fsjava-module {
+  font-family: 'Inter', sans-serif;
+  color: #c8d8e8;
+  overflow-x: hidden;
+
+  /* Deep Java-branded background */
+  background-color: var(--java-darker);
+  background-image:
+    /* Large radial — orange top-left (Java logo warmth) */
+    radial-gradient(ellipse 80% 60% at -10% -5%,  rgba(248,152,32,0.12) 0%, transparent 60%),
+    /* Large radial — blue bottom-right (Java logo cool) */
+    radial-gradient(ellipse 70% 55% at 110% 105%, rgba(83,130,161,0.14) 0%, transparent 60%),
+    /* Subtle mid-page accent */
+    radial-gradient(ellipse 50% 40% at 50% 50%,   rgba(83,130,161,0.05) 0%, transparent 70%);
+  background-attachment: fixed;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+.fsjava-module ::-webkit-scrollbar { width: 5px; }
+.fsjava-module ::-webkit-scrollbar-track { background: #070b17; }
+.fsjava-module ::-webkit-scrollbar-thumb { background: rgba(248,152,32,0.3); border-radius: 3px; }
+.fsjava-module ::-webkit-scrollbar-thumb:hover { background: rgba(248,152,32,0.6); }
+
+/* ── Glassmorphism HUD Panel ───────────────────────────────── */
+.fsjava-module .hud-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(248,152,32,0.08);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+/* Top shimmer line */
+.fsjava-module .hud-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(248,152,32,0.5) 30%,
+    rgba(83,130,161,0.5) 70%,
+    transparent 100%
+  );
+  opacity: 0.7;
+}
+
+.fsjava-module .hud-panel:hover {
+  border-color: rgba(248,152,32,0.28);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(248,152,32,0.06),
+    inset 0 1px 0 rgba(248,152,32,0.12);
+}
+
+/* ── Glow text ─────────────────────────────────────────────── */
+.fsjava-module .glow-orange {
+  color: var(--java-orange);
+  text-shadow: 0 0 18px rgba(248,152,32,0.7), 0 0 48px rgba(248,152,32,0.3);
+}
+.fsjava-module .glow-blue {
+  color: var(--java-blue);
+  text-shadow: 0 0 18px rgba(83,130,161,0.8), 0 0 48px rgba(83,130,161,0.4);
+}
+.fsjava-module .glow-green {
+  color: var(--java-green);
+  text-shadow: 0 0 14px rgba(61,220,132,0.7);
+}
+.fsjava-module .glow-cyan {
+  color: #00f0ff;
+  text-shadow: 0 0 18px rgba(0,240,255,0.8), 0 0 48px rgba(0,240,255,0.4);
+}
+
+/* ── Grid overlay ──────────────────────────────────────────── */
+.fsjava-module .grid-overlay {
+  background-image:
+    linear-gradient(rgba(83,130,161,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(83,130,161,0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Scan line ─────────────────────────────────────────────── */
+@keyframes fsjava-scanLine {
+  0%   { top: -100%; }
+  100% { top: 200%; }
+}
+.fsjava-module .scan-effect { position: relative; overflow: hidden; }
+.fsjava-module .scan-effect::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(248,152,32,0.25), transparent);
+  animation: fsjava-scanLine 5s linear infinite;
+  pointer-events: none;
+}
+
+/* ── Pulse animations ──────────────────────────────────────── */
+@keyframes fsjava-pulse-orange {
+  0%, 100% { box-shadow: 0 0 4px rgba(248,152,32,0.3); }
+  50%       { box-shadow: 0 0 16px rgba(248,152,32,0.8), 0 0 32px rgba(248,152,32,0.3); }
+}
+@keyframes fsjava-pulse-blue {
+  0%, 100% { box-shadow: 0 0 4px rgba(83,130,161,0.3); }
+  50%       { box-shadow: 0 0 16px rgba(83,130,161,0.8), 0 0 32px rgba(83,130,161,0.3); }
+}
+.fsjava-module .pulse-orange { animation: fsjava-pulse-orange 2s ease-in-out infinite; }
+.fsjava-module .pulse-blue   { animation: fsjava-pulse-blue   2s ease-in-out infinite; }
+
+/* ── Status dot ────────────────────────────────────────────── */
+.fsjava-module .status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--java-green);
+  box-shadow: 0 0 8px var(--java-green);
+  animation: fsjava-pulse-orange 1.8s ease-in-out infinite;
+}
+
+/* ── Java icon glow ────────────────────────────────────────── */
+@keyframes fsjava-javaShimmer {
+  0%   { filter: drop-shadow(0 0 5px rgba(248,152,32,0.4)); }
+  50%  { filter: drop-shadow(0 0 16px rgba(248,152,32,0.9)) drop-shadow(0 0 28px rgba(83,130,161,0.5)); }
+  100% { filter: drop-shadow(0 0 5px rgba(248,152,32,0.4)); }
+}
+.fsjava-module .java-icon-glow { animation: fsjava-javaShimmer 2.5s ease-in-out infinite; }
+
+/* ── Animated border ───────────────────────────────────────── */
+@keyframes fsjava-borderFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.fsjava-module .animated-border {
+  background: linear-gradient(90deg, var(--java-orange), var(--java-blue), var(--java-orange));
+  background-size: 200% 200%;
+  animation: fsjava-borderFlow 3s ease infinite;
+}
+
+/* ── Fonts ─────────────────────────────────────────────────── */
+.fsjava-module .font-orbitron { font-family: 'Orbitron', monospace; }
+.fsjava-module .font-mono     { font-family: 'JetBrains Mono', monospace; }
+
+/* ── Footer ────────────────────────────────────────────────── */
+.fsjava-module .footer {
+  background: rgba(7,11,23,0.96);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(248,152,32,0.12);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+}
+.fsjava-module .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.fsjava-module .footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.fsjava-module .footer-brand-col p {
+  color: #3a5060;
+  font-size: 0.84rem;
+  line-height: 1.65;
+  margin-top: 0.75rem;
+}
+.fsjava-module .fb-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.fsjava-module .fb-logo span {
+  font-family: 'Orbitron', monospace;
+  color: var(--java-orange);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.fsjava-module .footer-col h5 {
+  color: var(--java-orange);
+  font-family: 'Orbitron', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.fsjava-module .footer-col ul { list-style: none; }
+.fsjava-module .footer-col ul li { margin-bottom: 0.5rem; }
+.fsjava-module .footer-col ul li a {
+  color: #3a5060;
+  text-decoration: none;
+  font-size: 0.84rem;
+  transition: color 0.2s;
+}
+.fsjava-module .footer-col ul li a:hover { color: var(--java-orange); }
+.fsjava-module .footer-socials { display: flex; flex-direction: column; gap: 0.5rem; }
+.fsjava-module .fsoc {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3a5060;
+  text-decoration: none;
+  font-size: 0.84rem;
+  transition: color 0.2s;
+}
+.fsjava-module .fsoc svg { width: 15px; height: 15px; }
+.fsjava-module .fsoc:hover { color: var(--java-orange); }
+.fsjava-module .footer-bottom {
+  border-top: 1px solid rgba(83,130,161,0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fsjava-module .footer-bottom p { color: #243040; font-size: 0.78rem; }
+
+@media (max-width: 768px) {
+  .fsjava-module .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .fsjava-module .footer-top { grid-template-columns: 1fr; }
+  .fsjava-module .footer-bottom { flex-direction: column; gap: 1rem; }
+}
+
+/* ── Card styles for SystemFlowViz ──────────────────────────── */
+.fsjava-module .card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+}

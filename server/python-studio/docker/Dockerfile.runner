@@ -1,0 +1,24 @@
+# Python Execution Runner Image
+# This image is used to run user code in isolation
+FROM python:3.10-slim
+
+# Install AI/ML libraries
+RUN pip install --no-cache-dir \
+    numpy==1.26.4 \
+    pandas==2.2.0 \
+    scikit-learn==1.4.0 \
+    matplotlib==3.8.2
+
+# Create non-root user for security
+RUN useradd -m -u 1000 -s /bin/sh runner
+
+# Create code directory
+RUN mkdir -p /code && chown runner:runner /code
+
+# Switch to non-root user
+USER runner
+
+WORKDIR /code
+
+# Default command (overridden at runtime)
+CMD ["python", "--version"]

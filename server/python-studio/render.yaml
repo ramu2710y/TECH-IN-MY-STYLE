@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: tech-in-my-style-python-studio
+    env: docker
+    dockerfilePath: ./Dockerfile
+    region: oregon
+    plan: starter
+    envVars:
+      - key: USE_DOCKER
+        value: "false"
+      - key: EXECUTION_TIMEOUT
+        value: "30"
+      - key: PYTHONUNBUFFERED
+        value: "1"

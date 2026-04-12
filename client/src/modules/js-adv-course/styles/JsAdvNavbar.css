@@ -1,0 +1,794 @@
+/* ======================================================================
+   JsAdvNavbar.css — JavaScript Advanced In My Style
+   Brand: JS Yellow (#06b6d4) · Deep Navy (var(--bg))
+   Dark mode: toggled via  html.dark  class on <html>
+   ====================================================================== */
+
+/* ── CSS Custom Properties ────────────────────────────────────────────── */
+:root {
+  --nav-bg:              rgba(250, 250, 240, 0.82);
+  --nav-border:          rgba(6, 182, 212, 0.28);
+  --nav-link:            #2e2e50;
+  --nav-link-hover-bg:   rgba(6, 182, 212, 0.10);
+  --nav-link-hover-clr:  #b89e00;
+  --nav-active-bg:       rgba(6, 182, 212, 0.13);
+  --nav-active-clr:      #b89e00;
+  --nav-btn-border:      rgba(47, 47, 80, 0.22);
+  --nav-btn-clr:         #2e2e50;
+  --nav-btn-hover-bg:    rgba(6, 182, 212, 0.14);
+  
+  --bg-surface:          #ffffff;
+  --surface-alt:         #f8f8f2;
+  --mobile-header-border: rgba(6, 182, 212, 0.22);
+  --mobile-theme-border:  rgba(47, 47, 80, 0.10);
+  --mobile-footer-clr:    #8888aa;
+  --social-border:        rgba(47, 47, 80, 0.14);
+  --toggle-track-off:     #c8c8e0;
+  --toggle-thumb:         #ffffff;
+}
+
+html.dark {
+  --nav-bg:              rgba(14, 14, 28, 0.84);
+  --nav-border:          rgba(6, 182, 212, 0.12);
+  --nav-link:            #b8b8d8;
+  --nav-link-hover-bg:   rgba(6, 182, 212, 0.09);
+  --nav-link-hover-clr:  #06b6d4;
+  --nav-active-bg:       rgba(6, 182, 212, 0.11);
+  --nav-active-clr:      #06b6d4;
+  --nav-btn-border:      rgba(6, 182, 212, 0.20);
+  --nav-btn-clr:         #c8c8e0;
+  --nav-btn-hover-bg:    rgba(6, 182, 212, 0.12);
+  --text-primary:        #eeeef6;
+  --bg-surface:          #0f0f1e;
+  --surface-alt:         #13132a;
+  --mobile-header-border: rgba(6, 182, 212, 0.14);
+  --mobile-theme-border:  rgba(6, 182, 212, 0.08);
+  --mobile-footer-clr:    #4a4a6a;
+  --social-border:        rgba(6, 182, 212, 0.14);
+  --toggle-track-off:     #2a2a48;
+  --toggle-thumb:         #ffffff;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   NAVBAR SHELL
+   ════════════════════════════════════════════════════════════════════════ */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  transition:
+    background      0.30s ease,
+    border-color    0.30s ease,
+    box-shadow      0.30s ease;
+}
+
+/* Shadow that kicks in after 8px of scroll */
+.navbar--scrolled {
+  box-shadow:
+    0  4px 20px rgba(26, 26, 46, 0.10),
+    0  1px  0   var(--nav-border);
+}
+
+html.dark .navbar--scrolled {
+  box-shadow:
+    0  4px 28px rgba(0, 0, 0, 0.55),
+    0  1px  0   rgba(6, 182, 212, 0.10);
+}
+
+/* ── Scroll Progress Bar ─────────────────────────────────────────────── */
+.navbar__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  max-width: 100%;
+  background: linear-gradient(
+    90deg,
+    #06b6d4   0%,
+    #f0a500  55%,
+    #06b6d4 100%
+  );
+  border-radius: 0 3px 3px 0;
+  transition: width 0.10s linear;
+  z-index: 201;
+  pointer-events: none;
+  will-change: width;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.60);
+}
+
+/* ── Inner Container ─────────────────────────────────────────────────── */
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  padding: 0 5%;
+  gap: 14px;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   LOGO
+   ════════════════════════════════════════════════════════════════════════ */
+.navbar__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+  outline-offset: 4px;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.navbar__logo:hover {
+  transform: scale(1.04);
+  text-decoration: none;
+}
+
+.navbar__logo:focus-visible {
+  outline: 2px solid #06b6d4;
+  border-radius: 8px;
+}
+
+/* </> tag prefix — monospace, color matches dark/light text */
+.navbar__logo-tag {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  user-select: none;
+  transition: color 0.25s ease;
+}
+
+/* JS.ADV brand text — always JS yellow */
+.navbar__logo-brand {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #06b6d4;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  user-select: none;
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.30);
+  transition: text-shadow 0.25s ease;
+}
+
+.navbar__logo:hover .navbar__logo-brand {
+  text-shadow: 0 0 28px rgba(6, 182, 212, 0.55);
+}
+
+/* Mobile logo size adjustment */
+.navbar__logo--mobile .navbar__logo-tag {
+  font-size: 0.96rem;
+}
+
+.navbar__logo--mobile .navbar__logo-brand {
+  font-size: 1.05rem;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DESKTOP NAV
+   ════════════════════════════════════════════════════════════════════════ */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.15rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar__nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.40rem;
+  padding: 0.50rem 0.90rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--nav-link);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background   0.20s ease,
+    color        0.20s ease,
+    transform    0.15s ease;
+  position: relative;
+  outline-offset: 2px;
+}
+
+.navbar__nav-link i {
+  font-size: 0.82rem;
+  flex-shrink: 0;
+  transition: transform 0.20s ease;
+}
+
+.navbar__nav-link:hover {
+  background: var(--nav-link-hover-bg);
+  color: var(--nav-link-hover-clr);
+  text-decoration: none;
+}
+
+.navbar__nav-link:hover i {
+  transform: scale(1.18);
+}
+
+.navbar__nav-link:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* Active state */
+.navbar__nav-link.active {
+  background: var(--nav-active-bg);
+  color: var(--nav-active-clr);
+  font-weight: 600;
+}
+
+.navbar__nav-link.active i {
+  color: #06b6d4;
+}
+
+.navbar__nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 2px;
+  background: #06b6d4;
+  border-radius: 2px 2px 0 0;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   RIGHT CONTROLS
+   ════════════════════════════════════════════════════════════════════════ */
+.navbar__controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Theme Toggle Button ──────────────────────────────────────────────── */
+.navbar__theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--nav-btn-border);
+  background: transparent;
+  color: var(--nav-btn-clr);
+  font-size: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background    0.22s ease,
+    color         0.22s ease,
+    border-color  0.22s ease,
+    transform     0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow    0.22s ease;
+  line-height: 1;
+}
+
+.navbar__theme-btn:hover {
+  background: var(--nav-btn-hover-bg);
+  color: #06b6d4;
+  border-color: rgba(6, 182, 212, 0.45);
+  transform: rotate(15deg) scale(1.10);
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.25);
+}
+
+.navbar__theme-btn:active {
+  transform: rotate(15deg) scale(0.95);
+}
+
+.navbar__theme-btn:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+.navbar__theme-btn i {
+  transition: transform 0.30s ease;
+}
+
+/* ── Hamburger (mobile only) ─────────────────────────────────────────── */
+.navbar__hamburger {
+  display: none; /* hidden on desktop */
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--nav-btn-border);
+  background: transparent;
+  color: var(--nav-btn-clr);
+  font-size: 1.15rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background    0.20s ease,
+    color         0.20s ease,
+    border-color  0.20s ease,
+    transform     0.15s ease;
+  line-height: 1;
+}
+
+.navbar__hamburger:hover {
+  background: var(--nav-btn-hover-bg);
+  color: #06b6d4;
+  border-color: rgba(6, 182, 212, 0.40);
+}
+
+.navbar__hamburger--open {
+  background: rgba(6, 182, 212, 0.10);
+  color: #06b6d4;
+  border-color: rgba(6, 182, 212, 0.35);
+}
+
+.navbar__hamburger:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   OVERLAY BACKDROP
+   ════════════════════════════════════════════════════════════════════════ */
+.navbar__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(10, 10, 24, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+
+.navbar__overlay--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   MOBILE DRAWER
+   ════════════════════════════════════════════════════════════════════════ */
+.navbar__mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(320px, 85vw);
+  background: var(--bg-surface);
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition:
+    transform  0.34s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.34s ease;
+  box-shadow: none;
+  overflow: hidden;
+  will-change: transform;
+  overscroll-behavior: contain;
+}
+
+.navbar__mobile-menu.open {
+  transform: translateX(0);
+  box-shadow:
+    -12px 0 48px rgba(0, 0, 0, 0.38),
+    -1px  0  0   rgba(6, 182, 212, 0.10);
+}
+
+/* ── Drawer header ───────────────────────────────────────────────────── */
+.navbar__mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--mobile-header-border);
+  flex-shrink: 0;
+  gap: 12px;
+  background: inherit;
+}
+
+/* ── Mobile close button ─────────────────────────────────────────────── */
+.navbar__mobile-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--nav-btn-border);
+  background: transparent;
+  color: var(--nav-btn-clr);
+  font-size: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background  0.18s ease,
+    color       0.18s ease,
+    transform   0.15s ease;
+  line-height: 1;
+}
+
+.navbar__mobile-close:hover {
+  background: #06b6d4;
+  color: #1a1a2e;
+  border-color: #06b6d4;
+  transform: rotate(90deg);
+}
+
+.navbar__mobile-close:focus-visible {
+  outline: 2px solid #06b6d4;
+}
+
+/* ── Mobile nav links ────────────────────────────────────────────────── */
+.navbar__mobile-nav {
+  padding: 10px 14px;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.navbar__mobile-nav::-webkit-scrollbar {
+  width: 3px;
+}
+
+.navbar__mobile-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navbar__mobile-nav::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.30);
+  border-radius: 99px;
+}
+
+.navbar__mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.navbar__mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--nav-link);
+  text-decoration: none;
+  transition:
+    background  0.18s ease,
+    color       0.18s ease,
+    transform   0.12s ease;
+  position: relative;
+}
+
+.navbar__mobile-link:hover {
+  background: var(--nav-link-hover-bg);
+  color: var(--nav-link-hover-clr);
+  transform: translateX(3px);
+  text-decoration: none;
+}
+
+.navbar__mobile-link--active {
+  background: var(--nav-active-bg);
+  color: var(--nav-active-clr);
+  font-weight: 600;
+}
+
+.navbar__mobile-link--active:hover {
+  transform: translateX(3px);
+}
+
+.navbar__mobile-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(6, 182, 212, 0.08);
+  font-size: 0.88rem;
+  flex-shrink: 0;
+  transition: background 0.18s ease, color 0.18s ease;
+  color: var(--nav-link);
+}
+
+.navbar__mobile-link:hover .navbar__mobile-link-icon,
+.navbar__mobile-link--active .navbar__mobile-link-icon {
+  background: rgba(6, 182, 212, 0.16);
+  color: #06b6d4;
+}
+
+.navbar__mobile-link-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.navbar__mobile-active-check {
+  font-size: 0.82rem;
+  color: #06b6d4;
+  flex-shrink: 0;
+}
+
+.navbar__mobile-link:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* ── Dark mode toggle switch row ─────────────────────────────────────── */
+.navbar__mobile-theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-top: 1px solid var(--mobile-theme-border);
+  border-bottom: 1px solid var(--mobile-theme-border);
+  flex-shrink: 0;
+}
+
+.navbar__mobile-theme-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--nav-link);
+  user-select: none;
+}
+
+.navbar__mobile-theme-label i {
+  font-size: 0.92rem;
+  color: #06b6d4;
+}
+
+/* ── CSS Toggle Switch ───────────────────────────────────────────────── */
+.navbar__toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.navbar__toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.navbar__toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--toggle-track-off);
+  border-radius: 99px;
+  transition: background 0.25s ease;
+}
+
+.navbar__toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--toggle-thumb);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.22);
+  transition:
+    transform  0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.25s ease;
+}
+
+.navbar__toggle-switch input:checked + .navbar__toggle-slider {
+  background: #06b6d4;
+}
+
+.navbar__toggle-switch input:checked + .navbar__toggle-slider::before {
+  transform: translateX(20px) translateY(-50%);
+}
+
+.navbar__toggle-switch:focus-within .navbar__toggle-slider {
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.35);
+}
+
+/* ── Social icons row ────────────────────────────────────────────────── */
+.navbar__mobile-socials {
+  padding: 16px 20px;
+  flex-shrink: 0;
+}
+
+.navbar__mobile-socials-label {
+  font-size: 0.70rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--mobile-footer-clr);
+  margin: 0 0 10px 0;
+}
+
+.navbar__mobile-socials-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--social-border);
+  background: transparent;
+  color: var(--nav-link);
+  font-size: 1.05rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition:
+    background    0.20s ease,
+    color         0.20s ease,
+    border-color  0.20s ease,
+    transform     0.15s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow    0.20s ease;
+  line-height: 1;
+}
+
+.navbar__social-btn:hover {
+  transform: translateY(-3px) scale(1.08);
+}
+
+/* Instagram */
+.navbar__social-btn--instagram:hover {
+  background: linear-gradient(135deg, #fd1d1d, #e1306c, #833ab4);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(225, 48, 108, 0.38);
+}
+
+/* YouTube */
+.navbar__social-btn--youtube:hover {
+  background: #ff0000;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.35);
+}
+
+/* Telegram */
+.navbar__social-btn--telegram:hover {
+  background: #0088cc;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(0, 136, 204, 0.35);
+}
+
+/* ── Drawer footer strip ─────────────────────────────────────────────── */
+.navbar__mobile-footer {
+  padding: 12px 20px;
+  margin-top: auto;
+  border-top: 1px solid var(--mobile-theme-border);
+  flex-shrink: 0;
+}
+
+.navbar__mobile-footer-text {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--mobile-footer-clr);
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ── Tablet: hide desktop nav, show hamburger ─────────────────────────── */
+@media (max-width: 900px) {
+  .navbar__nav {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+}
+
+/* ── Desktop: always show nav, hide drawer UI ────────────────────────── */
+@media (min-width: 901px) {
+  .navbar__hamburger {
+    display: none !important;
+  }
+
+  .navbar__mobile-menu,
+  .navbar__overlay {
+    display: none !important;
+  }
+}
+
+/* ── Small mobile ────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .navbar__inner {
+    padding: 0 4%;
+    height: 64px;
+  }
+
+  .navbar__logo-tag {
+    font-size: 0.95rem;
+  }
+
+  .navbar__logo-brand {
+    font-size: 1.05rem;
+  }
+
+  .navbar__mobile-menu {
+    width: 100vw;
+  }
+}
+
+/* ── Extra large: cap desktop padding ───────────────────────────────── */
+@media (min-width: 1400px) {
+  .navbar__inner {
+    padding: 0 3%;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   ════════════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar__progress,
+  .navbar__logo,
+  .navbar__logo-brand,
+  .navbar__nav-link,
+  .navbar__nav-link i,
+  .navbar__theme-btn,
+  .navbar__hamburger,
+  .navbar__overlay,
+  .navbar__mobile-menu,
+  .navbar__mobile-link,
+  .navbar__mobile-close,
+  .navbar__social-btn,
+  .navbar__toggle-slider,
+  .navbar__toggle-slider::before {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .navbar__logo:hover       { transform: none; }
+  .navbar__theme-btn:hover  { transform: none; }
+  .navbar__mobile-close:hover { transform: none; }
+  .navbar__social-btn:hover { transform: none; }
+  .navbar__mobile-link:hover { transform: none; }
+  .navbar__nav-link:hover i  { transform: none; }
+}

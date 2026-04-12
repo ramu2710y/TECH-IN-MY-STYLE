@@ -1,0 +1,51 @@
+/* ═══════════════════════════════════════════════════════════════════
+   JsGlobal.css  —  JAVASCRIPT BASIC IN MY STYLE
+   Global CSS variables for light & dark mode.
+   Used by all pages in the js-basic-course module.
+   Toggled by html.dark class (set by useDarkMode hook in JsNavbar).
+═══════════════════════════════════════════════════════════════════ */
+
+/* ── Light Mode (default) ───────────────────────────────────────── */
+.js-basic-course-root {
+  --color-bg:           #fffef0;
+  --color-bg-alt:       #fafae8;
+  --color-card:         #ffffff;
+  --color-border:       rgba(247, 223, 30, 0.28);
+  --color-border-soft:  rgba(247, 223, 30, 0.15);
+  --color-text:         #1a1a0e;
+  --color-text-muted:   #5a5a2a;
+  --color-text-faint:   #9a9a6a;
+  
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+/* ── Dark Mode ──────────────────────────────────────────────────── */
+html.dark .js-basic-course-root {
+  --color-bg:           #0e0e0a;
+  --color-bg-alt:       #141410;
+  --color-card:         #1a1a10;
+  --color-border:       rgba(247, 223, 30, 0.18);
+  --color-border-soft:  rgba(247, 223, 30, 0.10);
+  --color-text:         #f5f5e8;
+  --color-text-muted:   #a8a87a;
+  --color-text-faint:   #6a6a4a;
+}
+
+/* ── Smooth transitions on theme change ─────────────────────────── */
+.js-basic-course-root *, 
+.js-basic-course-root *::before, 
+.js-basic-course-root *::after {
+  transition:
+    background-color 0.25s ease,
+    border-color     0.25s ease,
+    color            0.25s ease;
+}
+
+/* Override transition for animated elements to avoid jank */
+[class*="animation"],
+[style*="animation"],
+[style*="transition"] {
+  transition: unset;
+}

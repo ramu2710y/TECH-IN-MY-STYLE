@@ -1,0 +1,41 @@
+/* ═══════════════════════════════════════════════════════════════════
+   JsAdvGlobal.css  —  JAVASCRIPT ADVANCED IN MY STYLE
+   Scoped CSS variables for the js-adv-course module.
+═══════════════════════════════════════════════════════════════════ */
+
+.js-adv-course-root {
+  /* Core variables */
+  --bg: #0a0e1a;
+  --surface: #131824;
+  --surface-alt: #1a2030;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --text-primary: #e8eaf0;
+  --text-muted: #9ca3af;
+  
+  /* JS Advanced cyan accent */
+  --jsadv-cyan: #06b6d4;
+  --jsadv-cyan-dk: #0891b2;
+  --jsadv-cyan-lt: #67e8f9;
+  
+  /* Glass effects */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: var(--border-color);
+  --jsadv-hero-glow: rgba(6, 182, 212, 0.12);
+  
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html.dark .js-adv-course-root {
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: var(--border-color);
+  --jsadv-hero-glow: rgba(6, 182, 212, 0.12);
+}
+
+.js-adv-course-root *, 
+.js-adv-course-root *::before, 
+.js-adv-course-root *::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,69 @@
+/* ═══════════════════════════════════════════════════════════════════
+   HtmlGlobal.css  —  HTML IN MY STYLE
+   Scoped CSS variables for the html-course module.
+   Brand palette: primary #E34F26 · secondary #F16529 · dark #C73E1D
+═══════════════════════════════════════════════════════════════════ */
+
+.html-course-root {
+  --hp-primary: #e34f26;
+  --hp-primary-dk: #c73e1d;
+  --hp-secondary: #f16529;
+  --hp-accent: #ff7043;
+
+  /* Light surface */
+  --hp-bg: #fff8f5;
+  --hp-bg-alt: #ffffff;
+  --hp-card: #ffffff;
+  --hp-border: rgba(227, 79, 38, 0.12);
+
+  /* Light text */
+  --hp-text: #1a1a2e;
+  --hp-text-muted: #5a5a72;
+  --hp-text-faint: #9898a8;
+
+  /* Gradients */
+  --hp-grad: linear-gradient(135deg, #e34f26, #f16529);
+  --hp-grad-dk: linear-gradient(135deg, #c73e1d, #e34f26);
+  --hp-grad-soft: linear-gradient(135deg, rgba(227, 79, 38, 0.08), rgba(241, 101, 41, 0.04));
+
+  /* Shadows */
+  --hp-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --hp-shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --hp-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --hp-shadow-card: 0 8px 32px rgba(227, 79, 38, 0.1);
+
+  /* Spacing & radii */
+  --hp-radius-sm: 8px;
+  --hp-radius-md: 14px;
+  --hp-radius-lg: 20px;
+  --hp-radius-xl: 28px;
+  --hp-radius-full: 9999px;
+
+  /* Motion */
+  --hp-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --hp-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --hp-dur-fast: 200ms;
+  --hp-dur-mid: 350ms;
+  
+  background: var(--hp-bg);
+  color: var(--hp-text);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html.dark .html-course-root {
+  --hp-bg: #0f0a08;
+  --hp-bg-alt: #1a1210;
+  --hp-card: #221815;
+  --hp-border: rgba(227, 79, 38, 0.18);
+  --hp-text: #f5f0ed;
+  --hp-text-muted: #b8a8a0;
+  --hp-text-faint: #7a6a62;
+  --hp-shadow-card: 0 8px 32px rgba(227, 79, 38, 0.15);
+}
+
+.html-course-root *, 
+.html-course-root *::before, 
+.html-course-root *::after {
+  box-sizing: border-box;
+}

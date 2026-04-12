@@ -1,0 +1,576 @@
+.py-tasks-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.py-tasks-hero {
+  background: linear-gradient(150deg, var(--n9) 0%, var(--p1dd) 45%, var(--p1) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.py-tasks-hero .py-chip {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.py-tasks-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -1.5px;
+  margin: 1rem 0;
+  line-height: 1.1;
+}
+
+.py-tasks-hero h1 span {
+  color: var(--p2);
+}
+
+.py-tasks-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+.py-tasks-chips {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.py-tasks-chip {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.py-tasks-chip:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.py-tasks-body {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Sidebar */
+.py-tasks-sidebar {
+  position: sticky;
+  top: 100px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r4);
+  overflow: hidden;
+  box-shadow: var(--s2);
+}
+
+.py-sb-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, var(--p1xl) 0%, transparent 100%);
+}
+
+.py-sb-hd h2 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--p1dd);
+}
+
+.py-sb-count {
+  background: var(--p1);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.py-task-ul {
+  list-style: none;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+
+.py-task-ul::-webkit-scrollbar {
+  width: 5px;
+}
+
+.py-task-ul::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.py-task-li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+}
+
+.py-task-li:hover {
+  background: var(--p1xl);
+}
+
+.py-task-li.py-sel {
+  background: #fff;
+  border-color: var(--p1);
+  box-shadow: var(--s2);
+}
+
+.py-task-li.py-done .py-tnum {
+  background: #22c55e;
+  color: #fff;
+}
+
+.py-tnum {
+  width: 32px;
+  height: 32px;
+  background: var(--p1xl);
+  color: var(--p1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.py-task-li.py-sel .py-tnum {
+  background: var(--p1);
+  color: #fff;
+}
+
+.py-tinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.py-ttitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--n8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.py-tdiff {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Editor Section */
+.py-task-editor {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r4);
+  overflow: hidden;
+  box-shadow: var(--s3);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.py-t-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.py-eico {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  opacity: 0.3;
+  animation: py-float 4s ease-in-out infinite;
+}
+
+.py-t-empty h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--n8);
+  margin-bottom: 0.75rem;
+}
+
+.py-t-hd {
+  padding: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+}
+
+.py-t-hd-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.py-t-idx {
+  background: var(--p1);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.py-t-diff {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.py-t-done-badge {
+  background: #dcfce7;
+  color: #166534;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+}
+
+.py-t-hd h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--p1dd);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.py-t-instr {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.py-hint-btn {
+  background: none;
+  border: 2px solid var(--p2);
+  color: var(--n8);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.6rem 1.25rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font);
+}
+
+.py-hint-btn:hover {
+  background: var(--p2xl);
+  transform: translateY(-2px);
+}
+
+.py-hint-box {
+  margin-top: 1rem;
+  background: #fffbeb;
+  border: 1.5px dashed var(--p2);
+  border-radius: 16px;
+  padding: 1.25rem;
+  font-size: 1rem;
+  color: var(--n8);
+  line-height: 1.7;
+  display: flex;
+  gap: 1rem;
+  animation: py-slideIn 0.3s ease-out;
+}
+
+@keyframes py-slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.py-t-body {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+
+.py-editor-wrap {
+  background: #0d1117;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #30363d;
+  box-shadow: var(--s4);
+}
+
+.py-editor-bar {
+  background: #161b22;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.py-edots {
+  display: flex;
+  gap: 8px;
+}
+
+.py-edots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.py-edots span:nth-child(1) { background: #ff5f57; }
+.py-edots span:nth-child(2) { background: #febc2e; }
+.py-edots span:nth-child(3) { background: #28c840; }
+
+.py-efile {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: #8b949e;
+  flex: 1;
+}
+
+.py-elang {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--p2);
+  background: rgba(255, 212, 59, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 212, 59, 0.2);
+}
+
+.py-code-ta {
+  width: 100%;
+  min-height: 300px;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  font-family: "Fira Code", var(--mono);
+  font-size: 1rem;
+  color: #e6edf3;
+  line-height: 1.8;
+  resize: vertical;
+  caret-color: var(--p2);
+  tab-size: 4;
+}
+
+.py-t-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.py-run-btn {
+  min-width: 200px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.py-done-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #bbf7d0;
+}
+
+.py-spin {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: py-spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes py-spin {
+  to { transform: rotate(360deg); }
+}
+
+.py-out-panel {
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  animation: py-fadeIn 0.4s ease-out;
+}
+
+@keyframes py-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.py-out-loading {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--surface);
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.py-ai-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.py-ai-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--p1);
+  border-radius: 50%;
+  animation: py-aipulse 1.2s infinite ease-in-out;
+}
+
+.py-ai-dot:nth-child(2) { animation-delay: 0.2s; }
+.py-ai-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes py-aipulse {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1.2); opacity: 1; }
+}
+
+.py-term-blk {
+  background: #0d1117;
+}
+
+.py-term-bar {
+  background: #161b22;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.py-term-bar span {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: #8b949e;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.py-term-body {
+  padding: 1.5rem;
+  font-family: "Fira Code", var(--mono);
+  font-size: 1rem;
+  line-height: 1.8;
+  min-height: 80px;
+}
+
+.py-tout { color: #39d353; white-space: pre-wrap; }
+.py-terr { color: #ff7b72; white-space: pre-wrap; }
+.py-tempty { color: #484f58; font-style: italic; }
+
+.py-val-res {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-top: 2px solid var(--border);
+}
+
+.py-val-res.py-pass { background: #f0fdf4; border-top-color: #bbf7d0; }
+.py-val-res.py-fail { background: #fff1f2; border-top-color: #fecdd3; }
+
+.py-val-ico {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.py-val-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.py-val-txt strong {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.py-val-res.py-pass .py-val-txt strong { color: #166534; }
+.py-val-res.py-fail .py-val-txt strong { color: #9f1239; }
+
+.py-val-txt span {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@keyframes py-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@media (max-width: 1100px) {
+  .py-tasks-body {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .py-tasks-hero { padding: 4rem 1.5rem; }
+  .py-tasks-body { padding: 3rem 1.5rem; }
+  .py-t-hd, .py-t-body { padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .py-t-actions { flex-direction: column; }
+  .py-t-actions .py-btn { width: 100%; justify-content: center; }
+  .py-t-hd h2 { font-size: 1.5rem; }
+}

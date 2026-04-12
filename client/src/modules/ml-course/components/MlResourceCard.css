@@ -1,0 +1,56 @@
+.ml-resource-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--ml-glass-bg);
+  border: 1px solid var(--ml-glass-border);
+  border-radius: var(--ml-radius-md);
+  margin-bottom: 1rem;
+  transition: all var(--ml-transition);
+}
+
+.ml-resource-card:hover {
+  background: var(--ml-glass-bg-hover);
+  border-color: var(--ml-glass-border-hover);
+  transform: translateX(5px);
+}
+
+.ml-resource-icon {
+  font-size: 2rem;
+  width: 50px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ml-resource-youtube .ml-resource-icon {
+  color: #ff0000;
+}
+
+.ml-resource-pdf .ml-resource-icon {
+  color: #e44d26;
+}
+
+.ml-resource-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--ml-text-primary);
+}
+
+.ml-resource-link {
+  font-size: 0.88rem;
+  color: var(--ml-primary-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color var(--ml-transition);
+}
+
+.ml-resource-link:hover {
+  color: var(--ml-accent);
+}
+
+.ml-resource-link i {
+  font-size: 0.7rem;
+}

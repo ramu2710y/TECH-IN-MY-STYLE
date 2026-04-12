@@ -1,0 +1,346 @@
+/* ===== Aurora Visualization ===== */
+.viz-container {
+    background: var(--bg-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.viz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.viz-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+}
+
+.viz-title-icon {
+    font-size: 1.1rem;
+}
+
+.viz-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.viz-btn {
+    padding: 7px 18px;
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-full);
+    background: rgba(30, 41, 66, 0.3);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: all var(--transition-fast);
+}
+
+.viz-btn:hover {
+    background: rgba(139, 92, 246, 0.1);
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+}
+
+.viz-btn--primary {
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+}
+
+.viz-btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25);
+}
+
+/* Gantt Chart */
+.gantt-chart {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 16px;
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    min-height: 60px;
+}
+
+.gantt-block {
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+    animation: scaleIn 0.3s var(--ease-out) forwards;
+}
+
+.gantt-idle {
+    background: rgba(100, 116, 139, 0.2);
+    color: var(--text-muted);
+    border: 1px dashed rgba(100, 116, 139, 0.3);
+}
+
+/* Process Table */
+.process-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.process-table th {
+    padding: 10px 14px;
+    background: rgba(139, 92, 246, 0.06);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.process-table td {
+    padding: 10px 14px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.04);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+}
+
+.process-table tr:hover td {
+    background: rgba(139, 92, 246, 0.03);
+}
+
+/* Memory Grid */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.memory-cell {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    transition: all var(--transition-fast);
+    border: 1px solid var(--border-glass);
+    background: rgba(30, 41, 66, 0.25);
+    color: var(--text-muted);
+}
+
+.memory-cell--allocated {
+    border-color: rgba(139, 92, 246, 0.3);
+    color: var(--text-primary);
+}
+
+.memory-cell--p0 {
+    background: rgba(139, 92, 246, 0.15);
+}
+
+.memory-cell--p1 {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.memory-cell--p2 {
+    background: rgba(16, 185, 129, 0.15);
+}
+
+.memory-cell--p3 {
+    background: rgba(245, 158, 11, 0.15);
+}
+
+.memory-cell-label {
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.memory-cell-addr {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Process State Diagram */
+.state-diagram {
+    margin-top: 1rem;
+}
+
+.state-diagram svg {
+    width: 100%;
+    max-height: 300px;
+}
+
+.state-node circle {
+    stroke-width: 2;
+}
+
+.state-node text {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 11px;
+    fill: var(--text-primary);
+}
+
+.state-arrow line,
+.state-arrow path {
+    stroke-width: 1.5;
+}
+
+.state-arrow text {
+    font-family: var(--font-body);
+    font-size: 9px;
+    fill: var(--text-muted);
+}
+
+/* Select dropdown */
+.viz-select {
+    padding: 6px 12px;
+    background: rgba(30, 41, 66, 0.4);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.viz-select:focus {
+    border-color: var(--border-hover);
+}
+
+.viz-select option {
+    background: var(--bg-panel-solid);
+    color: var(--text-primary);
+}
+
+/* ===== Gantt Chart (used by SchedulingViz) ===== */
+.gantt-container {
+  position: relative;
+  height: 60px;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: var(--radius-sm);
+  margin: 1rem 0 0.5rem;
+  overflow: hidden;
+}
+
+.gantt-timeline {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 4px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.gantt-tick {
+  flex: 1;
+  text-align: left;
+}
+
+.gantt-bar {
+  position: absolute;
+  top: 8px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0a0e17;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gantt-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.gantt-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.gantt-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* viz-btn active/run variants */
+.viz-btn--active {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--border-hover);
+  color: var(--accent-violet);
+}
+
+.viz-btn--run {
+  background: var(--gradient-primary);
+  border: none;
+  color: white;
+}
+
+.viz-btn--run:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25);
+}
+
+/* memory-cell used state */
+.memory-cell--used {
+  border-color: rgba(139, 92, 246, 0.3);
+  color: var(--text-primary);
+}
+
+.memory-addr {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.memory-proc {
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+/* state diagram */
+.state-svg {
+  width: 100%;
+  max-height: 300px;
+}

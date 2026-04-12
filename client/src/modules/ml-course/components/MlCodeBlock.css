@@ -1,0 +1,54 @@
+.ml-code-block-wrapper {
+  border-radius: var(--ml-radius-md);
+  overflow: hidden;
+  margin: 1rem 0;
+  border: 1px solid var(--ml-glass-border);
+  box-shadow: var(--ml-shadow-sm);
+}
+
+.ml-code-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(30, 41, 59, 0.9);
+  border-bottom: 1px solid var(--ml-glass-border);
+}
+
+.ml-code-language-badge {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ml-cyan);
+  background: rgba(34, 211, 238, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--ml-radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ml-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid var(--ml-glass-border);
+  color: var(--ml-text-secondary);
+  font-size: 0.78rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--ml-radius-sm);
+  cursor: pointer;
+  transition: all var(--ml-transition);
+  font-family: 'Inter', sans-serif;
+}
+
+.ml-copy-btn:hover {
+  background: var(--ml-glass-bg-hover);
+  color: var(--ml-text-primary);
+  border-color: var(--ml-glass-border-hover);
+}
+
+.ml-copy-btn.copied {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.3);
+}

@@ -1,0 +1,371 @@
+/* Python Course Module Styles
+   Prefix: py-
+   Colors: Blue (#3776ab), Yellow (#ffd43b)
+*/
+
+.py-home {
+  font-family: var(--sans);
+  color: var(--n8);
+  background: var(--bg);
+}
+
+/* --- HERO --- */
+.py-hero {
+  background: linear-gradient(150deg, #0c1a27 0%, #162535 50%, #0c1a27 100%);
+  padding: 8rem 2rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.py-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(55, 118, 171, 0.15), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(255, 212, 59, 0.1), transparent 40%);
+  pointer-events: none;
+}
+
+.py-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.py-hero-eyebrow {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(55, 118, 171, 0.1);
+  border: 1px solid rgba(55, 118, 171, 0.3);
+  border-radius: 2rem;
+  color: #3776ab;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.py-hero-h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.py-hl {
+  color: #ffd43b;
+  text-shadow: 0 0 30px rgba(255, 212, 59, 0.3);
+}
+
+.py-hero-sub {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.py-hero-btns {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.py-btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.py-btn-y {
+  background: #ffd43b;
+  color: #0c1a27;
+}
+
+.py-btn-y:hover {
+  background: #ffe381;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 212, 59, 0.4);
+}
+
+.py-btn-w {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.py-btn-w:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.py-hero-stats {
+  display: flex;
+  gap: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.py-hs-n {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffd43b;
+}
+
+.py-hs-l {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- TERMINAL --- */
+.py-terminal {
+  background: #1e293b;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
+  width: 100%;
+}
+
+.py-term-topbar {
+  background: #111b27;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.py-term-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.py-term-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.py-term-dots span:nth-child(1) { background: #ff5f56; }
+.py-term-dots span:nth-child(2) { background: #ffbd2e; }
+.py-term-dots span:nth-child(3) { background: #27c93f; }
+
+.py-term-title {
+  flex: 1;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.py-term-body {
+  padding: 1.5rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.py-tl-prompt { color: #22c55e; margin-right: 0.75rem; }
+.py-tl-kw { color: #f472b6; }
+.py-tl-fn { color: #38bdf8; }
+.py-tl-str { color: #fbbf24; }
+.py-tl-out { color: #94a3b8; margin-left: 2rem; }
+.py-tl-blank { height: 0.5rem; }
+
+.py-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.2em;
+  background: #ffd43b;
+  animation: py-blink 1s step-start infinite;
+  vertical-align: middle;
+}
+
+@keyframes py-blink {
+  50% { opacity: 0; }
+}
+
+/* --- FEATURES --- */
+.py-feat-sec {
+  padding: 6rem 2rem;
+  background: #fff;
+}
+
+.py-sec-hd {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.py-chip {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.py-sec-hd h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.py-sec-hd p {
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.py-feat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.py-feat-card {
+  padding: 2rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.py-feat-card:hover {
+  transform: translateY(-5px);
+  border-color: #3776ab;
+  background: #fff;
+  box-shadow: 0 10px 30px -5px rgba(55, 118, 171, 0.1);
+}
+
+.py-feat-ico {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.py-feat-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.py-feat-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --- CURRICULUM PREVIEW --- */
+.py-prev-sec {
+  padding: 6rem 2rem;
+  background: #f1f5f9;
+}
+
+.py-prev-hd {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.py-prev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.py-prev-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.py-btn-o {
+  color: #3776ab;
+  background: transparent;
+  padding: 0;
+}
+
+.py-btn-o:hover {
+  color: #1e293b;
+  transform: translateX(5px);
+}
+
+/* --- CTA --- */
+.py-cta-sec {
+  background: #3776ab;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.py-cta-inner h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.py-cta-inner h2 span {
+  color: #ffd43b;
+}
+
+.py-cta-inner p {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.py-cta-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .py-hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  .py-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .py-hero-sub { margin-left: auto; margin-right: auto; }
+}
+
+@media (max-width: 600px) {
+  .py-hero-btns, .py-cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .py-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

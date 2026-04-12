@@ -1,0 +1,205 @@
+.py-about-page {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.py-about-hero {
+  background: linear-gradient(150deg, var(--n9) 0%, var(--p1dd) 45%, var(--p1) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.py-about-hero .py-chip {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.py-about-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -1px;
+  margin: 1rem 0;
+  line-height: 1.1;
+}
+
+.py-about-hero h1 span {
+  color: var(--p2);
+  display: block;
+}
+
+.py-about-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.py-about-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.py-about-mission {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r4);
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: var(--s1);
+}
+
+.py-about-mission .py-mico {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  animation: py-float 3s ease-in-out infinite;
+}
+
+.py-about-mission h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--p1dd);
+  margin-bottom: 1.5rem;
+}
+
+.py-about-mission p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.py-about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.py-about-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r3);
+  padding: 2.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.py-about-card:hover {
+  box-shadow: var(--s4);
+  transform: translateY(-8px);
+  border-color: var(--p1xl);
+}
+
+.py-about-card .py-aco {
+  width: 56px;
+  height: 56px;
+  background: var(--p1xl);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.py-about-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--p1dd);
+  margin-bottom: 1rem;
+}
+
+.py-about-card p {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.py-about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.py-about-vals {
+  background: var(--n9);
+  border-radius: var(--r4);
+  padding: 4rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.py-val-item {
+  text-align: center;
+}
+
+.py-val-item .py-vi {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.py-val-item h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--p2);
+  margin-bottom: 0.75rem;
+}
+
+.py-val-item p {
+  font-size: 0.95rem;
+  color: var(--n5);
+  line-height: 1.7;
+}
+
+@keyframes py-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 992px) {
+  .py-about-vals {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .py-about-hero {
+    padding: 4rem 1.5rem;
+  }
+  .py-about-body {
+    padding: 3rem 1.5rem;
+  }
+  .py-about-cards {
+    grid-template-columns: 1fr;
+  }
+  .py-about-mission {
+    padding: 3rem 2rem;
+  }
+  .py-about-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .py-about-hero h1 {
+    font-size: 2.2rem;
+  }
+  .py-about-mission {
+    padding: 2.5rem 1.5rem;
+  }
+}

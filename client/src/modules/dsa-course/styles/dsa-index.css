@@ -1,0 +1,378 @@
+/* Fonts are imported globally in index.css */
+
+/* ── PERSONA 5 × MYTHOLOGICAL DARK FUSION ── */
+.dsa-course-root {
+  /* Core palette */
+  --dsa-gold: #c9a96e;
+  --dsa-gold-light: #e8c98a;
+  --dsa-gold-dark: #8a6a3a;
+  --dsa-ember: #ff6b2b;
+  --dsa-ember-dark: #cc4400;
+
+  /* P5 signature */
+  --dsa-p5-red: #e8001c;
+  --dsa-p5-red-dark: #9a0010;
+  --dsa-p5-white: #f0ece0;
+  --dsa-p5-black: #0a0008;
+
+  /* Backgrounds */
+  --dsa-bg: #060408;
+  --dsa-bg-2: #0c080e;
+  --dsa-bg-card: #100c12;
+  --dsa-bg-panel: #0e0a10;
+
+  /* Borders */
+  --dsa-border: rgba(201,169,110,0.18);
+  --dsa-border-p5: rgba(232,0,28,0.25);
+
+  /* Text */
+  --dsa-text: #ede5d8;
+  --dsa-text-muted: #6a6070;
+  --dsa-text-dim: #3a3040;
+
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background: var(--dsa-bg);
+  color: var(--dsa-text);
+}
+
+.dsa-course-root h1,
+.dsa-course-root h2,
+.dsa-course-root h3 { font-family: 'Cinzel', serif; }
+.dsa-course-root .bebas { font-family: 'Bebas Neue', sans-serif; }
+
+/* ── EMBER CANVAS ── */
+#ember-canvas {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; z-index: 0;
+}
+
+/* ── P5 DIAGONAL SLASH DECORATION ── */
+.dsa-course-root .p5-slash {
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--dsa-p5-red), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+/* ── P5 CARD STYLE ── */
+.dsa-course-root .p5-card {
+  background: var(--dsa-bg-card);
+  border: 1px solid var(--dsa-border);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.dsa-course-root .p5-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(232,0,28,0.04), transparent);
+  transition: left 0.5s ease;
+}
+.dsa-course-root .p5-card:hover::before { left: 150%; }
+.dsa-course-root .p5-card:hover {
+  border-color: rgba(232,0,28,0.35);
+  box-shadow: 0 0 0 1px rgba(232,0,28,0.1), 0 8px 40px rgba(232,0,28,0.08), 0 0 60px rgba(201,169,110,0.04);
+  transform: translateY(-3px) skewX(-0.5deg);
+}
+
+/* ── REALM CARD ── */
+.dsa-course-root .realm-card {
+  background: linear-gradient(135deg, rgba(16,12,18,0.95), rgba(10,8,14,0.98));
+  border: 1px solid rgba(201,169,110,0.12);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.dsa-course-root .realm-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--dsa-p5-red), var(--dsa-gold), var(--dsa-p5-red));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+.dsa-course-root .realm-card:hover::after { transform: scaleX(1); }
+.dsa-course-root .realm-card:hover {
+  border-color: rgba(232,0,28,0.3);
+  box-shadow: 0 0 30px rgba(232,0,28,0.08), 0 0 60px rgba(201,169,110,0.04), inset 0 0 30px rgba(232,0,28,0.02);
+  transform: translateY(-5px);
+}
+
+/* ── P5 MENU ITEM ── */
+.dsa-course-root .p5-menu-item {
+  position: relative;
+  padding: 0.75rem 1.5rem 0.75rem 2rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+.dsa-course-root .p5-menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 0;
+  background: linear-gradient(to right, rgba(232,0,28,0.12), transparent);
+  transition: width 0.3s ease;
+}
+.dsa-course-root .p5-menu-item:hover::before { width: 100%; }
+.dsa-course-root .p5-menu-item:hover { border-left-color: var(--dsa-p5-red); }
+.dsa-course-root .p5-menu-item.active { border-left-color: var(--dsa-gold); background: rgba(201,169,110,0.04); }
+
+/* ── GLITCH TEXT ── */
+@keyframes dsa-glitch1 {
+  0%,100% { clip-path: inset(0 0 95% 0); transform: translate(-2px, 0); }
+  20% { clip-path: inset(30% 0 50% 0); transform: translate(2px, 0); }
+  40% { clip-path: inset(60% 0 20% 0); transform: translate(-1px, 0); }
+  60% { clip-path: inset(80% 0 5% 0); transform: translate(1px, 0); }
+  80% { clip-path: inset(10% 0 75% 0); transform: translate(-2px, 0); }
+}
+@keyframes dsa-glitch2 {
+  0%,100% { clip-path: inset(80% 0 5% 0); transform: translate(2px, 0); }
+  20% { clip-path: inset(10% 0 70% 0); transform: translate(-2px, 0); }
+  40% { clip-path: inset(50% 0 30% 0); transform: translate(1px, 0); }
+  60% { clip-path: inset(20% 0 60% 0); transform: translate(-1px, 0); }
+  80% { clip-path: inset(65% 0 15% 0); transform: translate(2px, 0); }
+}
+.dsa-course-root .glitch-text { position: relative; display: inline-block; }
+.dsa-course-root .glitch-text::before,
+.dsa-course-root .glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+}
+.dsa-course-root .glitch-text:hover::before {
+  opacity: 0.7;
+  color: var(--dsa-p5-red);
+  animation: dsa-glitch1 0.4s steps(1) infinite;
+}
+.dsa-course-root .glitch-text:hover::after {
+  opacity: 0.5;
+  color: var(--dsa-gold);
+  animation: dsa-glitch2 0.4s steps(1) infinite;
+}
+
+/* ── P5 DIAGONAL STRIPE BG ── */
+.dsa-course-root .p5-stripe-bg {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(232,0,28,0.015) 8px,
+    rgba(232,0,28,0.015) 9px
+  );
+}
+
+/* ── SCAN LINE OVERLAY ── */
+.dsa-course-root .scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.08) 2px,
+    rgba(0,0,0,0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── CODE BLOCK ── */
+.dsa-course-root .code-block {
+  background: #060408;
+  border: 1px solid rgba(232,0,28,0.12);
+  border-left: 3px solid var(--dsa-p5-red);
+  border-radius: 0 8px 8px 0;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.84rem;
+  line-height: 1.75;
+  overflow-x: auto;
+}
+.dsa-course-root .code-block .line-highlight {
+  background: rgba(232,0,28,0.08);
+  display: block;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  border-left: 2px solid var(--dsa-p5-red);
+}
+
+/* ── VISUALIZATION ── */
+.dsa-course-root .viz-bar { transition: all 0.3s ease; }
+.dsa-course-root .viz-bar.active { box-shadow: 0 0 16px rgba(232,0,28,0.7); }
+.dsa-course-root .viz-bar.comparing { box-shadow: 0 0 12px rgba(58,138,255,0.6); }
+.dsa-course-root .viz-bar.sorted { box-shadow: 0 0 10px rgba(58,255,138,0.5); }
+
+/* ── NODE STYLES ── */
+.dsa-course-root .node-box {
+  border: 1px solid var(--dsa-border);
+  background: var(--dsa-bg-card);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.dsa-course-root .node-box.active {
+  border-color: var(--dsa-p5-red);
+  box-shadow: 0 0 16px rgba(232,0,28,0.5);
+  background: rgba(232,0,28,0.06);
+}
+.dsa-course-root .node-box.visited {
+  border-color: var(--dsa-gold);
+  box-shadow: 0 0 12px rgba(201,169,110,0.4);
+  background: rgba(201,169,110,0.05);
+}
+
+/* ── P5 SECTION DIVIDER ── */
+.dsa-course-root .p5-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--dsa-p5-red), var(--dsa-gold), var(--dsa-p5-red), transparent);
+  opacity: 0.4;
+  margin: 3rem 0;
+}
+
+/* ── PHANTOM BADGE ── */
+.dsa-course-root .phantom-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(232,0,28,0.08);
+  border: 1px solid rgba(232,0,28,0.3);
+  border-radius: 3px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dsa-p5-red);
+  font-family: 'Bebas Neue', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.dsa-course-root .phantom-badge::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--dsa-p5-red);
+}
+
+/* ── GOLD BADGE ── */
+.dsa-course-root .gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(201,169,110,0.08);
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 3px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dsa-gold);
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* ── INTERVIEW ACCORDION ── */
+.dsa-course-root .accordion-item {
+  border: 1px solid rgba(201,169,110,0.1);
+  border-left: 3px solid transparent;
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+  background: rgba(10,8,14,0.7);
+  transition: border-color 0.3s;
+}
+.dsa-course-root .accordion-item.open {
+  border-left-color: var(--dsa-p5-red);
+  border-color: rgba(232,0,28,0.2);
+  border-left-color: var(--dsa-p5-red);
+}
+
+/* ── FOOTER ── */
+.dsa-course-root .dsa-footer {
+  background: #040206;
+  border-top: 1px solid rgba(232,0,28,0.12);
+  padding: 3rem 0 1.5rem;
+  position: relative;
+}
+.dsa-course-root .dsa-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--dsa-p5-red), var(--dsa-gold), var(--dsa-p5-red), transparent);
+}
+.dsa-course-root .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.dsa-course-root .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+.dsa-course-root .footer-brand-col p { color: var(--dsa-text-muted); font-size: 0.85rem; line-height: 1.7; margin-top: 0.75rem; }
+.dsa-course-root .fb-logo { display: flex; align-items: center; gap: 0.6rem; }
+.dsa-course-root .fb-logo span { font-family: 'Cinzel', serif; color: var(--dsa-gold); font-size: 0.95rem; }
+.dsa-course-root .footer-col h5 { color: var(--dsa-p5-red); font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+.dsa-course-root .footer-col ul { list-style: none; }
+.dsa-course-root .footer-col ul li { margin-bottom: 0.5rem; }
+.dsa-course-root .footer-col ul li a { color: var(--dsa-text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.dsa-course-root .footer-col ul li a:hover { color: var(--dsa-gold); }
+.dsa-course-root .footer-socials { display: flex; flex-direction: column; gap: 0.6rem; }
+.dsa-course-root .fsoc { display: flex; align-items: center; gap: 0.5rem; color: var(--dsa-text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.dsa-course-root .fsoc svg { width: 16px; height: 16px; }
+.dsa-course-root .fsoc:hover { color: var(--dsa-p5-red); }
+.dsa-course-root .footer-bottom { border-top: 1px solid rgba(232,0,28,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+.dsa-course-root .footer-bottom p { color: var(--dsa-text-muted); font-size: 0.8rem; }
+.dsa-course-root .footer-pill { display: flex; align-items: center; gap: 0.4rem; background: rgba(232,0,28,0.06); border: 1px solid rgba(232,0,28,0.15); border-radius: 3px; padding: 0.3rem 0.8rem; font-size: 0.75rem; color: var(--dsa-text-muted); font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; }
+.dsa-course-root .yd { width: 8px; height: 8px; background: var(--dsa-p5-red); border-radius: 50%; display: inline-block; animation: dsa-pulse 2s infinite; }
+
+@keyframes dsa-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+
+/* ── P5 BUTTON ── */
+.dsa-course-root .p5-btn {
+  position: relative;
+  background: rgba(232,0,28,0.1);
+  border: 1px solid rgba(232,0,28,0.35);
+  border-radius: 3px;
+  padding: 0.65rem 1.5rem;
+  color: var(--dsa-p5-red);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+.dsa-course-root .p5-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--dsa-p5-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  z-index: 0;
+}
+.dsa-course-root .p5-btn:hover::before { transform: scaleX(1); }
+.dsa-course-root .p5-btn:hover { color: #fff; }
+.dsa-course-root .p5-btn span { position: relative; z-index: 1; }
+
+.dsa-course-root .p5-btn-gold {
+  background: rgba(201,169,110,0.1);
+  border: 1px solid rgba(201,169,110,0.35);
+  color: var(--dsa-gold);
+}
+.dsa-course-root .p5-btn-gold::before { background: var(--dsa-gold); }
+.dsa-course-root .p5-btn-gold:hover { color: #000; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .dsa-course-root .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .dsa-course-root .footer-brand-col { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .dsa-course-root .footer-top { grid-template-columns: 1fr; }
+}

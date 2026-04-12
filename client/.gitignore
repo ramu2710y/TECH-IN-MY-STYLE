@@ -1,0 +1,158 @@
+# ============================================
+# CLIENT .gitignore for TECH-IN-MY-STYLE
+# ============================================
+
+# ============================================
+# SENSITIVE FILES - NEVER COMMIT
+# ============================================
+
+# Environment variables (contain API keys and secrets)
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+*.env
+
+# IMPORTANT: Keep example file
+!.env.example
+
+# ============================================
+# DEPENDENCIES
+# ============================================
+
+# Node modules
+node_modules/
+/node_modules
+/.pnp
+.pnp.js
+.pnp.*
+
+# Package manager
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================
+# BUILD OUTPUT
+# ============================================
+
+# Vite build output
+/build
+/dist
+.vite
+.cache
+
+# Production build
+/build
+
+# ============================================
+# TESTING
+# ============================================
+
+# Test coverage
+/coverage
+*.lcov
+.nyc_output
+
+# ============================================
+# LOGS
+# ============================================
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# OPERATING SYSTEM FILES
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ============================================
+# IDE & EDITOR FILES
+# ============================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================================
+# MISC
+# ============================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Error log files (from development)
+errors.txt
+errors_fixed.txt
+final_check.txt
+final_errors.txt
+
+# Temporary files
+*.tmp
+*.temp
+
+# ============================================
+# VERCEL
+# ============================================
+
+.vercel
+
+# ============================================
+# KEEP THESE FILES
+# ============================================
+
+# Keep configuration
+!vercel.json
+!package.json
+!package-lock.json
+!vite.config.js
+!tailwind.config.js
+!postcss.config.js
+
+# Keep example environment
+!.env.example
+
+# Keep documentation
+!README*.md

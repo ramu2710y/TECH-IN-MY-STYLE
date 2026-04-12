@@ -1,0 +1,329 @@
+/* Fonts are imported globally in index.css */
+
+/* Scope all fullstack-python-course styles to avoid conflicts */
+.fspy-module {
+  /* macOS system palette */
+  --mac-bg:          #f5f5f7;
+  --mac-surface:     #ffffff;
+  --mac-surface-2:   #f0f0f2;
+  --mac-surface-3:   #e8e8ed;
+  --mac-border:      rgba(0,0,0,0.08);
+  --mac-border-med:  rgba(0,0,0,0.12);
+  --mac-shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --mac-shadow-md:   0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+  --mac-shadow-lg:   0 12px 40px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.06);
+  --mac-shadow-xl:   0 24px 64px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.08);
+
+  /* macOS accent — Python blue */
+  --accent:          #0071e3;
+  --accent-hover:    #0077ed;
+  --accent-light:    rgba(0,113,227,0.10);
+  --accent-border:   rgba(0,113,227,0.25);
+
+  /* macOS traffic lights */
+  --red-dot:    #ff5f57;
+  --yellow-dot: #febc2e;
+  --green-dot:  #28c840;
+
+  /* Text */
+  --text-primary:   #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-tertiary:  #aeaeb2;
+
+  /* Sidebar */
+  --sidebar-bg:     rgba(246,246,248,0.85);
+
+  /* Vibrancy */
+  --glass-bg:       rgba(255,255,255,0.72);
+  --glass-border:   rgba(255,255,255,0.9);
+  
+  /* Navbar height token */
+  --navbar-h: 56px;
+  
+  background: var(--mac-bg);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* macOS glass / vibrancy */
+.fspy-module .mac-glass {
+  background: var(--glass-bg);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+/* macOS card */
+.fspy-module .mac-card {
+  background: var(--mac-surface);
+  border: 1px solid var(--mac-border);
+  border-radius: 16px;
+  box-shadow: var(--mac-shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.fspy-module .mac-card:hover {
+  box-shadow: var(--mac-shadow-md);
+  transform: translateY(-1px);
+}
+
+/* macOS window chrome */
+.fspy-module .mac-window {
+  background: var(--mac-surface);
+  border-radius: 12px;
+  box-shadow: var(--mac-shadow-xl);
+  border: 1px solid var(--mac-border);
+  overflow: hidden;
+}
+.fspy-module .mac-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--mac-surface-2);
+  border-bottom: 1px solid var(--mac-border);
+}
+.fspy-module .mac-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* macOS button */
+.fspy-module .mac-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 980px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+  outline: none;
+}
+.fspy-module .mac-btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,113,227,0.3);
+}
+.fspy-module .mac-btn-primary:hover { background: var(--accent-hover); box-shadow: 0 2px 8px rgba(0,113,227,0.4); }
+.fspy-module .mac-btn-secondary {
+  background: var(--mac-surface-2);
+  color: var(--text-primary);
+  border: 1px solid var(--mac-border-med);
+}
+.fspy-module .mac-btn-secondary:hover { background: var(--mac-surface-3); }
+
+/* macOS input */
+.fspy-module .mac-input {
+  background: var(--mac-surface);
+  border: 1px solid var(--mac-border-med);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+}
+.fspy-module .mac-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,113,227,0.15);
+}
+.fspy-module .mac-input::placeholder { color: var(--text-tertiary); }
+
+/* macOS sidebar item */
+.fspy-module .mac-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+  text-decoration: none;
+}
+.fspy-module .mac-sidebar-item:hover { background: rgba(0,0,0,0.05); color: var(--text-primary); }
+.fspy-module .mac-sidebar-item.active { background: var(--accent-light); color: var(--accent); }
+
+/* macOS badge */
+.fspy-module .mac-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 980px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* macOS tag */
+.fspy-module .mac-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--mac-surface-2);
+  color: var(--text-secondary);
+  border: 1px solid var(--mac-border);
+}
+
+/* Code block */
+.fspy-module .mac-code-window {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--mac-shadow-lg);
+  border: 1px solid var(--mac-border);
+}
+
+.fspy-module pre, .fspy-module code {
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Menlo', monospace !important;
+}
+
+/* Page fade */
+.fspy-module .page-enter {
+  animation: macFadeIn 0.35s ease forwards;
+}
+@keyframes macFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Divider */
+.fspy-module .mac-divider {
+  height: 1px;
+  background: var(--mac-border);
+  margin: 0;
+}
+
+/* Section label */
+.fspy-module .mac-section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 0 12px;
+  margin-bottom: 4px;
+}
+
+/* Accordion */
+.fspy-module .mac-accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--mac-border);
+  background: var(--mac-surface);
+  margin-bottom: 8px;
+}
+
+/* Footer */
+.fspy-module .footer {
+  background: var(--mac-surface-2);
+  border-top: 1px solid var(--mac-border);
+  padding: 48px 0 24px;
+}
+.fspy-module .footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.fspy-module .footer-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.fspy-module .footer-logo-block img { border-radius: 8px; }
+.fspy-module .footer-logo-block span {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.fspy-module .footer-links h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 14px;
+}
+.fspy-module .footer-links a {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.15s;
+}
+.fspy-module .footer-links a:hover { color: var(--accent); }
+.fspy-module .footer-social h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 14px;
+}
+.fspy-module .social-icons { display: flex; gap: 10px; flex-wrap: wrap; }
+.fspy-module .social-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--mac-surface);
+  border: 1px solid var(--mac-border-med);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  box-shadow: var(--mac-shadow-sm);
+}
+.fspy-module .social-icon:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,113,227,0.3);
+}
+.fspy-module .footer-bottom {
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding: 20px 24px 0;
+  border-top: 1px solid var(--mac-border);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}
+
+/* Build page expand grid — stack on mobile */
+@media (max-width: 640px) {
+  .fspy-module .build-expand-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Topic page sidebar — show on large screens */
+@media (min-width: 1024px) {
+  .fspy-module .topic-sidebar {
+    display: block !important;
+  }
+}
+
+/* MCQ grid — stack on mobile */
+@media (max-width: 540px) {
+  .fspy-module .mcq-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

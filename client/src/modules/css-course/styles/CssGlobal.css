@@ -1,0 +1,73 @@
+/* ═══════════════════════════════════════════════════════════════════
+   CssGlobal.css  —  CSS IN MY STYLE
+   Scoped CSS variables for the css-course module.
+   Brand palette: #264DE4 (CSS3 blue) · #2965F1 · #1B35B5 · #42A1D0
+═══════════════════════════════════════════════════════════════════ */
+
+.css-course-root {
+  --ch-primary: #264de4;
+  --ch-primary-dk: #1b35b5;
+  --ch-secondary: #2965f1;
+  --ch-accent: #42a1d0;
+
+  /* Light surfaces */
+  --ch-bg: #eef2ff;
+  --ch-bg-alt: #ffffff;
+  --ch-card: #ffffff;
+  --ch-border: rgba(38, 77, 228, 0.12);
+  --ch-border-soft: rgba(0, 0, 0, 0.07);
+
+  /* Light text */
+  --ch-text: #0f1729;
+  --ch-text-muted: #4a5580;
+  --ch-text-faint: #9099c0;
+
+  /* Gradients */
+  --ch-grad: linear-gradient(135deg, #264de4, #2965f1);
+  --ch-grad-dk: linear-gradient(135deg, #1b35b5, #264de4);
+  --ch-grad-accent: linear-gradient(135deg, #264de4, #42a1d0);
+  --ch-grad-soft: linear-gradient(135deg, rgba(38, 77, 228, 0.08), rgba(41, 101, 241, 0.04));
+
+  /* Shadows */
+  --ch-shadow-xs: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --ch-shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --ch-shadow-md: 0 6px 24px rgba(0, 0, 0, 0.10);
+  --ch-shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.13);
+  --ch-shadow-card: 0 8px 32px rgba(38, 77, 228, 0.12);
+
+  /* Radii */
+  --ch-r-sm: 8px;
+  --ch-r-md: 14px;
+  --ch-r-lg: 20px;
+  --ch-r-xl: 28px;
+  --ch-r-full: 9999px;
+
+  /* Motion */
+  --ch-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ch-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ch-dur-fast: 180ms;
+  --ch-dur-mid: 320ms;
+  
+  background: var(--ch-bg);
+  color: var(--ch-text);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html.dark .css-course-root {
+  --ch-bg: #080c1a;
+  --ch-bg-alt: #0f1420;
+  --ch-card: #151a2e;
+  --ch-border: rgba(38, 77, 228, 0.18);
+  --ch-border-soft: rgba(255, 255, 255, 0.05);
+  --ch-text: #e8ecf8;
+  --ch-text-muted: #8a95c0;
+  --ch-text-faint: #5a6488;
+  --ch-shadow-card: 0 8px 32px rgba(38, 77, 228, 0.18);
+}
+
+.css-course-root *, 
+.css-course-root *::before, 
+.css-course-root *::after {
+  box-sizing: border-box;
+}

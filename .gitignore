@@ -1,0 +1,280 @@
+# ============================================
+# ROOT .gitignore for TECH-IN-MY-STYLE
+# ============================================
+
+# ============================================
+# SENSITIVE FILES - NEVER COMMIT THESE
+# ============================================
+
+# Environment variables (contain secrets)
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+*.env
+
+# API Keys and Secrets
+**/secrets/
+**/credentials/
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.crt
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+data/localdb.json
+server/data/localdb.json
+
+# ============================================
+# DEPENDENCIES
+# ============================================
+
+# Node modules
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package manager files
+package-lock.json.backup
+yarn.lock.backup
+pnpm-lock.yaml.backup
+
+# ============================================
+# BUILD OUTPUT
+# ============================================
+
+# Client build
+client/build/
+client/dist/
+client/.vite/
+client/.cache/
+
+# Server build
+server/build/
+server/dist/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+server/temp/*
+!server/temp/.gitkeep
+
+# ============================================
+# LOGS
+# ============================================
+
+# Log files
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================
+# OPERATING SYSTEM FILES
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# IDE & EDITOR FILES
+# ============================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+*.code-workspace
+
+# JetBrains IDEs (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ============================================
+# TESTING
+# ============================================
+
+# Test coverage
+coverage/
+*.lcov
+.nyc_output/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# ============================================
+# DOCKER
+# ============================================
+
+# Docker files (keep Dockerfile, ignore runtime)
+*.dockerignore.backup
+docker-compose.override.yml
+
+# ============================================
+# PYTHON (for Python Studio)
+# ============================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# ============================================
+# MISC
+# ============================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Error files
+errors.txt
+errors_fixed.txt
+final_check.txt
+final_errors.txt
+
+# ============================================
+# PROJECT SPECIFIC
+# ============================================
+
+# Keep example files but ignore actual config
+!.env.example
+!.env.sample
+
+# Ignore generated documentation (keep source)
+docs/generated/
+
+# Ignore user uploads (if any)
+uploads/
+public/uploads/
+
+# ============================================
+# DEPLOYMENT
+# ============================================
+
+# Vercel
+.vercel
+.vercel.json.backup
+
+# Render
+.render/
+
+# ============================================
+# KEEP THESE FILES (IMPORTANT)
+# ============================================
+
+# Keep example environment files
+!client/.env.example
+!server/.env.example
+!server/python-studio/.env.example
+
+# Keep configuration files
+!client/vercel.json
+!server/render.yaml
+!server/python-studio/render.yaml
+!server/python-studio/Dockerfile
+!server/python-studio/requirements.txt
+
+# Keep documentation
+!*.md
+!README*.md
+!DEPLOYMENT*.md
+!PROJECT*.md
+
+# Keep package files
+!package.json
+!package-lock.json
+
+# Keep gitignore files
+!.gitignore
+!**/.gitignore
+
+# Keep temp directory structure
+!server/temp/.gitkeep

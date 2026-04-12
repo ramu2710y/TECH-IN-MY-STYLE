@@ -1,0 +1,51 @@
+/* ═══════════════════════════════════════════════════════════════════
+   JsIntGlobal.css  —  JAVASCRIPT INT IN MY STYLE
+   Global CSS variables for light & dark mode.
+   Used by all pages in the js-int-course module.
+   Toggled by html.dark class (set by useDarkMode hook in JsIntNavbar).
+═══════════════════════════════════════════════════════════════════ */
+
+/* ── Light Mode (default) ───────────────────────────────────────── */
+.js-int-course-root {
+  --color-bg:           #f5f3ff;
+  --color-bg-alt:       #ede9fe;
+  --color-card:         #ffffff;
+  --color-border:       rgba(139, 92, 246, 0.28);
+  --color-border-soft:  rgba(139, 92, 246, 0.15);
+  --color-text:         #1c192b;
+  --color-text-muted:   #5b5270;
+  --color-text-faint:   #8b839e;
+  
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+/* ── Dark Mode ──────────────────────────────────────────────────── */
+html.dark .js-int-course-root {
+  --color-bg:           #0b0914;
+  --color-bg-alt:       #131022;
+  --color-card:         #1c172d;
+  --color-border:       rgba(139, 92, 246, 0.18);
+  --color-border-soft:  rgba(139, 92, 246, 0.10);
+  --color-text:         #f3f0fa;
+  --color-text-muted:   #a79ebd;
+  --color-text-faint:   #6f6587;
+}
+
+/* ── Smooth transitions on theme change ─────────────────────────── */
+.js-int-course-root *, 
+.js-int-course-root *::before, 
+.js-int-course-root *::after {
+  transition:
+    background-color 0.25s ease,
+    border-color     0.25s ease,
+    color            0.25s ease;
+}
+
+/* Override transition for animated elements to avoid jank */
+.js-int-course-root [class*="animation"],
+.js-int-course-root [style*="animation"],
+.js-int-course-root [style*="transition"] {
+  transition: unset;
+}

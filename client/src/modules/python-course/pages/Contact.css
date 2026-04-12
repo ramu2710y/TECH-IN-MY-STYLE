@@ -1,0 +1,241 @@
+.py-contact-page {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.py-contact-hero {
+  background: linear-gradient(150deg, var(--n9) 0%, var(--p1dd) 45%, var(--p1) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.py-contact-hero .py-chip {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.py-contact-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -1px;
+  margin: 1rem 0;
+  line-height: 1.1;
+}
+
+.py-contact-hero h1 span {
+  color: var(--p2);
+}
+
+.py-contact-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.py-contact-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.py-cf-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r4);
+  padding: 3rem;
+  box-shadow: var(--s2);
+}
+
+.py-cf-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--n8);
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.py-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.py-fg {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.py-fg label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--n7);
+  padding-left: 4px;
+}
+
+.py-fg input, .py-fg textarea, .py-fg select {
+  padding: 0.9rem 1.25rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--surface);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.py-fg input:focus, .py-fg textarea:focus, .py-fg select:focus {
+  border-color: var(--p1);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  background: #fff;
+}
+
+.py-fg textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.py-ci-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.py-ci-block {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r3);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  box-shadow: var(--s1);
+}
+
+.py-ci-block:hover {
+  border-color: var(--p1);
+  box-shadow: var(--s3);
+  transform: translateX(8px);
+}
+
+.py-ci-ico {
+  width: 52px;
+  height: 52px;
+  background: var(--p1xl);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.py-ci-ico svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--p1);
+}
+
+.py-ci-txt h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--n8);
+  margin-bottom: 0.5rem;
+}
+
+.py-ci-txt p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.py-ci-soc {
+  background: var(--n9);
+  border-radius: var(--r4);
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.py-ci-soc h3 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--n4);
+  margin-bottom: 1.5rem;
+}
+
+.py-ci-soc-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.py-ci-soc-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--n4);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.py-ci-soc-link:hover {
+  background: var(--p1);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.py-ci-soc-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+  .py-contact-body {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .py-contact-hero {
+    padding: 4rem 1.5rem;
+  }
+  .py-contact-body {
+    padding: 3rem 1.5rem;
+  }
+  .py-cf-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .py-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .py-contact-body {
+    padding: 2rem 1rem;
+  }
+  .py-cf-card h2 {
+    font-size: 1.5rem;
+  }
+}

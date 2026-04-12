@@ -1,0 +1,232 @@
+# ============================================
+# SERVER .gitignore for TECH-IN-MY-STYLE
+# ============================================
+
+# ============================================
+# SENSITIVE FILES - NEVER COMMIT THESE
+# ============================================
+
+# Environment variables (contain database credentials, JWT secrets, email passwords)
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+*.env
+
+# IMPORTANT: Keep example file
+!.env.example
+
+# API Keys and Secrets
+secrets/
+credentials/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ============================================
+# DATABASE FILES
+# ============================================
+
+# Local database (fallback)
+data/
+data/localdb.json
+*.db
+*.sqlite
+*.sqlite3
+
+# Keep data directory structure
+!data/.gitkeep
+
+# ============================================
+# DEPENDENCIES
+# ============================================
+
+# Node modules
+node_modules/
+/node_modules
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================
+# LOGS
+# ============================================
+
+# Application logs
+*.log
+logs/
+*.log.*
+
+# ============================================
+# TEMPORARY FILES
+# ============================================
+
+# Temp directory (for file uploads, processing, etc.)
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Keep temp directory structure
+!temp/.gitkeep
+
+# ============================================
+# OPERATING SYSTEM FILES
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# IDE & EDITOR FILES
+# ============================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw[a-z]
+
+# ============================================
+# BUILD OUTPUT
+# ============================================
+
+# Build directories
+build/
+dist/
+out/
+
+# ============================================
+# TESTING
+# ============================================
+
+# Test coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# ============================================
+# PYTHON (for Python Studio)
+# ============================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Python build
+*.egg
+*.egg-info/
+pip-log.txt
+
+# ============================================
+# DOCKER
+# ============================================
+
+# Docker override files
+docker-compose.override.yml
+
+# Keep Dockerfile
+!Dockerfile
+!docker-compose.yml
+
+# ============================================
+# MISC
+# ============================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# ============================================
+# RENDER
+# ============================================
+
+.render/
+
+# ============================================
+# KEEP THESE FILES (IMPORTANT)
+# ============================================
+
+# Keep configuration files
+!render.yaml
+!package.json
+!package-lock.json
+!server.js
+
+# Keep example environment
+!.env.example
+
+# Keep Python Studio files
+!python-studio/
+!python-studio/Dockerfile
+!python-studio/requirements.txt
+!python-studio/main.py
+!python-studio/render.yaml
+
+# Keep documentation
+!README*.md
+
+# Keep models, routes, controllers, middleware
+!models/
+!routes/
+!controllers/
+!middleware/
+!config/
+!utils/

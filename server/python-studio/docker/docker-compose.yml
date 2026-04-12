@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  python-studio-backend:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - USE_DOCKER=true
+      - DOCKER_IMAGE=python-studio-runner
+      - EXECUTION_TIMEOUT=300
+    volumes:
+      # Mount Docker socket so backend can spin up sibling containers
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

@@ -1,0 +1,22 @@
+.c-interview-questions { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; }
+.c-question-item { border-radius: 0.75rem; overflow: hidden; }
+.c-question-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem; cursor: pointer; transition: 0.15s ease;
+}
+.c-question-header:hover { background: rgba(255,255,255,0.05); }
+.c-question-header h4 { color: #f8fafc; margin-bottom: 0; flex: 1; }
+.c-question-header i { color: #f97316; transition: 0.15s ease; }
+.c-question-item.active .c-question-header i { transform: rotate(180deg); }
+.c-question-answer {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.2);
+  animation: c-slideDown 0.3s ease;
+}
+.c-question-answer p { color: #cbd5e1; margin-bottom: 0; line-height: 1.6; }
+.c-question-answer code {
+  background: rgba(0,0,0,0.3); color: #f97316;
+  padding: 2px 6px; border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.9em;
+}

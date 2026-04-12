@@ -1,0 +1,51 @@
+@import './c-variables.css';
+
+.c-course-root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, var(--c-bg-primary) 0%, var(--c-bg-secondary) 100%);
+  color: var(--c-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.c-course-root h1,
+.c-course-root h2,
+.c-course-root h3,
+.c-course-root h4,
+.c-course-root h5,
+.c-course-root h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--c-spacing-md);
+}
+.c-course-root h1 { font-size: 2.5rem; }
+.c-course-root h2 { font-size: 2rem; }
+.c-course-root h3 { font-size: 1.5rem; }
+.c-course-root h4 { font-size: 1.25rem; }
+
+.c-course-root p { margin-bottom: var(--c-spacing-md); color: var(--c-text-secondary); }
+.c-course-root a { color: var(--c-secondary-color); text-decoration: none; transition: var(--c-transition-fast); }
+.c-course-root a:hover { color: var(--c-accent-color); }
+
+.c-container { max-width: 1200px; margin: 0 auto; padding: 0 var(--c-spacing-lg); }
+
+.c-glass-card {
+  background: var(--c-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--c-glass-border);
+  box-shadow: 0 8px 32px var(--c-glass-shadow);
+  transition: var(--c-transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+.c-glass-card:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+@keyframes c-fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+@keyframes c-fadeInRight { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
+@keyframes c-slideDown { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }

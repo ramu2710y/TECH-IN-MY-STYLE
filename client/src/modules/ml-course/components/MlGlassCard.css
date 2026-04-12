@@ -1,0 +1,66 @@
+.ml-glass-card {
+  background: var(--ml-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--ml-glass-border);
+  border-radius: var(--ml-radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all var(--ml-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.ml-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+
+.ml-glass-card:hover {
+  background: var(--ml-glass-bg-hover);
+  border-color: var(--ml-glass-border-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--ml-shadow-md);
+}
+
+.ml-glass-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  color: var(--ml-text-primary);
+}
+
+.ml-glass-card p {
+  color: var(--ml-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+
+.ml-glass-card ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.ml-glass-card ul li {
+  list-style-type: disc;
+  margin-bottom: 0.4rem;
+  color: var(--ml-text-secondary);
+  line-height: 1.7;
+}
+
+/* Variants */
+.ml-glass-card--example h3 {
+  color: var(--ml-cyan);
+}
+
+.ml-glass-card--application h3 {
+  color: var(--ml-secondary-light);
+}
+
+.ml-glass-card--resource {
+  background: rgba(17, 24, 39, 0.5);
+}

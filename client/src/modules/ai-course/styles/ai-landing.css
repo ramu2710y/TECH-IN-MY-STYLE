@@ -1,0 +1,316 @@
+/* ai-landing.css — scoped to .ai-course-root */
+
+/* ── HERO ── */
+.ai-course-root .hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-course-root .hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 20%, rgba(124,58,237,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(0,212,255,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.ai-course-root .hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.ai-course-root .hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ai-course-root .hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ai-cyan);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.ai-course-root .hero-eyebrow .dot {
+  width: 6px; height: 6px;
+  background: var(--ai-cyan);
+  border-radius: 50%;
+  animation: ai-pulse 2s infinite;
+}
+
+@keyframes ai-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.ai-course-root .hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.ai-course-root .hero-desc {
+  font-size: 1.1rem;
+  color: var(--ai-text2);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.ai-course-root .hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.ai-course-root .hero-stats {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ai-border);
+}
+
+.ai-course-root .stat-item { display: flex; flex-direction: column; gap: 0.2rem; }
+.ai-course-root .stat-num { font-family: var(--ai-font-display); font-size: 1.6rem; font-weight: 800; color: var(--ai-text); }
+.ai-course-root .stat-label { font-size: 0.78rem; color: var(--ai-text3); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.ai-course-root .hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-course-root .hero-card-stack {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.ai-course-root .hero-main-card {
+  background: var(--ai-surface);
+  border: 1px solid var(--ai-border2);
+  border-radius: var(--ai-radius-xl);
+  padding: 2rem;
+  box-shadow: var(--ai-shadow-lg), 0 0 60px rgba(124,58,237,0.15);
+}
+
+.ai-course-root .hmc-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-course-root .hmc-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--ai-purple), var(--ai-cyan));
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.ai-course-root .hmc-icon img { width: 100%; height: 100%; object-fit: contain; }
+.ai-course-root .hmc-title { font-size: 1rem; font-weight: 700; }
+.ai-course-root .hmc-sub { font-size: 0.78rem; color: var(--ai-text3); }
+
+.ai-course-root .hmc-code {
+  background: var(--ai-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--ai-text2);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--ai-border);
+}
+
+.ai-course-root .hmc-code .kw { color: var(--ai-purple-light); }
+.ai-course-root .hmc-code .fn { color: var(--ai-cyan); }
+.ai-course-root .hmc-code .str { color: var(--ai-green); }
+.ai-course-root .hmc-code .cm { color: var(--ai-text3); }
+
+.ai-course-root .hmc-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.ai-course-root .hmc-tag {
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.05);
+  color: var(--ai-text2);
+  border: 1px solid var(--ai-border);
+}
+
+/* ── FEATURES ── */
+.ai-course-root .features-section { background: var(--ai-bg2); padding: 5rem 0; }
+
+.ai-course-root .features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.ai-course-root .feature-card {
+  background: var(--ai-bg3);
+  border: 1px solid var(--ai-border);
+  border-radius: var(--ai-radius-lg);
+  padding: 1.75rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-course-root .feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--ai-purple), var(--ai-cyan));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ai-course-root .feature-card:hover { border-color: var(--ai-border2); transform: translateY(-4px); }
+.ai-course-root .feature-card:hover::before { opacity: 1; }
+
+.ai-course-root .fc-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.25rem;
+}
+
+.ai-course-root .fc-icon-1 { background: rgba(124,58,237,0.15); color: var(--ai-purple-light); }
+.ai-course-root .fc-icon-2 { background: rgba(0,212,255,0.1); color: var(--ai-cyan); }
+.ai-course-root .fc-icon-3 { background: rgba(16,185,129,0.1); color: var(--ai-green); }
+.ai-course-root .fc-icon-4 { background: rgba(245,158,11,0.1); color: var(--ai-orange); }
+
+.ai-course-root .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.ai-course-root .feature-card p { font-size: 0.875rem; color: var(--ai-text2); line-height: 1.6; margin: 0; }
+
+/* ── TOPICS PREVIEW ── */
+.ai-course-root .topics-preview { padding: 5rem 0; }
+
+.ai-course-root .tp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.ai-course-root .tp-card {
+  background: var(--ai-surface);
+  border: 1px solid var(--ai-border);
+  border-radius: var(--ai-radius-lg);
+  padding: 2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-course-root .tp-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(124,58,237,0.05), rgba(0,212,255,0.05));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ai-course-root .tp-card:hover { border-color: rgba(124,58,237,0.4); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(124,58,237,0.15); }
+.ai-course-root .tp-card:hover::after { opacity: 1; }
+
+.ai-course-root .tp-icon {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--ai-purple), var(--ai-purple-light));
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  position: relative; z-index: 1;
+}
+
+.ai-course-root .tp-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; position: relative; z-index: 1; }
+.ai-course-root .tp-card p { font-size: 0.875rem; color: var(--ai-text2); margin-bottom: 1.25rem; position: relative; z-index: 1; }
+
+.ai-course-root .tp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ai-cyan);
+  position: relative; z-index: 1;
+  transition: gap 0.2s;
+}
+.ai-course-root .tp-card:hover .tp-link { gap: 0.7rem; }
+.ai-course-root .tp-center { text-align: center; }
+
+/* ── CTA BANNER ── */
+.ai-course-root .cta-banner {
+  margin: 0 0 5rem;
+  background: linear-gradient(135deg, var(--ai-surface2), var(--ai-surface));
+  border: 1px solid var(--ai-border2);
+  border-radius: var(--ai-radius-xl);
+  padding: 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-course-root .cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(ellipse at center, rgba(124,58,237,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.ai-course-root .cta-banner h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 1rem; position: relative; }
+.ai-course-root .cta-banner p { color: var(--ai-text2); margin-bottom: 2rem; font-size: 1.05rem; position: relative; }
+.ai-course-root .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .ai-course-root .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .ai-course-root .hero .container { grid-template-columns: 1fr; gap: 3rem; }
+  .ai-course-root .hero-visual { display: none; }
+  .ai-course-root .hero-stats { gap: 1.5rem; }
+  .ai-course-root .tp-grid { grid-template-columns: 1fr; }
+  .ai-course-root .features-grid { grid-template-columns: 1fr; }
+  .ai-course-root .cta-banner { padding: 2.5rem 1.5rem; }
+}

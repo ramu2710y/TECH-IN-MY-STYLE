@@ -1,0 +1,174 @@
+/* ===== Aurora Course Overview ===== */
+.overview {
+    max-width: 900px;
+}
+
+/* Hero */
+.overview-hero {
+    text-align: center;
+    padding: 3rem 0 2.5rem;
+}
+
+.overview-hero-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(139, 92, 246, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: var(--radius-full);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--accent-violet);
+    margin-bottom: 1.5rem;
+}
+
+.overview-hero-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.overview-hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+/* Stats */
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 1rem;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 20px 12px;
+    background: #0f1525;
+    border: none;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+    box-shadow:
+        6px 6px 14px rgba(0, 0, 0, 0.5),
+        -4px -4px 10px rgba(255, 255, 255, 0.03);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        8px 8px 20px rgba(0, 0, 0, 0.6),
+        -4px -4px 12px rgba(255, 255, 255, 0.04),
+        0 0 16px rgba(139, 92, 246, 0.12);
+}
+
+.stat-num {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Modules grid */
+.overview-modules {
+    margin-top: 3rem;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: var(--text-primary);
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 14px;
+}
+
+/* Resources */
+.overview-resources {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--bg-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.resource-item {
+    display: flex;
+    gap: 14px;
+    padding: 16px;
+    background: rgba(30, 41, 66, 0.2);
+    border: 1px solid rgba(148, 163, 184, 0.06);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.resource-item:hover {
+    border-color: var(--border-hover);
+    background: rgba(139, 92, 246, 0.04);
+}
+
+.resource-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.resource-item strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+}
+
+.resource-item p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .overview-hero-title {
+        font-size: 2rem;
+    }
+
+    .overview-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+}

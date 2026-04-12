@@ -1,0 +1,27 @@
+.ml-breadcrumb {
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--ml-text-muted);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.ml-breadcrumb a {
+  color: var(--ml-primary-light);
+  transition: color var(--ml-transition);
+}
+
+.ml-breadcrumb a:hover {
+  color: var(--ml-accent);
+}
+
+.ml-breadcrumb-sep {
+  color: var(--ml-text-muted);
+  margin: 0 0.2rem;
+}
+
+.ml-breadcrumb-current {
+  color: var(--ml-text-secondary);
+}

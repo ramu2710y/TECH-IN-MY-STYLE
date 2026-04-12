@@ -1,0 +1,166 @@
+/* ===== ML In My Style — Scoped Design System ===== */
+
+.ml-course-root {
+  /* Primary palette */
+  --ml-primary: #6366f1;
+  --ml-primary-light: #818cf8;
+  --ml-primary-dark: #4f46e5;
+  --ml-primary-glow: rgba(99, 102, 241, 0.35);
+
+  /* Accent */
+  --ml-accent: #f97316;
+  --ml-accent-light: #fb923c;
+  --ml-accent-glow: rgba(249, 115, 22, 0.3);
+
+  /* Secondary */
+  --ml-secondary: #14b8a6;
+  --ml-secondary-light: #2dd4bf;
+
+  /* Cyan */
+  --ml-cyan: #22d3ee;
+  --ml-cyan-glow: rgba(34, 211, 238, 0.25);
+
+  /* Backgrounds */
+  --ml-bg-deep: #06091a;
+  --ml-bg-primary: #0b1120;
+  --ml-bg-secondary: #111827;
+
+  /* Glass */
+  --ml-glass-bg: rgba(255, 255, 255, 0.04);
+  --ml-glass-bg-hover: rgba(255, 255, 255, 0.08);
+  --ml-glass-border: rgba(255, 255, 255, 0.08);
+  --ml-glass-border-hover: rgba(255, 255, 255, 0.15);
+
+  /* Text */
+  --ml-text-primary: #f1f5f9;
+  --ml-text-secondary: #94a3b8;
+  --ml-text-muted: #64748b;
+
+  /* Misc */
+  --ml-radius-sm: 8px;
+  --ml-radius-md: 12px;
+  --ml-radius-lg: 16px;
+  --ml-radius-xl: 20px;
+  --ml-radius-full: 9999px;
+  --ml-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --ml-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --ml-shadow-md: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --ml-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.25);
+
+  /* Layout */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: var(--ml-text-primary);
+  background: var(--ml-bg-deep);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.ml-course-root *, .ml-course-root *::before, .ml-course-root *::after {
+  box-sizing: border-box;
+}
+
+.ml-course-root h1,
+.ml-course-root h2,
+.ml-course-root h3,
+.ml-course-root h4,
+.ml-course-root h5,
+.ml-course-root h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ml-text-primary);
+  margin: 0;
+}
+
+.ml-course-root a {
+  color: var(--ml-primary-light);
+  text-decoration: none;
+  transition: color var(--ml-transition);
+}
+
+.ml-course-root a:hover {
+  color: var(--ml-accent);
+}
+
+.ml-course-root ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ml-course-root img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ml-course-root p {
+  margin: 0;
+}
+
+/* Utility */
+.ml-gradient-text {
+  background: linear-gradient(135deg, var(--ml-cyan), var(--ml-primary-light), var(--ml-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ml-highlight {
+  color: var(--ml-accent);
+}
+
+/* Animations */
+@keyframes ml-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes ml-borderGlow {
+  0%, 100% { border-color: var(--ml-glass-border); }
+  50% { border-color: rgba(99, 102, 241, 0.3); }
+}
+
+@keyframes ml-particleFloat {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.1; }
+  25% { opacity: 0.4; }
+  50% { transform: translateY(-30px) translateX(15px); opacity: 0.3; }
+  75% { opacity: 0.5; }
+}
+
+@keyframes ml-connectionPulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.35; }
+}
+
+@keyframes ml-nodeGlow {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+@keyframes ml-ringPulse {
+  0%, 100% { r: 12; opacity: 0.2; }
+  50% { r: 16; opacity: 0.4; }
+}
+
+/* Scrollbar inside ml-course-root */
+.ml-course-root ::-webkit-scrollbar {
+  width: 8px;
+}
+.ml-course-root ::-webkit-scrollbar-track {
+  background: var(--ml-bg-deep);
+}
+.ml-course-root ::-webkit-scrollbar-thumb {
+  background: var(--ml-primary-dark);
+  border-radius: 4px;
+}
+.ml-course-root ::-webkit-scrollbar-thumb:hover {
+  background: var(--ml-primary);
+}
+
+/* main min-height */
+.ml-course-root main {
+  min-height: calc(100vh - 200px);
+  position: relative;
+}

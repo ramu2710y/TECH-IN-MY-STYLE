@@ -1,0 +1,103 @@
+.ml-question-card {
+  background: var(--ml-glass-bg);
+  border: 1px solid var(--ml-glass-border);
+  border-radius: var(--ml-radius-md);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all var(--ml-transition);
+}
+
+.ml-question-card:hover {
+  border-color: var(--ml-glass-border-hover);
+}
+
+.ml-question-card.expanded {
+  border-color: rgba(99, 102, 241, 0.2);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
+}
+
+.ml-question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  transition: background var(--ml-transition);
+}
+
+.ml-question-header:hover {
+  background: var(--ml-glass-bg-hover);
+}
+
+.ml-question-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ml-text-primary);
+  flex: 1;
+  line-height: 1.5;
+}
+
+.ml-toggle-answer-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  color: var(--ml-primary-light);
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--ml-transition);
+  font-family: 'Inter', sans-serif;
+  padding: 0.3rem 0;
+}
+
+.ml-toggle-answer-btn:hover {
+  color: var(--ml-accent);
+}
+
+.ml-toggle-answer-btn i {
+  transition: transform 0.3s ease;
+  font-size: 0.75rem;
+}
+
+.ml-answer-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ml-answer-content {
+  padding: 0 1.5rem 1.2rem;
+  border-top: 1px solid var(--ml-glass-border);
+  padding-top: 1rem;
+}
+
+.ml-answer-content p {
+  color: var(--ml-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.ml-answer-content ul {
+  padding-left: 1.5rem;
+}
+
+.ml-answer-content ul li {
+  list-style-type: disc;
+  color: var(--ml-text-secondary);
+  margin-bottom: 0.3rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .ml-question-header {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .ml-toggle-answer-btn {
+    align-self: flex-start;
+  }
+}

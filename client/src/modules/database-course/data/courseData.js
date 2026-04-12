@@ -1,0 +1,62 @@
+// Course structure data
+export const courseModules = [
+  {
+    id: 'beginner',
+    label: 'BEGINNER',
+    color: '#39ff14',
+    topics: [
+      { id: 'what-is-database', title: 'What is a Database?', icon: 'database' },
+      { id: 'sql-vs-nosql', title: 'SQL vs NoSQL', icon: 'code-branch' },
+      { id: 'tables-vs-collections', title: 'Tables vs Collections', icon: 'table' },
+      { id: 'rows-vs-documents', title: 'Rows vs Documents', icon: 'file-alt' },
+      { id: 'basic-sql', title: 'Basic SQL', icon: 'terminal' },
+      { id: 'basic-mongodb', title: 'Basic MongoDB', icon: 'leaf' },
+      { id: 'sql-languages', title: 'SQL Languages (DDL/DML/DCL)', icon: 'language' },
+    ],
+  },
+  {
+    id: 'intermediate',
+    label: 'INTERMEDIATE',
+    color: '#00f0ff',
+    topics: [
+      { id: 'sql-joins', title: 'SQL Joins', icon: 'link' },
+      { id: 'group-by', title: 'GROUP BY & Aggregates', icon: 'layer-group' },
+      { id: 'subqueries', title: 'Subqueries', icon: 'code' },
+      { id: 'mongodb-crud', title: 'MongoDB CRUD', icon: 'edit' },
+      { id: 'mongodb-queries', title: 'MongoDB Queries', icon: 'search' },
+      { id: 'indexing', title: 'Indexing', icon: 'bolt' },
+    ],
+  },
+  {
+    id: 'advanced',
+    label: 'ADVANCED',
+    color: '#ff9f1c',
+    topics: [
+      { id: 'query-optimization', title: 'Query Optimization', icon: 'tachometer-alt' },
+      { id: 'transactions', title: 'Transactions', icon: 'exchange-alt' },
+      { id: 'acid-vs-base', title: 'ACID vs BASE', icon: 'balance-scale' },
+      { id: 'mongodb-aggregation', title: 'MongoDB Aggregation', icon: 'filter' },
+      { id: 'scaling-systems', title: 'Scaling Systems', icon: 'expand-arrows-alt' },
+    ],
+  },
+  {
+    id: 'advanced-plus',
+    label: 'ADVANCED+',
+    color: '#ff4444',
+    topics: [
+      { id: 'window-functions', title: 'Window Functions', icon: 'window-maximize' },
+      { id: 'views', title: 'Views', icon: 'eye' },
+      { id: 'stored-procedures', title: 'Stored Procedures', icon: 'cogs' },
+      { id: 'triggers', title: 'Triggers', icon: 'bell' },
+      { id: 'constraints', title: 'Constraints (PK, FK, UNIQUE)', icon: 'lock' },
+      { id: 'normalization', title: 'Normalization', icon: 'sitemap' },
+      { id: 'schema-design', title: 'MongoDB Schema Design', icon: 'project-diagram' },
+      { id: 'embedding-referencing', title: 'Embedding vs Referencing', icon: 'object-group' },
+      { id: 'indexing-deep', title: 'Indexing (Deep Dive)', icon: 'search-plus' },
+      { id: 'performance-tuning', title: 'Performance Tuning', icon: 'sliders-h' },
+      { id: 'cap-theorem', title: 'CAP Theorem', icon: 'triangle-exclamation' },
+      { id: 'data-modeling', title: 'Data Modeling', icon: 'cubes' },
+      { id: 'real-world-arch', title: 'Real-World Architecture', icon: 'city' },
+    ],
+  },
+];

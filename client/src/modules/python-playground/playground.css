@@ -1,0 +1,277 @@
+/* ═══════════════════════════════════════════════════
+   PERSONA 5 THEME — PHANTOM THIEF EDITION
+   Scoped under .p5-playground-root
+   Black · Red · White · Yellow accents
+   Diagonal slashes · Sharp geometry · Bold type
+   Fonts are imported globally in index.css
+═══════════════════════════════════════════════════ */
+
+/* ── RESET within playground ── */
+.p5-playground-root,
+.p5-playground-root *,
+.p5-playground-root *::before,
+.p5-playground-root *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.p5-playground-root {
+  background: #0a0a0a;
+  color: #f0f0f0;
+  font-family: 'Barlow', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.p5-playground-root ::selection { background: #e61e32; color: #fff; }
+
+.p5-playground-root ::-webkit-scrollbar { width: 4px; height: 4px; }
+.p5-playground-root ::-webkit-scrollbar-track { background: #0a0a0a; }
+.p5-playground-root ::-webkit-scrollbar-thumb { background: #e61e32; }
+.p5-playground-root ::-webkit-scrollbar-thumb:hover { background: #f5c400; }
+
+/* ── P5 PANEL ── */
+.p5-playground-root .p5-panel {
+  background: #111111;
+  border: 1px solid #222;
+  position: relative;
+}
+
+/* ── P5 HEADER ── */
+.p5-playground-root .p5-header {
+  background: #0a0a0a;
+  border-bottom: 3px solid #e61e32;
+  position: relative;
+  overflow: hidden;
+}
+.p5-playground-root .p5-header::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: -20px;
+  width: 60px;
+  background: #e61e32;
+  transform: skewX(-15deg);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+/* ── P5 BUTTON ── */
+.p5-playground-root .p5-btn {
+  font-family: 'Oswald', Impact, sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #e61e32;
+  border: none;
+  padding: 7px 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+.p5-playground-root .p5-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.p5-playground-root .p5-btn:hover {
+  background: #ff2a3d;
+  box-shadow: 4px 4px 0 #f5c400;
+  transform: translate(-2px, -2px);
+}
+.p5-playground-root .p5-btn:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+.p5-playground-root .p5-btn:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── P5 GHOST BUTTON ── */
+.p5-playground-root .p5-btn-ghost {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  background: transparent;
+  border: 1px solid #333;
+  padding: 6px 14px;
+  cursor: pointer;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.p5-playground-root .p5-btn-ghost:hover {
+  border-color: #e61e32;
+  color: #e61e32;
+  box-shadow: 3px 3px 0 #e61e32;
+  transform: translate(-2px, -2px);
+}
+.p5-playground-root .p5-btn-ghost:active { transform: translate(0,0); box-shadow: none; }
+
+/* ── P5 CARD ── */
+.p5-playground-root .p5-card {
+  background: #141414;
+  border: 1px solid #222;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.15s;
+  clip-path: polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px);
+}
+.p5-playground-root .p5-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: #e61e32;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.2s;
+}
+.p5-playground-root .p5-card:hover {
+  border-color: #e61e32;
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 #e61e32;
+}
+.p5-playground-root .p5-card:hover::after { transform: scaleY(1); }
+
+/* ── P5 BADGE ── */
+.p5-playground-root .p5-badge {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: #e61e32;
+  color: #fff;
+  padding: 2px 8px;
+  clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+}
+
+/* ── P5 DIVIDER ── */
+.p5-playground-root .p5-divider {
+  height: 2px;
+  background: #e61e32;
+  position: relative;
+}
+.p5-playground-root .p5-divider::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0;
+  width: 30%;
+  height: 100%;
+  background: #f5c400;
+  clip-path: polygon(8px 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* ── P5 INPUT ── */
+.p5-playground-root .p5-input {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-left: 3px solid #e61e32;
+  color: #f0f0f0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  padding: 8px 12px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+.p5-playground-root .p5-input:focus { border-color: #e61e32; box-shadow: 3px 0 0 #e61e32; }
+.p5-playground-root .p5-input::placeholder { color: #333; }
+
+/* ── DIAGONAL SLASH BG ── */
+.p5-playground-root .p5-slash-bg {
+  position: relative;
+  overflow: hidden;
+}
+.p5-playground-root .p5-slash-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent 0px,
+    transparent 18px,
+    rgba(230,30,50,0.03) 18px,
+    rgba(230,30,50,0.03) 20px
+  );
+  pointer-events: none;
+}
+
+/* ── SCROLL ROW ── */
+.p5-playground-root .p5-scroll-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+.p5-playground-root .p5-scroll-row::-webkit-scrollbar { display: none; }
+
+/* ── TAB ACTIVE ── */
+.p5-playground-root .p5-tab-active {
+  background: rgba(230,30,50,0.12) !important;
+  color: #e61e32 !important;
+  border-bottom: 2px solid #e61e32 !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════════════ */
+
+@keyframes p5Glitch {
+  0%,90%,100% { clip-path: none; transform: none; }
+  91% { clip-path: inset(20% 0 60% 0); transform: translateX(-4px); }
+  93% { clip-path: inset(60% 0 10% 0); transform: translateX(4px); }
+  95% { clip-path: inset(40% 0 40% 0); transform: translateX(-2px); }
+  97% { clip-path: none; transform: none; }
+}
+.p5-playground-root .p5-glitch { animation: p5Glitch 6s ease-in-out infinite; }
+
+@keyframes p5SlideIn {
+  from { opacity: 0; transform: translateX(-20px) skewX(-5deg); }
+  to   { opacity: 1; transform: translateX(0) skewX(0); }
+}
+.p5-playground-root .p5-slide-in { animation: p5SlideIn 0.3s ease forwards; }
+
+@keyframes p5Flash {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.7; color: #e61e32; }
+}
+.p5-playground-root .p5-flash { animation: p5Flash 2s ease-in-out infinite; }
+
+@keyframes p5PulseBorder {
+  0%,100% { box-shadow: 3px 3px 0 #e61e32; }
+  50%      { box-shadow: 3px 3px 0 #f5c400; }
+}
+.p5-playground-root .p5-pulse { animation: p5PulseBorder 2s ease-in-out infinite; }
+
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+.p5-playground-root .p5-cursor { animation: blink 1s step-end infinite; }
+
+@keyframes p5Wipe {
+  from { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
+  to   { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+.p5-playground-root .p5-wipe { animation: p5Wipe 0.5s ease forwards; }

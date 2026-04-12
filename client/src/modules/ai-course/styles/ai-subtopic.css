@@ -1,0 +1,278 @@
+/* ai-subtopic.css — scoped to .ai-course-root */
+
+.ai-course-root .breadcrumb-bar {
+  padding: 5.5rem 0 0;
+  background: var(--ai-bg2);
+  border-bottom: 1px solid var(--ai-border);
+}
+.ai-course-root .breadcrumb-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+.ai-course-root .breadcrumb-inner a { color: var(--ai-text3); font-size: 0.8rem; transition: color 0.2s; }
+.ai-course-root .breadcrumb-inner a:hover { color: var(--ai-cyan); }
+.ai-course-root .breadcrumb-inner span { color: var(--ai-text3); font-size: 0.8rem; }
+.ai-course-root .breadcrumb-inner .bc-current { color: var(--ai-text2); font-size: 0.8rem; font-weight: 500; }
+
+.ai-course-root .subtopic-layout { padding: 2.5rem 0 5rem; }
+.ai-course-root .subtopic-inner {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.ai-course-root .subtopic-sidebar { position: sticky; top: 90px; }
+.ai-course-root .sidebar-nav {
+  background: var(--ai-surface);
+  border: 1px solid var(--ai-border);
+  border-radius: var(--ai-radius-lg);
+  overflow: hidden;
+}
+.ai-course-root .sidebar-section { padding: 1.25rem 1.25rem 0.75rem; }
+.ai-course-root .sidebar-section:not(:first-child) { border-top: 1px solid var(--ai-border); }
+.ai-course-root .sidebar-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ai-text3);
+  margin-bottom: 0.6rem;
+  padding: 0 0.25rem;
+}
+.ai-course-root .sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  color: var(--ai-text2);
+  font-size: 0.83rem;
+  transition: all 0.2s;
+  margin-bottom: 0.15rem;
+}
+.ai-course-root .sidebar-link:hover { color: var(--ai-text); background: rgba(255,255,255,0.05); }
+.ai-course-root .sidebar-link.active { color: var(--ai-cyan); background: var(--ai-cyan-dim); font-weight: 600; }
+.ai-course-root .sidebar-link i { font-size: 0.6rem; flex-shrink: 0; }
+
+.ai-course-root .subtopic-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ai-course-root .content-card {
+  background: var(--ai-surface);
+  border: 1px solid var(--ai-border);
+  border-radius: var(--ai-radius-xl);
+  padding: 2rem;
+}
+.ai-course-root .content-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--ai-border);
+}
+.ai-course-root .cc-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.ai-course-root .cc-icon-desc { background: rgba(124,58,237,0.15); color: var(--ai-purple-light); }
+.ai-course-root .cc-icon-code { background: rgba(0,212,255,0.1); color: var(--ai-cyan); }
+.ai-course-root .cc-icon-apps { background: rgba(16,185,129,0.1); color: var(--ai-green); }
+.ai-course-root .cc-icon-table { background: rgba(245,158,11,0.1); color: var(--ai-orange); }
+.ai-course-root .cc-icon-res { background: rgba(236,72,153,0.1); color: var(--ai-pink); }
+.ai-course-root .cc-icon-qa { background: rgba(124,58,237,0.15); color: var(--ai-purple-light); }
+.ai-course-root .content-card-header h2 { font-size: 1.1rem; font-weight: 700; margin: 0; }
+
+.ai-course-root .page-title { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
+.ai-course-root .page-title-card {
+  background: linear-gradient(135deg, var(--ai-surface2), var(--ai-surface));
+  border: 1px solid var(--ai-border2);
+  border-radius: var(--ai-radius-xl);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.ai-course-root .page-title-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ai-purple), var(--ai-cyan));
+}
+.ai-course-root .page-title-card p { color: var(--ai-text2); margin: 0; font-size: 0.95rem; }
+
+.ai-course-root .desc-text p { color: var(--ai-text2); line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
+.ai-course-root .desc-text p:last-child { margin-bottom: 0; }
+
+.ai-course-root .info-box {
+  background: var(--ai-bg3);
+  border: 1px solid var(--ai-border);
+  border-left: 3px solid var(--ai-purple-light);
+  border-radius: var(--ai-radius);
+  padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+}
+.ai-course-root .info-box ul { display: flex; flex-direction: column; gap: 0.6rem; }
+.ai-course-root .info-box li { color: var(--ai-text2); font-size: 0.875rem; line-height: 1.6; }
+
+.ai-course-root .code-block {
+  background: #0d1117;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--ai-radius-lg);
+  overflow: hidden;
+}
+.ai-course-root .code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.ai-course-root .code-lang {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ai-cyan);
+}
+.ai-course-root .code-dots { display: flex; gap: 6px; }
+.ai-course-root .code-dots span { width: 10px; height: 10px; border-radius: 50%; }
+.ai-course-root .code-dots span:nth-child(1) { background: #ff5f57; }
+.ai-course-root .code-dots span:nth-child(2) { background: #febc2e; }
+.ai-course-root .code-dots span:nth-child(3) { background: #28c840; }
+.ai-course-root .code-block pre { margin: 0; padding: 1.5rem; overflow-x: auto; }
+.ai-course-root .code-block code {
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #e6edf3;
+}
+
+.ai-course-root .apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.ai-course-root .app-card {
+  background: var(--ai-bg3);
+  border: 1px solid var(--ai-border);
+  border-radius: var(--ai-radius-lg);
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+.ai-course-root .app-card:hover { border-color: var(--ai-border2); transform: translateY(-3px); }
+.ai-course-root .app-card i { font-size: 1.6rem; color: var(--ai-cyan); margin-bottom: 0.75rem; display: block; }
+.ai-course-root .app-card h3 { font-size: 0.875rem; font-weight: 700; margin-bottom: 0.4rem; }
+.ai-course-root .app-card p { font-size: 0.78rem; color: var(--ai-text3); margin: 0; line-height: 1.5; }
+
+.ai-course-root .data-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.ai-course-root .data-table thead tr { background: rgba(124,58,237,0.1); }
+.ai-course-root .data-table th { padding: 0.85rem 1rem; text-align: left; font-weight: 700; color: var(--ai-purple-light); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.ai-course-root .data-table td { padding: 0.85rem 1rem; color: var(--ai-text2); border-bottom: 1px solid var(--ai-border); }
+.ai-course-root .data-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+.ai-course-root .data-table tbody tr:last-child td { border-bottom: none; }
+.ai-course-root .table-wrap { overflow-x: auto; border-radius: var(--ai-radius); border: 1px solid var(--ai-border); }
+
+.ai-course-root .resource-links { display: flex; flex-direction: column; gap: 0.75rem; }
+.ai-course-root .resource-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--ai-bg3);
+  border: 1px solid var(--ai-border);
+  border-radius: var(--ai-radius);
+  color: var(--ai-text2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.ai-course-root .resource-link:hover { border-color: var(--ai-border2); color: var(--ai-text); transform: translateX(4px); }
+.ai-course-root .resource-link-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.ai-course-root .rli-yt { background: rgba(255,0,0,0.1); color: #ff4444; }
+.ai-course-root .rli-pdf { background: rgba(245,158,11,0.1); color: var(--ai-orange); }
+.ai-course-root .resource-link span { flex: 1; }
+
+.ai-course-root .accordion { display: flex; flex-direction: column; gap: 0.75rem; }
+.ai-course-root .acc-item {
+  background: var(--ai-bg3);
+  border: 1px solid var(--ai-border);
+  border-radius: var(--ai-radius-lg);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.ai-course-root .acc-item.open { border-color: rgba(124,58,237,0.35); }
+.ai-course-root .acc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.25rem;
+  cursor: pointer;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+.ai-course-root .acc-header:hover { background: rgba(255,255,255,0.02); }
+.ai-course-root .acc-header h3 { font-size: 0.9rem; font-weight: 600; margin: 0; flex: 1; }
+.ai-course-root .acc-chevron {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: var(--ai-surface);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem;
+  color: var(--ai-text3);
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+.ai-course-root .acc-item.open .acc-chevron { background: rgba(124,58,237,0.15); color: var(--ai-purple-light); transform: rotate(180deg); }
+.ai-course-root .acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s;
+}
+.ai-course-root .acc-item.open .acc-body { max-height: 400px; padding: 0 1.25rem 1.25rem; }
+.ai-course-root .acc-body p { font-size: 0.875rem; color: var(--ai-text2); margin: 0; line-height: 1.7; }
+
+.ai-course-root .not-found-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.ai-course-root .not-found-page h1 { font-size: 2rem; }
+.ai-course-root .not-found-page p { color: var(--ai-text2); }
+
+@media (max-width: 1024px) {
+  .ai-course-root .subtopic-inner { grid-template-columns: 220px 1fr; }
+}
+@media (max-width: 768px) {
+  .ai-course-root .subtopic-inner { grid-template-columns: 1fr; }
+  .ai-course-root .subtopic-sidebar { position: static; }
+  .ai-course-root .apps-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .ai-course-root .apps-grid { grid-template-columns: 1fr; }
+  .ai-course-root .content-card { padding: 1.25rem; }
+}

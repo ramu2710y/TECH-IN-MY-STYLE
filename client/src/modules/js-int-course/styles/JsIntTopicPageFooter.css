@@ -1,0 +1,485 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   JsIntTopicPageFooter.css
+   JsIntFooter shown at the bottom of individual JS Intermediate topic pages
+   Theme: Violet Primary (#8b5cf6) · Black (#1A1A1A) · dark via html.dark
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── JsIntFooter wrapper ───────────────────────────────────────────────────── */
+.topic-page-footer {
+  background: #111111;
+  border-top: 1.5px solid rgba(139, 92, 246, 0.18);
+  padding: 28px 24px 24px;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Prev / Next navigation row ───────────────────────────────────────── */
+.topic-footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Spacer when one side is missing */
+.topic-footer-btn-placeholder {
+  flex: 1;
+  min-width: 0;
+  max-width: calc(50% - 8px);
+}
+
+/* ── Shared button base ───────────────────────────────────────────────── */
+.topic-footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+  max-width: calc(50% - 8px);
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(139, 92, 246, 0.35);
+  background: rgba(139, 92, 246, 0.04);
+  color: #d4d4c0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition:
+    background    0.22s ease,
+    color         0.22s ease,
+    border-color  0.22s ease,
+    transform     0.16s ease,
+    box-shadow    0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer sweep on hover */
+.topic-footer-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(139, 92, 246, 0.08) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+
+.topic-footer-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.topic-footer-btn:hover {
+  background: #8b5cf6;
+  color: #1A1A1A;
+  border-color: #8b5cf6;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
+}
+
+.topic-footer-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.18);
+}
+
+/* ── Previous button ──────────────────────────────────────────────────── */
+.topic-footer-prev {
+  justify-content: flex-start;
+}
+
+.topic-footer-prev:hover .topic-footer-btn-icon {
+  transform: translateX(-4px);
+}
+
+/* ── Next button ──────────────────────────────────────────────────────── */
+.topic-footer-next {
+  justify-content: flex-end;
+  margin-left: auto;
+  text-align: right;
+}
+
+.topic-footer-next:hover .topic-footer-btn-icon {
+  transform: translateX(4px);
+}
+
+/* Arrow icon shared styles */
+.topic-footer-btn-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: transform 0.20s ease;
+  color: #8b5cf6;
+}
+
+.topic-footer-btn:hover .topic-footer-btn-icon {
+  color: #1A1A1A;
+}
+
+/* ── Button text content ──────────────────────────────────────────────── */
+.topic-footer-btn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.topic-footer-btn-content--right {
+  align-items: flex-end;
+}
+
+/* "Previous" / "Next" label */
+.topic-footer-btn-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.55;
+  line-height: 1;
+  transition: opacity 0.18s ease;
+}
+
+.topic-footer-btn:hover .topic-footer-btn-label {
+  opacity: 0.75;
+}
+
+/* Topic slug */
+.topic-footer-btn-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 190px;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+/* Category label beneath the slug */
+.topic-footer-btn-category {
+  font-size: 0.70rem;
+  font-weight: 500;
+  opacity: 0.45;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 190px;
+  line-height: 1;
+  transition: opacity 0.18s ease;
+}
+
+.topic-footer-btn:hover .topic-footer-btn-category {
+  opacity: 0.65;
+}
+
+/* ── Progress bar ─────────────────────────────────────────────────────── */
+.topic-footer-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.topic-footer-progress-bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+}
+
+.topic-footer-progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #6d28d9 0%, #8b5cf6 100%);
+  transition: width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.40);
+}
+
+.topic-footer-progress-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: #555544;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.topic-footer-progress-text i {
+  font-size: 0.82rem;
+  color: rgba(139, 92, 246, 0.45);
+}
+
+/* ── Back to all topics ───────────────────────────────────────────────── */
+.topic-footer-back-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.topic-footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #8b5cf6;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 9px 22px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(139, 92, 246, 0.28);
+  background: transparent;
+  transition:
+    background    0.20s ease,
+    color         0.20s ease,
+    border-color  0.20s ease,
+    transform     0.16s ease,
+    box-shadow    0.20s ease;
+  letter-spacing: 0.01em;
+}
+
+.topic-footer-back i {
+  font-size: 0.9rem;
+  transition: transform 0.20s ease;
+}
+
+.topic-footer-back:hover {
+  background: rgba(139, 92, 246, 0.10);
+  border-color: rgba(139, 92, 246, 0.55);
+  color: #8b5cf6;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.12);
+}
+
+.topic-footer-back:hover i {
+  transform: scale(1.15);
+}
+
+.topic-footer-back:active {
+  transform: translateY(0);
+}
+
+/* ── Divider ──────────────────────────────────────────────────────────── */
+.topic-footer-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(139, 92, 246, 0.10);
+  border: none;
+  margin: 0;
+}
+
+/* ── Social links row ─────────────────────────────────────────────────── */
+.topic-footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.topic-footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(139, 92, 246, 0.20);
+  background: rgba(139, 92, 246, 0.03);
+  color: #666655;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition:
+    background    0.20s ease,
+    color         0.20s ease,
+    border-color  0.20s ease,
+    transform     0.16s ease,
+    box-shadow    0.20s ease;
+  line-height: 1;
+}
+
+.topic-footer-social-link:hover {
+  background: #8b5cf6;
+  color: #1A1A1A;
+  border-color: #8b5cf6;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.28);
+  text-decoration: none;
+}
+
+.topic-footer-social-link:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(139, 92, 246, 0.20);
+}
+
+/* Individual platform accent on hover (subtle) */
+.topic-footer-social-link:nth-child(1):hover {    /* Telegram */
+  background: #8b5cf6;
+}
+
+.topic-footer-social-link:nth-child(2):hover {    /* Instagram */
+  background: #8b5cf6;
+}
+
+.topic-footer-social-link:nth-child(3):hover {    /* YouTube */
+  background: #8b5cf6;
+}
+
+/* ── Copyright line ───────────────────────────────────────────────────── */
+.topic-footer-copy {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #444433;
+  text-align: center;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  line-height: 1.5;
+}
+
+.topic-footer-copy i {
+  font-size: 0.78rem;
+  opacity: 0.6;
+}
+
+/* ── Responsive: tablet (≤ 768px) ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .topic-page-footer {
+    padding: 24px 16px 20px;
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .topic-footer-nav {
+    gap: 10px;
+  }
+
+  .topic-footer-btn {
+    max-width: calc(50% - 5px);
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .topic-footer-btn-placeholder {
+    max-width: calc(50% - 5px);
+  }
+
+  .topic-footer-btn-name {
+    max-width: 130px;
+  }
+
+  .topic-footer-btn-category {
+    max-width: 130px;
+  }
+
+  .topic-footer-back {
+    font-size: 0.825rem;
+    padding: 8px 18px;
+  }
+
+  .topic-footer-social-link {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
+/* ── Responsive: mobile (≤ 480px) ────────────────────────────────────── */
+@media (max-width: 480px) {
+  .topic-page-footer {
+    padding: 20px 14px 18px;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  /* Stack prev/next vertically */
+  .topic-footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topic-footer-btn {
+    max-width: 100%;
+    width: 100%;
+    flex: none;
+    justify-content: flex-start;
+    padding: 12px 16px;
+  }
+
+  .topic-footer-btn-placeholder {
+    display: none;
+  }
+
+  /* Next button: reset right-alignment on mobile */
+  .topic-footer-next {
+    margin-left: 0;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .topic-footer-btn-content--right {
+    align-items: flex-start;
+  }
+
+  .topic-footer-btn-name {
+    max-width: 240px;
+  }
+
+  .topic-footer-btn-category {
+    max-width: 240px;
+  }
+
+  .topic-footer-progress-wrap {
+    max-width: 100%;
+  }
+
+  .topic-footer-social {
+    gap: 12px;
+  }
+
+  .topic-footer-social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .topic-footer-copy {
+    font-size: 0.70rem;
+  }
+}
+
+/* ── Reduced-motion override ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .topic-footer-btn,
+  .topic-footer-btn::before,
+  .topic-footer-btn-icon,
+  .topic-footer-back,
+  .topic-footer-back i,
+  .topic-footer-social-link,
+  .topic-footer-progress-fill {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .topic-footer-btn:hover,
+  .topic-footer-back:hover,
+  .topic-footer-social-link:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}

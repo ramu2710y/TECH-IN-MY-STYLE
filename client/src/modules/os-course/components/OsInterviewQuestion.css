@@ -1,0 +1,95 @@
+/* ===== OS Interview Question — Neumorphic Accordion ===== */
+.iq {
+    background: #0f1525;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 250ms ease;
+    box-shadow:
+        5px 5px 12px rgba(0, 0, 0, 0.5),
+        -3px -3px 8px rgba(255, 255, 255, 0.025);
+}
+
+.iq:hover {
+    box-shadow:
+        7px 7px 16px rgba(0, 0, 0, 0.6),
+        -3px -3px 8px rgba(255, 255, 255, 0.03),
+        0 0 14px rgba(139, 92, 246, 0.15);
+}
+
+.iq--open {
+    box-shadow:
+        inset 4px 4px 10px rgba(0, 0, 0, 0.45),
+        inset -2px -2px 6px rgba(255, 255, 255, 0.02),
+        0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.iq-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-body);
+    transition: background 150ms ease;
+}
+
+.iq-toggle:hover {
+    background: rgba(139, 92, 246, 0.05);
+}
+
+.iq-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(139, 92, 246, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-violet);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: all 200ms ease;
+    box-shadow:
+        3px 3px 7px rgba(0,0,0,0.4),
+        -2px -2px 5px rgba(255,255,255,0.02);
+}
+
+.iq--open .iq-icon {
+    background: rgba(139, 92, 246, 0.25);
+    box-shadow:
+        inset 2px 2px 5px rgba(0,0,0,0.4),
+        inset -1px -1px 3px rgba(255,255,255,0.02);
+    color: #c4b5fd;
+}
+
+.iq-question {
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+    flex: 1;
+}
+
+.iq--open .iq-question {
+    color: #c4b5fd;
+}
+
+.iq-answer {
+    padding: 0 20px 20px 62px;
+}
+
+.iq-answer p {
+    font-size: 0.875rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    margin: 0;
+    padding-top: 12px;
+    border-top: 1px solid rgba(139, 92, 246, 0.12);
+    word-break: break-word;
+}
