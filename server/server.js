@@ -21,8 +21,9 @@ const allowedOrigins = [
   'http://127.0.0.1:59432',
   'http://localhost:59432',
   'http://localhost:8000',
-  'http://127.0.0.1:8000'
-];
+  'http://127.0.0.1:8000',
+  process.env.CLIENT_URL // Production frontend URL from environment variable
+].filter(Boolean); // Remove undefined values
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -39,10 +40,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Proxy Python Studio API to FastAPI backend
+const pythonStudioUrl = process.env.PYTHON_STUDIO_URL || 'https://tech-in-my-style-python-studio.onrender.com';
 app.use('/api/python-studio', createProxyMiddleware({
-  target: 'http://localhost:8000',
+  target: pythonStudioUrl,
   changeOrigin: true,
   pathRewrite: { '^/api/python-studio': '' },
+  onProxyReq: (proxyReq, req, res) => {
+    console.log(`[Proxy] ${req.method} ${req.path} -> ${pythonStudioUrl}${req.path}`);
+  },
+  onError: (err, req, res) => {
+    console.error('[Proxy Error]', err.message);
+    res.status(500).json({ 
+      error: 'Python Studio service unavailable',
+      message: err.message 
+    });
+  }
 }));
 
 // Routes
