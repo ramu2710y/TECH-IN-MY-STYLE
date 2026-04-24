@@ -159,7 +159,7 @@ const features = [
 const stats = [
   { icon: 'bi bi-braces', value: '100+', label: 'CSS Properties' },
   { icon: 'bi bi-grid-fill', value: '12+', label: 'Categories' },
-  { icon: 'bi bi-play-btn-fill', value: '3', label: 'Live Demos' },
+  { icon: 'bi bi-terminal-fill', value: '1', label: 'Live Playground' },
   { icon: 'bi bi-gift-fill', value: '100%', label: 'Free Forever' },
 ]
 
@@ -334,7 +334,7 @@ export default function Home() {
                   <i className="bi bi-check-circle-fill" />No signup needed
                 </span>
                 <span className="css-hero__trust-item">
-                  <i className="bi bi-check-circle-fill" />Live interactive demos
+                  <i className="bi bi-check-circle-fill" />No Subscriptions
                 </span>
               </div>
             </div>
@@ -430,102 +430,6 @@ export default function Home() {
                   <p className="css-feature-card__desc">{f.description}</p>
                   <span className="css-feature-card__cta">
                     Explore <i className="bi bi-arrow-right" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ══════════════════ LIVE DEMOS STRIP ══════════════════ */}
-        <section className="css-demos-section" aria-labelledby="demos-heading">
-          <div className="css-container">
-            <div className="css-section-header">
-              <div className="css-section-pill">
-                <i className="bi bi-play-circle-fill" />
-                Interactive
-              </div>
-              <h2 className="css-section-title" id="demos-heading">
-                3 Fully Interactive CSS Demos
-              </h2>
-              <p className="css-section-desc">
-                Click any demo card to open an interactive playground where you can tweak properties
-                and see the live result in real-time — no coding required.
-              </p>
-            </div>
-
-            <div className="css-demos-grid">
-              {[
-                {
-                  to: '/css-course/property/flexbox',
-                  icon: 'bi bi-layout-wtf',
-                  title: 'Flexbox',
-                  desc: 'Toggle flex-direction, justify-content, align-items, flex-wrap, and gap with live visual feedback.',
-                  color: '#264de4',
-                  demo: 'flex',
-                  badge: 'LIVE DEMO',
-                },
-                {
-                  to: '/css-course/property/grid',
-                  icon: 'bi bi-grid-3x3-gap-fill',
-                  title: 'CSS Grid',
-                  desc: 'Control grid-template-columns, rows, gap, and placement with an interactive grid builder.',
-                  color: '#2965f1',
-                  demo: 'grid',
-                  badge: 'LIVE DEMO',
-                },
-                {
-                  to: '/css-course/property/animation',
-                  icon: 'bi bi-play-circle-fill',
-                  title: 'CSS Animation',
-                  desc: 'Pick from preset animations and tweak duration, timing, delay, and iteration count live.',
-                  color: '#1b35b5',
-                  demo: 'animation',
-                  badge: 'LIVE DEMO',
-                },
-              ].map((demo, i) => (
-                <Link
-                  key={demo.title}
-                  to={demo.to}
-                  className="css-demo-card"
-                  style={{ '--d-color': demo.color, animationDelay: `${i * 0.15}s` }}
-                  aria-label={`Open ${demo.title} live demo`}
-                >
-                  {/* Live badge */}
-                  <div className="css-demo-card__badge">
-                    <span className="css-demo-card__dot" aria-hidden="true" />
-                    {demo.badge}
-                  </div>
-
-                  {/* Icon */}
-                  <div className="css-demo-card__icon">
-                    <i className={demo.icon} aria-hidden="true" />
-                  </div>
-
-                  {/* Mini visual preview */}
-                  <div className="css-demo-card__preview" aria-hidden="true">
-                    {demo.demo === 'flex' && (
-                      <div className="css-mini-flex">
-                        {[1, 2, 3].map(n => <div key={n} className="css-mini-flex__item">{n}</div>)}
-                      </div>
-                    )}
-                    {demo.demo === 'grid' && (
-                      <div className="css-mini-grid">
-                        {[1, 2, 3, 4, 5, 6].map(n => <div key={n} className="css-mini-grid__item" />)}
-                      </div>
-                    )}
-                    {demo.demo === 'animation' && (
-                      <div className="css-mini-anim">
-                        <div className="css-mini-anim__ball" />
-                      </div>
-                    )}
-                  </div>
-
-                  <h3 className="css-demo-card__title">{demo.title}</h3>
-                  <p className="css-demo-card__desc">{demo.desc}</p>
-
-                  <span className="css-demo-card__cta">
-                    Open Demo <i className="bi bi-arrow-right" />
                   </span>
                 </Link>
               ))}
