@@ -637,56 +637,45 @@ html.dark .html-course-root .navbar__mobile-link.active i {
    ============================================================ */
 @media (max-width: 900px) {
   /* Show hamburger */
-  .navbar__hamburger {
+  .html-course-root .navbar__hamburger {
     display: flex;
   }
 
   /* Show mobile menu container */
-  .navbar__mobile-menu {
+  .html-course-root .navbar__mobile-menu {
     display: flex;
   }
 
   /* Show overlay when menu open */
-  .navbar__overlay {
+  .html-course-root .navbar__overlay {
     display: block;
   }
 
   /* Hide desktop nav links */
-  .navbar__nav {
+  .html-course-root .navbar__nav {
     display: none;
   }
 
   /* Tighten inner padding */
-  .navbar__inner {
-    padding: 0 4%;
-    height: 64px;
-  }
-
-  /* Slightly smaller logo */
-  .navbar__logo {
-    font-size: 1.3rem;
-  }
-
-  .navbar__logo-html {
-    font-size: 1.35rem;
+  .html-course-root .navbar__inner {
+    padding: 0 1.25rem;
   }
 }
 
 @media (max-width: 480px) {
-  .navbar__inner {
+  .html-course-root .navbar__inner {
     padding: 0 1rem;
-    height: 60px;
   }
 
-  .navbar__logo {
+  .html-course-root .navbar__logo {
     font-size: 1.15rem;
   }
 
-  .navbar__logo-html {
+  .html-course-root .navbar__logo-html {
     font-size: 1.2rem;
   }
 
-  .navbar__logo-tag {
+  .html-course-root .navbar__logo-tag {
     font-size: 1rem;
   }
 }
