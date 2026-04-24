@@ -59,6 +59,193 @@ const Courses = () => {
     };
   }, []);
 
+  const courseCards = [
+    // Web Development Courses
+    {
+      id: 1,
+      name: 'HTML',
+      fullName: 'HTML in My Style',
+      icon: 'fab fa-html5',
+      description: 'Master HTML fundamentals and web structure',
+      route: '/html-course',
+      gradient: 'linear-gradient(135deg, #e34c26, #f06529)'
+    },
+    {
+      id: 2,
+      name: 'CSS',
+      fullName: 'CSS in My Style',
+      icon: 'fab fa-css3-alt',
+      description: 'Learn CSS styling and responsive design',
+      route: '/css-course',
+      gradient: 'linear-gradient(135deg, #264de4, #2965f1)'
+    },
+    {
+      id: 3,
+      name: 'JavaScript Basic',
+      fullName: 'JavaScript Basic in My Style',
+      icon: 'fab fa-js',
+      description: 'JavaScript fundamentals and DOM manipulation',
+      route: '/js-basic-course',
+      gradient: 'linear-gradient(135deg, #f0db4f, #f7df1e)'
+    },
+    {
+      id: 4,
+      name: 'JavaScript Intermediate',
+      fullName: 'JavaScript Intermediate in My Style',
+      icon: 'fab fa-js',
+      description: 'Advance your JavaScript skills',
+      route: '/js-int-course',
+      gradient: 'linear-gradient(135deg, #f0db4f, #e8d44d)'
+    },
+    {
+      id: 5,
+      name: 'JavaScript Advanced',
+      fullName: 'JavaScript Advanced in My Style',
+      icon: 'fab fa-js',
+      description: 'Master Enterprise-Level JavaScript',
+      route: '/js-adv-course',
+      gradient: 'linear-gradient(135deg, #e8d44d, #d4c23e)'
+    },
+    // Programming Languages
+    {
+      id: 6,
+      name: 'Python',
+      fullName: 'Python in My Style',
+      icon: 'fab fa-python',
+      description: 'Explore Python for web and data science',
+      route: '/python-course',
+      gradient: 'linear-gradient(135deg, #3776ab, #ffd43b)'
+    },
+    {
+      id: 7,
+      name: 'Java',
+      fullName: 'Java in My Style',
+      icon: 'fab fa-java',
+      description: 'Learn Java for enterprise applications',
+      route: '/java-course',
+      gradient: 'linear-gradient(135deg, #5382a1, #f89820)'
+    },
+    {
+      id: 8,
+      name: 'C',
+      fullName: 'C in My Style',
+      icon: 'fas fa-copyright',
+      description: 'Master C programming fundamentals',
+      route: '/c-course',
+      gradient: 'linear-gradient(135deg, #283593, #5c6bc0)'
+    },
+    {
+      id: 9,
+      name: 'DSA',
+      fullName: 'DSA in My Style',
+      icon: 'fas fa-sitemap',
+      description: 'Master Data Structures and Algorithms',
+      route: '/dsa-course',
+      gradient: 'linear-gradient(135deg, #00897b, #26a69a)'
+    },
+    {
+      id: 10,
+      name: 'OS',
+      fullName: 'OS in My Style',
+      icon: 'fas fa-microchip',
+      description: 'Master Operating Systems concepts',
+      route: '/os-course',
+      gradient: 'linear-gradient(135deg, #6a1b9a, #8e24aa)'
+    },
+    {
+      id: 11,
+      name: 'System Design',
+      fullName: 'System Design in My Style',
+      icon: 'fas fa-server',
+      description: 'Master system design and architecture',
+      route: '/system-design-course',
+      gradient: 'linear-gradient(135deg, #d32f2f, #f44336)'
+    },
+    {
+      id: 12,
+      name: 'Full Stack Python',
+      fullName: 'Full Stack Python in My Style',
+      icon: 'fab fa-python',
+      description: 'Build production-ready backend applications',
+      route: '/fullstack-python-course',
+      gradient: 'linear-gradient(135deg, #1565c0, #42a5f5)'
+    },
+    {
+      id: 13,
+      name: 'Full Stack Java',
+      fullName: 'Full Stack Java in My Style',
+      icon: 'fab fa-java',
+      description: 'Build scalable enterprise applications',
+      route: '/fullstack-java-platform-course',
+      gradient: 'linear-gradient(135deg, #e65100, #ff6f00)'
+    },
+    // AI & Machine Learning
+    {
+      id: 15,
+      name: 'AI',
+      fullName: 'AI in My Style',
+      icon: 'fas fa-robot',
+      description: 'Dive into Artificial Intelligence',
+      route: '/ai-course',
+      gradient: 'linear-gradient(135deg, #7b1fa2, #9c27b0)'
+    },
+    {
+      id: 16,
+      name: 'ML',
+      fullName: 'ML in My Style',
+      icon: 'fas fa-brain',
+      description: 'Learn Machine Learning techniques',
+      route: '/ml-course',
+      gradient: 'linear-gradient(135deg, #c2185b, #e91e63)'
+    },
+    {
+      id: 17,
+      name: 'DL',
+      fullName: 'DL in My Style',
+      icon: 'fas fa-network-wired',
+      description: 'Master Deep Learning and neural networks',
+      route: '/dl-course',
+      gradient: 'linear-gradient(135deg, #ad1457, #d81b60)'
+    },
+    {
+      id: 18,
+      name: 'NLP',
+      fullName: 'NLP in My Style',
+      icon: 'fas fa-language',
+      description: 'Master Natural Language Processing',
+      route: '/nlp-course',
+      gradient: 'linear-gradient(135deg, #6a1b9a, #ab47bc)'
+    },
+    {
+      id: 19,
+      name: 'Gen AI',
+      fullName: 'Gen AI in My Style',
+      icon: 'fas fa-wand-magic-sparkles',
+      description: 'Master Generative AI and LLMs',
+      route: '/genai-course',
+      gradient: 'linear-gradient(135deg, #4a148c, #7b1fa2)'
+    },
+    // Data Science
+    {
+      id: 20,
+      name: 'DSC',
+      fullName: 'DSC in My Style',
+      icon: 'fas fa-chart-bar',
+      description: 'Gain expertise in Data Science',
+      route: '/dsc-course',
+      gradient: 'linear-gradient(135deg, #00695c, #00897b)'
+    },
+    {
+      id: 21,
+      name: 'Database',
+      fullName: 'Database in My Style',
+      icon: 'fas fa-database',
+      description: 'Master SQL and MongoDB',
+      route: '/database-course',
+      gradient: 'linear-gradient(135deg, #01579b, #0277bd)'
+    }
+  ];
+
   const categories = [
     {
       id: 'web',
@@ -293,6 +480,22 @@ const Courses = () => {
     ? allCourses 
     : allCourses.filter(course => course.category === selectedCategory);
 
+  const scrollToCourseCard = (courseName) => {
+    // Find the course card in the All Courses section
+    const courseCards = document.querySelectorAll('.all-courses .course-card');
+    courseCards.forEach((card) => {
+      const cardTitle = card.querySelector('h3');
+      if (cardTitle && cardTitle.textContent.includes(courseName)) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Add a highlight effect
+        card.style.animation = 'highlight-pulse 1s ease';
+        setTimeout(() => {
+          card.style.animation = '';
+        }, 1000);
+      }
+    });
+  };
+
   const handleCourseClick = (course) => {
     if (course.name === 'HTML in My Style') {
       navigate('/html-course');
@@ -354,24 +557,109 @@ const Courses = () => {
         </div>
       </section>
 
-      {/* Course Categories */}
+      {/* Course Categories - Individual Course Cards */}
       <section className="course-categories">
         <div className="container">
           <h2 data-aos="fade-up">Course Categories</h2>
-          <div className="categories-grid">
-            {categories.map((category, index) => (
-              <div 
-                className="category-card" 
-                key={category.id}
-                data-aos="fade-up" 
-                data-aos-delay={index * 100}
-                onClick={() => setSelectedCategory(category.id)}
-              >
-                <i className={category.icon}></i>
-                <h3>{category.name}</h3>
-                <p>{category.description}</p>
-              </div>
-            ))}
+          
+          {/* Web Development Courses */}
+          <h3 className="category-title" data-aos="fade-up">Web Development</h3>
+          <div className="courses-cards-grid" data-aos="fade-up">
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('HTML')}>
+              <i className="fab fa-html5"></i>
+              <h4>HTML</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('CSS')}>
+              <i className="fab fa-css3-alt"></i>
+              <h4>CSS</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('JavaScript in My Style - Basic')}>
+              <i className="fab fa-js"></i>
+              <h4>JavaScript Basic</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('JavaScript in My Style - Intermediate')}>
+              <i className="fab fa-js"></i>
+              <h4>JavaScript Intermediate</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('JavaScript in My Style - Advanced')}>
+              <i className="fab fa-js"></i>
+              <h4>JavaScript Advanced</h4>
+            </div>
+          </div>
+
+          {/* Programming Languages */}
+          <h3 className="category-title" data-aos="fade-up">Programming Languages</h3>
+          <div className="courses-cards-grid" data-aos="fade-up">
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('Python')}>
+              <i className="fab fa-python"></i>
+              <h4>Python</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('Java')}>
+              <i className="fab fa-java"></i>
+              <h4>Java</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('C in My Style')}>
+              <i className="fas fa-copyright"></i>
+              <h4>C</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('DSA')}>
+              <i className="fas fa-sitemap"></i>
+              <h4>DSA</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('OS')}>
+              <i className="fas fa-microchip"></i>
+              <h4>OS</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('System Design')}>
+              <i className="fas fa-server"></i>
+              <h4>System Design</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('Full Stack Python')}>
+              <i className="fab fa-python"></i>
+              <h4>Full Stack Python</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('Full Stack Java')}>
+              <i className="fab fa-java"></i>
+              <h4>Full Stack Java</h4>
+            </div>
+          </div>
+
+          {/* AI & Machine Learning */}
+          <h3 className="category-title" data-aos="fade-up">AI & Machine Learning</h3>
+          <div className="courses-cards-grid" data-aos="fade-up">
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('AI')}>
+              <i className="fas fa-robot"></i>
+              <h4>AI</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('ML')}>
+              <i className="fas fa-brain"></i>
+              <h4>ML</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('DL')}>
+              <i className="fas fa-network-wired"></i>
+              <h4>DL</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('NLP')}>
+              <i className="fas fa-language"></i>
+              <h4>NLP</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('Gen AI')}>
+              <i className="fas fa-wand-magic-sparkles"></i>
+              <h4>Gen AI</h4>
+            </div>
+          </div>
+
+          {/* Data Science */}
+          <h3 className="category-title" data-aos="fade-up">Data Science</h3>
+          <div className="courses-cards-grid" data-aos="fade-up">
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('DSC')}>
+              <i className="fas fa-chart-bar"></i>
+              <h4>DSC</h4>
+            </div>
+            <div className="course-mini-card" onClick={() => scrollToCourseCard('Database')}>
+              <i className="fas fa-database"></i>
+              <h4>Database</h4>
+            </div>
           </div>
         </div>
       </section>
@@ -407,15 +695,6 @@ const Courses = () => {
                 <div className="course-content">
                   <h3>{course.name}</h3>
                   <p>{course.description}</p>
-                  <div className="course-meta">
-                    <span className="course-level">{course.level}</span>
-                    <span className="course-duration">
-                      <i className="fas fa-clock"></i> {course.duration}
-                    </span>
-                    <span className="course-lessons">
-                      <i className="fas fa-book"></i> {course.lessons} lessons
-                    </span>
-                  </div>
                   <button 
                     className="btn primary course-btn"
                     onClick={(e) => { e.stopPropagation(); handleCourseClick(course); }}

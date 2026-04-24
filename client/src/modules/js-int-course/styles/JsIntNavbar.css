@@ -1,11 +1,11 @@
-/* ======================================================================
-   JsIntNavbar.css — JS Intermediate In My Style
+﻿/* ======================================================================
+   JsIntNavbar.css â€” JS Intermediate In My Style
    Theme: Violet Primary (#8b5cf6) + Black (#1A1A1A)
    Dark mode: html.dark class on <html> root element
 ====================================================================== */
 
-/* ── Base JsIntNavbar ────────────────────────────────────────────────────── */
-.navbar {
+/* â”€â”€ Base JsIntNavbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,22 +22,22 @@
     box-shadow 0.3s ease;
 }
 
-html.dark .navbar {
+html.dark .js-int-course-root .navbar {
   background: rgba(13, 13, 13, 0.92);
   border-bottom-color: rgba(139, 92, 246, 0.15);
 }
 
 /* Shadow that appears after scrolling 10 px */
-.navbar--scrolled {
+.js-int-course-root .navbar--scrolled {
   box-shadow: 0 4px 24px rgba(26, 26, 26, 0.12);
 }
 
-html.dark .navbar--scrolled {
+html.dark .js-int-course-root .navbar--scrolled {
   box-shadow: 0 4px 28px rgba(0, 0, 0, 0.55);
 }
 
-/* ── Scroll Progress Bar ────────────────────────────────────────────── */
-.navbar__progress {
+/* â”€â”€ Scroll Progress Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__progress {
   position: absolute;
   top: 0;
   left: 0;
@@ -51,8 +51,8 @@ html.dark .navbar--scrolled {
   will-change: width;
 }
 
-/* ── Inner Container ────────────────────────────────────────────────── */
-.navbar__inner {
+/* â”€â”€ Inner Container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,10 +64,10 @@ html.dark .navbar--scrolled {
   gap: 12px;
 }
 
-/* ══════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    LOGO
-══════════════════════════════════════════════════════════════════════ */
-.navbar__logo {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .navbar__logo {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -77,12 +77,12 @@ html.dark .navbar--scrolled {
   outline-offset: 4px;
 }
 
-.navbar__logo:hover {
+.js-int-course-root .navbar__logo:hover {
   opacity: 0.82;
 }
 
 /* Yellow badge square */
-.navbar__logo-badge {
+.js-int-course-root .navbar__logo-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -95,13 +95,13 @@ html.dark .navbar--scrolled {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.navbar__logo:hover .navbar__logo-badge {
+.js-int-course-root .navbar__logo:hover .navbar__logo-badge {
   box-shadow: 0 4px 18px rgba(139, 92, 246, 0.60);
   transform: translateY(-1px) rotate(-1deg);
 }
 
 /* <JS/> monospace text inside badge */
-.navbar__logo-js {
+.js-int-course-root .navbar__logo-js {
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
   font-size: 0.675rem;
   font-weight: 700;
@@ -113,14 +113,14 @@ html.dark .navbar--scrolled {
 }
 
 /* Text block beside badge */
-.navbar__logo-text {
+.js-int-course-root .navbar__logo-text {
   display: flex;
   flex-direction: column;
   gap: 1px;
   line-height: 1;
 }
 
-.navbar__logo-int {
+.js-int-course-root .navbar__logo-int {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 1.05rem;
   font-weight: 800;
@@ -129,11 +129,11 @@ html.dark .navbar--scrolled {
   line-height: 1.1;
 }
 
-html.dark .navbar__logo-int {
+html.dark .js-int-course-root .navbar__logo-int {
   color: #f3f0fa;
 }
 
-.navbar__logo-sub {
+.js-int-course-root .navbar__logo-sub {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 0.5rem;
   font-weight: 600;
@@ -143,14 +143,14 @@ html.dark .navbar__logo-int {
   line-height: 1;
 }
 
-html.dark .navbar__logo-sub {
+html.dark .js-int-course-root .navbar__logo-sub {
   color: #888866;
 }
 
-/* ══════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DESKTOP NAVIGATION
-══════════════════════════════════════════════════════════════════════ */
-.navbar__nav {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .navbar__nav {
   display: flex;
   align-items: center;
   list-style: none;
@@ -161,7 +161,7 @@ html.dark .navbar__logo-sub {
   justify-content: center;
 }
 
-.navbar__nav-link {
+.js-int-course-root .navbar__nav-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -181,70 +181,70 @@ html.dark .navbar__logo-sub {
   outline-offset: 2px;
 }
 
-html.dark .navbar__nav-link {
+html.dark .js-int-course-root .navbar__nav-link {
   color: #CCCCAA;
 }
 
-.navbar__nav-link i {
+.js-int-course-root .navbar__nav-link i {
   font-size: 0.95rem;
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }
 
-.navbar__nav-link:hover {
+.js-int-course-root .navbar__nav-link:hover {
   background: rgba(139, 92, 246, 0.16);
   color: #1A1A1A;
 }
 
-html.dark .navbar__nav-link:hover {
+html.dark .js-int-course-root .navbar__nav-link:hover {
   background: rgba(139, 92, 246, 0.10);
   color: #8b5cf6;
 }
 
-.navbar__nav-link:hover i {
+.js-int-course-root .navbar__nav-link:hover i {
   transform: translateY(-1px);
 }
 
 /* Active state */
-.navbar__nav-link--active {
+.js-int-course-root .navbar__nav-link--active {
   background: #8b5cf6;
   color: #1A1A1A;
   font-weight: 700;
   box-shadow: 0 2px 10px rgba(139, 92, 246, 0.38);
 }
 
-.navbar__nav-link--active:hover {
+.js-int-course-root .navbar__nav-link--active:hover {
   background: #F0D800;
   color: #1A1A1A;
 }
 
-html.dark .navbar__nav-link--active {
+html.dark .js-int-course-root .navbar__nav-link--active {
   background: #8b5cf6;
   color: #1A1A1A;
   box-shadow: 0 2px 12px rgba(139, 92, 246, 0.28);
 }
 
-html.dark .navbar__nav-link--active:hover {
+html.dark .js-int-course-root .navbar__nav-link--active:hover {
   background: #F0D800;
   color: #1A1A1A;
 }
 
-.navbar__nav-link--active i {
+.js-int-course-root .navbar__nav-link--active i {
   transform: none;
 }
 
-/* ══════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RIGHT CONTROLS  (theme toggle + hamburger)
-══════════════════════════════════════════════════════════════════════ */
-.navbar__controls {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .navbar__controls {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
 }
 
-/* ── Dark / Light theme button ──────────────────────────────────────── */
-.navbar__theme-btn {
+/* â”€â”€ Dark / Light theme button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__theme-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -266,12 +266,12 @@ html.dark .navbar__nav-link--active:hover {
   outline-offset: 3px;
 }
 
-html.dark .navbar__theme-btn {
+html.dark .js-int-course-root .navbar__theme-btn {
   border-color: rgba(255, 255, 255, 0.14);
   color: #CCCCAA;
 }
 
-.navbar__theme-btn:hover {
+.js-int-course-root .navbar__theme-btn:hover {
   background: #8b5cf6;
   color: #1A1A1A;
   border-color: #8b5cf6;
@@ -279,14 +279,14 @@ html.dark .navbar__theme-btn {
   box-shadow: 0 2px 10px rgba(139, 92, 246, 0.40);
 }
 
-html.dark .navbar__theme-btn:hover {
+html.dark .js-int-course-root .navbar__theme-btn:hover {
   background: #8b5cf6;
   color: #1A1A1A;
   border-color: #8b5cf6;
 }
 
-/* ── Mobile hamburger ───────────────────────────────────────────────── */
-.navbar__hamburger {
+/* â”€â”€ Mobile hamburger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__hamburger {
   display: none;
   align-items: center;
   justify-content: center;
@@ -306,37 +306,37 @@ html.dark .navbar__theme-btn:hover {
   outline-offset: 3px;
 }
 
-html.dark .navbar__hamburger {
+html.dark .js-int-course-root .navbar__hamburger {
   border-color: rgba(255, 255, 255, 0.14);
   color: #f3f0fa;
 }
 
-.navbar__hamburger:hover {
+.js-int-course-root .navbar__hamburger:hover {
   background: rgba(139, 92, 246, 0.15);
   border-color: rgba(139, 92, 246, 0.45);
   color: #1A1A1A;
 }
 
-html.dark .navbar__hamburger:hover {
+html.dark .js-int-course-root .navbar__hamburger:hover {
   background: rgba(139, 92, 246, 0.10);
   border-color: rgba(139, 92, 246, 0.28);
   color: #8b5cf6;
 }
 
-.navbar__hamburger--open {
+.js-int-course-root .navbar__hamburger--open {
   background: rgba(139, 92, 246, 0.15);
   border-color: rgba(139, 92, 246, 0.45);
 }
 
-html.dark .navbar__hamburger--open {
+html.dark .js-int-course-root .navbar__hamburger--open {
   background: rgba(139, 92, 246, 0.10);
   border-color: rgba(139, 92, 246, 0.28);
 }
 
-/* ══════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BACKDROP OVERLAY
-══════════════════════════════════════════════════════════════════════ */
-.navbar__overlay {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .navbar__overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0);
@@ -345,23 +345,23 @@ html.dark .navbar__hamburger--open {
   transition: background 0.3s ease;
 }
 
-.navbar__overlay--visible {
+.js-int-course-root .navbar__overlay--visible {
   background: rgba(0, 0, 0, 0.48);
   pointer-events: auto;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  animation: overlayFadeIn 0.25s ease forwards;
+  animation: jsintOverlayFadeIn 0.25s ease forwards;
 }
 
-@keyframes overlayFadeIn {
+@keyframes jsintOverlayFadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-/* ══════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    MOBILE SLIDE-IN DRAWER
-══════════════════════════════════════════════════════════════════════ */
-.navbar__mobile-menu {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .navbar__mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -380,22 +380,22 @@ html.dark .navbar__hamburger--open {
   will-change: transform;
 }
 
-html.dark .navbar__mobile-menu {
+html.dark .js-int-course-root .navbar__mobile-menu {
   background: #0D0D0D;
   border-left-color: rgba(139, 92, 246, 0.12);
 }
 
-.navbar__mobile-menu.open {
+.js-int-course-root .navbar__mobile-menu.open {
   transform: translateX(0);
   box-shadow: -8px 0 40px rgba(0, 0, 0, 0.22);
 }
 
-html.dark .navbar__mobile-menu.open {
+html.dark .js-int-course-root .navbar__mobile-menu.open {
   box-shadow: -8px 0 48px rgba(0, 0, 0, 0.65);
 }
 
-/* ── Drawer header ──────────────────────────────────────────────────── */
-.navbar__mobile-header {
+/* â”€â”€ Drawer header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__mobile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -404,20 +404,20 @@ html.dark .navbar__mobile-menu.open {
   flex-shrink: 0;
 }
 
-html.dark .navbar__mobile-header {
+html.dark .js-int-course-root .navbar__mobile-header {
   border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 
-.navbar__logo--mobile .navbar__logo-badge {
+.js-int-course-root .navbar__logo--mobile .navbar__logo-badge {
   width: 38px;
   height: 38px;
 }
 
-.navbar__logo--mobile .navbar__logo-js {
+.js-int-course-root .navbar__logo--mobile .navbar__logo-js {
   font-size: 0.625rem;
 }
 
-.navbar__mobile-close {
+.js-int-course-root .navbar__mobile-close {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -434,29 +434,29 @@ html.dark .navbar__mobile-header {
   outline-offset: 2px;
 }
 
-html.dark .navbar__mobile-close {
+html.dark .js-int-course-root .navbar__mobile-close {
   background: rgba(255, 255, 255, 0.06);
   color: #888866;
 }
 
-.navbar__mobile-close:hover {
+.js-int-course-root .navbar__mobile-close:hover {
   background: rgba(139, 92, 246, 0.18);
   color: #1A1A1A;
 }
 
-html.dark .navbar__mobile-close:hover {
+html.dark .js-int-course-root .navbar__mobile-close:hover {
   background: rgba(139, 92, 246, 0.12);
   color: #8b5cf6;
 }
 
-/* ── Drawer nav links ───────────────────────────────────────────────── */
-.navbar__mobile-nav {
+/* â”€â”€ Drawer nav links â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__mobile-nav {
   flex: 1;
   padding: 10px 10px 8px;
   overflow-y: auto;
 }
 
-.navbar__mobile-nav ul {
+.js-int-course-root .navbar__mobile-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -465,7 +465,7 @@ html.dark .navbar__mobile-close:hover {
   gap: 3px;
 }
 
-.navbar__mobile-link {
+.js-int-course-root .navbar__mobile-link {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -483,23 +483,23 @@ html.dark .navbar__mobile-close:hover {
   outline-offset: 2px;
 }
 
-html.dark .navbar__mobile-link {
+html.dark .js-int-course-root .navbar__mobile-link {
   color: #CCCCAA;
 }
 
-.navbar__mobile-link i:first-child {
+.js-int-course-root .navbar__mobile-link i:first-child {
   font-size: 1.05rem;
   width: 20px;
   text-align: center;
   flex-shrink: 0;
 }
 
-.navbar__mobile-link span {
+.js-int-course-root .navbar__mobile-link span {
   flex: 1;
 }
 
 /* Active-check icon floated right */
-.navbar__mobile-active-check {
+.js-int-course-root .navbar__mobile-active-check {
   font-size: 0.8rem !important;
   width: auto !important;
   color: #1A1A1A;
@@ -507,42 +507,42 @@ html.dark .navbar__mobile-link {
   flex-shrink: 0;
 }
 
-.navbar__mobile-link:hover {
+.js-int-course-root .navbar__mobile-link:hover {
   background: rgba(139, 92, 246, 0.12);
   color: #1A1A1A;
   transform: translateX(3px);
 }
 
-html.dark .navbar__mobile-link:hover {
+html.dark .js-int-course-root .navbar__mobile-link:hover {
   background: rgba(139, 92, 246, 0.08);
   color: #8b5cf6;
 }
 
-.navbar__mobile-link--active {
+.js-int-course-root .navbar__mobile-link--active {
   background: #8b5cf6;
   color: #1A1A1A;
   font-weight: 700;
   box-shadow: 0 2px 10px rgba(139, 92, 246, 0.28);
 }
 
-.navbar__mobile-link--active:hover {
+.js-int-course-root .navbar__mobile-link--active:hover {
   background: #F0D800;
   color: #1A1A1A;
   transform: none;
 }
 
-html.dark .navbar__mobile-link--active {
+html.dark .js-int-course-root .navbar__mobile-link--active {
   background: #8b5cf6;
   color: #1A1A1A;
   box-shadow: 0 2px 10px rgba(139, 92, 246, 0.20);
 }
 
-html.dark .navbar__mobile-link--active .navbar__mobile-active-check {
+html.dark .js-int-course-root .navbar__mobile-link--active .navbar__mobile-active-check {
   color: #1A1A1A;
 }
 
-/* ── Dark mode toggle section ───────────────────────────────────────── */
-.navbar__mobile-theme {
+/* â”€â”€ Dark mode toggle section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__mobile-theme {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -552,11 +552,11 @@ html.dark .navbar__mobile-link--active .navbar__mobile-active-check {
   flex-shrink: 0;
 }
 
-html.dark .navbar__mobile-theme {
+html.dark .js-int-course-root .navbar__mobile-theme {
   border-color: rgba(255, 255, 255, 0.05);
 }
 
-.navbar__mobile-theme-label {
+.js-int-course-root .navbar__mobile-theme-label {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -567,17 +567,17 @@ html.dark .navbar__mobile-theme {
   user-select: none;
 }
 
-html.dark .navbar__mobile-theme-label {
+html.dark .js-int-course-root .navbar__mobile-theme-label {
   color: #CCCCAA;
 }
 
-.navbar__mobile-theme-label i {
+.js-int-course-root .navbar__mobile-theme-label i {
   font-size: 1rem;
   color: #8b5cf6;
 }
 
-/* ── Custom toggle switch ───────────────────────────────────────────── */
-.navbar__toggle-switch {
+/* â”€â”€ Custom toggle switch â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__toggle-switch {
   position: relative;
   display: inline-block;
   width: 48px;
@@ -587,7 +587,7 @@ html.dark .navbar__mobile-theme-label {
   outline-offset: 3px;
 }
 
-.navbar__toggle-switch input {
+.js-int-course-root .navbar__toggle-switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -595,7 +595,7 @@ html.dark .navbar__mobile-theme-label {
   pointer-events: none;
 }
 
-.navbar__toggle-slider {
+.js-int-course-root .navbar__toggle-slider {
   position: absolute;
   inset: 0;
   background: rgba(26, 26, 26, 0.14);
@@ -604,12 +604,12 @@ html.dark .navbar__mobile-theme-label {
   border: 1.5px solid rgba(26, 26, 26, 0.10);
 }
 
-html.dark .navbar__toggle-slider {
+html.dark .js-int-course-root .navbar__toggle-slider {
   background: rgba(255, 255, 255, 0.10);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-.navbar__toggle-slider::before {
+.js-int-course-root .navbar__toggle-slider::before {
   content: '';
   position: absolute;
   width: 19px;
@@ -624,28 +624,28 @@ html.dark .navbar__toggle-slider {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
 }
 
-.navbar__toggle-switch input:checked + .navbar__toggle-slider {
+.js-int-course-root .navbar__toggle-switch input:checked + .navbar__toggle-slider {
   background: #8b5cf6;
   border-color: #E8CF00;
 }
 
-.navbar__toggle-switch input:checked + .navbar__toggle-slider::before {
+.js-int-course-root .navbar__toggle-switch input:checked + .navbar__toggle-slider::before {
   transform: translateX(22px) translateY(50%);
   background: #1A1A1A;
 }
 
-.navbar__toggle-switch:focus-within .navbar__toggle-slider {
+.js-int-course-root .navbar__toggle-switch:focus-within .navbar__toggle-slider {
   outline: 2px solid #8b5cf6;
   outline-offset: 2px;
 }
 
-/* ── Social icons row ───────────────────────────────────────────────── */
-.navbar__mobile-socials {
+/* â”€â”€ Social icons row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .navbar__mobile-socials {
   padding: 16px 20px 28px;
   flex-shrink: 0;
 }
 
-.navbar__mobile-socials-label {
+.js-int-course-root .navbar__mobile-socials-label {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
@@ -655,17 +655,17 @@ html.dark .navbar__toggle-slider {
   margin: 0 0 10px;
 }
 
-html.dark .navbar__mobile-socials-label {
+html.dark .js-int-course-root .navbar__mobile-socials-label {
   color: #555544;
 }
 
-.navbar__mobile-socials-row {
+.js-int-course-root .navbar__mobile-socials-row {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.navbar__social-btn {
+.js-int-course-root .navbar__social-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -684,18 +684,18 @@ html.dark .navbar__mobile-socials-label {
   outline-offset: 3px;
 }
 
-.navbar__social-btn:hover {
+.js-int-course-root .navbar__social-btn:hover {
   transform: translateY(-3px);
 }
 
 /* Instagram */
-.navbar__social-btn--instagram {
+.js-int-course-root .navbar__social-btn--instagram {
   background: rgba(228, 64, 95, 0.10);
   color: #e4405f;
   border-color: rgba(228, 64, 95, 0.20);
 }
 
-.navbar__social-btn--instagram:hover {
+.js-int-course-root .navbar__social-btn--instagram:hover {
   background: #e4405f;
   color: #fff;
   border-color: #e4405f;
@@ -703,13 +703,13 @@ html.dark .navbar__mobile-socials-label {
 }
 
 /* YouTube */
-.navbar__social-btn--youtube {
+.js-int-course-root .navbar__social-btn--youtube {
   background: rgba(255, 0, 0, 0.10);
   color: #ff0000;
   border-color: rgba(255, 0, 0, 0.20);
 }
 
-.navbar__social-btn--youtube:hover {
+.js-int-course-root .navbar__social-btn--youtube:hover {
   background: #ff0000;
   color: #fff;
   border-color: #ff0000;
@@ -717,24 +717,24 @@ html.dark .navbar__mobile-socials-label {
 }
 
 /* Telegram */
-.navbar__social-btn--telegram {
+.js-int-course-root .navbar__social-btn--telegram {
   background: rgba(0, 136, 204, 0.10);
   color: #0088cc;
   border-color: rgba(0, 136, 204, 0.20);
 }
 
-.navbar__social-btn--telegram:hover {
+.js-int-course-root .navbar__social-btn--telegram:hover {
   background: #0088cc;
   color: #fff;
   border-color: #0088cc;
   box-shadow: 0 4px 16px rgba(0, 136, 204, 0.38);
 }
 
-/* ══════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESPONSIVE BREAKPOINTS
-══════════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ── Hide desktop nav, show hamburger below 768px ─────────────────── */
+/* â”€â”€ Hide desktop nav, show hamburger below 768px â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .navbar__nav {
     display: none;
@@ -745,7 +745,7 @@ html.dark .navbar__mobile-socials-label {
   }
 }
 
-/* ── Hide hamburger on desktop, keep drawer off-screen ────────────── */
+/* â”€â”€ Hide hamburger on desktop, keep drawer off-screen â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (min-width: 769px) {
   .navbar__hamburger {
     display: none;
@@ -767,7 +767,7 @@ html.dark .navbar__mobile-socials-label {
   }
 }
 
-/* ── Tighten inner padding on small phones ────────────────────────── */
+/* â”€â”€ Tighten inner padding on small phones â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 480px) {
   .navbar__inner {
     padding: 0 14px;
@@ -784,7 +784,7 @@ html.dark .navbar__mobile-socials-label {
   }
 }
 
-/* ── Reduce motion for accessibility ─────────────────────────────── */
+/* â”€â”€ Reduce motion for accessibility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (prefers-reduced-motion: reduce) {
   .navbar,
   .navbar__progress,
@@ -802,3 +802,5 @@ html.dark .navbar__mobile-socials-label {
     animation: none !important;
   }
 }
+
+

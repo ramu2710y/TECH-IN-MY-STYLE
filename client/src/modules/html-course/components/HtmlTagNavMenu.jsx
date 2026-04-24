@@ -162,7 +162,7 @@ export default function HtmlTagNavMenu({ isOpen, onClose }) {
                 return (
                   <Link
                     key={tag}
-                    to={`/html-course/${tag}`}
+                    to={`/html-course/tag/${tag}`}
                     onClick={onClose}
                     className={`nav-tag-link${isActive ? " active-tag" : ""}`}
                   >

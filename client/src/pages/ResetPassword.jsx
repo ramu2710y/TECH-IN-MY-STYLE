@@ -17,34 +17,9 @@ const ResetPassword = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Custom cursor
-    const initCustomCursor = () => {
-      if (window.innerWidth <= 768) return;
-
-      const existingCursor = document.querySelector('.custom-cursor');
-      if (existingCursor) existingCursor.remove();
-
-      const cursor = document.createElement('div');
-      cursor.classList.add('custom-cursor');
-      
-      const cursorDot = document.createElement('div');
-      cursorDot.classList.add('cursor-dot');
-      
-      cursor.appendChild(cursorDot);
-      document.body.appendChild(cursor);
-      
-      document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        cursor.style.opacity = '1';
-      });
-    };
-
-    initCustomCursor();
-
+    // No custom cursor on auth pages
     return () => {
-      const cursor = document.querySelector('.custom-cursor');
-      if (cursor) cursor.remove();
+      // Cleanup if needed
     };
   }, []);
 

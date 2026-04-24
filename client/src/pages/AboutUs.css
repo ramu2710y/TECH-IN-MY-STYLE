@@ -1,5 +1,10 @@
 .about-page {
   min-height: 100vh;
+  cursor: none !important;
+}
+
+.about-page * {
+  cursor: none !important;
 }
 
 /* Hero Section */

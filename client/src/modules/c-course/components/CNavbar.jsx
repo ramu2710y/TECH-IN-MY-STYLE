@@ -39,6 +39,7 @@ export default function CNavbar() {
           <button className="c-nav-link" onClick={() => scrollTo('c-topics')}>Topics</button>
           <button className="c-nav-link" onClick={() => scrollTo('c-resources')}>Resources</button>
           <button className="c-nav-link" onClick={() => scrollTo('c-about')}>About</button>
+          <Link to="/courses" className="c-nav-link" style={{ textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.4)', borderRadius: '20px', padding: '0.3rem 0.9rem', fontSize: '0.85rem' }}>← Back</Link>
         </div>
         <div className={`c-nav-toggle${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(o => !o)}>
           <span className="c-bar"></span>

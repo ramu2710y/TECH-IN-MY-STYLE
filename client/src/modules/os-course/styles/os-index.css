@@ -1,5 +1,5 @@
-/* ===== Aurora Theme â€” Premium OS Course ===== */
-:root {
+﻿/* ===== Aurora Theme Ã¢â‚¬â€ Premium OS Course ===== */
+.os-course-root {
   /* Background Palette */
   --bg-deep: #0b0f1a;
   --bg-dark: #0f1525;
@@ -74,17 +74,17 @@
 
 
 
-a {
+.os-course-root a {
   color: var(--accent-violet);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-a:hover {
+.os-course-root a:hover {
   color: #c4b5fd;
 }
 
-code {
+.os-course-root code {
   font-family: var(--font-mono);
   background: rgba(139, 92, 246, 0.1);
   padding: 2px 8px;
@@ -94,12 +94,12 @@ code {
   border: 1px solid rgba(139, 92, 246, 0.15);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.os-course-root h1,
+.os-course-root h2,
+.os-course-root h3,
+.os-course-root h4,
+.os-course-root h5,
+.os-course-root h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.3;
@@ -107,76 +107,76 @@ h6 {
   letter-spacing: -0.02em;
 }
 
-h1 {
+.os-course-root h1 {
   font-size: 2.4rem;
   font-weight: 800;
 }
 
-h2 {
+.os-course-root h2 {
   font-size: 1.65rem;
   font-weight: 700;
 }
 
-h3 {
+.os-course-root h3 {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-p {
+.os-course-root p {
   color: var(--text-secondary);
   margin-bottom: 1rem;
 }
 
-ul,
-ol {
+.os-course-root ul,
+.os-course-root ol {
   padding-left: 1.5rem;
   color: var(--text-secondary);
 }
 
-li {
+.os-course-root li {
   margin-bottom: 0.35rem;
 }
 
-::selection {
+.os-course-root ::selection {
   background: rgba(139, 92, 246, 0.3);
   color: var(--text-primary);
 }
 
 /* ===== Scrollbar ===== */
-::-webkit-scrollbar {
+.os-course-root ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
-::-webkit-scrollbar-track {
+.os-course-root ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+.os-course-root ::-webkit-scrollbar-thumb {
   background: rgba(148, 163, 184, 0.15);
   border-radius: 3px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.os-course-root ::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.25);
 }
 
 /* ===== Utility Classes ===== */
-.glow-text {
+.os-course-root .glow-text {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.glow-text-green {
+.os-course-root .glow-text-green {
   background: var(--gradient-success);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.glass {
+.os-course-root .glass {
   background: var(--bg-glass);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -184,7 +184,7 @@ li {
   border-radius: var(--radius-lg);
 }
 
-.panel {
+.os-course-root .panel {
   background: var(--bg-glass);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -194,12 +194,12 @@ li {
   transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.panel:hover {
+.os-course-root .panel:hover {
   border-color: var(--border-hover);
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.06);
 }
 
-.card {
+.os-course-root .card {
   background: var(--bg-glass);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -209,19 +209,19 @@ li {
   transition: all var(--transition-normal);
 }
 
-.card:hover {
+.os-course-root .card:hover {
   border-color: var(--border-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(139, 92, 246, 0.05);
 }
 
 /* Gradient border utility */
-.gradient-border {
+.os-course-root .gradient-border {
   position: relative;
   border: none;
 }
 
-.gradient-border::before {
+.os-course-root .gradient-border::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -234,8 +234,8 @@ li {
   pointer-events: none;
 }
 
-/* Terminal header â€” for code blocks */
-.terminal-header {
+/* Terminal header Ã¢â‚¬â€ for code blocks */
+.os-course-root .terminal-header {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -248,31 +248,31 @@ li {
   color: var(--text-muted);
 }
 
-.terminal-dots {
+.os-course-root .terminal-dots {
   display: flex;
   gap: 6px;
 }
 
-.terminal-dots span {
+.os-course-root .terminal-dots span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
 }
 
-.terminal-dots span:nth-child(1) {
+.os-course-root .terminal-dots span:nth-child(1) {
   background: #ef4444;
 }
 
-.terminal-dots span:nth-child(2) {
+.os-course-root .terminal-dots span:nth-child(2) {
   background: #f59e0b;
 }
 
-.terminal-dots span:nth-child(3) {
+.os-course-root .terminal-dots span:nth-child(3) {
   background: #10b981;
 }
 
 /* ===== Keyframes ===== */
-@keyframes fadeIn {
+@keyframes osFadeIn {
   from {
     opacity: 0;
     transform: translateY(16px);
@@ -284,7 +284,7 @@ li {
   }
 }
 
-@keyframes slideUp {
+@keyframes osSlideUp {
   from {
     opacity: 0;
     transform: translateY(24px);
@@ -296,7 +296,7 @@ li {
   }
 }
 
-@keyframes scaleIn {
+@keyframes osScaleIn {
   from {
     opacity: 0;
     transform: scale(0.95);
@@ -308,7 +308,7 @@ li {
   }
 }
 
-@keyframes shimmer {
+@keyframes osShimmer {
   0% {
     background-position: -200% center;
   }
@@ -318,7 +318,7 @@ li {
   }
 }
 
-@keyframes float {
+@keyframes osFloat {
 
   0%,
   100% {
@@ -330,7 +330,7 @@ li {
   }
 }
 
-@keyframes pulseGlow {
+@keyframes osPulseGlow {
 
   0%,
   100% {
@@ -342,7 +342,7 @@ li {
   }
 }
 
-@keyframes gradientShift {
+@keyframes osGradientShift {
   0% {
     background-position: 0% 50%;
   }
@@ -356,33 +356,33 @@ li {
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.5s var(--ease-out) forwards;
+.os-course-root .animate-fade-in {
+  animation: osFadeIn 0.5s var(--ease-out) forwards;
 }
 
-.animate-slide-up {
-  animation: slideUp 0.6s var(--ease-out) forwards;
+.os-course-root .animate-slide-up {
+  animation: osSlideUp 0.6s var(--ease-out) forwards;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  :root {
+  .os-course-root {
     --sidebar-width: 0px;
   }
 
-  h1 {
+  .os-course-root h1 {
     font-size: 1.7rem;
   }
 
-  h2 {
+  .os-course-root h2 {
     font-size: 1.35rem;
   }
 }
 
 /* ===== Dark Neumorphism System ===== */
 
-/* Raised card — appears to float above the surface */
-.nm-raised {
+/* Raised card â€” appears to float above the surface */
+.os-course-root .nm-raised {
   background: #0f1525;
   border: none;
   border-radius: var(--radius-lg);
@@ -392,7 +392,7 @@ li {
   transition: box-shadow var(--transition-normal), transform var(--transition-normal);
 }
 
-.nm-raised:hover {
+.os-course-root .nm-raised:hover {
   box-shadow:
     8px 8px 20px rgba(0, 0, 0, 0.6),
     -4px -4px 12px rgba(255, 255, 255, 0.04),
@@ -400,8 +400,8 @@ li {
   transform: translateY(-2px);
 }
 
-/* Inset — pressed into the surface */
-.nm-inset {
+/* Inset â€” pressed into the surface */
+.os-course-root .nm-inset {
   background: #0a0e1a;
   border: none;
   border-radius: var(--radius-md);
@@ -410,8 +410,8 @@ li {
     inset -3px -3px 8px rgba(255, 255, 255, 0.025);
 }
 
-/* Flat — subtle depth without elevation */
-.nm-flat {
+/* Flat â€” subtle depth without elevation */
+.os-course-root .nm-flat {
   background: #0d1220;
   border: none;
   border-radius: var(--radius-md);
@@ -420,8 +420,8 @@ li {
     -2px -2px 6px rgba(255, 255, 255, 0.025);
 }
 
-/* Glow variant — raised + accent glow */
-.nm-glow {
+/* Glow variant â€” raised + accent glow */
+.os-course-root .nm-glow {
   background: #0f1525;
   border: none;
   border-radius: var(--radius-lg);
@@ -432,7 +432,7 @@ li {
   transition: box-shadow var(--transition-normal);
 }
 
-.nm-glow:hover {
+.os-course-root .nm-glow:hover {
   box-shadow:
     8px 8px 20px rgba(0, 0, 0, 0.6),
     -4px -4px 12px rgba(255, 255, 255, 0.04),
@@ -440,7 +440,7 @@ li {
 }
 
 /* Button neumorphic */
-.nm-btn {
+.os-course-root .nm-btn {
   background: #0f1525;
   border: none;
   border-radius: var(--radius-full);
@@ -453,7 +453,7 @@ li {
   font-family: var(--font-body);
 }
 
-.nm-btn:hover {
+.os-course-root .nm-btn:hover {
   box-shadow:
     5px 5px 12px rgba(0, 0, 0, 0.55),
     -3px -3px 8px rgba(255, 255, 255, 0.04),
@@ -461,7 +461,7 @@ li {
   color: var(--text-primary);
 }
 
-.nm-btn:active {
+.os-course-root .nm-btn:active {
   box-shadow:
     inset 3px 3px 8px rgba(0, 0, 0, 0.5),
     inset -2px -2px 6px rgba(255, 255, 255, 0.02);
@@ -505,3 +505,5 @@ li {
     0 0 20px rgba(139, 92, 246, 0.1);
   transform: translateY(-2px);
 }
+
+

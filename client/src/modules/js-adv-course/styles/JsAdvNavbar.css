@@ -1,11 +1,11 @@
-/* ======================================================================
-   JsAdvNavbar.css — JavaScript Advanced In My Style
-   Brand: JS Yellow (#06b6d4) · Deep Navy (var(--bg))
+﻿/* ======================================================================
+   JsAdvNavbar.css â€” JavaScript Advanced In My Style
+   Brand: JS Yellow (#06b6d4) Â· Deep Navy (var(--bg))
    Dark mode: toggled via  html.dark  class on <html>
    ====================================================================== */
 
-/* ── CSS Custom Properties ────────────────────────────────────────────── */
-:root {
+/* â”€â”€ CSS Custom Properties â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root {
   --nav-bg:              rgba(250, 250, 240, 0.82);
   --nav-border:          rgba(6, 182, 212, 0.28);
   --nav-link:            #2e2e50;
@@ -49,10 +49,10 @@ html.dark {
   --toggle-thumb:         #ffffff;
 }
 
-/* ════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    NAVBAR SHELL
-   ════════════════════════════════════════════════════════════════════════ */
-.navbar {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .navbar {
   position: sticky;
   top: 0;
   left: 0;
@@ -70,20 +70,20 @@ html.dark {
 }
 
 /* Shadow that kicks in after 8px of scroll */
-.navbar--scrolled {
+.js-adv-course-root .navbar--scrolled {
   box-shadow:
     0  4px 20px rgba(26, 26, 46, 0.10),
     0  1px  0   var(--nav-border);
 }
 
-html.dark .navbar--scrolled {
+html.dark .js-adv-course-root .navbar--scrolled {
   box-shadow:
     0  4px 28px rgba(0, 0, 0, 0.55),
     0  1px  0   rgba(6, 182, 212, 0.10);
 }
 
-/* ── Scroll Progress Bar ─────────────────────────────────────────────── */
-.navbar__progress {
+/* â”€â”€ Scroll Progress Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__progress {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,8 +103,8 @@ html.dark .navbar--scrolled {
   box-shadow: 0 0 10px rgba(6, 182, 212, 0.60);
 }
 
-/* ── Inner Container ─────────────────────────────────────────────────── */
-.navbar__inner {
+/* â”€â”€ Inner Container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,10 +116,10 @@ html.dark .navbar--scrolled {
   gap: 14px;
 }
 
-/* ════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    LOGO
-   ════════════════════════════════════════════════════════════════════════ */
-.navbar__logo {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .navbar__logo {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -129,18 +129,18 @@ html.dark .navbar--scrolled {
   transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.navbar__logo:hover {
+.js-adv-course-root .navbar__logo:hover {
   transform: scale(1.04);
   text-decoration: none;
 }
 
-.navbar__logo:focus-visible {
+.js-adv-course-root .navbar__logo:focus-visible {
   outline: 2px solid #06b6d4;
   border-radius: 8px;
 }
 
-/* </> tag prefix — monospace, color matches dark/light text */
-.navbar__logo-tag {
+/* </> tag prefix â€” monospace, color matches dark/light text */
+.js-adv-course-root .navbar__logo-tag {
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
   font-size: 1.05rem;
   font-weight: 700;
@@ -151,8 +151,8 @@ html.dark .navbar--scrolled {
   transition: color 0.25s ease;
 }
 
-/* JS.ADV brand text — always JS yellow */
-.navbar__logo-brand {
+/* JS.ADV brand text â€” always JS yellow */
+.js-adv-course-root .navbar__logo-brand {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 1.15rem;
   font-weight: 900;
@@ -164,23 +164,23 @@ html.dark .navbar--scrolled {
   transition: text-shadow 0.25s ease;
 }
 
-.navbar__logo:hover .navbar__logo-brand {
+.js-adv-course-root .navbar__logo:hover .navbar__logo-brand {
   text-shadow: 0 0 28px rgba(6, 182, 212, 0.55);
 }
 
 /* Mobile logo size adjustment */
-.navbar__logo--mobile .navbar__logo-tag {
+.js-adv-course-root .navbar__logo--mobile .navbar__logo-tag {
   font-size: 0.96rem;
 }
 
-.navbar__logo--mobile .navbar__logo-brand {
+.js-adv-course-root .navbar__logo--mobile .navbar__logo-brand {
   font-size: 1.05rem;
 }
 
-/* ════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DESKTOP NAV
-   ════════════════════════════════════════════════════════════════════════ */
-.navbar__nav {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .navbar__nav {
   display: flex;
   align-items: center;
   list-style: none;
@@ -191,7 +191,7 @@ html.dark .navbar--scrolled {
   justify-content: center;
 }
 
-.navbar__nav-link {
+.js-adv-course-root .navbar__nav-link {
   display: inline-flex;
   align-items: center;
   gap: 0.40rem;
@@ -211,39 +211,39 @@ html.dark .navbar--scrolled {
   outline-offset: 2px;
 }
 
-.navbar__nav-link i {
+.js-adv-course-root .navbar__nav-link i {
   font-size: 0.82rem;
   flex-shrink: 0;
   transition: transform 0.20s ease;
 }
 
-.navbar__nav-link:hover {
+.js-adv-course-root .navbar__nav-link:hover {
   background: var(--nav-link-hover-bg);
   color: var(--nav-link-hover-clr);
   text-decoration: none;
 }
 
-.navbar__nav-link:hover i {
+.js-adv-course-root .navbar__nav-link:hover i {
   transform: scale(1.18);
 }
 
-.navbar__nav-link:focus-visible {
+.js-adv-course-root .navbar__nav-link:focus-visible {
   outline: 2px solid #06b6d4;
   outline-offset: 2px;
 }
 
 /* Active state */
-.navbar__nav-link.active {
+.js-adv-course-root .navbar__nav-link.active {
   background: var(--nav-active-bg);
   color: var(--nav-active-clr);
   font-weight: 600;
 }
 
-.navbar__nav-link.active i {
+.js-adv-course-root .navbar__nav-link.active i {
   color: #06b6d4;
 }
 
-.navbar__nav-link.active::after {
+.js-adv-course-root .navbar__nav-link.active::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -255,18 +255,18 @@ html.dark .navbar--scrolled {
   border-radius: 2px 2px 0 0;
 }
 
-/* ════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RIGHT CONTROLS
-   ════════════════════════════════════════════════════════════════════════ */
-.navbar__controls {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .navbar__controls {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
 }
 
-/* ── Theme Toggle Button ──────────────────────────────────────────────── */
-.navbar__theme-btn {
+/* â”€â”€ Theme Toggle Button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__theme-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -288,7 +288,7 @@ html.dark .navbar--scrolled {
   line-height: 1;
 }
 
-.navbar__theme-btn:hover {
+.js-adv-course-root .navbar__theme-btn:hover {
   background: var(--nav-btn-hover-bg);
   color: #06b6d4;
   border-color: rgba(6, 182, 212, 0.45);
@@ -296,21 +296,21 @@ html.dark .navbar--scrolled {
   box-shadow: 0 0 14px rgba(6, 182, 212, 0.25);
 }
 
-.navbar__theme-btn:active {
+.js-adv-course-root .navbar__theme-btn:active {
   transform: rotate(15deg) scale(0.95);
 }
 
-.navbar__theme-btn:focus-visible {
+.js-adv-course-root .navbar__theme-btn:focus-visible {
   outline: 2px solid #06b6d4;
   outline-offset: 2px;
 }
 
-.navbar__theme-btn i {
+.js-adv-course-root .navbar__theme-btn i {
   transition: transform 0.30s ease;
 }
 
-/* ── Hamburger (mobile only) ─────────────────────────────────────────── */
-.navbar__hamburger {
+/* â”€â”€ Hamburger (mobile only) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__hamburger {
   display: none; /* hidden on desktop */
   align-items: center;
   justify-content: center;
@@ -331,27 +331,27 @@ html.dark .navbar--scrolled {
   line-height: 1;
 }
 
-.navbar__hamburger:hover {
+.js-adv-course-root .navbar__hamburger:hover {
   background: var(--nav-btn-hover-bg);
   color: #06b6d4;
   border-color: rgba(6, 182, 212, 0.40);
 }
 
-.navbar__hamburger--open {
+.js-adv-course-root .navbar__hamburger--open {
   background: rgba(6, 182, 212, 0.10);
   color: #06b6d4;
   border-color: rgba(6, 182, 212, 0.35);
 }
 
-.navbar__hamburger:focus-visible {
+.js-adv-course-root .navbar__hamburger:focus-visible {
   outline: 2px solid #06b6d4;
   outline-offset: 2px;
 }
 
-/* ════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    OVERLAY BACKDROP
-   ════════════════════════════════════════════════════════════════════════ */
-.navbar__overlay {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .navbar__overlay {
   position: fixed;
   inset: 0;
   z-index: 250;
@@ -363,15 +363,15 @@ html.dark .navbar--scrolled {
   transition: opacity 0.28s ease;
 }
 
-.navbar__overlay--visible {
+.js-adv-course-root .navbar__overlay--visible {
   opacity: 1;
   pointer-events: all;
 }
 
-/* ════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    MOBILE DRAWER
-   ════════════════════════════════════════════════════════════════════════ */
-.navbar__mobile-menu {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .navbar__mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -391,15 +391,15 @@ html.dark .navbar--scrolled {
   overscroll-behavior: contain;
 }
 
-.navbar__mobile-menu.open {
+.js-adv-course-root .navbar__mobile-menu.open {
   transform: translateX(0);
   box-shadow:
     -12px 0 48px rgba(0, 0, 0, 0.38),
     -1px  0  0   rgba(6, 182, 212, 0.10);
 }
 
-/* ── Drawer header ───────────────────────────────────────────────────── */
-.navbar__mobile-header {
+/* â”€â”€ Drawer header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__mobile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -410,8 +410,8 @@ html.dark .navbar--scrolled {
   background: inherit;
 }
 
-/* ── Mobile close button ─────────────────────────────────────────────── */
-.navbar__mobile-close {
+/* â”€â”€ Mobile close button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__mobile-close {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -431,39 +431,39 @@ html.dark .navbar--scrolled {
   line-height: 1;
 }
 
-.navbar__mobile-close:hover {
+.js-adv-course-root .navbar__mobile-close:hover {
   background: #06b6d4;
   color: #1a1a2e;
   border-color: #06b6d4;
   transform: rotate(90deg);
 }
 
-.navbar__mobile-close:focus-visible {
+.js-adv-course-root .navbar__mobile-close:focus-visible {
   outline: 2px solid #06b6d4;
 }
 
-/* ── Mobile nav links ────────────────────────────────────────────────── */
-.navbar__mobile-nav {
+/* â”€â”€ Mobile nav links â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__mobile-nav {
   padding: 10px 14px;
   flex: 1;
   overflow-y: auto;
   overscroll-behavior: contain;
 }
 
-.navbar__mobile-nav::-webkit-scrollbar {
+.js-adv-course-root .navbar__mobile-nav::-webkit-scrollbar {
   width: 3px;
 }
 
-.navbar__mobile-nav::-webkit-scrollbar-track {
+.js-adv-course-root .navbar__mobile-nav::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.navbar__mobile-nav::-webkit-scrollbar-thumb {
+.js-adv-course-root .navbar__mobile-nav::-webkit-scrollbar-thumb {
   background: rgba(6, 182, 212, 0.30);
   border-radius: 99px;
 }
 
-.navbar__mobile-nav ul {
+.js-adv-course-root .navbar__mobile-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -472,7 +472,7 @@ html.dark .navbar--scrolled {
   gap: 3px;
 }
 
-.navbar__mobile-link {
+.js-adv-course-root .navbar__mobile-link {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -489,24 +489,24 @@ html.dark .navbar--scrolled {
   position: relative;
 }
 
-.navbar__mobile-link:hover {
+.js-adv-course-root .navbar__mobile-link:hover {
   background: var(--nav-link-hover-bg);
   color: var(--nav-link-hover-clr);
   transform: translateX(3px);
   text-decoration: none;
 }
 
-.navbar__mobile-link--active {
+.js-adv-course-root .navbar__mobile-link--active {
   background: var(--nav-active-bg);
   color: var(--nav-active-clr);
   font-weight: 600;
 }
 
-.navbar__mobile-link--active:hover {
+.js-adv-course-root .navbar__mobile-link--active:hover {
   transform: translateX(3px);
 }
 
-.navbar__mobile-link-icon {
+.js-adv-course-root .navbar__mobile-link-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -520,30 +520,30 @@ html.dark .navbar--scrolled {
   color: var(--nav-link);
 }
 
-.navbar__mobile-link:hover .navbar__mobile-link-icon,
-.navbar__mobile-link--active .navbar__mobile-link-icon {
+.js-adv-course-root .navbar__mobile-link:hover .navbar__mobile-link-icon,
+.js-adv-course-root .navbar__mobile-link--active .navbar__mobile-link-icon {
   background: rgba(6, 182, 212, 0.16);
   color: #06b6d4;
 }
 
-.navbar__mobile-link-label {
+.js-adv-course-root .navbar__mobile-link-label {
   flex: 1;
   min-width: 0;
 }
 
-.navbar__mobile-active-check {
+.js-adv-course-root .navbar__mobile-active-check {
   font-size: 0.82rem;
   color: #06b6d4;
   flex-shrink: 0;
 }
 
-.navbar__mobile-link:focus-visible {
+.js-adv-course-root .navbar__mobile-link:focus-visible {
   outline: 2px solid #06b6d4;
   outline-offset: 2px;
 }
 
-/* ── Dark mode toggle switch row ─────────────────────────────────────── */
-.navbar__mobile-theme {
+/* â”€â”€ Dark mode toggle switch row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__mobile-theme {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -553,7 +553,7 @@ html.dark .navbar--scrolled {
   flex-shrink: 0;
 }
 
-.navbar__mobile-theme-label {
+.js-adv-course-root .navbar__mobile-theme-label {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -563,13 +563,13 @@ html.dark .navbar--scrolled {
   user-select: none;
 }
 
-.navbar__mobile-theme-label i {
+.js-adv-course-root .navbar__mobile-theme-label i {
   font-size: 0.92rem;
   color: #06b6d4;
 }
 
-/* ── CSS Toggle Switch ───────────────────────────────────────────────── */
-.navbar__toggle-switch {
+/* â”€â”€ CSS Toggle Switch â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__toggle-switch {
   position: relative;
   display: inline-block;
   width: 44px;
@@ -578,14 +578,14 @@ html.dark .navbar--scrolled {
   flex-shrink: 0;
 }
 
-.navbar__toggle-switch input {
+.js-adv-course-root .navbar__toggle-switch input {
   opacity: 0;
   width: 0;
   height: 0;
   position: absolute;
 }
 
-.navbar__toggle-slider {
+.js-adv-course-root .navbar__toggle-slider {
   position: absolute;
   inset: 0;
   background: var(--toggle-track-off);
@@ -593,7 +593,7 @@ html.dark .navbar--scrolled {
   transition: background 0.25s ease;
 }
 
-.navbar__toggle-slider::before {
+.js-adv-course-root .navbar__toggle-slider::before {
   content: '';
   position: absolute;
   width: 18px;
@@ -609,25 +609,25 @@ html.dark .navbar--scrolled {
     background 0.25s ease;
 }
 
-.navbar__toggle-switch input:checked + .navbar__toggle-slider {
+.js-adv-course-root .navbar__toggle-switch input:checked + .navbar__toggle-slider {
   background: #06b6d4;
 }
 
-.navbar__toggle-switch input:checked + .navbar__toggle-slider::before {
+.js-adv-course-root .navbar__toggle-switch input:checked + .navbar__toggle-slider::before {
   transform: translateX(20px) translateY(-50%);
 }
 
-.navbar__toggle-switch:focus-within .navbar__toggle-slider {
+.js-adv-course-root .navbar__toggle-switch:focus-within .navbar__toggle-slider {
   box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.35);
 }
 
-/* ── Social icons row ────────────────────────────────────────────────── */
-.navbar__mobile-socials {
+/* â”€â”€ Social icons row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__mobile-socials {
   padding: 16px 20px;
   flex-shrink: 0;
 }
 
-.navbar__mobile-socials-label {
+.js-adv-course-root .navbar__mobile-socials-label {
   font-size: 0.70rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -636,13 +636,13 @@ html.dark .navbar--scrolled {
   margin: 0 0 10px 0;
 }
 
-.navbar__mobile-socials-row {
+.js-adv-course-root .navbar__mobile-socials-row {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.navbar__social-btn {
+.js-adv-course-root .navbar__social-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -664,12 +664,12 @@ html.dark .navbar--scrolled {
   line-height: 1;
 }
 
-.navbar__social-btn:hover {
+.js-adv-course-root .navbar__social-btn:hover {
   transform: translateY(-3px) scale(1.08);
 }
 
 /* Instagram */
-.navbar__social-btn--instagram:hover {
+.js-adv-course-root .navbar__social-btn--instagram:hover {
   background: linear-gradient(135deg, #fd1d1d, #e1306c, #833ab4);
   color: #ffffff;
   border-color: transparent;
@@ -677,7 +677,7 @@ html.dark .navbar--scrolled {
 }
 
 /* YouTube */
-.navbar__social-btn--youtube:hover {
+.js-adv-course-root .navbar__social-btn--youtube:hover {
   background: #ff0000;
   color: #ffffff;
   border-color: transparent;
@@ -685,22 +685,22 @@ html.dark .navbar--scrolled {
 }
 
 /* Telegram */
-.navbar__social-btn--telegram:hover {
+.js-adv-course-root .navbar__social-btn--telegram:hover {
   background: #0088cc;
   color: #ffffff;
   border-color: transparent;
   box-shadow: 0 4px 14px rgba(0, 136, 204, 0.35);
 }
 
-/* ── Drawer footer strip ─────────────────────────────────────────────── */
-.navbar__mobile-footer {
+/* â”€â”€ Drawer footer strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .navbar__mobile-footer {
   padding: 12px 20px;
   margin-top: auto;
   border-top: 1px solid var(--mobile-theme-border);
   flex-shrink: 0;
 }
 
-.navbar__mobile-footer-text {
+.js-adv-course-root .navbar__mobile-footer-text {
   font-size: 0.68rem;
   font-weight: 500;
   color: var(--mobile-footer-clr);
@@ -708,11 +708,11 @@ html.dark .navbar--scrolled {
   user-select: none;
 }
 
-/* ════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESPONSIVE BREAKPOINTS
-   ════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ── Tablet: hide desktop nav, show hamburger ─────────────────────────── */
+/* â”€â”€ Tablet: hide desktop nav, show hamburger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 900px) {
   .navbar__nav {
     display: none;
@@ -723,7 +723,7 @@ html.dark .navbar--scrolled {
   }
 }
 
-/* ── Desktop: always show nav, hide drawer UI ────────────────────────── */
+/* â”€â”€ Desktop: always show nav, hide drawer UI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (min-width: 901px) {
   .navbar__hamburger {
     display: none !important;
@@ -735,7 +735,7 @@ html.dark .navbar--scrolled {
   }
 }
 
-/* ── Small mobile ────────────────────────────────────────────────────── */
+/* â”€â”€ Small mobile â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 480px) {
   .navbar__inner {
     padding: 0 4%;
@@ -755,16 +755,16 @@ html.dark .navbar--scrolled {
   }
 }
 
-/* ── Extra large: cap desktop padding ───────────────────────────────── */
+/* â”€â”€ Extra large: cap desktop padding â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (min-width: 1400px) {
   .navbar__inner {
     padding: 0 3%;
   }
 }
 
-/* ════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    REDUCED MOTION
-   ════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (prefers-reduced-motion: reduce) {
   .navbar,
   .navbar__progress,
@@ -792,3 +792,5 @@ html.dark .navbar--scrolled {
   .navbar__mobile-link:hover { transform: none; }
   .navbar__nav-link:hover i  { transform: none; }
 }
+
+

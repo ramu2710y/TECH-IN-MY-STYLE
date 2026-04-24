@@ -51,6 +51,13 @@ const SDNavbar = () => {
                   <span className="ml-2">{item.label}</span>
                 </button>
               ))}
+              <button
+                onClick={() => navigate('/courses')}
+                className="sd-neumorphic-btn px-3 py-2 rounded-lg text-sm transition-all text-blue-600 dark:text-blue-400"
+                style={{ border: '1.5px solid currentColor', borderRadius: '20px', fontSize: '0.8rem' }}
+              >
+                ← Courses
+              </button>
             </div>
           </div>
           

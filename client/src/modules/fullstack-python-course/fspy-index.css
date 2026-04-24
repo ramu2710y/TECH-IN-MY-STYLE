@@ -228,9 +228,10 @@
 
 /* Footer */
 .fspy-module .footer {
-  background: var(--mac-surface-2);
-  border-top: 1px solid var(--mac-border);
-  padding: 48px 0 24px;
+  background: var(--mac-surface-2) !important;
+  border-top: 1px solid var(--mac-border) !important;
+  padding: 48px 0 24px !important;
+  color: var(--text-primary) !important;
 }
 .fspy-module .footer-content {
   display: grid;
@@ -250,31 +251,31 @@
 .fspy-module .footer-logo-block span {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
 }
 .fspy-module .footer-links h3 {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-tertiary);
+  color: var(--text-tertiary) !important;
   margin-bottom: 14px;
 }
 .fspy-module .footer-links a {
   display: block;
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: var(--text-secondary) !important;
   text-decoration: none;
   margin-bottom: 8px;
   transition: color 0.15s;
 }
-.fspy-module .footer-links a:hover { color: var(--accent); }
+.fspy-module .footer-links a:hover { color: var(--accent) !important; }
 .fspy-module .footer-social h3 {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-tertiary);
+  color: var(--text-tertiary) !important;
   margin-bottom: 14px;
 }
 .fspy-module .social-icons { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -282,18 +283,18 @@
   width: 36px; height: 36px;
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  background: var(--mac-surface);
-  border: 1px solid var(--mac-border-med);
-  color: var(--text-secondary);
+  background: var(--mac-surface) !important;
+  border: 1px solid var(--mac-border-med) !important;
+  color: var(--text-secondary) !important;
   font-size: 0.95rem;
   text-decoration: none;
   transition: all 0.15s ease;
   box-shadow: var(--mac-shadow-sm);
 }
 .fspy-module .social-icon:hover {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent) !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,113,227,0.3);
 }
@@ -301,10 +302,13 @@
   max-width: 1200px;
   margin: 32px auto 0;
   padding: 20px 24px 0;
-  border-top: 1px solid var(--mac-border);
+  border-top: 1px solid var(--mac-border) !important;
   text-align: center;
   font-size: 0.8rem;
-  color: var(--text-tertiary);
+  color: var(--text-tertiary) !important;
+}
+.fspy-module .footer-bottom p {
+  color: var(--text-tertiary) !important;
 }
 
 /* Build page expand grid — stack on mobile */

@@ -1,7 +1,7 @@
-/* ===== Home Page ===== */
+﻿/* ===== Home Page ===== */
 
 /* Hero */
-.ml-hero {
+.ml-course-root .ml-hero {
   position: relative;
   min-height: 92vh;
   display: flex;
@@ -12,21 +12,24 @@
   gap: 2rem;
 }
 
-.ml-hero-bg-effects {
+
+.ml-course-root .ml-hero-bg-effects {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
 }
 
-.ml-hero-glow {
+
+.ml-course-root .ml-hero-glow {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
   opacity: 0.25;
 }
 
-.ml-hero-glow-1 {
+
+.ml-course-root .ml-hero-glow-1 {
   width: 500px;
   height: 500px;
   background: var(--ml-primary);
@@ -35,7 +38,8 @@
   animation: ml-float 8s ease-in-out infinite;
 }
 
-.ml-hero-glow-2 {
+
+.ml-course-root .ml-hero-glow-2 {
   width: 400px;
   height: 400px;
   background: var(--ml-accent);
@@ -44,7 +48,8 @@
   animation: ml-float 10s ease-in-out infinite reverse;
 }
 
-.ml-hero-glow-3 {
+
+.ml-course-root .ml-hero-glow-3 {
   width: 300px;
   height: 300px;
   background: var(--ml-cyan);
@@ -55,7 +60,8 @@
   opacity: 0.12;
 }
 
-.ml-hero-grid {
+
+.ml-course-root .ml-hero-grid {
   position: absolute;
   inset: 0;
   background-image:
@@ -66,19 +72,22 @@
   -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 }
 
+
 /* Floating particles */
-.ml-hero-particles {
+.ml-course-root .ml-hero-particles {
   position: absolute;
   inset: 0;
 }
 
-.ml-hero-particle {
+
+.ml-course-root .ml-hero-particle {
   position: absolute;
   border-radius: 50%;
   background: var(--ml-primary-light);
   opacity: 0.3;
   animation: ml-particleFloat ease-in-out infinite;
 }
+
 
 @keyframes ml-particleFloat {
   0%, 100% { transform: translateY(0) translateX(0); opacity: 0.1; }
@@ -87,14 +96,15 @@
   75% { opacity: 0.5; }
 }
 
-.ml-hero-content {
+.ml-course-root .ml-hero-content {
   position: relative;
   z-index: 1;
   max-width: 580px;
   flex-shrink: 0;
 }
 
-.ml-hero-badge {
+
+.ml-course-root .ml-hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -109,11 +119,13 @@
   animation: ml-borderGlow 3s ease-in-out infinite;
 }
 
-.ml-hero-badge i {
+
+.ml-course-root .ml-hero-badge i {
   font-size: 1rem;
 }
 
-.ml-hero h1 {
+
+.ml-course-root .ml-hero h1 {
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.15;
@@ -121,7 +133,8 @@
   letter-spacing: -1px;
 }
 
-.ml-hero-subtitle {
+
+.ml-course-root .ml-hero-subtitle {
   font-size: 1.1rem;
   color: var(--ml-text-secondary);
   line-height: 1.8;
@@ -129,14 +142,16 @@
   max-width: 520px;
 }
 
-.ml-hero-actions {
+
+.ml-course-root .ml-hero-actions {
   display: flex;
   gap: 1rem;
   margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
 
-.ml-btn {
+
+.ml-course-root .ml-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -151,31 +166,36 @@
   text-decoration: none;
 }
 
-.ml-btn-primary {
+
+.ml-course-root .ml-btn-primary {
   background: linear-gradient(135deg, var(--ml-primary), var(--ml-primary-dark));
   color: white;
   box-shadow: 0 4px 15px var(--ml-primary-glow);
 }
 
-.ml-btn-primary:hover {
+
+.ml-course-root .ml-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px var(--ml-primary-glow);
   color: white;
 }
 
-.ml-btn-outline {
+
+.ml-course-root .ml-btn-outline {
   background: transparent;
   color: var(--ml-text-secondary);
   border: 1px solid var(--ml-glass-border);
 }
 
-.ml-btn-outline:hover {
+
+.ml-course-root .ml-btn-outline:hover {
   background: var(--ml-glass-bg);
   color: var(--ml-text-primary);
   border-color: var(--ml-glass-border-hover);
 }
 
-.ml-hero-stats {
+
+.ml-course-root .ml-hero-stats {
   display: inline-flex;
   align-items: center;
   gap: 1.5rem;
@@ -186,11 +206,13 @@
   backdrop-filter: blur(10px);
 }
 
-.ml-stat-item {
+
+.ml-course-root .ml-stat-item {
   text-align: center;
 }
 
-.ml-stat-number {
+
+.ml-course-root .ml-stat-number {
   display: block;
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
@@ -201,21 +223,24 @@
   color: transparent;
 }
 
-.ml-stat-label {
+
+.ml-course-root .ml-stat-label {
   font-size: 0.78rem;
   color: var(--ml-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.ml-stat-divider {
+
+.ml-course-root .ml-stat-divider {
   width: 1px;
   height: 30px;
   background: var(--ml-glass-border);
 }
 
+
 /* Hero Visual — Neural Network SVG */
-.ml-hero-visual {
+.ml-course-root .ml-hero-visual {
   position: relative;
   z-index: 1;
   flex: 1;
@@ -224,7 +249,8 @@
   max-width: 700px;
 }
 
-.ml-nn-container {
+
+.ml-course-root .ml-nn-container {
   width: 100%;
   max-width: 650px;
   background: rgba(6, 9, 26, 0.5);
@@ -236,7 +262,8 @@
   overflow: hidden;
 }
 
-.ml-nn-container::before {
+
+.ml-course-root .ml-nn-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -246,7 +273,8 @@
   background: linear-gradient(90deg, transparent, var(--ml-primary-glow), transparent);
 }
 
-.ml-nn-container::after {
+
+.ml-course-root .ml-nn-container::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -254,7 +282,8 @@
   pointer-events: none;
 }
 
-.ml-nn-label {
+
+.ml-course-root .ml-nn-label {
   font-family: 'Fira Code', monospace;
   font-size: 0.72rem;
   color: var(--ml-text-muted);
@@ -264,71 +293,81 @@
   text-align: center;
 }
 
-.ml-nn-svg {
+
+.ml-course-root .ml-nn-svg {
   width: 100%;
   height: auto;
 }
 
+
 /* Neural Network SVG animations */
-.ml-nn-connection {
+.ml-course-root .ml-nn-connection {
   animation: ml-connectionPulse 3s ease-in-out infinite;
 }
+
 
 @keyframes ml-connectionPulse {
   0%, 100% { opacity: 0.15; }
   50% { opacity: 0.35; }
 }
 
-.ml-nn-node-group {
+.ml-course-root .ml-nn-node-group {
   animation: ml-nodeGlow 2s ease-in-out infinite;
 }
+
 
 @keyframes ml-nodeGlow {
   0%, 100% { opacity: 0.85; }
   50% { opacity: 1; }
 }
 
-.ml-nn-ring {
+.ml-course-root .ml-nn-ring {
   animation: ml-ringPulse 2.5s ease-in-out infinite;
 }
+
 
 @keyframes ml-ringPulse {
   0%, 100% { r: 12; opacity: 0.2; }
   50% { r: 16; opacity: 0.4; }
 }
 
-.ml-nn-node-circle {
+.ml-course-root .ml-nn-node-circle {
   transition: r 0.3s ease;
 }
 
+
 /* Features Section */
-.ml-features-section {
+.ml-course-root .ml-features-section {
   padding: 5rem 5%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.ml-section-title {
+
+.ml-course-root .ml-section-title {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 3rem;
 }
 
-.ml-features-grid {
+
+.ml-course-root .ml-features-grid {
   display: flex;
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+
 /* About Section */
-.ml-about-section {
+.ml-course-root .ml-about-section {
   padding: 3rem 5% 5rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
-.ml-about-card {
+
+.ml-course-root .ml-about-card {
   background: var(--ml-glass-bg);
   border: 1px solid var(--ml-glass-border);
   border-radius: var(--ml-radius-xl);
@@ -337,7 +376,8 @@
   overflow: hidden;
 }
 
-.ml-about-card::before {
+
+.ml-course-root .ml-about-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -347,25 +387,29 @@
   background: linear-gradient(90deg, var(--ml-primary), var(--ml-accent), var(--ml-cyan));
 }
 
-.ml-about-card h2 {
+
+.ml-course-root .ml-about-card h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
-.ml-about-card p {
+
+.ml-course-root .ml-about-card p {
   color: var(--ml-text-secondary);
   line-height: 1.8;
   margin-bottom: 1.2rem;
 }
 
-.ml-about-highlights {
+
+.ml-course-root .ml-about-highlights {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
   margin: 2rem 0;
 }
 
-.ml-about-highlight-item {
+
+.ml-course-root .ml-about-highlight-item {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -373,18 +417,21 @@
   font-size: 0.92rem;
 }
 
-.ml-about-highlight-item i {
+
+.ml-course-root .ml-about-highlight-item i {
   color: var(--ml-secondary-light);
   font-size: 0.9rem;
 }
 
-.ml-about-cta {
+
+.ml-course-root .ml-about-cta {
   margin-top: 1rem;
 }
 
+
 /* Responsive */
 @media (max-width: 1100px) {
-  .ml-hero {
+  .ml-course-root .ml-hero {
     flex-direction: column;
     text-align: center;
     min-height: auto;
@@ -392,76 +439,94 @@
     gap: 3rem;
   }
 
-  .ml-hero-content {
+
+  .ml-course-root .ml-hero-content {
     max-width: 100%;
   }
 
-  .ml-hero-subtitle {
+
+  .ml-course-root .ml-hero-subtitle {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .ml-hero-actions {
+
+  .ml-course-root .ml-hero-actions {
     justify-content: center;
   }
 
-  .ml-hero-stats {
+
+  .ml-course-root .ml-hero-stats {
     margin: 0 auto;
   }
 
-  .ml-hero-visual {
+
+  .ml-course-root .ml-hero-visual {
     width: 100%;
     max-width: 550px;
   }
 
-  .ml-hero h1 {
+
+  .ml-course-root .ml-hero h1 {
     font-size: 2.8rem;
   }
+
 }
 
 @media (max-width: 768px) {
-  .ml-hero h1 {
+  .ml-course-root .ml-hero h1 {
     font-size: 2.2rem;
   }
 
-  .ml-about-highlights {
+
+  .ml-course-root .ml-about-highlights {
     grid-template-columns: 1fr;
   }
 
-  .ml-about-card {
+
+  .ml-course-root .ml-about-card {
     padding: 2rem;
   }
 
-  .ml-hero-stats {
+
+  .ml-course-root .ml-hero-stats {
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem;
   }
 
-  .ml-nn-container {
+
+  .ml-course-root .ml-nn-container {
     padding: 1rem;
   }
+
 }
 
 @media (max-width: 480px) {
-  .ml-hero h1 {
+  .ml-course-root .ml-hero h1 {
     font-size: 1.8rem;
   }
 
-  .ml-hero-subtitle {
+
+  .ml-course-root .ml-hero-subtitle {
     font-size: 0.95rem;
   }
 
-  .ml-features-section {
+
+  .ml-course-root .ml-features-section {
     padding: 3rem 5%;
   }
 
-  .ml-section-title {
+
+  .ml-course-root .ml-section-title {
     font-size: 1.6rem;
   }
 
-  .ml-hero {
+
+  .ml-course-root .ml-hero {
     padding-top: 5rem;
   }
+
 }
+

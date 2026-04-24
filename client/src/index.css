@@ -207,6 +207,79 @@ body {
   }
 }
 
+/* Hide custom cursor in all course modules */
+.html-course-root .custom-cursor,
+.html-course-root .cursor-dot,
+.css-course-root .custom-cursor,
+.css-course-root .cursor-dot,
+.python-course-root .custom-cursor,
+.python-course-root .cursor-dot,
+.js-course-root .custom-cursor,
+.js-course-root .cursor-dot,
+.js-int-course-root .custom-cursor,
+.js-int-course-root .cursor-dot,
+.js-adv-course-root .custom-cursor,
+.js-adv-course-root .cursor-dot,
+.java-course-root .custom-cursor,
+.java-course-root .cursor-dot,
+.c-course-root .custom-cursor,
+.c-course-root .cursor-dot,
+.ai-course-root .custom-cursor,
+.ai-course-root .cursor-dot,
+.ml-course-root .custom-cursor,
+.ml-course-root .cursor-dot,
+.dl-course-root .custom-cursor,
+.dl-course-root .cursor-dot,
+.dsc-course-root .custom-cursor,
+.dsc-course-root .cursor-dot,
+.dsa-course-root .custom-cursor,
+.dsa-course-root .cursor-dot,
+.nlp-course-root .custom-cursor,
+.nlp-course-root .cursor-dot,
+.os-course-root .custom-cursor,
+.os-course-root .cursor-dot,
+.system-design-course-root .custom-cursor,
+.system-design-course-root .cursor-dot,
+.database-course-root .custom-cursor,
+.database-course-root .cursor-dot,
+.genai-course-root .custom-cursor,
+.genai-course-root .cursor-dot,
+.fspy-module .custom-cursor,
+.fspy-module .cursor-dot,
+.fsjava-module .custom-cursor,
+.fsjava-module .cursor-dot {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Also hide when body has course-related paths */
+body:has(.html-course-root) .custom-cursor,
+body:has(.css-course-root) .custom-cursor,
+body:has(.python-course-root) .custom-cursor,
+body:has(.js-course-root) .custom-cursor,
+body:has(.js-int-course-root) .custom-cursor,
+body:has(.js-adv-course-root) .custom-cursor,
+body:has(.java-course-root) .custom-cursor,
+body:has(.c-course-root) .custom-cursor,
+body:has(.ai-course-root) .custom-cursor,
+body:has(.ml-course-root) .custom-cursor,
+body:has(.dl-course-root) .custom-cursor,
+body:has(.dsc-course-root) .custom-cursor,
+body:has(.dsa-course-root) .custom-cursor,
+body:has(.nlp-course-root) .custom-cursor,
+body:has(.os-course-root) .custom-cursor,
+body:has(.system-design-course-root) .custom-cursor,
+body:has(.database-course-root) .custom-cursor,
+body:has(.genai-course-root) .custom-cursor,
+body:has(.fspy-module) .custom-cursor,
+body:has(.fsjava-module) .custom-cursor {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 html {
   scroll-behavior: smooth;
 }

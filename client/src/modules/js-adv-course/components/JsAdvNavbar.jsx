@@ -6,14 +6,16 @@ import '../styles/JsAdvNavbar.css'
    NAV_LINKS  — order matters for keyboard / visual layout
 ───────────────────────────────────────────────────────────────────────────── */
 const NAV_LINKS = [
-  { label: 'JsAdvHome',          to: '/js-adv-course/',           icon: 'bi bi-house-door-fill',  pageKey: 'home'      },
-  { label: 'JsAdvTopics',        to: '/js-adv-course/topics',     icon: 'bi bi-code-square',      pageKey: 'topics'    },
-  { label: 'JsAdvCompiler',      to: '/js-adv-course/compiler',   icon: 'bi bi-terminal-fill',    pageKey: 'compiler'  },
-  { label: 'JsAdvResources',     to: '/js-adv-course/resources',  icon: 'bi bi-journal-code',     pageKey: 'resources' },
-  { label: 'JsAdvDashboard',     to: '/js-adv-course/dashboard',  icon: 'bi bi-graph-up-arrow',   pageKey: 'dashboard' },
-  { label: 'JsAdvProjects',      to: '/js-adv-course/projects',   icon: 'bi bi-layers-fill',      pageKey: 'projects'  },
-  { label: "Let's JsAdvConnect", to: '/js-adv-course/connect',    icon: 'bi bi-person-lines-fill', pageKey: 'connect'  },
+  { label: 'Home',           to: '/js-adv-course/',           icon: 'bi bi-house-door-fill',  pageKey: 'home'      },
+  { label: 'Topics',         to: '/js-adv-course/topics',     icon: 'bi bi-code-square',      pageKey: 'topics'    },
+  { label: 'Compiler',       to: '/js-adv-course/compiler',   icon: 'bi bi-terminal-fill',    pageKey: 'compiler'  },
+  { label: 'Resources',      to: '/js-adv-course/resources',  icon: 'bi bi-journal-code',     pageKey: 'resources' },
+  { label: 'Dashboard',      to: '/js-adv-course/dashboard',  icon: 'bi bi-graph-up-arrow',   pageKey: 'dashboard' },
+  { label: 'Projects',       to: '/js-adv-course/projects',   icon: 'bi bi-layers-fill',      pageKey: 'projects'  },
+  { label: "Let's Connect",  to: '/js-adv-course/connect',    icon: 'bi bi-person-lines-fill', pageKey: 'connect'  },
 ]
+
+const BACK_LINK = { label: '← Back to Courses', to: '/courses', icon: 'bi bi-arrow-left-circle-fill', pageKey: 'back' }
 
 /* ─────────────────────────────────────────────────────────────────────────────
    useDarkMode  — exported named hook
@@ -40,6 +42,10 @@ export function useDarkMode() {
     } else {
       root.classList.remove('dark')
       try { localStorage.setItem('js-adv-theme', 'light') } catch (_) {}
+    }
+    // Remove html.dark on unmount so it doesn't bleed to main app pages
+    return () => {
+      document.documentElement.classList.remove('dark')
     }
   }, [dark])
 
@@ -212,6 +218,12 @@ export default function JsAdvNavbar() {
                 </li>
               )
             })}
+            <li role="listitem">
+              <Link to={BACK_LINK.to} className="navbar__nav-link navbar__back-link">
+                <i className={BACK_LINK.icon} aria-hidden="true" />
+                <span>{BACK_LINK.label}</span>
+              </Link>
+            </li>
           </ul>
 
           {/* ── Right controls ───────────────────────────────── */}

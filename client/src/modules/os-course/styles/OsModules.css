@@ -1,15 +1,17 @@
-/* ===== Aurora Module Pages ===== */
-.module-page {
+﻿/* ===== Aurora Module Pages ===== */
+.os-course-root .module-page {
     max-width: 850px;
 }
 
-.module-header {
+
+.os-course-root .module-header {
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--border-glass);
 }
 
-.module-badge {
+
+.os-course-root .module-badge {
     display: inline-block;
     padding: 4px 14px;
     background: rgba(139, 92, 246, 0.08);
@@ -23,31 +25,36 @@
     margin-bottom: 0.8rem;
 }
 
-.module-header h1 {
+
+.os-course-root .module-header h1 {
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 0.6rem;
     letter-spacing: -0.03em;
 }
 
-.module-subtitle {
+
+.os-course-root .module-subtitle {
     font-size: 1rem;
     color: var(--text-secondary);
     margin: 0;
 }
 
-.module-section {
+
+.os-course-root .module-section {
     margin-bottom: 2.5rem;
 }
 
-.module-section h2 {
+
+.os-course-root .module-section h2 {
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border-glass);
     position: relative;
 }
 
-.module-section h2::after {
+
+.os-course-root .module-section h2::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -58,41 +65,48 @@
     border-radius: 1px;
 }
 
-.module-section h3 {
+
+.os-course-root .module-section h3 {
     margin-top: 1.2rem;
     margin-bottom: 0.6rem;
     color: var(--text-primary);
 }
 
-.module-section p {
+
+.os-course-root .module-section p {
     font-size: 0.95rem;
     line-height: 1.8;
 }
 
-.module-section ul,
-.module-section ol {
+
+.os-course-root .module-section ul,
+.os-course-root .module-section ol {
     margin-bottom: 1rem;
 }
 
-.module-section li {
+
+.os-course-root .module-section li {
     font-size: 0.92rem;
     line-height: 1.7;
     margin-bottom: 0.5rem;
 }
 
-.module-section strong {
+
+.os-course-root .module-section strong {
     color: var(--text-primary);
 }
 
+
 /* Project Grid */
-.project-grid {
+.os-course-root .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 14px;
     margin-top: 1rem;
 }
 
-.project-idea {
+
+.os-course-root .project-idea {
     background: var(--bg-glass);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
@@ -102,32 +116,40 @@
     transition: all var(--transition-normal);
 }
 
-.project-idea:hover {
+
+.os-course-root .project-idea:hover {
     transform: translateY(-3px);
     border-color: var(--border-hover);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.project-idea h3 {
+
+.os-course-root .project-idea h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.project-idea p {
+
+.os-course-root .project-idea p {
     font-size: 0.82rem;
     margin: 0;
 }
 
+
 @media (max-width: 768px) {
-    .module-header h1 {
+    .os-course-root .module-header h1 {
         font-size: 1.6rem;
     }
+
 }
 
 /* Content max-width wrapper */
-.module-page,
-.overview {
+.os-course-root .module-page,
+.os-course-root .overview {
     max-width: 860px;
     margin: 0 auto;
     width: 100%;
 }
+
+
+

@@ -935,3 +935,44 @@
         animation-duration: 0.01ms !important;
     }
 }
+
+
+/* ════════════════════════════════════════════
+   DARK MODE STYLES - HTML COMPILER
+   ════════════════════════════════════════════ */
+
+html.dark .compiler-page {
+  background: var(--hp-bg, #0f0a08);
+}
+
+html.dark .compiler-header {
+  background: var(--hp-card, #221815);
+  border-bottom-color: var(--hp-border, rgba(227, 79, 38, 0.18));
+}
+
+html.dark .compiler-title {
+  color: #f5f0ed;
+}
+
+html.dark .editor-panel,
+html.dark .preview-panel {
+  background: var(--hp-card, #221815);
+  border-color: var(--hp-border, rgba(227, 79, 38, 0.18));
+}
+
+html.dark .editor-panel-header,
+html.dark .preview-panel-header {
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom-color: var(--hp-border, rgba(227, 79, 38, 0.18));
+}
+
+html.dark .editor-label-text,
+html.dark .preview-panel-title {
+  color: #f5f0ed;
+}
+
+html.dark .preview-note {
+  background: rgba(227, 79, 38, 0.1);
+  border-color: var(--hp-border, rgba(227, 79, 38, 0.18));
+  color: var(--hp-text-muted, #b8a8a0);
+}

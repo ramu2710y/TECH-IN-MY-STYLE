@@ -27,6 +27,10 @@ export function useDarkMode() {
     try {
       localStorage.setItem('js-basic-theme', dark ? 'dark' : 'light')
     } catch { /* noop */ }
+    // Remove html.dark on unmount so it doesn't bleed to main app pages
+    return () => {
+      document.documentElement.classList.remove('dark')
+    }
   }, [dark])
 
   useEffect(() => {
@@ -53,6 +57,8 @@ const NAV_LINKS = [
   { label: 'Playground',   to: '/js-basic-course/compiler',   icon: 'bi bi-terminal-fill',     pageKey: 'compiler'  },
   { label: "Let's Connect",to: '/js-basic-course/connect',    icon: 'bi bi-person-lines-fill', pageKey: 'connect'   },
 ]
+
+const BACK_LINK = { label: '← Back to Courses', to: '/courses', icon: 'bi bi-arrow-left-circle-fill', pageKey: 'back' }
 
 function getActiveKey(pathname) {
   if (pathname === '/js-basic-course' || pathname === '/js-basic-course/') return 'home'
@@ -173,6 +179,12 @@ export default function JsNavbar({ activePage }) {
                   </Link>
                 </li>
               ))}
+              <li className="js-navbar__nav-item">
+                <Link to={BACK_LINK.to} className="js-navbar__nav-link js-navbar__back-link">
+                  <i className={BACK_LINK.icon} aria-hidden="true" />
+                  {BACK_LINK.label}
+                </Link>
+              </li>
             </ul>
           </nav>
 
@@ -258,6 +270,17 @@ export default function JsNavbar({ activePage }) {
               </Link>
             </li>
           ))}
+          <li className="js-navbar__mobile-item">
+            <Link
+              to={BACK_LINK.to}
+              className="js-navbar__mobile-link js-navbar__mobile-back"
+              onClick={closeMenu}
+              tabIndex={menuOpen ? 0 : -1}
+            >
+              <i className={BACK_LINK.icon} aria-hidden="true" />
+              {BACK_LINK.label}
+            </Link>
+          </li>
         </ul>
 
         {/* Drawer footer */}

@@ -28,40 +28,40 @@ const Footer = () => {
               </div>
               <div className="footer-column">
                 <h4>Web Development</h4>
-                <Link to="/html"><i className="fab fa-html5"></i> HTML</Link>
-                <Link to="/css"><i className="fab fa-css3-alt"></i> CSS</Link>
-                <Link to="/js-basic"><i className="fab fa-js"></i> JavaScript Basic</Link>
-                <Link to="/js-intermediate"><i className="fab fa-js"></i> JavaScript Intermediate</Link>
-                <Link to="/js-advanced"><i className="fab fa-js"></i> JavaScript Advanced</Link>
+                <Link to="/html-course"><i className="fab fa-html5"></i> HTML</Link>
+                <Link to="/css-course"><i className="fab fa-css3-alt"></i> CSS</Link>
+                <Link to="/js-basic-course"><i className="fab fa-js"></i> JavaScript Basic</Link>
+                <Link to="/js-int-course"><i className="fab fa-js"></i> JavaScript Intermediate</Link>
+                <Link to="/js-adv-course"><i className="fab fa-js"></i> JavaScript Advanced</Link>
               </div>
               <div className="footer-column">
                 <h4>Programming</h4>
-                <Link to="/c"><i className="fas fa-code"></i> C Programming</Link>
-                <Link to="/java"><i className="fab fa-java"></i> Java</Link>
-                <Link to="/python"><i className="fab fa-python"></i> Python</Link>
+                <Link to="/c-course"><i className="fas fa-code"></i> C Programming</Link>
+                <Link to="/java-course"><i className="fab fa-java"></i> Java</Link>
+                <Link to="/python-course"><i className="fab fa-python"></i> Python</Link>
               </div>
               <div className="footer-column">
                 <h4>AI & Machine Learning</h4>
-                <Link to="/ml"><i className="fas fa-brain"></i> Machine Learning</Link>
-                <Link to="/dl"><i className="fas fa-network-wired"></i> Deep Learning</Link>
-                <Link to="/ai"><i className="fas fa-robot"></i> Artificial Intelligence</Link>
-                <Link to="/nlp"><i className="fas fa-language"></i> NLP</Link>
-                <Link to="/genai"><i className="fas fa-magic"></i> Generative AI</Link>
-                <Link to="/dsc"><i className="fas fa-chart-line"></i> Data Science</Link>
+                <Link to="/ml-course"><i className="fas fa-brain"></i> Machine Learning</Link>
+                <Link to="/dl-course"><i className="fas fa-network-wired"></i> Deep Learning</Link>
+                <Link to="/ai-course"><i className="fas fa-robot"></i> Artificial Intelligence</Link>
+                <Link to="/nlp-course"><i className="fas fa-language"></i> NLP</Link>
+                <Link to="/genai-course"><i className="fas fa-magic"></i> Generative AI</Link>
+                <Link to="/dsc-course"><i className="fas fa-chart-line"></i> Data Science</Link>
               </div>
             </div>
             <div className="footer-row footer-row-2">
               <div className="footer-column">
                 <h4>Computer Science</h4>
-                <Link to="/dsa"><i className="fas fa-project-diagram"></i> DSA</Link>
-                <Link to="/database"><i className="fas fa-database"></i> Database</Link>
-                <Link to="/os"><i className="fas fa-desktop"></i> Operating Systems</Link>
-                <Link to="/system-design"><i className="fas fa-sitemap"></i> System Design</Link>
+                <Link to="/dsa-course"><i className="fas fa-project-diagram"></i> DSA</Link>
+                <Link to="/database-course"><i className="fas fa-database"></i> Database</Link>
+                <Link to="/os-course"><i className="fas fa-desktop"></i> Operating Systems</Link>
+                <Link to="/system-design-course"><i className="fas fa-sitemap"></i> System Design</Link>
               </div>
               <div className="footer-column">
                 <h4>Full Stack</h4>
-                <Link to="/fullstack-python"><i className="fas fa-layer-group"></i> Full Stack Python</Link>
-                <Link to="/fullstack-java"><i className="fas fa-layer-group"></i> Full Stack Java</Link>
+                <Link to="/fullstack-python-course"><i className="fas fa-layer-group"></i> Full Stack Python</Link>
+                <Link to="/fullstack-java-platform-course"><i className="fas fa-layer-group"></i> Full Stack Java</Link>
               </div>
               <div className="footer-column">
                 <h4>Connect With Us</h4>

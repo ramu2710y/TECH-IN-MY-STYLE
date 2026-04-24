@@ -1,10 +1,10 @@
-/* Fonts are imported globally in index.css */
+﻿/* Fonts are imported globally in index.css */
 
-/* ══════════════════════════════════════════════════════════════════════════════
-   ASUS ROG × PERSONA 5 — PHANTOM OPERATOR THEME
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   ASUS ROG Ã— PERSONA 5 â€” PHANTOM OPERATOR THEME
    ROG: dark base, #76b900 green, angular cuts, scan lines, RGB glows
    P5:  #e8002d red, bold italic condensed, diagonal slashes, comic energy
-   ══════════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .database-course-root {
   /* ROG palette */
   --rog-green:   #76b900;
@@ -60,16 +60,15 @@
   min-height: 100vh;
 }
 
-/* ── Reset ─────────────────────────────────────────────────────────────────── */
+/* â”€â”€ Reset â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .database-course-root *, 
 .database-course-root *::before, 
 .database-course-root *::after { 
   box-sizing: border-box; 
 }
 
-html { scroll-behavior: smooth; }
 
-body {
+.database-course-root body, .database-course-root {
   background: var(--bg-base);
   color: var(--text-primary);
   font-family: 'Barlow', sans-serif;
@@ -78,61 +77,44 @@ body {
   min-height: 100vh;
 }
 
-/* P5-style diagonal stripe overlay */
-body::before {
-  content: '';
-  position: fixed; inset: 0;
-  background: repeating-linear-gradient(
-    -45deg,
-    transparent, transparent 40px,
-    rgba(232,0,45,0.012) 40px, rgba(232,0,45,0.012) 41px
-  );
-  pointer-events: none; z-index: 0;
-}
-/* ROG scanline overlay */
-body::after {
-  content: '';
-  position: fixed; inset: 0;
-  background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(118,185,0,0.006) 3px, rgba(118,185,0,0.006) 4px);
-  pointer-events: none; z-index: 0;
-}
+/* P5/ROG scanlines moved to .database-course-root::before/after */
 
-/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 4px; height: 4px; }
-::-webkit-scrollbar-track { background: var(--bg-1); }
-::-webkit-scrollbar-thumb { background: var(--p5-red); }
-::-webkit-scrollbar-thumb:hover { background: var(--p5-red2); }
+/* â”€â”€ Scrollbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root ::-webkit-scrollbar { width: 4px; height: 4px; }
+.database-course-root ::-webkit-scrollbar-track { background: var(--bg-1); }
+.database-course-root ::-webkit-scrollbar-thumb { background: var(--p5-red); }
+.database-course-root ::-webkit-scrollbar-thumb:hover { background: var(--p5-red2); }
 
-/* ── Typography ────────────────────────────────────────────────────────────── */
-.font-p5    { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-style: italic; letter-spacing: 0.04em; text-transform: uppercase; }
-.font-rog   { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
-.font-body  { font-family: 'Barlow', sans-serif; }
-.font-mono  { font-family: 'Share Tech Mono', monospace; }
+/* â”€â”€ Typography â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .font-p5 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-style: italic; letter-spacing: 0.04em; text-transform: uppercase; }
+.database-course-root .font-rog { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.database-course-root .font-body { font-family: 'Barlow', sans-serif; }
+.database-course-root .font-mono { font-family: 'Share Tech Mono', monospace; }
 
-/* ── Accent text ───────────────────────────────────────────────────────────── */
-.p5-text { color: var(--p5-red); }
-.rog-text { color: var(--rog-green); }
-.cyan-text { color: var(--neon-cyan); }
+/* â”€â”€ Accent text â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .p5-text { color: var(--p5-red); }
+.database-course-root .rog-text { color: var(--rog-green); }
+.database-course-root .cyan-text { color: var(--neon-cyan); }
 
-.p5-glow-text {
+.database-course-root .p5-glow-text {
   color: var(--p5-red);
   text-shadow: 0 0 12px rgba(232,0,45,0.8), 0 0 40px rgba(232,0,45,0.3);
 }
-.rog-glow-text {
+.database-course-root .rog-glow-text {
   color: var(--rog-green);
   text-shadow: 0 0 10px rgba(118,185,0,0.7), 0 0 30px rgba(118,185,0,0.3);
 }
-.dual-glow-text {
+.database-course-root .dual-glow-text {
   background: linear-gradient(90deg, var(--rog-green) 0%, var(--p5-red) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 
-/* ── P5 diagonal slash divider ─────────────────────────────────────────────── */
-.p5-slash {
+/* â”€â”€ P5 diagonal slash divider â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .p5-slash {
   position: relative;
   overflow: hidden;
 }
-.p5-slash::after {
+.database-course-root .p5-slash::after {
   content: '';
   position: absolute;
   top: 0; right: -20px;
@@ -141,50 +123,50 @@ body::after {
   transform: skewX(-12deg);
 }
 
-/* ── Cards ─────────────────────────────────────────────────────────────────── */
-.phantom-card {
+/* â”€â”€ Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .phantom-card {
   background: var(--bg-card);
   border: 1px solid var(--border-dim);
   position: relative; overflow: hidden;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.phantom-card::before {
+.database-course-root .phantom-card::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, var(--p5-red), var(--rog-green), var(--p5-red));
   opacity: 0.7;
 }
-.phantom-card:hover {
+.database-course-root .phantom-card:hover {
   border-color: var(--border-red);
   box-shadow: 0 0 20px rgba(232,0,45,0.08), var(--shadow-card);
 }
 
-.rog-card {
+.database-course-root .rog-card {
   background: var(--bg-2);
   border: 1px solid var(--border-dim);
   position: relative; overflow: hidden;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.rog-card::before {
+.database-course-root .rog-card::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0; height: 1px;
   background: linear-gradient(90deg, transparent, var(--rog-green), transparent);
   opacity: 0.5;
 }
-.rog-card:hover {
+.database-course-root .rog-card:hover {
   border-color: var(--border-bright);
   box-shadow: 0 0 16px rgba(118,185,0,0.1), var(--shadow-card);
 }
 
-/* ── Angular cuts ──────────────────────────────────────────────────────────── */
-.cut-tr    { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
-.cut-tr-lg { clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%); }
-.cut-tr-sm { clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); }
-.cut-both  { clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px)); }
-.cut-both-sm { clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
+/* â”€â”€ Angular cuts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .cut-tr { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+.database-course-root .cut-tr-lg { clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%); }
+.database-course-root .cut-tr-sm { clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); }
+.database-course-root .cut-both { clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px)); }
+.database-course-root .cut-both-sm { clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
 
-/* ── P5 diagonal stripe bg ─────────────────────────────────────────────────── */
-.p5-stripe-bg {
+/* â”€â”€ P5 diagonal stripe bg â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .p5-stripe-bg {
   background-image: repeating-linear-gradient(
     -45deg,
     transparent, transparent 8px,
@@ -192,9 +174,9 @@ body::after {
   );
 }
 
-/* ── RGB border ────────────────────────────────────────────────────────────── */
-.rgb-border { position: relative; }
-.rgb-border::before {
+/* â”€â”€ RGB border â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .rgb-border { position: relative; }
+.database-course-root .rgb-border::before {
   content: '';
   position: absolute; inset: -1px;
   background: linear-gradient(135deg, var(--p5-red), var(--rog-green), var(--neon-cyan), var(--p5-red));
@@ -208,9 +190,9 @@ body::after {
   100% { background-position: 0% 50%; }
 }
 
-/* ── Buttons ───────────────────────────────────────────────────────────────── */
-/* P5 primary — red, italic, diagonal cut */
-.btn-p5 {
+/* â”€â”€ Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* P5 primary â€” red, italic, diagonal cut */
+.database-course-root .btn-p5 {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.65rem 1.8rem;
   background: var(--p5-red);
@@ -224,18 +206,18 @@ body::after {
   box-shadow: 0 0 16px rgba(232,0,45,0.45);
   white-space: nowrap; position: relative; overflow: hidden;
 }
-.btn-p5::before {
+.database-course-root .btn-p5::before {
   content: '';
   position: absolute; top: 0; left: -100%; width: 60%; height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
   transition: left 0.4s ease;
 }
-.btn-p5:hover { background: var(--p5-red2); box-shadow: var(--glow-red); transform: translateY(-2px); }
-.btn-p5:hover::before { left: 150%; }
-.btn-p5:active { transform: scale(0.97); }
+.database-course-root .btn-p5:hover { background: var(--p5-red2); box-shadow: var(--glow-red); transform: translateY(-2px); }
+.database-course-root .btn-p5:hover::before { left: 150%; }
+.database-course-root .btn-p5:active { transform: scale(0.97); }
 
-/* ROG secondary — green outline */
-.btn-rog {
+/* ROG secondary â€” green outline */
+.database-course-root .btn-rog {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.6rem 1.6rem;
   background: transparent; color: var(--rog-green);
@@ -246,11 +228,11 @@ body::after {
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
   transition: all 0.15s ease; white-space: nowrap;
 }
-.btn-rog:hover { background: rgba(118,185,0,0.1); box-shadow: var(--glow-green); transform: translateY(-1px); }
-.btn-rog:active { transform: scale(0.97); }
+.database-course-root .btn-rog:hover { background: rgba(118,185,0,0.1); box-shadow: var(--glow-green); transform: translateY(-1px); }
+.database-course-root .btn-rog:active { transform: scale(0.97); }
 
 /* ROG filled */
-.btn-rog-fill {
+.database-course-root .btn-rog-fill {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.6rem 1.6rem;
   background: var(--rog-green); color: #000;
@@ -262,10 +244,10 @@ body::after {
   transition: all 0.15s ease; white-space: nowrap;
   box-shadow: 0 0 12px rgba(118,185,0,0.4);
 }
-.btn-rog-fill:hover { background: var(--rog-green2); box-shadow: var(--glow-green); transform: translateY(-1px); }
+.database-course-root .btn-rog-fill:hover { background: var(--rog-green2); box-shadow: var(--glow-green); transform: translateY(-1px); }
 
-/* ── Navbar ────────────────────────────────────────────────────────────────── */
-.navbar {
+/* â”€â”€ Navbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .navbar {
   position: sticky; top: 0; z-index: 1000;
   background: rgba(8,8,8,0.97);
   border-bottom: 1px solid var(--border-red-dim);
@@ -273,80 +255,80 @@ body::after {
   box-shadow: 0 2px 20px rgba(232,0,45,0.06), 0 1px 0 rgba(118,185,0,0.08);
 }
 
-/* ── Progress bar ──────────────────────────────────────────────────────────── */
-.progress-bar-track {
+/* â”€â”€ Progress bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .progress-bar-track {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.07);
   height: 4px; overflow: hidden;
 }
-.progress-bar-fill {
+.database-course-root .progress-bar-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--p5-red), var(--rog-green));
   box-shadow: 0 0 8px rgba(232,0,45,0.5);
   transition: width 0.6s ease;
 }
 
-/* ── Topic card ────────────────────────────────────────────────────────────── */
-.topic-card { transition: all 0.2s ease; cursor: pointer; }
-.topic-card:hover {
+/* â”€â”€ Topic card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .topic-card { transition: all 0.2s ease; cursor: pointer; }
+.database-course-root .topic-card:hover {
   transform: translateX(6px);
   border-color: var(--border-red) !important;
   box-shadow: -3px 0 0 var(--p5-red), var(--shadow-card) !important;
 }
 
-/* ── Accordion ─────────────────────────────────────────────────────────────── */
-.accordion-item {
+/* â”€â”€ Accordion â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .accordion-item {
   border: 1px solid var(--border-dim); margin-bottom: 5px;
   background: var(--bg-2); overflow: hidden; transition: border-color 0.2s;
 }
-.accordion-item:hover { border-color: var(--border-red-dim); }
-.accordion-header {
+.database-course-root .accordion-item:hover { border-color: var(--border-red-dim); }
+.database-course-root .accordion-header {
   padding: 12px 16px; cursor: pointer;
   display: flex; justify-content: space-between; align-items: center;
   font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.95rem;
   color: var(--text-primary); transition: background 0.15s;
 }
-.accordion-header:hover { background: rgba(232,0,45,0.04); }
-.accordion-body {
+.database-course-root .accordion-header:hover { background: rgba(232,0,45,0.04); }
+.database-course-root .accordion-body {
   padding: 12px 16px 16px; color: var(--text-secondary);
   font-size: 0.9rem; border-top: 1px solid var(--border-dim); line-height: 1.65;
 }
 
-/* ── Result table ──────────────────────────────────────────────────────────── */
-.result-table { width: 100%; border-collapse: collapse; font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; }
-.result-table th {
+/* â”€â”€ Result table â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .result-table { width: 100%; border-collapse: collapse; font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; }
+.database-course-root .result-table th {
   background: rgba(232,0,45,0.08); color: var(--p5-red);
   padding: 7px 12px; text-align: left;
   border-bottom: 1px solid var(--border-red-dim);
   font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem;
   font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
 }
-.result-table td { padding: 6px 12px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text-primary); }
-.result-table tr:last-child td { border-bottom: none; }
-.result-table tr:hover td { background: rgba(232,0,45,0.04); }
+.database-course-root .result-table td { padding: 6px 12px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text-primary); }
+.database-course-root .result-table tr:last-child td { border-bottom: none; }
+.database-course-root .result-table tr:hover td { background: rgba(232,0,45,0.04); }
 
-/* ── Footer ────────────────────────────────────────────────────────────────── */
-.footer { background: var(--bg-1); border-top: 2px solid var(--p5-red); padding: 3.5rem 0 1.5rem; font-family: 'Barlow', sans-serif; }
-.footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
-@media (max-width: 768px) { .footer-top { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } }
-.footer-brand-col p { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.65; margin-top: 0.75rem; }
-.fb-logo { display: flex; align-items: center; gap: 0.6rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-style: italic; font-size: 1.2rem; color: var(--text-primary); letter-spacing: 0.04em; text-transform: uppercase; }
-.footer-col h5 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--p5-red); margin-bottom: 1rem; }
-.footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 0.5rem; }
-.footer-col ul li a { color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
-.footer-col ul li a:hover { color: var(--p5-red); }
-.footer-socials { display: flex; flex-direction: column; gap: 0.5rem; }
-.fsoc { display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
-.fsoc:hover { color: var(--p5-red); }
-.fsoc svg { width: 15px; height: 15px; }
-.footer-bottom { border-top: 1px solid var(--border-dim); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-dim); font-size: 0.82rem; }
-.footer-pill { display: flex; align-items: center; gap: 0.4rem; background: rgba(232,0,45,0.06); border: 1px solid var(--border-red-dim); padding: 0.3rem 0.9rem; font-size: 0.8rem; color: var(--p5-red); }
-.yd { width: 7px; height: 7px; background: var(--p5-red); display: inline-block; animation: p5-pulse 2s ease-in-out infinite; }
+/* â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .footer { background: var(--bg-1); border-top: 2px solid var(--p5-red); padding: 3.5rem 0 1.5rem; font-family: 'Barlow', sans-serif; }
+.database-course-root .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.database-course-root .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+@media (max-width: 768px) { .database-course-root .footer-top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .database-course-root .footer-top { grid-template-columns: 1fr; } }
+.database-course-root .footer-brand-col p { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.65; margin-top: 0.75rem; }
+.database-course-root .fb-logo { display: flex; align-items: center; gap: 0.6rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-style: italic; font-size: 1.2rem; color: var(--text-primary); letter-spacing: 0.04em; text-transform: uppercase; }
+.database-course-root .footer-col h5 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--p5-red); margin-bottom: 1rem; }
+.database-course-root .footer-col ul { list-style: none; }
+.database-course-root .footer-col ul li { margin-bottom: 0.5rem; }
+.database-course-root .footer-col ul li a { color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
+.database-course-root .footer-col ul li a:hover { color: var(--p5-red); }
+.database-course-root .footer-socials { display: flex; flex-direction: column; gap: 0.5rem; }
+.database-course-root .fsoc { display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
+.database-course-root .fsoc:hover { color: var(--p5-red); }
+.database-course-root .fsoc svg { width: 15px; height: 15px; }
+.database-course-root .footer-bottom { border-top: 1px solid var(--border-dim); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-dim); font-size: 0.82rem; }
+.database-course-root .footer-pill { display: flex; align-items: center; gap: 0.4rem; background: rgba(232,0,45,0.06); border: 1px solid var(--border-red-dim); padding: 0.3rem 0.9rem; font-size: 0.8rem; color: var(--p5-red); }
+.database-course-root .yd { width: 7px; height: 7px; background: var(--p5-red); display: inline-block; animation: p5-pulse 2s ease-in-out infinite; }
 
-/* ── Animations ────────────────────────────────────────────────────────────── */
+/* â”€â”€ Animations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @keyframes p5-pulse {
   0%,100% { box-shadow: 0 0 0 0 rgba(232,0,45,0.6); }
   50%     { box-shadow: 0 0 0 5px rgba(232,0,45,0); }
@@ -367,24 +349,24 @@ body::after {
 @keyframes border-pulse-red { 0%,100%{box-shadow:0 0 5px rgba(232,0,45,0.3)} 50%{box-shadow:0 0 20px rgba(232,0,45,0.7),0 0 40px rgba(232,0,45,0.3)} }
 @keyframes border-pulse-green { 0%,100%{box-shadow:0 0 5px rgba(118,185,0,0.3)} 50%{box-shadow:0 0 20px rgba(118,185,0,0.7),0 0 40px rgba(118,185,0,0.3)} }
 
-.animate-float    { animation: float-y 3s ease-in-out infinite; }
-.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+.database-course-root .animate-float { animation: float-y 3s ease-in-out infinite; }
+.database-course-root .animate-spin-slow { animation: spin-slow 8s linear infinite; }
 .animate-flicker  { animation: p5-flicker 5s infinite; }
-.animate-glow-red { animation: border-pulse-red 2s ease-in-out infinite; }
-.animate-glow-green { animation: border-pulse-green 2s ease-in-out infinite; }
+.database-course-root .animate-glow-red { animation: border-pulse-red 2s ease-in-out infinite; }
+.database-course-root .animate-glow-green { animation: border-pulse-green 2s ease-in-out infinite; }
 
-/* ── Section label ─────────────────────────────────────────────────────────── */
-.section-label {
+/* â”€â”€ Section label â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .section-label {
   font-family: 'Barlow Condensed', sans-serif; font-style: italic;
   font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--p5-red);
   margin-bottom: 0.4rem;
   display: flex; align-items: center; gap: 0.5rem;
 }
-.section-label::before { content: '▶'; font-style: normal; font-size: 0.6rem; }
+.database-course-root .section-label::before { content: 'â–¶'; font-style: normal; font-size: 0.6rem; }
 
-/* ── Tag / badge ───────────────────────────────────────────────────────────── */
-.tag {
+/* â”€â”€ Tag / badge â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .tag {
   display: inline-flex; align-items: center; gap: 0.3rem;
   padding: 0.2rem 0.8rem;
   font-family: 'Barlow Condensed', sans-serif; font-style: italic;
@@ -393,70 +375,70 @@ body::after {
   border: 1px solid var(--border-red-dim);
   clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
 }
-.tag-green {
+.database-course-root .tag-green {
   background: rgba(118,185,0,0.1); color: var(--rog-green);
   border-color: var(--border-mid);
   clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
 }
 
-/* ── Code block ────────────────────────────────────────────────────────────── */
-.code-block { background: #060606; border: 1px solid var(--border-dim); overflow: hidden; }
-.code-block-header {
+/* â”€â”€ Code block â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .code-block { background: #060606; border: 1px solid var(--border-dim); overflow: hidden; }
+.database-course-root .code-block-header {
   display: flex; align-items: center; justify-content: space-between;
   padding: 8px 14px;
   background: rgba(232,0,45,0.06);
   border-bottom: 1px solid var(--border-red-dim);
 }
-.code-block pre { padding: 1rem; font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; color: #d4e8c8; overflow-x: auto; line-height: 1.65; margin: 0; }
+.database-course-root .code-block pre { padding: 1rem; font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; color: #d4e8c8; overflow-x: auto; line-height: 1.65; margin: 0; }
 
-/* ── Viz highlights ────────────────────────────────────────────────────────── */
-.viz-row-highlight { background: rgba(232,0,45,0.08) !important; border-left: 3px solid var(--p5-red); }
-.viz-doc-highlight { background: rgba(118,185,0,0.08) !important; border-left: 3px solid var(--rog-green); }
+/* â”€â”€ Viz highlights â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .viz-row-highlight { background: rgba(232,0,45,0.08) !important; border-left: 3px solid var(--p5-red); }
+.database-course-root .viz-doc-highlight { background: rgba(118,185,0,0.08) !important; border-left: 3px solid var(--rog-green); }
 
-/* ── Responsive ────────────────────────────────────────────────────────────── */
-@media (max-width: 768px) { .hide-mobile { display: none !important; } }
-@media (min-width: 769px) { .hide-desktop { display: none !important; } }
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@media (max-width: 768px) { .database-course-root .hide-mobile { display: none !important; } }
+@media (min-width: 769px) { .database-course-root .hide-desktop { display: none !important; } }
 
-/* ── Legacy aliases ────────────────────────────────────────────────────────── */
-.hud-panel { background: var(--bg-2); border: 1px solid var(--border-dim); position: relative; overflow: hidden; }
-.hud-panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--p5-red), var(--rog-green), transparent); opacity: 0.5; }
-.hud-panel-amber { background: rgba(255,107,0,0.05); border: 1px solid rgba(255,107,0,0.2); position: relative; overflow: hidden; }
-.btn-hud {
+/* â”€â”€ Legacy aliases â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.database-course-root .hud-panel { background: var(--bg-2); border: 1px solid var(--border-dim); position: relative; overflow: hidden; }
+.database-course-root .hud-panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--p5-red), var(--rog-green), transparent); opacity: 0.5; }
+.database-course-root .hud-panel-amber { background: rgba(255,107,0,0.05); border: 1px solid rgba(255,107,0,0.2); position: relative; overflow: hidden; }
+.database-course-root .btn-hud {
   display: inline-flex; align-items: center; gap: 0.4rem;
   background: var(--bg-3); border: 1px solid var(--border-mid);
   color: var(--text-primary); font-family: 'Barlow Condensed', sans-serif;
   font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
   padding: 0.4rem 0.9rem; cursor: pointer; transition: all 0.15s ease;
 }
-.btn-hud:hover { background: var(--bg-4); border-color: var(--border-red); color: var(--p5-red); }
-.btn-hud-amber { border-color: rgba(255,107,0,0.4); color: var(--neon-orange); }
-.btn-hud-amber:hover { background: rgba(255,107,0,0.08); }
-.btn-hud-green { border-color: var(--border-bright); color: var(--rog-green); }
-.btn-hud-green:hover { background: rgba(118,185,0,0.1); box-shadow: var(--glow-green); }
-.glow-cyan { color: var(--p5-red); }
-.font-orbitron { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-style: italic; letter-spacing: 0.05em; text-transform: uppercase; }
-.font-mono-tech { font-family: 'Share Tech Mono', monospace; }
-.scanlines { display: none; }
-.glass-card    { background: var(--bg-card); border: 1px solid var(--border-dim); position: relative; overflow: hidden; }
-.glass-card-sm { background: var(--bg-2); border: 1px solid var(--border-dim); position: relative; overflow: hidden; }
-.glass-card-dark { background: rgba(6,6,6,0.97); border: 1px solid var(--border-mid); position: relative; overflow: hidden; }
-.mac-dots { display: flex; gap: 6px; align-items: center; }
-.mac-dot  { width: 10px; height: 10px; }
-.mac-dot-red    { background: var(--p5-red); }
-.mac-dot-yellow { background: var(--p5-yellow); }
+.database-course-root .btn-hud:hover { background: var(--bg-4); border-color: var(--border-red); color: var(--p5-red); }
+.database-course-root .btn-hud-amber { border-color: rgba(255,107,0,0.4); color: var(--neon-orange); }
+.database-course-root .btn-hud-amber:hover { background: rgba(255,107,0,0.08); }
+.database-course-root .btn-hud-green { border-color: var(--border-bright); color: var(--rog-green); }
+.database-course-root .btn-hud-green:hover { background: rgba(118,185,0,0.1); box-shadow: var(--glow-green); }
+.database-course-root .glow-cyan { color: var(--p5-red); }
+.database-course-root .font-orbitron { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-style: italic; letter-spacing: 0.05em; text-transform: uppercase; }
+.database-course-root .font-mono-tech { font-family: 'Share Tech Mono', monospace; }
+.database-course-root .scanlines { display: none; }
+.database-course-root .glass-card { background: var(--bg-card); border: 1px solid var(--border-dim); position: relative; overflow: hidden; }
+.database-course-root .glass-card-sm { background: var(--bg-2); border: 1px solid var(--border-dim); position: relative; overflow: hidden; }
+.database-course-root .glass-card-dark { background: rgba(6,6,6,0.97); border: 1px solid var(--border-mid); position: relative; overflow: hidden; }
+.database-course-root .mac-dots { display: flex; gap: 6px; align-items: center; }
+.database-course-root .mac-dot { width: 10px; height: 10px; }
+.database-course-root .mac-dot-red { background: var(--p5-red); }
+.database-course-root .mac-dot-yellow { background: var(--p5-yellow); }
 .mac-dot-green  { background: var(--rog-green); box-shadow: 0 0 4px rgba(118,185,0,0.6); }
-.ig-text { color: var(--p5-red); }
-.ig-text-soft { color: var(--p5-red2); }
-.rog-glow-text { color: var(--rog-green); text-shadow: 0 0 10px rgba(118,185,0,0.7), 0 0 30px rgba(118,185,0,0.3); }
-.section-label-old { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.database-course-root .ig-text { color: var(--p5-red); }
+.database-course-root .ig-text-soft { color: var(--p5-red2); }
+.database-course-root .rog-glow-text { color: var(--rog-green); text-shadow: 0 0 10px rgba(118,185,0,0.7), 0 0 30px rgba(118,185,0,0.3); }
+.database-course-root .section-label-old { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; }
 /* btn-rog-outline alias */
-.btn-rog-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.6rem; background: transparent; color: var(--rog-green); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--border-bright); cursor: pointer; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); transition: all 0.15s ease; white-space: nowrap; }
-.btn-rog-outline:hover { background: rgba(118,185,0,0.1); box-shadow: var(--glow-green); }
+.database-course-root .btn-rog-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.6rem; background: transparent; color: var(--rog-green); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--border-bright); cursor: pointer; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); transition: all 0.15s ease; white-space: nowrap; }
+.database-course-root .btn-rog-outline:hover { background: rgba(118,185,0,0.1); box-shadow: var(--glow-green); }
 
 
-/* ══════════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DATABASE TOPIC CODE GRID - RESPONSIVE LAYOUT
-   ══════════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .db-code-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -511,3 +493,5 @@ body::after {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+

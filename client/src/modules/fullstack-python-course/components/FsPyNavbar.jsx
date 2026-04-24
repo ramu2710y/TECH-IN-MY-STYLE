@@ -79,6 +79,10 @@ export default function FsPyNavbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-2">
+          <Link to="/courses" className="text-xs font-medium px-3 py-1.5 rounded-full transition-all"
+            style={{ border: '1.5px solid var(--accent)', color: 'var(--accent)', textDecoration: 'none' }}>
+            ← Back
+          </Link>
           <Link to="/fullstack-python-course/python" className="mac-btn mac-btn-primary text-sm">
             Start Learning
           </Link>
@@ -132,6 +136,10 @@ export default function FsPyNavbar() {
               );
             })}
             <div className="p-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+              <Link to="/courses" className="flex items-center gap-2 px-3 py-2 text-sm text-center justify-center rounded-lg mb-1 transition-all"
+                style={{ border: '1.5px solid var(--accent)', color: 'var(--accent)', textDecoration: 'none' }}>
+                ← Back to All Courses
+              </Link>
               <Link to="/fullstack-python-course/python" className="mac-btn mac-btn-primary w-full justify-center text-sm">
                 Start Learning
               </Link>

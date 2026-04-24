@@ -11,52 +11,19 @@ import HtmlReference from './pages/HtmlReference';
 
 function HtmlCourseRoutes() {
   useEffect(() => {
-    // Custom cursor implementation
-    const initCustomCursor = () => {
-      if (window.innerWidth <= 768) return;
+    // Remove any custom cursor that might exist from main pages
+    const existingCursor = document.querySelector('.custom-cursor');
+    if (existingCursor) {
+      existingCursor.remove();
+    }
 
-      // Remove any existing custom cursor
-      const existingCursor = document.querySelector('.custom-cursor');
-      if (existingCursor) {
-        existingCursor.remove();
+    // Cleanup on unmount
+    return () => {
+      const cursor = document.querySelector('.custom-cursor');
+      if (cursor) {
+        cursor.remove();
       }
-
-      const cursor = document.createElement('div');
-      cursor.classList.add('custom-cursor');
-      
-      const cursorDot = document.createElement('div');
-      cursorDot.classList.add('cursor-dot');
-      
-      cursor.appendChild(cursorDot);
-      document.body.appendChild(cursor);
-      
-      const moveHandler = (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        cursor.style.opacity = '1';
-      };
-      
-      const outHandler = (e) => {
-        if (e.clientY <= 0 || e.clientX <= 0 || e.clientX >= window.innerWidth || e.clientY >= window.innerHeight) {
-          cursor.style.opacity = '0';
-        }
-      };
-      
-      document.addEventListener('mousemove', moveHandler);
-      document.addEventListener('mouseout', outHandler);
-      
-      return () => {
-        document.removeEventListener('mousemove', moveHandler);
-        document.removeEventListener('mouseout', outHandler);
-        const activeCursor = document.querySelector('.custom-cursor');
-        if (activeCursor) {
-          activeCursor.remove();
-        }
-      };
     };
-
-    const cleanup = initCustomCursor();
-    return cleanup;
   }, []);
 
   return (

@@ -12,6 +12,8 @@ const links = [
   { to: '/database-course/interview',    label: 'Interview' },
 ];
 
+const BACK_TO_COURSES = '/courses';
+
 export default function DbNavbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -71,6 +73,22 @@ export default function DbNavbar() {
               </Link>
             );
           })}
+          <Link to={BACK_TO_COURSES} style={{ textDecoration: 'none' }}>
+            <motion.div whileHover={{ y: -1 }} whileTap={{ scale: 0.96 }}
+              style={{
+                padding: '0.3rem 0.85rem',
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontSize: '0.78rem', fontWeight: 700,
+                letterSpacing: '0.08em', textTransform: 'uppercase',
+                color: 'var(--rog-green)',
+                border: '1.5px solid var(--rog-green)',
+                borderRadius: '20px',
+                transition: 'all 0.15s',
+                marginLeft: '0.5rem',
+              }}>
+              ← Courses
+            </motion.div>
+          </Link>
         </div>
 
         {/* Right actions */}

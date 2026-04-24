@@ -10,7 +10,7 @@ const courses = [
     description:
       "Learn semantic HTML5, document structure, forms, and accessibility with our comprehensive course.",
     image: "/img/HTML.png",
-    link: "/html-course/reference",
+    link: "/html-course",
     internal: true,
     badge: "Available Now",
   },
@@ -19,90 +19,171 @@ const courses = [
     description:
       "Master modern CSS techniques, layouts, animations, and responsive design principles.",
     image: "/img/CSS.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
+    link: "/css-course",
+    internal: true,
+    badge: "Available Now",
   },
   {
     title: "JAVASCRIPT BASICS",
     description:
       "Start your JavaScript journey by mastering variables, functions, conditionals, loops, and basic DOM manipulation.",
     image: "/img/JS-BEGINNERS.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
+    link: "/js-basic-course",
+    internal: true,
+    badge: "Available Now",
   },
   {
     title: "JAVASCRIPT INTERMEDIATE",
     description:
       "Level up your JavaScript skills with ES6 features, asynchronous programming, APIs, closures, and advanced DOM techniques.",
     image: "/img/JS-INTERMEDIATE.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
+    link: "/js-int-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "JAVASCRIPT ADVANCED",
+    description:
+      "Master Enterprise-Level JavaScript concepts, patterns, and architecture for building scalable applications.",
+    image: "/img/JS-INTERMEDIATE.png",
+    link: "/js-adv-course",
+    internal: true,
+    badge: "Available Now",
   },
   {
     title: "JAVA IN MY STYLE",
     description:
       "Comprehensive Java programming from basics to advanced concepts and application development.",
     image: "/img/JAVA.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
+    link: "/java-course",
+    internal: true,
+    badge: "Available Now",
   },
   {
     title: "PYTHON IN MY STYLE",
     description:
       "Learn Python programming for web development, data science, and automation.",
     image: "/img/PYTHON.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
-  },
-  {
-    title: "DEEP LEARNING",
-    description:
-      "Dive into deep learning with neural networks, backpropagation, CNNs, RNNs, and hands-on projects.",
-    image: "/img/DL.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
-  },
-  {
-    title: "MACHINE LEARNING",
-    description:
-      "Explore machine learning fundamentals including supervised and unsupervised learning and real-world ML projects.",
-    image: "/img/ML.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
-  },
-  {
-    title: "ARTIFICIAL INTELLIGENCE",
-    description:
-      "Explore the fundamentals of AI, including intelligent agents, search algorithms, and decision-making models.",
-    image: "/img/AI.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
-  },
-  {
-    title: "DATA SCIENCE",
-    description:
-      "Master Data Science with statistics, data wrangling, visualization, and real-world analytics projects using Python.",
-    image: "/img/DSC.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
+    link: "/python-course",
+    internal: true,
+    badge: "Available Now",
   },
   {
     title: "C IN MY STYLE",
     description:
       "Learn C programming from scratch with hands-on coding, memory management, pointers, and data structures.",
     image: "/img/C.png",
-    link: "#",
-    internal: false,
-    badge: "Coming Soon",
+    link: "/c-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "DEEP LEARNING",
+    description:
+      "Dive into deep learning with neural networks, backpropagation, CNNs, RNNs, and hands-on projects.",
+    image: "/img/DL.png",
+    link: "/dl-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "MACHINE LEARNING",
+    description:
+      "Explore machine learning fundamentals including supervised and unsupervised learning and real-world ML projects.",
+    image: "/img/ML.png",
+    link: "/ml-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "ARTIFICIAL INTELLIGENCE",
+    description:
+      "Explore the fundamentals of AI, including intelligent agents, search algorithms, and decision-making models.",
+    image: "/img/AI.png",
+    link: "/ai-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "DATA SCIENCE",
+    description:
+      "Master Data Science with statistics, data wrangling, visualization, and real-world analytics projects using Python.",
+    image: "/img/DSC.png",
+    link: "/dsc-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "DSA IN MY STYLE",
+    description:
+      "Master Data Structures and Algorithms with interactive visualizers, code examples, and interview prep.",
+    image: "/img/DSC.png",
+    link: "/dsa-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "NLP IN MY STYLE",
+    description:
+      "Master Natural Language Processing from tokenization to transformers with code examples and MCQs.",
+    image: "/img/AI.png",
+    link: "/nlp-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "OS IN MY STYLE",
+    description:
+      "Master Operating Systems — processes, memory, file systems, security with interactive visualizations.",
+    image: "/img/TECH.png",
+    link: "/os-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "SYSTEM DESIGN",
+    description:
+      "Master system design concepts from basics to real-world implementations with interactive diagrams.",
+    image: "/img/TECH.png",
+    link: "/system-design-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "DATABASE IN MY STYLE",
+    description:
+      "Master SQL and MongoDB with live query execution, visualizers, and interview questions.",
+    image: "/img/DSC.png",
+    link: "/database-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "GEN AI IN MY STYLE",
+    description:
+      "Master Generative AI from foundations to production — LLMs, RAG, agents, embeddings, and applications.",
+    image: "/img/AI.png",
+    link: "/genai-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "FULL STACK PYTHON",
+    description:
+      "Master Python from fundamentals to deployment. Build REST APIs and ship production-ready applications.",
+    image: "/img/PYTHON.png",
+    link: "/fullstack-python-course",
+    internal: true,
+    badge: "Available Now",
+  },
+  {
+    title: "FULL STACK JAVA",
+    description:
+      "Build scalable backend systems with Java and Spring Boot. Master microservices and deployment.",
+    image: "/img/JAVA.png",
+    link: "/fullstack-java-platform-course",
+    internal: true,
+    badge: "Available Now",
   },
 ];
 
@@ -150,8 +231,8 @@ const features = [
 ];
 
 const stats = [
-  { icon: "bi bi-tags-fill", value: "100+", label: "HTML Tags Covered" },
-  { icon: "bi bi-collection-fill", value: "11+", label: "Courses Available" },
+  { icon: "bi bi-tags-fill", value: "80+", label: "HTML Tags Covered" },
+  { icon: "bi bi-collection-fill", value: "20", label: "Courses Available" },
   { icon: "bi bi-terminal-fill", value: "1", label: "Live Playground" },
   { icon: "bi bi-gift-fill", value: "100%", label: "Free Forever" },
 ];
@@ -368,7 +449,7 @@ export default function HtmlHome() {
                 </span>
                 <span className="hero__trust-item">
                   <i className="bi bi-check-circle-fill" />
-                  No signup needed
+                  No subscriptions
                 </span>
                 <span className="hero__trust-item">
                   <i className="bi bi-check-circle-fill" />

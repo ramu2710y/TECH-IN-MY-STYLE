@@ -1,4 +1,4 @@
-.counter {
+﻿.counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -17,7 +17,7 @@
   }
 }
 
-.hero {
+.database-course-root .hero {
   position: relative;
 
   .base,
@@ -182,3 +182,4 @@
     border-right-color: var(--border);
   }
 }
+

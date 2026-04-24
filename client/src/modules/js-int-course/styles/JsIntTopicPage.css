@@ -1,11 +1,11 @@
-/* ═══════════════════════════════════════════════════════════════════
-   JsIntTopicPage.css  —  JS Intermediate In My Style
-   Theme: Violet Primary (#8b5cf6) · Black (#1A1A1A) · Dark-first design
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   JsIntTopicPage.css  â€”  JS Intermediate In My Style
+   Theme: Violet Primary (#8b5cf6) Â· Black (#1A1A1A) Â· Dark-first design
    Dark mode via  html.dark  class on <html>
-═══════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ─── Page Shell ──────────────────────────────────────────────────── */
-.topic-page {
+/* â”€â”€â”€ Page Shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-int-course-root .topic-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,25 +16,28 @@
   overflow-x: hidden;
 }
 
+
 /* Light-mode override */
-html:not(.dark) .topic-page {
+html:not(.dark) .js-int-course-root .topic-page {
   background-color: #f5f5f0;
   color: #1a1a1a;
 }
 
-/* ─── Fade-in keyframe ────────────────────────────────────────────── */
-@keyframes topicFadeIn {
+
+/* â”€â”€â”€ Fade-in keyframe â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@keyframes jsintTopicFadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0);   }
 }
 
-.animate-fade-in {
-  animation: topicFadeIn 0.45s ease-out both;
+.js-int-course-root .animate-fade-in {
+  animation: jsintTopicFadeIn 0.45s ease-out both;
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    LOADING OVERLAY
-═══════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @keyframes overlayIn {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -44,7 +47,7 @@ html:not(.dark) .topic-page {
   to   { opacity: 0; }
 }
 
-.topic-loading-overlay {
+.js-int-course-root .topic-loading-overlay {
   position: fixed;
   inset: 0;
   background: #0a0a0a;
@@ -57,13 +60,15 @@ html:not(.dark) .topic-page {
   animation: overlayIn 0.2s ease forwards;
 }
 
-.topic-loading-overlay.fade-out {
+
+.js-int-course-root .topic-loading-overlay.fade-out {
   animation: overlayOut 0.42s ease forwards;
   pointer-events: none;
 }
 
-/* ── Spinner ring + JS logo ── */
-.loading-logo-wrap {
+
+/* â”€â”€ Spinner ring + JS logo â”€â”€ */
+.js-int-course-root .loading-logo-wrap {
   position: relative;
   width: 92px;
   height: 92px;
@@ -72,37 +77,40 @@ html:not(.dark) .topic-page {
   justify-content: center;
 }
 
-@keyframes spinRing {
+
+@keyframes jsintSpinRing {
   to { transform: rotate(360deg); }
 }
 
-.loading-spinner-ring {
+.js-int-course-root .loading-spinner-ring {
   position: absolute;
   inset: 0;
   border: 3px solid rgba(139, 92, 246, 0.15);
   border-top-color: #8b5cf6;
   border-right-color: rgba(139, 92, 246, 0.55);
   border-radius: 50%;
-  animation: spinRing 0.9s linear infinite;
+  animation: jsintSpinRing 0.9s linear infinite;
 }
 
-@keyframes jsPulse {
+
+@keyframes jsintJsPulse {
   from { transform: scale(0.88); opacity: 0.75; }
   to   { transform: scale(1.08); opacity: 1;    }
 }
 
-.loading-js-text {
+.js-int-course-root .loading-js-text {
   font-size: 1.25rem;
   font-weight: 900;
   color: #8b5cf6;
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   letter-spacing: -0.02em;
-  animation: jsPulse 0.9s ease-in-out infinite alternate;
+  animation: jsintJsPulse 0.9s ease-in-out infinite alternate;
   user-select: none;
 }
 
-/* ── Topic name pill ── */
-.loading-tag-name {
+
+/* â”€â”€ Topic name pill â”€â”€ */
+.js-int-course-root .loading-tag-name {
   font-size: 0.95rem;
   font-weight: 700;
   color: #8b5cf6;
@@ -118,30 +126,36 @@ html:not(.dark) .topic-page {
   white-space: nowrap;
 }
 
-/* ── Bouncing dots ── */
-.loading-dots {
+
+/* â”€â”€ Bouncing dots â”€â”€ */
+.js-int-course-root .loading-dots {
   display: flex;
   gap: 0.45rem;
 }
 
-@keyframes dotBounce {
+
+@keyframes jsintDotBounce {
   0%, 100% { transform: translateY(0);     opacity: 1;   }
   50%       { transform: translateY(-12px); opacity: 0.4; }
 }
 
-.loading-dot {
+.js-int-course-root .loading-dot {
   width: 9px;
   height: 9px;
   border-radius: 50%;
   background: #8b5cf6;
-  animation: dotBounce 0.65s ease-in-out infinite;
+  animation: jsintDotBounce 0.65s ease-in-out infinite;
 }
-.loading-dot:nth-child(1) { animation-delay: 0s;    }
-.loading-dot:nth-child(2) { animation-delay: 0.13s; }
-.loading-dot:nth-child(3) { animation-delay: 0.26s; }
 
-/* ── Caption ── */
-.loading-caption {
+.js-int-course-root .loading-dot:nth-child(1) { animation-delay: 0s;    }
+
+.js-int-course-root .loading-dot:nth-child(2) { animation-delay: 0.13s; }
+
+.js-int-course-root .loading-dot:nth-child(3) { animation-delay: 0.26s; }
+
+
+/* â”€â”€ Caption â”€â”€ */
+.js-int-course-root .loading-caption {
   font-size: 0.75rem;
   font-weight: 500;
   color: rgba(139, 92, 246, 0.5);
@@ -149,10 +163,11 @@ html:not(.dark) .topic-page {
   text-transform: uppercase;
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FIXED HEADER BAR
-═══════════════════════════════════════════════════════════════════ */
-.topic-page-header {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .topic-page-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -165,12 +180,14 @@ html:not(.dark) .topic-page {
   flex-shrink: 0;
 }
 
-html:not(.dark) .topic-page-header {
+
+html:not(.dark) .js-int-course-root .topic-page-header {
   background: #1a1a1a;
   border-bottom-color: rgba(139, 92, 246, 0.25);
 }
 
-.topic-header-inner {
+
+.js-int-course-root .topic-header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -181,8 +198,9 @@ html:not(.dark) .topic-page-header {
   gap: 0.75rem;
 }
 
-/* ── Back button ── */
-.topic-back-btn {
+
+/* â”€â”€ Back button â”€â”€ */
+.js-int-course-root .topic-back-btn {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -200,18 +218,21 @@ html:not(.dark) .topic-page-header {
   letter-spacing: 0.01em;
 }
 
-.topic-back-btn:hover {
+
+.js-int-course-root .topic-back-btn:hover {
   background: rgba(139, 92, 246, 0.14);
   border-color: rgba(139, 92, 246, 0.6);
   color: #8b5cf6;
 }
 
-.topic-back-btn i {
+
+.js-int-course-root .topic-back-btn i {
   font-size: 0.9rem;
 }
 
-/* ── Center title ── */
-.topic-header-title {
+
+/* â”€â”€ Center title â”€â”€ */
+.js-int-course-root .topic-header-title {
   flex: 1;
   text-align: center;
   font-size: clamp(0.72rem, 2.2vw, 1.05rem);
@@ -225,7 +246,8 @@ html:not(.dark) .topic-page-header {
   text-transform: uppercase;
 }
 
-.topic-header-js {
+
+.js-int-course-root .topic-header-js {
   color: #8b5cf6;
   font-weight: 900;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
@@ -234,8 +256,9 @@ html:not(.dark) .topic-page-header {
   padding: 0 4px;
 }
 
-/* ── Hamburger menu trigger ── */
-.topic-menu-trigger {
+
+/* â”€â”€ Hamburger menu trigger â”€â”€ */
+.js-int-course-root .topic-menu-trigger {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -252,12 +275,14 @@ html:not(.dark) .topic-page-header {
   transition: background 0.2s, border-color 0.2s;
 }
 
-.topic-menu-trigger:hover {
+
+.js-int-course-root .topic-menu-trigger:hover {
   background: rgba(139, 92, 246, 0.14);
   border-color: rgba(139, 92, 246, 0.6);
 }
 
-.topic-menu-trigger span {
+
+.js-int-course-root .topic-menu-trigger span {
   display: block;
   width: 100%;
   height: 2px;
@@ -266,14 +291,16 @@ html:not(.dark) .topic-page-header {
   transition: background 0.2s;
 }
 
-.topic-menu-trigger:hover span {
+
+.js-int-course-root .topic-menu-trigger:hover span {
   background: #8b5cf6;
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    INFO BANNER
-═══════════════════════════════════════════════════════════════════ */
-.topic-info-banner {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .topic-info-banner {
   margin-top: 56px; /* push below fixed header */
   background: rgba(139, 92, 246, 0.06);
   border-bottom: 1px solid rgba(139, 92, 246, 0.2);
@@ -281,12 +308,14 @@ html:not(.dark) .topic-page-header {
   flex-shrink: 0;
 }
 
-html:not(.dark) .topic-info-banner {
+
+html:not(.dark) .js-int-course-root .topic-info-banner {
   background: rgba(139, 92, 246, 0.12);
   border-bottom-color: rgba(139, 92, 246, 0.4);
 }
 
-.topic-info-inner {
+
+.js-int-course-root .topic-info-inner {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
@@ -295,24 +324,28 @@ html:not(.dark) .topic-info-banner {
   flex-wrap: wrap;
 }
 
-.topic-info-icon {
+
+.js-int-course-root .topic-info-icon {
   flex-shrink: 0;
   color: #8b5cf6;
   font-size: 0.95rem;
   margin-top: 2px;
 }
 
-.topic-info-text {
+
+.js-int-course-root .topic-info-text {
   font-size: 0.86rem;
   color: #c8c8c8;
   line-height: 1.55;
 }
 
-html:not(.dark) .topic-info-text {
+
+html:not(.dark) .js-int-course-root .topic-info-text {
   color: #3d3d2e;
 }
 
-.topic-info-text code {
+
+.js-int-course-root .topic-info-text code {
   background: rgba(139, 92, 246, 0.15);
   color: #8b5cf6;
   padding: 0.08rem 0.4rem;
@@ -323,15 +356,17 @@ html:not(.dark) .topic-info-text {
   border: 1px solid rgba(139, 92, 246, 0.25);
 }
 
-html:not(.dark) .topic-info-text code {
+
+html:not(.dark) .js-int-course-root .topic-info-text code {
   background: rgba(139, 92, 246, 0.2);
   color: #7a6800;
 }
 
-/* ═══════════════════════════════════════════════════════════════════
-   MAIN CONTENT — PANELS GRID
-═══════════════════════════════════════════════════════════════════ */
-.topic-main {
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   MAIN CONTENT â€” PANELS GRID
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .topic-main {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -341,7 +376,8 @@ html:not(.dark) .topic-info-text code {
   min-height: 0;
 }
 
-.topic-panels-grid {
+
+.js-int-course-root .topic-panels-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.9rem;
@@ -350,17 +386,19 @@ html:not(.dark) .topic-info-text code {
   min-height: calc(100vh - 56px - 42px - 3rem);
 }
 
+
 @media (max-width: 768px) {
-  .topic-panels-grid {
+  .js-int-course-root .topic-panels-grid {
     grid-template-columns: 1fr;
     min-height: unset;
   }
+
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    EDITOR PANEL (LEFT)
-═══════════════════════════════════════════════════════════════════ */
-.editor-panel {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .editor-panel {
   background: #1e1e1e;
   border-radius: 10px;
   overflow: hidden;
@@ -372,13 +410,15 @@ html:not(.dark) .topic-info-text code {
   transition: box-shadow 0.2s;
 }
 
-.editor-panel:hover {
+
+.js-int-course-root .editor-panel:hover {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4),
               0 0 0 1px rgba(139, 92, 246, 0.15);
 }
 
+
 /* Panel header */
-.editor-panel-header {
+.js-int-course-root .editor-panel-header {
   background: #111827;
   padding: 0.55rem 0.9rem;
   display: flex;
@@ -388,14 +428,16 @@ html:not(.dark) .topic-info-text code {
   border-bottom: 1px solid rgba(139, 92, 246, 0.08);
 }
 
-.editor-panel-header-left {
+
+.js-int-course-root .editor-panel-header-left {
   display: flex;
   align-items: center;
   gap: 0.55rem;
 }
 
+
 /* JS lang badge */
-.editor-lang-badge {
+.js-int-course-root .editor-lang-badge {
   background: rgba(139, 92, 246, 0.15);
   color: #8b5cf6;
   font-size: 0.7rem;
@@ -408,39 +450,47 @@ html:not(.dark) .topic-info-text code {
   border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
-.editor-label-text {
+
+.js-int-course-root .editor-label-text {
   color: #6b7280;
   font-size: 0.76rem;
   font-weight: 500;
 }
 
+
 /* Traffic light dots */
-.editor-dots {
+.js-int-course-root .editor-dots {
   display: flex;
   gap: 0.38rem;
   align-items: center;
 }
 
-.editor-dot {
+
+.js-int-course-root .editor-dot {
   width: 11px;
   height: 11px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
-.editor-dot.red    { background: #ef4444; }
-.editor-dot.yellow { background: #f59e0b; }
-.editor-dot.green  { background: #22c55e; }
+
+.js-int-course-root .editor-dot.red { background: #ef4444; }
+
+.js-int-course-root .editor-dot.yellow { background: #f59e0b; }
+
+.js-int-course-root .editor-dot.green { background: #22c55e; }
+
 
 /* Monaco wrapper */
-.editor-monaco-wrap {
+.js-int-course-root .editor-monaco-wrap {
   flex: 1;
   min-height: 0;
   overflow: hidden;
 }
 
-/* ── Action buttons bar ── */
-.editor-actions-bar {
+
+/* â”€â”€ Action buttons bar â”€â”€ */
+.js-int-course-root .editor-actions-bar {
   background: #0d1117;
   padding: 0.5rem 0.75rem;
   display: flex;
@@ -451,8 +501,9 @@ html:not(.dark) .topic-info-text code {
   border-top: 1px solid rgba(139, 92, 246, 0.06);
 }
 
+
 /* Base action button */
-.action-btn {
+.js-int-course-root .action-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -468,50 +519,58 @@ html:not(.dark) .topic-info-text code {
   font-family: inherit;
 }
 
-.action-btn:hover {
+
+.js-int-course-root .action-btn:hover {
   filter: brightness(1.14);
   transform: translateY(-1px);
 }
 
-.action-btn:active {
+
+.js-int-course-root .action-btn:active {
   transform: translateY(0);
   filter: brightness(0.95);
 }
 
-.action-btn i {
+
+.js-int-course-root .action-btn i {
   font-size: 0.85rem;
   flex-shrink: 0;
 }
 
-/* Run — Violet Primary */
-.action-btn.run {
+
+/* Run â€” Violet Primary */
+.js-int-course-root .action-btn.run {
   background: #8b5cf6;
   color: #1a1a1a;
   box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
 }
 
-.action-btn.run:hover {
+
+.js-int-course-root .action-btn.run:hover {
   box-shadow: 0 4px 16px rgba(139, 92, 246, 0.45);
 }
 
-/* JsIntCompiler — blue-ish */
-.action-btn.compiler {
+
+/* JsIntCompiler â€” blue-ish */
+.js-int-course-root .action-btn.compiler {
   background: #1d4ed8;
   color: #fff;
   box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
 }
 
-/* Copy — dark gray */
-.action-btn.copy {
+
+/* Copy â€” dark gray */
+.js-int-course-root .action-btn.copy {
   background: #374151;
   color: #f3f4f6;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CONSOLE PANEL (RIGHT)
-═══════════════════════════════════════════════════════════════════ */
-.console-panel {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .console-panel {
   background: #161616;
   border-radius: 10px;
   overflow: hidden;
@@ -523,13 +582,15 @@ html:not(.dark) .topic-info-text code {
   transition: box-shadow 0.2s;
 }
 
-.console-panel:hover {
+
+.js-int-course-root .console-panel:hover {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4),
               0 0 0 1px rgba(139, 92, 246, 0.15);
 }
 
+
 /* Panel header */
-.console-panel-header {
+.js-int-course-root .console-panel-header {
   background: #111827;
   padding: 0.55rem 0.9rem;
   display: flex;
@@ -539,7 +600,8 @@ html:not(.dark) .topic-info-text code {
   border-bottom: 1px solid rgba(139, 92, 246, 0.08);
 }
 
-.console-panel-title {
+
+.js-int-course-root .console-panel-title {
   display: flex;
   align-items: center;
   gap: 0.45rem;
@@ -549,13 +611,15 @@ html:not(.dark) .topic-info-text code {
   margin: 0;
 }
 
-.console-panel-title i {
+
+.js-int-course-root .console-panel-title i {
   color: #8b5cf6;
   font-size: 0.95rem;
 }
 
+
 /* "Live Result" badge */
-.console-live-badge {
+.js-int-course-root .console-live-badge {
   background: rgba(34, 197, 94, 0.15);
   color: #22c55e;
   font-size: 0.66rem;
@@ -567,8 +631,9 @@ html:not(.dark) .topic-info-text code {
   border: 1px solid rgba(34, 197, 94, 0.25);
 }
 
-/* ── Console output area ── */
-.console-output {
+
+/* â”€â”€ Console output area â”€â”€ */
+.js-int-course-root .console-output {
   flex: 1;
   overflow-y: auto;
   padding: 12px 14px;
@@ -581,13 +646,18 @@ html:not(.dark) .topic-info-text code {
   scrollbar-color: rgba(139, 92, 246, 0.3) transparent;
 }
 
-.console-output::-webkit-scrollbar       { width: 5px; }
-.console-output::-webkit-scrollbar-track { background: transparent; }
-.console-output::-webkit-scrollbar-thumb { background: rgba(139, 92, 246, 0.25); border-radius: 4px; }
-.console-output::-webkit-scrollbar-thumb:hover { background: rgba(139, 92, 246, 0.45); }
 
-/* ── Empty state ── */
-.console-empty-state {
+.js-int-course-root .console-output::-webkit-scrollbar { width: 5px; }
+
+.js-int-course-root .console-output::-webkit-scrollbar-track { background: transparent; }
+
+.js-int-course-root .console-output::-webkit-scrollbar-thumb { background: rgba(139, 92, 246, 0.25); border-radius: 4px; }
+
+.js-int-course-root .console-output::-webkit-scrollbar-thumb:hover { background: rgba(139, 92, 246, 0.45); }
+
+
+/* â”€â”€ Empty state â”€â”€ */
+.js-int-course-root .console-empty-state {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -599,26 +669,30 @@ html:not(.dark) .topic-info-text code {
   padding: 2rem 1.5rem;
 }
 
-.console-empty-icon {
+
+.js-int-course-root .console-empty-icon {
   font-size: 2.2rem;
   color: rgba(139, 92, 246, 0.25);
 }
 
-.console-empty-title {
+
+.js-int-course-root .console-empty-title {
   font-size: 0.95rem;
   font-weight: 700;
   color: #4b5563;
   margin: 0;
 }
 
-.console-empty-hint {
+
+.js-int-course-root .console-empty-hint {
   font-size: 0.8rem;
   color: #374151;
   margin: 0;
   line-height: 1.6;
 }
 
-.console-empty-hint code {
+
+.js-int-course-root .console-empty-hint code {
   background: rgba(139, 92, 246, 0.1);
   color: #8b5cf6;
   padding: 0.06rem 0.35rem;
@@ -627,12 +701,14 @@ html:not(.dark) .topic-info-text code {
   font-weight: 600;
 }
 
-.console-empty-hint strong {
+
+.js-int-course-root .console-empty-hint strong {
   color: #8b5cf6;
 }
 
-/* ── Log entry ── */
-.console-entry {
+
+/* â”€â”€ Log entry â”€â”€ */
+.js-int-course-root .console-entry {
   display: flex;
   align-items: flex-start;
   gap: 0.45rem;
@@ -643,69 +719,84 @@ html:not(.dark) .topic-info-text code {
   transition: background 0.15s;
 }
 
-.console-entry:last-child {
+
+.js-int-course-root .console-entry:last-child {
   margin-bottom: 0;
 }
 
-.console-entry:hover {
+
+.js-int-course-root .console-entry:hover {
   background: rgba(255, 255, 255, 0.03);
 }
 
-/* Entry — log */
-.console-entry--log {
+
+/* Entry â€” log */
+.js-int-course-root .console-entry--log {
   border-left: 2px solid rgba(139, 92, 246, 0.35);
 }
 
-.console-entry--log .console-entry-icon i {
+
+.js-int-course-root .console-entry--log .console-entry-icon i {
   color: rgba(139, 92, 246, 0.7);
 }
 
-.console-entry--log .console-entry-type {
+
+.js-int-course-root .console-entry--log .console-entry-type {
   color: rgba(139, 92, 246, 0.5);
 }
 
-.console-entry--log .console-entry-text {
+
+.js-int-course-root .console-entry--log .console-entry-text {
   color: #d1fae5;
 }
 
-/* Entry — error */
-.console-entry--error {
+
+/* Entry â€” error */
+.js-int-course-root .console-entry--error {
   background: rgba(239, 68, 68, 0.06);
   border-left: 2px solid #ef4444;
 }
 
-.console-entry--error .console-entry-icon i {
+
+.js-int-course-root .console-entry--error .console-entry-icon i {
   color: #ef4444;
 }
 
-.console-entry--error .console-entry-type {
+
+.js-int-course-root .console-entry--error .console-entry-type {
   color: #f87171;
 }
 
-.console-entry--error .console-entry-text {
+
+.js-int-course-root .console-entry--error .console-entry-text {
   color: #fca5a5;
 }
 
-/* Entry — warn */
-.console-entry--warn {
+
+/* Entry â€” warn */
+.js-int-course-root .console-entry--warn {
   background: rgba(245, 158, 11, 0.06);
   border-left: 2px solid #f59e0b;
 }
 
-.console-entry--warn .console-entry-icon i {
+
+.js-int-course-root .console-entry--warn .console-entry-icon i {
   color: #f59e0b;
 }
 
-.console-entry--warn .console-entry-type {
+
+.js-int-course-root .console-entry--warn .console-entry-type {
   color: #fbbf24;
 }
 
-.console-entry--warn .console-entry-text {
+
+.js-int-course-root .console-entry--warn .console-entry-text {
   color: #fde68a;
 }
 
-/* ── Entry sub-parts ── */
-.console-entry-icon {
+
+/* â”€â”€ Entry sub-parts â”€â”€ */
+.js-int-course-root .console-entry-icon {
   flex-shrink: 0;
   font-size: 0.8rem;
   width: 16px;
@@ -715,7 +806,8 @@ html:not(.dark) .topic-info-text code {
   margin-top: 1px;
 }
 
-.console-entry-type {
+
+.js-int-course-root .console-entry-type {
   flex-shrink: 0;
   font-size: 0.65rem;
   font-weight: 800;
@@ -725,7 +817,8 @@ html:not(.dark) .topic-info-text code {
   margin-top: 1px;
 }
 
-.console-entry-text {
+
+.js-int-course-root .console-entry-text {
   flex: 1;
   white-space: pre-wrap;
   word-break: break-word;
@@ -733,8 +826,9 @@ html:not(.dark) .topic-info-text code {
   line-height: 1.5;
 }
 
-/* ── Console actions bar ── */
-.console-actions-bar {
+
+/* â”€â”€ Console actions bar â”€â”€ */
+.js-int-course-root .console-actions-bar {
   background: #0d1117;
   padding: 0.48rem 0.75rem;
   display: flex;
@@ -745,7 +839,8 @@ html:not(.dark) .topic-info-text code {
   border-top: 1px solid rgba(139, 92, 246, 0.06);
 }
 
-.console-clear-btn {
+
+.js-int-course-root .console-clear-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
@@ -761,22 +856,26 @@ html:not(.dark) .topic-info-text code {
   font-family: inherit;
 }
 
-.console-clear-btn:hover:not(:disabled) {
+
+.js-int-course-root .console-clear-btn:hover:not(:disabled) {
   background: rgba(239, 68, 68, 0.18);
   border-color: rgba(239, 68, 68, 0.45);
 }
 
-.console-clear-btn:disabled {
+
+.js-int-course-root .console-clear-btn:disabled {
   opacity: 0.35;
   cursor: not-allowed;
 }
 
-.console-clear-btn i {
+
+.js-int-course-root .console-clear-btn i {
   font-size: 0.8rem;
 }
 
+
 /* Output line count badge */
-.console-count-badge {
+.js-int-course-root .console-count-badge {
   background: rgba(139, 92, 246, 0.1);
   color: rgba(139, 92, 246, 0.7);
   font-size: 0.67rem;
@@ -787,8 +886,9 @@ html:not(.dark) .topic-info-text code {
   border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
+
 /* Hint text at right */
-.console-hint-text {
+.js-int-course-root .console-hint-text {
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -798,87 +898,104 @@ html:not(.dark) .topic-info-text code {
   white-space: nowrap;
 }
 
-.console-hint-text i {
+
+.js-int-course-root .console-hint-text i {
   font-size: 0.75rem;
   color: #4b5563;
 }
 
+
 @media (max-width: 600px) {
-  .console-hint-text {
+  .js-int-course-root .console-hint-text {
     display: none;
   }
+
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESPONSIVE TWEAKS
-═══════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 480px) {
-  .topic-header-title {
+  .js-int-course-root .topic-header-title {
     font-size: 0.65rem;
   }
 
-  .topic-back-btn {
+
+  .js-int-course-root .topic-back-btn {
     padding: 0.3rem 0.55rem;
     font-size: 0.74rem;
   }
 
-  .topic-menu-trigger {
+
+  .js-int-course-root .topic-menu-trigger {
     width: 34px;
     height: 32px;
     gap: 4px;
   }
 
-  .topic-main {
+
+  .js-int-course-root .topic-main {
     padding: 0.6rem 0.6rem 1rem;
   }
 
-  .editor-panel,
-  .console-panel {
+
+  .js-int-course-root .editor-panel,
+.js-int-course-root .console-panel {
     min-height: 400px;
   }
 
-  .action-btn {
+
+  .js-int-course-root .action-btn {
     padding: 0.38rem 0.7rem;
     font-size: 0.74rem;
   }
 
-  .topic-info-banner {
+
+  .js-int-course-root .topic-info-banner {
     padding: 8px 14px;
   }
 
-  .topic-info-text {
+
+  .js-int-course-root .topic-info-text {
     font-size: 0.78rem;
   }
+
 }
 
 @media (max-width: 380px) {
-  .topic-header-title {
+  .js-int-course-root .topic-header-title {
     font-size: 0.58rem;
     letter-spacing: 0.02em;
   }
+
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HOVER SCALE EFFECT  (subtle lift on panels)
-═══════════════════════════════════════════════════════════════════ */
-.hover-scale {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-int-course-root .hover-scale {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hover-scale:hover {
+
+.js-int-course-root .hover-scale:hover {
   transform: translateY(-2px);
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    PREFERS REDUCED MOTION
-═══════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (prefers-reduced-motion: reduce) {
-  .loading-spinner-ring,
-  .loading-js-text,
-  .loading-dot,
-  .animate-fade-in,
-  .hover-scale {
+  .js-int-course-root .loading-spinner-ring,
+.js-int-course-root .loading-js-text,
+.js-int-course-root .loading-dot,
+.js-int-course-root .animate-fade-in,
+.js-int-course-root .hover-scale {
     animation: none !important;
     transition: none !important;
   }
+
 }
+
+

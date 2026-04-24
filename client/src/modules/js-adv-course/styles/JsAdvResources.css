@@ -1,10 +1,10 @@
-/* ═══════════════════════════════════════════════════════════════
-   JsAdvResources.css  —  JavaScript Adv in My Style
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   JsAdvResources.css  â€”  JavaScript Adv in My Style
    Brand: Primary #06b6d4 (JS Yellow)  |  Dark var(--bg) (Deep Navy)
-═══════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ─── CSS Variables ──────────────────────────────────────────── */
-.resources-page {
+/* â”€â”€â”€ CSS Variables â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .resources-page {
   --primary:        #06b6d4;
   --primary-dim:    rgba(6, 182, 212, 0.15);
   --primary-glow:   rgba(6, 182, 212, 0.35);
@@ -38,8 +38,9 @@
   overflow-x: hidden;
 }
 
+
 /* Light mode overrides */
-.resources-page:not(.dark) {
+.js-adv-course-root .resources-page:not(.dark) {
   --surface:        rgba(255, 255, 255, 0.85);
   --surface-hover:  rgba(255, 255, 255, 0.97);
   --border:         rgba(0, 0, 0, 0.08);
@@ -51,10 +52,11 @@
   background: #f4f6fb;
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HERO SECTION
-═══════════════════════════════════════════════════════════════ */
-.resources-hero {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .resources-hero {
   position: relative;
   min-height: 420px;
   display: flex;
@@ -70,7 +72,8 @@
   );
 }
 
-.resources-hero::before {
+
+.js-adv-course-root .resources-hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -80,7 +83,8 @@
   pointer-events: none;
 }
 
-.resources-hero__glow {
+
+.js-adv-course-root .resources-hero__glow {
   position: absolute;
   top: -120px;
   left: 50%;
@@ -92,19 +96,21 @@
   animation: heroGlowPulse 4s ease-in-out infinite alternate;
 }
 
+
 @keyframes heroGlowPulse {
   from { opacity: 0.7; transform: translateX(-50%) scale(1); }
   to   { opacity: 1;   transform: translateX(-50%) scale(1.08); }
 }
 
-.resources-hero__content {
+.js-adv-course-root .resources-hero__content {
   position: relative;
   z-index: 2;
   text-align: center;
   max-width: 680px;
 }
 
-.resources-hero__badge {
+
+.js-adv-course-root .resources-hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -120,7 +126,8 @@
   margin-bottom: 1.2rem;
 }
 
-.resources-hero__title {
+
+.js-adv-course-root .resources-hero__title {
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.15;
@@ -129,29 +136,33 @@
   letter-spacing: -0.02em;
 }
 
-.resources-hero__highlight {
+
+.js-adv-course-root .resources-hero__highlight {
   background: linear-gradient(135deg, #06b6d4 0%, #f0c400 50%, #e0a800 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.resources-hero__subtitle {
+
+.js-adv-course-root .resources-hero__subtitle {
   font-size: 1.05rem;
   color: var(--text-secondary);
   line-height: 1.7;
   margin: 0 0 2rem;
 }
 
+
 /* Floating decorative icons */
-.resources-hero__floats {
+.js-adv-course-root .resources-hero__floats {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 1;
 }
 
-.float-icon {
+
+.js-adv-course-root .float-icon {
   position: absolute;
   font-size: 1.8rem;
   opacity: 0.12;
@@ -159,11 +170,17 @@
   user-select: none;
 }
 
-.float-icon.f1 { top: 18%; left: 8%;  animation-delay: 0s;    font-size: 2.2rem; }
-.float-icon.f2 { top: 60%; left: 5%;  animation-delay: 1s;    font-size: 1.6rem; }
-.float-icon.f3 { top: 25%; right: 8%; animation-delay: 0.5s;  font-size: 2rem;   }
-.float-icon.f4 { top: 65%; right: 6%; animation-delay: 1.5s;  font-size: 1.5rem; }
-.float-icon.f5 { top: 80%; left: 45%; animation-delay: 2s;    font-size: 1.8rem; }
+
+.js-adv-course-root .float-icon.f1 { top: 18%; left: 8%;  animation-delay: 0s;    font-size: 2.2rem; }
+
+.js-adv-course-root .float-icon.f2 { top: 60%; left: 5%;  animation-delay: 1s;    font-size: 1.6rem; }
+
+.js-adv-course-root .float-icon.f3 { top: 25%; right: 8%; animation-delay: 0.5s;  font-size: 2rem;   }
+
+.js-adv-course-root .float-icon.f4 { top: 65%; right: 6%; animation-delay: 1.5s;  font-size: 1.5rem; }
+
+.js-adv-course-root .float-icon.f5 { top: 80%; left: 45%; animation-delay: 2s;    font-size: 1.8rem; }
+
 
 @keyframes floatDrift {
   0%, 100% { transform: translateY(0)    rotate(0deg); }
@@ -171,10 +188,10 @@
   66%       { transform: translateY(6px)   rotate(-3deg); }
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SEARCH BAR
-═══════════════════════════════════════════════════════════════ */
-.resources-search {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .resources-search {
   position: relative;
   display: flex;
   align-items: center;
@@ -182,7 +199,8 @@
   margin: 0 auto;
 }
 
-.resources-search__icon {
+
+.js-adv-course-root .resources-search__icon {
   position: absolute;
   left: 1.1rem;
   font-size: 1rem;
@@ -191,7 +209,8 @@
   z-index: 1;
 }
 
-.resources-search__input {
+
+.js-adv-course-root .resources-search__input {
   width: 100%;
   padding: 0.85rem 3rem 0.85rem 2.8rem;
   background: var(--surface);
@@ -206,22 +225,26 @@
   backdrop-filter: blur(16px);
 }
 
-.resources-page:not(.dark) .resources-search__input {
+
+.js-adv-course-root .resources-page:not(.dark) .resources-search__input {
   background: var(--surface);
   color: #1a1a2e;
 }
 
-.resources-search__input::placeholder {
+
+.js-adv-course-root .resources-search__input::placeholder {
   color: var(--text-muted);
 }
 
-.resources-search__input:focus {
+
+.js-adv-course-root .resources-search__input:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 4px var(--primary-dim), 0 4px 24px rgba(6, 182, 212,0.15);
   background: var(--surface);
 }
 
-.resources-search__clear {
+
+.js-adv-course-root .resources-search__clear {
   position: absolute;
   right: 0.9rem;
   background: none;
@@ -236,22 +259,25 @@
   align-items: center;
 }
 
-.resources-search__clear:hover {
+
+.js-adv-course-root .resources-search__clear:hover {
   color: var(--primary);
   transform: scale(1.2);
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    ROADMAP BANNER
-═══════════════════════════════════════════════════════════════ */
-.resources-roadmap-banner {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .resources-roadmap-banner {
   background: linear-gradient(135deg, rgba(6, 182, 212,0.12) 0%, rgba(6, 182, 212,0.04) 100%);
   border-top: 1px solid rgba(6, 182, 212,0.15);
   border-bottom: 1px solid rgba(6, 182, 212,0.15);
   padding: 1.1rem 2rem;
 }
 
-.resources-roadmap-banner__inner {
+
+.js-adv-course-root .resources-roadmap-banner__inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -261,19 +287,22 @@
   flex-wrap: wrap;
 }
 
-.resources-roadmap-banner__left {
+
+.js-adv-course-root .resources-roadmap-banner__left {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.resources-roadmap-banner__left > i {
+
+.js-adv-course-root .resources-roadmap-banner__left > i {
   font-size: 1.6rem;
   color: var(--primary);
   flex-shrink: 0;
 }
 
-.resources-roadmap-banner__left strong {
+
+.js-adv-course-root .resources-roadmap-banner__left strong {
   display: block;
   font-size: 0.95rem;
   font-weight: 700;
@@ -281,13 +310,15 @@
   margin-bottom: 0.15rem;
 }
 
-.resources-roadmap-banner__left p {
+
+.js-adv-course-root .resources-roadmap-banner__left p {
   margin: 0;
   font-size: 0.82rem;
   color: var(--text-secondary);
 }
 
-.resources-roadmap-banner__btn {
+
+.js-adv-course-root .resources-roadmap-banner__btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -303,22 +334,25 @@
   flex-shrink: 0;
 }
 
-.resources-roadmap-banner__btn:hover {
+
+.js-adv-course-root .resources-roadmap-banner__btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 24px var(--primary-glow);
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    MAIN CONTENT AREA
-═══════════════════════════════════════════════════════════════ */
-.resources-main {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .resources-main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem 5rem;
 }
 
-/* ─── Tabs ────────────────────────────────────────────────────── */
-.resources-tabs {
+
+/* â”€â”€â”€ Tabs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .resources-tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -331,12 +365,14 @@
   backdrop-filter: blur(12px);
 }
 
-.resources-page:not(.dark) .resources-tabs {
+
+.js-adv-course-root .resources-page:not(.dark) .resources-tabs {
   background: var(--surface);
   border-color: rgba(0,0,0,0.07);
 }
 
-.resources-tab {
+
+.js-adv-course-root .resources-tab {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -353,18 +389,21 @@
   white-space: nowrap;
 }
 
-.resources-tab:hover {
+
+.js-adv-course-root .resources-tab:hover {
   color: var(--text-primary);
   background: var(--surface);
 }
 
-.resources-tab--active {
+
+.js-adv-course-root .resources-tab--active {
   background: var(--primary);
   color: var(--dark) !important;
   box-shadow: 0 2px 12px rgba(6, 182, 212,0.40);
 }
 
-.resources-tab__count {
+
+.js-adv-course-root .resources-tab__count {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -378,30 +417,34 @@
   color: inherit;
 }
 
-.resources-tab--active .resources-tab__count {
+
+.js-adv-course-root .resources-tab--active .resources-tab__count {
   background: rgba(0,0,0,0.18);
   color: var(--dark);
 }
 
-/* ─── Result count ───────────────────────────────────────────── */
-.resources-result-count {
+
+/* â”€â”€â”€ Result count â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .resources-result-count {
   font-size: 0.82rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
   padding-left: 0.25rem;
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESOURCE GRID
-═══════════════════════════════════════════════════════════════ */
-.resources-grid {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .resources-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
-/* ─── Resource Card ──────────────────────────────────────────── */
-.resource-card {
+
+/* â”€â”€â”€ Resource Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .resource-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -421,12 +464,14 @@
   cursor: default;
 }
 
-.resources-page:not(.dark) .resource-card {
+
+.js-adv-course-root .resources-page:not(.dark) .resource-card {
   background: var(--surface);
   border-color: rgba(0,0,0,0.07);
 }
 
-.resource-card::before {
+
+.js-adv-course-root .resource-card::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -438,7 +483,8 @@
   pointer-events: none;
 }
 
-.resource-card:hover {
+
+.js-adv-course-root .resource-card:hover {
   transform: translateY(-6px);
   border-color: var(--card-accent, var(--primary));
   box-shadow:
@@ -447,8 +493,9 @@
     0 0 32px rgba(6, 182, 212,0.10);
 }
 
+
 /* Accent bar at top */
-.resource-card__accent-bar {
+.js-adv-course-root .resource-card__accent-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -459,19 +506,22 @@
   transition: opacity var(--transition);
 }
 
-.resource-card:hover .resource-card__accent-bar {
+
+.js-adv-course-root .resource-card:hover .resource-card__accent-bar {
   opacity: 1;
 }
 
+
 /* Card header */
-.resource-card__header {
+.js-adv-course-root .resource-card__header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
 
-.resource-card__icon-wrap {
+
+.js-adv-course-root .resource-card__icon-wrap {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
@@ -485,13 +535,15 @@
   transition: background var(--transition), transform var(--transition);
 }
 
-.resource-card:hover .resource-card__icon-wrap {
+
+.js-adv-course-root .resource-card:hover .resource-card__icon-wrap {
   background: var(--surface);
   transform: scale(1.08);
 }
 
+
 /* Badges */
-.resource-card__badge {
+.js-adv-course-root .resource-card__badge {
   font-size: 0.70rem;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -500,26 +552,30 @@
   border-radius: 100px;
 }
 
-.resource-card__badge--free {
+
+.js-adv-course-root .resource-card__badge--free {
   background: rgba(16,185,129,0.15);
   color: var(--badge-free);
   border: 1px solid rgba(16,185,129,0.30);
 }
 
-.resource-card__badge--paid {
+
+.js-adv-course-root .resource-card__badge--paid {
   background: rgba(249,115,22,0.15);
   color: var(--badge-paid);
   border: 1px solid rgba(249,115,22,0.30);
 }
 
-.resource-card__badge--opensource {
+
+.js-adv-course-root .resource-card__badge--opensource {
   background: rgba(139,92,246,0.15);
   color: var(--badge-oss);
   border: 1px solid rgba(139,92,246,0.30);
 }
 
+
 /* Title */
-.resource-card__title {
+.js-adv-course-root .resource-card__title {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -528,8 +584,9 @@
   letter-spacing: -0.01em;
 }
 
+
 /* Author */
-.resource-card__author {
+.js-adv-course-root .resource-card__author {
   font-size: 0.78rem;
   color: var(--text-muted);
   margin: 0 0 0.6rem;
@@ -538,8 +595,9 @@
   gap: 0.3rem;
 }
 
+
 /* Description */
-.resource-card__description {
+.js-adv-course-root .resource-card__description {
   font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.65;
@@ -547,15 +605,17 @@
   flex: 1;
 }
 
+
 /* Tags */
-.resource-card__tags {
+.js-adv-course-root .resource-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 1.2rem;
 }
 
-.resource-card__tag {
+
+.js-adv-course-root .resource-card__tag {
   font-size: 0.70rem;
   font-weight: 600;
   padding: 0.22rem 0.65rem;
@@ -566,18 +626,21 @@
   letter-spacing: 0.02em;
 }
 
-.resources-page:not(.dark) .resource-card__tag {
+
+.js-adv-course-root .resources-page:not(.dark) .resource-card__tag {
   background: rgba(0,0,0,0.04);
 }
 
+
 /* Actions */
-.resource-card__actions {
+.js-adv-course-root .resource-card__actions {
   display: flex;
   gap: 0.6rem;
   margin-top: auto;
 }
 
-.resource-card__visit {
+
+.js-adv-course-root .resource-card__visit {
   flex: 1;
   display: inline-flex;
   align-items: center;
@@ -593,13 +656,15 @@
   transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
 }
 
-.resource-card__visit:hover {
+
+.js-adv-course-root .resource-card__visit:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(6, 182, 212,0.35);
   filter: brightness(1.07);
 }
 
-.resource-card__copy {
+
+.js-adv-course-root .resource-card__copy {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -616,41 +681,47 @@
   white-space: nowrap;
 }
 
-.resource-card__copy:hover {
+
+.js-adv-course-root .resource-card__copy:hover {
   border-color: var(--primary);
   color: var(--primary);
   background: var(--primary-dim);
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    EMPTY STATE
-═══════════════════════════════════════════════════════════════ */
-.resources-empty {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .resources-empty {
   text-align: center;
   padding: 5rem 2rem;
   color: var(--text-secondary);
 }
 
-.resources-empty__icon {
+
+.js-adv-course-root .resources-empty__icon {
   font-size: 4rem;
   margin-bottom: 1rem;
   opacity: 0.5;
 }
 
-.resources-empty h3 {
+
+.js-adv-course-root .resources-empty h3 {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 0.5rem;
 }
 
-.resources-empty p {
+
+.js-adv-course-root .resources-empty p {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin: 0 0 1.5rem;
 }
 
-.resources-empty__reset {
+
+.js-adv-course-root .resources-empty__reset {
   padding: 0.65rem 1.6rem;
   background: var(--primary);
   color: var(--dark);
@@ -663,92 +734,109 @@
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.resources-empty__reset:hover {
+
+.js-adv-course-root .resources-empty__reset:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px var(--primary-glow);
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESPONSIVE
-═══════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 900px) {
-  .resources-hero {
+  .js-adv-course-root .resources-hero {
     padding: 6rem 1.5rem 3rem;
     min-height: 360px;
   }
 
-  .resources-grid {
+
+  .js-adv-course-root .resources-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.2rem;
   }
 
-  .resources-roadmap-banner__inner {
+
+  .js-adv-course-root .resources-roadmap-banner__inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
+
 }
 
 @media (max-width: 640px) {
-  .resources-hero {
+  .js-adv-course-root .resources-hero {
     padding: 5.5rem 1rem 2.5rem;
     min-height: 320px;
   }
 
-  .resources-hero__title {
+
+  .js-adv-course-root .resources-hero__title {
     font-size: 1.8rem;
   }
 
-  .resources-hero__subtitle {
+
+  .js-adv-course-root .resources-hero__subtitle {
     font-size: 0.92rem;
   }
 
-  .resources-tabs {
+
+  .js-adv-course-root .resources-tabs {
     gap: 0.3rem;
     padding: 0.4rem;
     border-radius: var(--radius-lg);
   }
 
-  .resources-tab {
+
+  .js-adv-course-root .resources-tab {
     font-size: 0.78rem;
     padding: 0.45rem 0.75rem;
   }
 
-  .resources-tab span:not(.resources-tab__count) {
+
+  .js-adv-course-root .resources-tab span:not(.resources-tab__count) {
     display: none;
   }
 
-  .resources-grid {
+
+  .js-adv-course-root .resources-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .resources-main {
+
+  .js-adv-course-root .resources-main {
     padding: 2rem 1rem 4rem;
   }
 
-  .resource-card {
+
+  .js-adv-course-root .resource-card {
     padding: 1.3rem 1.1rem 1.2rem;
   }
 
-  .resource-card__actions {
+
+  .js-adv-course-root .resource-card__actions {
     flex-direction: column;
   }
 
-  .resource-card__visit,
-  .resource-card__copy {
+
+  .js-adv-course-root .resource-card__visit,
+.js-adv-course-root .resource-card__copy {
     justify-content: center;
   }
 
-  .float-icon {
+
+  .js-adv-course-root .float-icon {
     display: none;
   }
+
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SCROLL ANIMATION UTILITIES
-═══════════════════════════════════════════════════════════════ */
-@keyframes fadeSlideUp {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+@keyframes jsadvFadeSlideUp {
   from {
     opacity: 0;
     transform: translateY(24px);
@@ -759,54 +847,75 @@
   }
 }
 
-.resource-card {
-  animation: fadeSlideUp 0.45s ease both;
+.js-adv-course-root .resource-card {
+  animation: jsadvFadeSlideUp 0.45s ease both;
 }
 
-.resource-card:nth-child(1)  { animation-delay: 0.04s; }
-.resource-card:nth-child(2)  { animation-delay: 0.08s; }
-.resource-card:nth-child(3)  { animation-delay: 0.12s; }
-.resource-card:nth-child(4)  { animation-delay: 0.16s; }
-.resource-card:nth-child(5)  { animation-delay: 0.20s; }
-.resource-card:nth-child(6)  { animation-delay: 0.24s; }
-.resource-card:nth-child(7)  { animation-delay: 0.28s; }
-.resource-card:nth-child(8)  { animation-delay: 0.32s; }
-.resource-card:nth-child(9)  { animation-delay: 0.36s; }
-.resource-card:nth-child(10) { animation-delay: 0.40s; }
-.resource-card:nth-child(11) { animation-delay: 0.44s; }
-.resource-card:nth-child(12) { animation-delay: 0.48s; }
-.resource-card:nth-child(n+13) { animation-delay: 0.52s; }
 
-/* ═══════════════════════════════════════════════════════════════
+.js-adv-course-root .resource-card:nth-child(1) { animation-delay: 0.04s; }
+
+.js-adv-course-root .resource-card:nth-child(2) { animation-delay: 0.08s; }
+
+.js-adv-course-root .resource-card:nth-child(3) { animation-delay: 0.12s; }
+
+.js-adv-course-root .resource-card:nth-child(4) { animation-delay: 0.16s; }
+
+.js-adv-course-root .resource-card:nth-child(5) { animation-delay: 0.20s; }
+
+.js-adv-course-root .resource-card:nth-child(6) { animation-delay: 0.24s; }
+
+.js-adv-course-root .resource-card:nth-child(7) { animation-delay: 0.28s; }
+
+.js-adv-course-root .resource-card:nth-child(8) { animation-delay: 0.32s; }
+
+.js-adv-course-root .resource-card:nth-child(9) { animation-delay: 0.36s; }
+
+.js-adv-course-root .resource-card:nth-child(10) { animation-delay: 0.40s; }
+
+.js-adv-course-root .resource-card:nth-child(11) { animation-delay: 0.44s; }
+
+.js-adv-course-root .resource-card:nth-child(12) { animation-delay: 0.48s; }
+
+.js-adv-course-root .resource-card:nth-child(n+13) { animation-delay: 0.52s; }
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SCROLLBAR STYLING
-═══════════════════════════════════════════════════════════════ */
-.resources-page *::-webkit-scrollbar {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .resources-page *::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
-.resources-page *::-webkit-scrollbar-track {
+
+.js-adv-course-root .resources-page *::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.resources-page *::-webkit-scrollbar-thumb {
+
+.js-adv-course-root .resources-page *::-webkit-scrollbar-thumb {
   background: rgba(6, 182, 212,0.25);
   border-radius: 100px;
 }
 
-.resources-page *::-webkit-scrollbar-thumb:hover {
+
+.js-adv-course-root .resources-page *::-webkit-scrollbar-thumb:hover {
   background: rgba(6, 182, 212,0.50);
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FOCUS ACCESSIBILITY
-═══════════════════════════════════════════════════════════════ */
-.resources-tab:focus-visible,
-.resources-search__input:focus-visible,
-.resource-card__visit:focus-visible,
-.resource-card__copy:focus-visible,
-.resources-roadmap-banner__btn:focus-visible,
-.resources-empty__reset:focus-visible {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .resources-tab:focus-visible,
+.js-adv-course-root .resources-search__input:focus-visible,
+.js-adv-course-root .resource-card__visit:focus-visible,
+.js-adv-course-root .resource-card__copy:focus-visible,
+.js-adv-course-root .resources-roadmap-banner__btn:focus-visible,
+.js-adv-course-root .resources-empty__reset:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;
 }
+
+
+

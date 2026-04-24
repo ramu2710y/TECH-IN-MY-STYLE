@@ -1,13 +1,13 @@
-/* ═══════════════════════════════════════════════════════════════════════════
-   JsAdvConnect.css — Let's JsAdvConnect Page
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   JsAdvConnect.css â€” Let's JsAdvConnect Page
    Brand: PRIMARY #06b6d4 (JS Yellow)  |  DARK var(--bg) (Deep Navy)
-   Design: Glassmorphism · Social Cards · FAQ Accordion · Contact Form
-═══════════════════════════════════════════════════════════════════════════ */
+   Design: Glassmorphism Â· Social Cards Â· FAQ Accordion Â· Contact Form
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ──────────────────────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    LOCAL TOKENS
-────────────────────────────────────────────────────────────────────────── */
-:root {
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root {
   --connect-navy:       var(--bg);
   --connect-navy-mid:   var(--surface);
   --connect-navy-light: var(--surface);
@@ -17,39 +17,44 @@
   --connect-glass-b:    rgba(255, 255, 255, 0.10);
 }
 
-/* ──────────────────────────────────────────────────────────────────────────
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    PAGE WRAPPER
-────────────────────────────────────────────────────────────────────────── */
-.connect-page {
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .connect-page {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text-primary);
   overflow-x: hidden;
 }
 
-/* ──────────────────────────────────────────────────────────────────────────
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    SHARED CONTAINER
-────────────────────────────────────────────────────────────────────────── */
-.connect-container {
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .connect-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
 }
 
-.connect-container--narrow {
+
+.js-adv-course-root .connect-container--narrow {
   max-width: 760px;
 }
 
-/* ──────────────────────────────────────────────────────────────────────────
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    SHARED SECTION HEADER
-────────────────────────────────────────────────────────────────────────── */
-.section-header {
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .section-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.section-header__title {
+
+.js-adv-course-root .section-header__title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 800;
   color: var(--text-primary);
@@ -57,7 +62,8 @@
   letter-spacing: -0.02em;
 }
 
-.section-header__sub {
+
+.js-adv-course-root .section-header__sub {
   font-size: 1rem;
   color: var(--text-muted);
   margin: 0;
@@ -66,9 +72,10 @@
   line-height: 1.6;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    KEYFRAMES
-══════════════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @keyframes connect-fade-up {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0);    }
@@ -96,10 +103,10 @@
   to   { transform: rotate(360deg); }
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HERO BANNER
-══════════════════════════════════════════════════════════════════════════ */
-.connect-hero {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .connect-hero {
   position: relative;
   background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 50%, var(--surface) 100%);
   overflow: hidden;
@@ -112,20 +119,23 @@
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.connect-hero--visible {
+
+.js-adv-course-root .connect-hero--visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ── Decorative blobs ── */
-.connect-hero__blob {
+
+/* â”€â”€ Decorative blobs â”€â”€ */
+.js-adv-course-root .connect-hero__blob {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
   will-change: transform;
 }
 
-.connect-hero__blob--1 {
+
+.js-adv-course-root .connect-hero__blob--1 {
   width: 500px;
   height: 500px;
   background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
@@ -134,7 +144,8 @@
   animation: connect-blob-1 18s ease-in-out infinite;
 }
 
-.connect-hero__blob--2 {
+
+.js-adv-course-root .connect-hero__blob--2 {
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, rgba(99, 102, 241, 0.10) 0%, transparent 70%);
@@ -143,7 +154,8 @@
   animation: connect-blob-2 22s ease-in-out infinite;
 }
 
-.connect-hero__blob--3 {
+
+.js-adv-course-root .connect-hero__blob--3 {
   width: 300px;
   height: 300px;
   background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
@@ -152,16 +164,18 @@
   animation: connect-blob-3 15s ease-in-out infinite;
 }
 
-/* ── Hero inner ── */
-.connect-hero__inner {
+
+/* â”€â”€ Hero inner â”€â”€ */
+.js-adv-course-root .connect-hero__inner {
   position: relative;
   z-index: 2;
   max-width: 760px;
   margin: 0 auto;
 }
 
-/* ── Badge ── */
-.connect-hero__badge {
+
+/* â”€â”€ Badge â”€â”€ */
+.js-adv-course-root .connect-hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -180,8 +194,9 @@
   animation-delay: 0.1s;
 }
 
-/* ── Title ── */
-.connect-hero__title {
+
+/* â”€â”€ Title â”€â”€ */
+.js-adv-course-root .connect-hero__title {
   font-size: clamp(2rem, 5vw, 3.4rem);
   font-weight: 900;
   letter-spacing: -0.03em;
@@ -198,8 +213,9 @@
   animation-delay: 0.2s;
 }
 
-/* ── Subtitle ── */
-.connect-hero__subtitle {
+
+/* â”€â”€ Subtitle â”€â”€ */
+.js-adv-course-root .connect-hero__subtitle {
   font-size: clamp(0.95rem, 2vw, 1.15rem);
   color: var(--text-muted);
   line-height: 1.7;
@@ -208,8 +224,9 @@
   animation-delay: 0.3s;
 }
 
-/* ── Stats row ── */
-.connect-hero__stats {
+
+/* â”€â”€ Stats row â”€â”€ */
+.js-adv-course-root .connect-hero__stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -217,7 +234,8 @@
   animation-delay: 0.4s;
 }
 
-.connect-stat {
+
+.js-adv-course-root .connect-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,19 +248,22 @@
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
 }
 
-.connect-stat:hover {
+
+.js-adv-course-root .connect-stat:hover {
   background: rgba(6, 182, 212, 0.08);
   border-color: rgba(6, 182, 212, 0.25);
   transform: translateY(-3px);
 }
 
-.connect-stat__icon {
+
+.js-adv-course-root .connect-stat__icon {
   font-size: 1.4rem;
   color: #06b6d4;
   margin-bottom: 0.15rem;
 }
 
-.connect-stat__value {
+
+.js-adv-course-root .connect-stat__value {
   font-size: 1.6rem;
   font-weight: 800;
   color: var(--text-primary);
@@ -250,7 +271,8 @@
   font-variant-numeric: tabular-nums;
 }
 
-.connect-stat__label {
+
+.js-adv-course-root .connect-stat__label {
   font-size: 0.72rem;
   color: var(--text-muted);
   text-align: center;
@@ -259,21 +281,24 @@
   text-transform: uppercase;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SOCIALS SECTION
-══════════════════════════════════════════════════════════════════════════ */
-.socials-section {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .socials-section {
   padding: 5rem 0;
 }
 
-.socials-grid {
+
+.js-adv-course-root .socials-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-/* ── Social Card ── */
-.social-card {
+
+/* â”€â”€ Social Card â”€â”€ */
+.js-adv-course-root .social-card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -290,7 +315,8 @@
   animation: connect-fade-up 0.5s ease both;
 }
 
-.social-card::before {
+
+.js-adv-course-root .social-card::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -300,18 +326,21 @@
   transition: opacity 0.3s ease;
 }
 
-.social-card:hover {
+
+.js-adv-course-root .social-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 48px -8px color-mix(in srgb, var(--sc-color, #06b6d4) 30%, transparent);
   border-color: var(--sc-color, #06b6d4);
 }
 
-.social-card:hover::before {
+
+.js-adv-course-root .social-card:hover::before {
   opacity: 1;
 }
 
-/* ── icon wrap ── */
-.social-card__icon-wrap {
+
+/* â”€â”€ icon wrap â”€â”€ */
+.js-adv-course-root .social-card__icon-wrap {
   width: 56px;
   height: 56px;
   border-radius: 14px;
@@ -328,12 +357,14 @@
   flex-shrink: 0;
 }
 
-.social-card:hover .social-card__icon-wrap {
+
+.js-adv-course-root .social-card:hover .social-card__icon-wrap {
   transform: scale(1.1) rotate(-4deg);
 }
 
-/* ── card body ── */
-.social-card__body {
+
+/* â”€â”€ card body â”€â”€ */
+.js-adv-course-root .social-card__body {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -341,20 +372,23 @@
   z-index: 1;
 }
 
-.social-card__top {
+
+.js-adv-course-root .social-card__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
 }
 
-.social-card__label {
+
+.js-adv-course-root .social-card__label {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-primary);
 }
 
-.social-card__badge {
+
+.js-adv-course-root .social-card__badge {
   font-size: 0.7rem;
   font-weight: 700;
   background: var(--sc-bg, rgba(6, 182, 212,0.1));
@@ -367,28 +401,32 @@
   white-space: nowrap;
 }
 
-.social-card__handle {
+
+.js-adv-course-root .social-card__handle {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--sc-color, #06b6d4);
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-.social-card__desc {
+
+.js-adv-course-root .social-card__desc {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
 }
 
-/* ── card footer ── */
-.social-card__footer {
+
+/* â”€â”€ card footer â”€â”€ */
+.js-adv-course-root .social-card__footer {
   margin-top: auto;
   position: relative;
   z-index: 1;
 }
 
-.social-card__cta {
+
+.js-adv-course-root .social-card__cta {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -398,21 +436,24 @@
   transition: gap 0.2s ease;
 }
 
-.social-card:hover .social-card__cta {
+
+.js-adv-course-root .social-card:hover .social-card__cta {
   gap: 0.7rem;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FAQ SECTION
-══════════════════════════════════════════════════════════════════════════ */
-.faq-section {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .faq-section {
   padding: 5rem 0;
   background: var(--bg-surface-alt, rgba(6, 182, 212, 0.02));
   border-top:    1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 
-.faq-list {
+
+.js-adv-course-root .faq-list {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border-color);
@@ -422,22 +463,26 @@
   box-shadow: var(--card-shadow);
 }
 
-/* ── FAQ Item ── */
-.faq-item {
+
+/* â”€â”€ FAQ Item â”€â”€ */
+.js-adv-course-root .faq-item {
   border-bottom: 1px solid var(--border-color);
 }
 
-.faq-item:last-child {
+
+.js-adv-course-root .faq-item:last-child {
   border-bottom: none;
 }
 
-.faq-item--open .faq-question {
+
+.js-adv-course-root .faq-item--open .faq-question {
   color: #06b6d4;
   background: rgba(6, 182, 212, 0.05);
 }
 
-/* ── FAQ question button ── */
-.faq-question {
+
+/* â”€â”€ FAQ question button â”€â”€ */
+.js-adv-course-root .faq-question {
   width: 100%;
   display: flex;
   align-items: center;
@@ -455,18 +500,21 @@
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.faq-question:hover {
+
+.js-adv-course-root .faq-question:hover {
   background: rgba(6, 182, 212, 0.04);
   color: var(--text-primary);
 }
 
-.faq-question__text {
+
+.js-adv-course-root .faq-question__text {
   flex: 1;
   line-height: 1.5;
 }
 
-/* ── Chevron ── */
-.faq-question__chevron {
+
+/* â”€â”€ Chevron â”€â”€ */
+.js-adv-course-root .faq-question__chevron {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -481,19 +529,22 @@
   transition: transform 0.3s ease, background 0.2s ease;
 }
 
-.faq-item--open .faq-question__chevron {
+
+.js-adv-course-root .faq-item--open .faq-question__chevron {
   transform: rotate(180deg);
   background: rgba(6, 182, 212, 0.18);
 }
 
-/* ── FAQ answer ── */
-.faq-answer {
+
+/* â”€â”€ FAQ answer â”€â”€ */
+.js-adv-course-root .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.faq-answer__text {
+
+.js-adv-course-root .faq-answer__text {
   padding: 0 1.75rem 1.5rem;
   font-size: 0.95rem;
   color: var(--text-secondary);
@@ -501,15 +552,17 @@
   margin: 0;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CONTACT SECTION
-══════════════════════════════════════════════════════════════════════════ */
-.contact-section {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .contact-section {
   padding: 5rem 0 6rem;
 }
 
-/* ── Contact Form ── */
-.contact-form {
+
+/* â”€â”€ Contact Form â”€â”€ */
+.js-adv-course-root .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -520,21 +573,24 @@
   box-shadow: var(--card-shadow);
 }
 
-/* ── Form Group ── */
-.form-group {
+
+/* â”€â”€ Form Group â”€â”€ */
+.js-adv-course-root .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.form-group--error .form-input,
-.form-group--error .form-textarea {
+
+.js-adv-course-root .form-group--error .form-input,
+.js-adv-course-root .form-group--error .form-textarea {
   border-color: #ef4444;
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
 }
 
-/* ── Label ── */
-.form-label {
+
+/* â”€â”€ Label â”€â”€ */
+.js-adv-course-root .form-label {
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -543,14 +599,16 @@
   gap: 0.4rem;
 }
 
-.form-label i {
+
+.js-adv-course-root .form-label i {
   color: #06b6d4;
   font-size: 0.9rem;
 }
 
-/* ── Input & Textarea ── */
-.form-input,
-.form-textarea {
+
+/* â”€â”€ Input & Textarea â”€â”€ */
+.js-adv-course-root .form-input,
+.js-adv-course-root .form-textarea {
   width: 100%;
   background: var(--bg);
   border: 1.5px solid var(--border-color);
@@ -564,26 +622,30 @@
   box-sizing: border-box;
 }
 
-.form-input::placeholder,
-.form-textarea::placeholder {
+
+.js-adv-course-root .form-input::placeholder,
+.js-adv-course-root .form-textarea::placeholder {
   color: var(--text-muted);
 }
 
-.form-input:focus,
-.form-textarea:focus {
+
+.js-adv-course-root .form-input:focus,
+.js-adv-course-root .form-textarea:focus {
   border-color: #06b6d4;
   box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
   background: var(--bg-surface);
 }
 
-.form-textarea {
+
+.js-adv-course-root .form-textarea {
   resize: vertical;
   min-height: 130px;
   line-height: 1.6;
 }
 
-/* ── Error message ── */
-.form-error {
+
+/* â”€â”€ Error message â”€â”€ */
+.js-adv-course-root .form-error {
   font-size: 0.8rem;
   color: #ef4444;
   display: flex;
@@ -592,8 +654,9 @@
   font-weight: 500;
 }
 
-/* ── Submit Button ── */
-.submit-btn {
+
+/* â”€â”€ Submit Button â”€â”€ */
+.js-adv-course-root .submit-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -613,25 +676,29 @@
   min-width: 180px;
 }
 
-.submit-btn:hover:not(:disabled) {
+
+.js-adv-course-root .submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(6, 182, 212, 0.4);
 }
 
-.submit-btn:active:not(:disabled) {
+
+.js-adv-course-root .submit-btn:active:not(:disabled) {
   transform: translateY(0);
 }
 
-.submit-btn--sending,
-.submit-btn:disabled {
+
+.js-adv-course-root .submit-btn--sending,
+.js-adv-course-root .submit-btn:disabled {
   opacity: 0.75;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
 }
 
-/* ── Spinner ── */
-.submit-btn__spinner {
+
+/* â”€â”€ Spinner â”€â”€ */
+.js-adv-course-root .submit-btn__spinner {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -641,8 +708,9 @@
   animation: spin-once 0.7s linear infinite;
 }
 
-/* ── Success Message ── */
-.success-message {
+
+/* â”€â”€ Success Message â”€â”€ */
+.js-adv-course-root .success-message {
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
@@ -653,14 +721,16 @@
   color: var(--text-primary);
 }
 
-.success-message__icon {
+
+.js-adv-course-root .success-message__icon {
   font-size: 2rem;
   color: #10b981;
   flex-shrink: 0;
   line-height: 1;
 }
 
-.success-message strong {
+
+.js-adv-course-root .success-message strong {
   display: block;
   font-size: 1.1rem;
   font-weight: 700;
@@ -668,14 +738,16 @@
   color: #10b981;
 }
 
-.success-message p {
+
+.js-adv-course-root .success-message p {
   font-size: 0.92rem;
   color: var(--text-secondary);
   margin: 0;
   line-height: 1.5;
 }
 
-.success-message__reset {
+
+.js-adv-course-root .success-message__reset {
   display: inline-flex;
   align-items: center;
   margin-top: 1rem;
@@ -691,149 +763,181 @@
   transition: background 0.2s ease;
 }
 
-.success-message__reset:hover {
+
+.js-adv-course-root .success-message__reset:hover {
   background: rgba(16, 185, 129, 0.1);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DARK MODE OVERRIDES
-══════════════════════════════════════════════════════════════════════════ */
-html.dark .connect-page {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+html.dark .js-adv-course-root .connect-page {
   background: var(--bg);
 }
 
-html.dark .social-card {
+
+html.dark .js-adv-course-root .social-card {
   background: rgba(255, 255, 255, 0.03);
   border-color: var(--text-muted);
 }
 
-html.dark .social-card:hover {
+
+html.dark .js-adv-course-root .social-card:hover {
   background: var(--sc-bg, rgba(255, 255, 255, 0.05));
   border-color: var(--sc-color, #06b6d4);
 }
 
-html.dark .faq-list {
+
+html.dark .js-adv-course-root .faq-list {
   background: #0f0f1e;
   border-color: var(--text-muted);
 }
 
-html.dark .faq-item {
+
+html.dark .js-adv-course-root .faq-item {
   border-color: var(--text-muted);
 }
 
-html.dark .faq-section {
+
+html.dark .js-adv-course-root .faq-section {
   background: rgba(255, 255, 255, 0.01);
   border-color: var(--text-muted);
 }
 
-html.dark .contact-form {
+
+html.dark .js-adv-course-root .contact-form {
   background: #0f0f1e;
   border-color: var(--text-muted);
 }
 
-html.dark .form-input,
-html.dark .form-textarea {
+
+html.dark .js-adv-course-root .form-input,
+html.dark .js-adv-course-root .form-textarea {
   background: var(--surface);
   border-color: var(--text-muted);
   color: #e8e8e8;
 }
 
-html.dark .form-input:focus,
-html.dark .form-textarea:focus {
+
+html.dark .js-adv-course-root .form-input:focus,
+html.dark .js-adv-course-root .form-textarea:focus {
   background: var(--bg);
   border-color: #06b6d4;
 }
 
-html.dark .connect-stat {
+
+html.dark .js-adv-course-root .connect-stat {
   background: rgba(255, 255, 255, 0.04);
   border-color: var(--text-muted);
 }
 
-html.dark .section-header__title {
+
+html.dark .js-adv-course-root .section-header__title {
   color: #f0f0f0;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESPONSIVE
-══════════════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Tablet */
 @media (max-width: 900px) {
-  .connect-hero__stats {
+  .js-adv-course-root .connect-hero__stats {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .socials-grid {
+
+  .js-adv-course-root .socials-grid {
     grid-template-columns: 1fr;
     max-width: 540px;
     margin-inline: auto;
   }
+
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-  .connect-hero {
+  .js-adv-course-root .connect-hero {
     padding: 5rem 1.25rem 4rem;
   }
 
-  .connect-hero__title {
+
+  .js-adv-course-root .connect-hero__title {
     font-size: 2rem;
   }
 
-  .connect-hero__stats {
+
+  .js-adv-course-root .connect-hero__stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
 
-  .connect-stat {
+
+  .js-adv-course-root .connect-stat {
     padding: 1rem 0.5rem;
   }
 
-  .connect-stat__value {
+
+  .js-adv-course-root .connect-stat__value {
     font-size: 1.3rem;
   }
 
-  .connect-container {
+
+  .js-adv-course-root .connect-container {
     padding: 0 1.25rem;
   }
 
-  .socials-section,
-  .faq-section,
-  .contact-section {
+
+  .js-adv-course-root .socials-section,
+.js-adv-course-root .faq-section,
+.js-adv-course-root .contact-section {
     padding: 3.5rem 0;
   }
 
-  .contact-form {
+
+  .js-adv-course-root .contact-form {
     padding: 1.75rem 1.25rem;
   }
 
-  .faq-question {
+
+  .js-adv-course-root .faq-question {
     padding: 1.1rem 1.25rem;
   }
 
-  .faq-answer__text {
+
+  .js-adv-course-root .faq-answer__text {
     padding: 0 1.25rem 1.25rem;
   }
 
-  .social-card {
+
+  .js-adv-course-root .social-card {
     padding: 1.4rem;
   }
 
-  .submit-btn {
+
+  .js-adv-course-root .submit-btn {
     width: 100%;
     justify-content: center;
   }
 
-  .success-message {
+
+  .js-adv-course-root .success-message {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
 }
 
 /* Very small */
 @media (max-width: 380px) {
-  .connect-hero__stats {
+  .js-adv-course-root .connect-hero__stats {
     grid-template-columns: 1fr 1fr;
   }
+
 }
+
+
+

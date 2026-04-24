@@ -1,4 +1,4 @@
-.ml-code-block-wrapper {
+﻿.ml-course-root .ml-code-block-wrapper {
   border-radius: var(--ml-radius-md);
   overflow: hidden;
   margin: 1rem 0;
@@ -6,7 +6,8 @@
   box-shadow: var(--ml-shadow-sm);
 }
 
-.ml-code-block-header {
+
+.ml-course-root .ml-code-block-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +16,8 @@
   border-bottom: 1px solid var(--ml-glass-border);
 }
 
-.ml-code-language-badge {
+
+.ml-course-root .ml-code-language-badge {
   font-family: 'Fira Code', monospace;
   font-size: 0.75rem;
   font-weight: 500;
@@ -27,7 +29,8 @@
   letter-spacing: 0.5px;
 }
 
-.ml-copy-btn {
+
+.ml-course-root .ml-copy-btn {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -42,13 +45,17 @@
   font-family: 'Inter', sans-serif;
 }
 
-.ml-copy-btn:hover {
+
+.ml-course-root .ml-copy-btn:hover {
   background: var(--ml-glass-bg-hover);
   color: var(--ml-text-primary);
   border-color: var(--ml-glass-border-hover);
 }
 
-.ml-copy-btn.copied {
+
+.ml-course-root .ml-copy-btn.copied {
   color: #4ade80;
   border-color: rgba(74, 222, 128, 0.3);
 }
+
+

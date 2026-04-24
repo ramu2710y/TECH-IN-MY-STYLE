@@ -42,6 +42,9 @@ export default function MlNavbar() {
               About
             </a>
           </li>
+          <li>
+            <Link to="/courses" onClick={closeMenu} style={{ opacity: 0.85, border: '1.5px solid rgba(255,255,255,0.5)', borderRadius: '20px', padding: '0.2rem 0.75rem', fontSize: '0.8rem' }}>← Back</Link>
+          </li>
         </ul>
       </nav>
     </header>

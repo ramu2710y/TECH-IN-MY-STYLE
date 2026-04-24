@@ -1,11 +1,11 @@
-/* ═══════════════════════════════════════════════════════════════════
-   HtmlResources.css  —  HTML Resources Page
-   Brand palette: #E34F26 · #F16529 · #C73E1D
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   HtmlResources.css  â€”  HTML Resources Page
+   Brand palette: #E34F26 Â· #F16529 Â· #C73E1D
    Dark mode: html.dark activates dark variables
-═══════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ── CSS Tokens ─────────────────────────────────────────────────── */
-:root {
+/* â”€â”€ CSS Tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.html-course-root {
     --hr-primary: #e34f26;
     --hr-primary-dk: #c73e1d;
     --hr-secondary: #f16529;
@@ -53,6 +53,7 @@
     --hr-dur-slow: 500ms;
 }
 
+
 /* Dark mode */
 html.dark {
     --hr-bg: #0f0f0f;
@@ -70,8 +71,9 @@ html.dark {
     );
 }
 
-/* ── Base Layout ───────────────────────────────────────────────── */
-.html-resources {
+
+/* â”€â”€ Base Layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.html-course-root .html-resources {
     min-height: 100vh;
     background: var(--hr-bg);
     color: var(--hr-text);
@@ -79,8 +81,9 @@ html.dark {
     line-height: 1.6;
 }
 
-/* ── Hero Section ───────────────────────────────────────────────── */
-.hr-hero {
+
+/* â”€â”€ Hero Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.html-course-root .hr-hero {
     background: var(--hr-grad);
     color: white;
     padding: 4rem 2rem;
@@ -89,7 +92,8 @@ html.dark {
     overflow: hidden;
 }
 
-.hr-hero::before {
+
+.html-course-root .hr-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -100,42 +104,48 @@ html.dark {
     z-index: 1;
 }
 
-.hr-hero-content {
+
+.html-course-root .hr-hero-content {
     position: relative;
     z-index: 2;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.hr-hero h1 {
+
+.html-course-root .hr-hero h1 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hr-hero p {
+
+.html-course-root .hr-hero p {
     font-size: 1.25rem;
     opacity: 0.95;
     margin-bottom: 2rem;
 }
 
-/* ── Container ───────────────────────────────────────────────── */
-.hr-container {
+
+/* â”€â”€ Container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.html-course-root .hr-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* ── Resources Grid ───────────────────────────────────────────── */
-.hr-resources-grid {
+
+/* â”€â”€ Resources Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.html-course-root .hr-resources-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     padding: 4rem 0;
 }
 
-.hr-resource-card {
+
+.html-course-root .hr-resource-card {
     background: var(--hr-card);
     border: 1px solid var(--hr-border);
     border-radius: var(--hr-r-lg);
@@ -145,7 +155,8 @@ html.dark {
     overflow: hidden;
 }
 
-.hr-resource-card::before {
+
+.html-course-root .hr-resource-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -157,17 +168,20 @@ html.dark {
     transition: transform var(--hr-dur-norm) var(--hr-ease);
 }
 
-.hr-resource-card:hover {
+
+.html-course-root .hr-resource-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--hr-shadow-lg);
     border-color: var(--hr-primary);
 }
 
-.hr-resource-card:hover::before {
+
+.html-course-root .hr-resource-card:hover::before {
     transform: scaleX(1);
 }
 
-.hr-resource-icon {
+
+.html-course-root .hr-resource-icon {
     width: 60px;
     height: 60px;
     background: var(--hr-grad);
@@ -180,20 +194,23 @@ html.dark {
     color: white;
 }
 
-.hr-resource-title {
+
+.html-course-root .hr-resource-title {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: var(--hr-text);
 }
 
-.hr-resource-description {
+
+.html-course-root .hr-resource-description {
     color: var(--hr-text-muted);
     margin-bottom: 1.5rem;
     line-height: 1.7;
 }
 
-.hr-resource-link {
+
+.html-course-root .hr-resource-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -203,30 +220,35 @@ html.dark {
     transition: color var(--hr-dur-fast) var(--hr-ease);
 }
 
-.hr-resource-link:hover {
+
+.html-course-root .hr-resource-link:hover {
     color: var(--hr-primary-dk);
 }
 
-/* ── Categories Section ─────────────────────────────────────────── */
-.hr-categories {
+
+/* â”€â”€ Categories Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.html-course-root .hr-categories {
     padding: 4rem 0;
     background: var(--hr-bg-alt);
 }
 
-.hr-categories h2 {
+
+.html-course-root .hr-categories h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: var(--hr-text);
 }
 
-.hr-category-list {
+
+.html-course-root .hr-category-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
-.hr-category-item {
+
+.html-course-root .hr-category-item {
     background: var(--hr-card);
     border: 1px solid var(--hr-border);
     border-radius: var(--hr-r-md);
@@ -235,91 +257,109 @@ html.dark {
     transition: all var(--hr-dur-norm) var(--hr-ease);
 }
 
-.hr-category-item:hover {
+
+.html-course-root .hr-category-item:hover {
     transform: translateY(-2px);
     box-shadow: var(--hr-shadow-md);
     border-color: var(--hr-primary);
 }
 
-.hr-category-icon {
+
+.html-course-root .hr-category-icon {
     font-size: 2rem;
     color: var(--hr-primary);
     margin-bottom: 1rem;
 }
 
-.hr-category-name {
+
+.html-course-root .hr-category-name {
     font-weight: 600;
     color: var(--hr-text);
     margin-bottom: 0.5rem;
 }
 
-.hr-category-count {
+
+.html-course-root .hr-category-count {
     color: var(--hr-text-muted);
     font-size: 0.9rem;
 }
 
-/* ── Responsive Design ─────────────────────────────────────────── */
+
+/* â”€â”€ Responsive Design â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
-    .hr-hero {
+    .html-course-root .hr-hero {
         padding: 3rem 1rem;
     }
+
     
-    .hr-hero h1 {
+    .html-course-root .hr-hero h1 {
         font-size: 2rem;
     }
+
     
-    .hr-hero p {
+    .html-course-root .hr-hero p {
         font-size: 1rem;
     }
+
     
-    .hr-container {
+    .html-course-root .hr-container {
         padding: 0 1rem;
     }
+
     
-    .hr-resources-grid {
+    .html-course-root .hr-resources-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 2rem 0;
     }
+
     
-    .hr-resource-card {
+    .html-course-root .hr-resource-card {
         padding: 1.5rem;
     }
+
     
-    .hr-categories {
+    .html-course-root .hr-categories {
         padding: 3rem 0;
     }
+
     
-    .hr-categories h2 {
+    .html-course-root .hr-categories h2 {
         font-size: 2rem;
     }
+
     
-    .hr-category-list {
+    .html-course-root .hr-category-list {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
     }
+
 }
 
 @media (max-width: 480px) {
-    .hr-hero h1 {
+    .html-course-root .hr-hero h1 {
         font-size: 1.75rem;
     }
+
     
-    .hr-resource-card {
+    .html-course-root .hr-resource-card {
         padding: 1rem;
     }
+
     
-    .hr-resource-title {
+    .html-course-root .hr-resource-title {
         font-size: 1.25rem;
     }
+
 }
 
-/* ── Loading & Animation States ─────────────────────────────────── */
-.hr-resource-card {
-    animation: fadeInUp 0.6s ease-out;
+/* â”€â”€ Loading & Animation States â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.html-course-root .hr-resource-card {
+    animation: htmlFadeInUp 0.6s ease-out;
 }
 
-@keyframes fadeInUp {
+
+@keyframes htmlFadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -330,18 +370,79 @@ html.dark {
     }
 }
 
-/* ── Accessibility ─────────────────────────────────────────────── */
-.hr-resource-link:focus,
-.hr-category-item:focus {
+/* â”€â”€ Accessibility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.html-course-root .hr-resource-link:focus,
+.html-course-root .hr-category-item:focus {
     outline: 2px solid var(--hr-primary);
     outline-offset: 2px;
 }
 
+
 @media (prefers-reduced-motion: reduce) {
-    .hr-resource-card,
-    .hr-resource-card::before,
-    .hr-category-item {
+    .html-course-root .hr-resource-card,
+.html-course-root .hr-resource-card::before,
+.html-course-root .hr-category-item {
         transition: none;
         animation: none;
     }
+
+}
+
+
+
+
+
+/* ════════════════════════════════════════════
+   DARK MODE STYLES - HTML RESOURCES
+   ════════════════════════════════════════════ */
+
+html.dark .hr-page {
+  background: var(--hp-bg, #0f0a08);
+  color: var(--hp-text, #f5f0ed);
+}
+
+html.dark .hr-hero {
+  background: var(--hp-bg, #0f0a08);
+}
+
+html.dark .hr-hero__title {
+  color: #f5f0ed;
+}
+
+html.dark .hr-hero__desc {
+  color: var(--hp-text-muted, #b8a8a0);
+}
+
+html.dark .hr-section {
+  background: var(--hp-bg-alt, #1a1210);
+}
+
+html.dark .hr-section:nth-child(even) {
+  background: var(--hp-bg, #0f0a08);
+}
+
+html.dark .hr-section__title {
+  color: #f5f0ed;
+}
+
+html.dark .hr-section__desc {
+  color: var(--hp-text-muted, #b8a8a0);
+}
+
+html.dark .hr-card {
+  background: var(--hp-card, #221815);
+  border-color: var(--hp-border, rgba(227, 79, 38, 0.18));
+}
+
+html.dark .hr-card__title {
+  color: #f5f0ed;
+}
+
+html.dark .hr-card__desc {
+  color: var(--hp-text-muted, #b8a8a0);
+}
+
+html.dark .hr-card:hover {
+  border-color: var(--hp-primary, #e34f26);
+  box-shadow: 0 8px 32px rgba(227, 79, 38, 0.25);
 }

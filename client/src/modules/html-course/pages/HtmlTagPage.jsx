@@ -85,6 +85,19 @@ export default function HtmlTagPage() {
     };
   }, [tag]);
 
+  // ── Reset editor and preview when tag changes ──────────────────
+  useEffect(() => {
+    // Reset editor content
+    if (editorRef.current) {
+      editorRef.current.setValue(defaultCode);
+    }
+    
+    // Reset preview
+    if (iframeRef.current) {
+      iframeRef.current.srcdoc = INITIAL_PREVIEW_HTML;
+    }
+  }, [tag, defaultCode]);
+
   // ── Editor callbacks ───────────────────────────────────────────
   function handleEditorMount(editor) {
     editorRef.current = editor;

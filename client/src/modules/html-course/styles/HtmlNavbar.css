@@ -1,11 +1,11 @@
-/* ============================================================
-   Navbar.css — HTML IN MY STYLE
+﻿/* ============================================================
+   Navbar.css â€” HTML IN MY STYLE
    Sticky navbar with blur, dark/light mode, hamburger, scroll shadow
    Design tokens inherited from src/index.css via CSS variables
    ============================================================ */
 
-/* ── Root navbar wrapper ── */
-.navbar {
+/* â”€â”€ Root navbar wrapper â”€â”€ */
+.html-course-root .navbar {
   position: sticky;
   top: 0;
   left: 0;
@@ -24,12 +24,12 @@
 }
 
 /* Shadow appears on scroll (via .scrolled class added by JS) */
-.navbar.scrolled {
+.html-course-root .navbar.scrolled {
   box-shadow: var(--nav-shadow, 0 2px 20px rgba(0, 0, 0, 0.09));
 }
 
-/* ── Inner container ── */
-.navbar__inner {
+/* â”€â”€ Inner container â”€â”€ */
+.html-course-root .navbar__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,7 +43,7 @@
 /* ============================================================
    LOGO
    ============================================================ */
-.navbar__logo {
+.html-course-root .navbar__logo {
   display: flex;
   align-items: center;
   gap: 0.15rem;
@@ -58,19 +58,19 @@
   user-select: none;
 }
 
-.navbar__logo:hover {
+.html-course-root .navbar__logo:hover {
   transform: scale(1.04);
   opacity: 0.9;
 }
 
-.navbar__logo-tag {
+.html-course-root .navbar__logo-tag {
   color: var(--text-primary, #1a1a2e);
   font-family: var(--font-mono, "JetBrains Mono", monospace);
   font-size: 1.15rem;
   font-weight: 700;
 }
 
-.navbar__logo-html {
+.html-course-root .navbar__logo-html {
   color: #e34f26;
   font-weight: 900;
   font-size: 1.5rem;
@@ -80,7 +80,7 @@
 /* ============================================================
    DESKTOP NAVIGATION
    ============================================================ */
-.navbar__nav {
+.html-course-root .navbar__nav {
   display: flex;
   align-items: center;
   gap: 0.15rem;
@@ -89,13 +89,13 @@
   padding: 0;
 }
 
-.navbar__nav-item {
+.html-course-root .navbar__nav-item {
   display: flex;
   align-items: center;
 }
 
 /* Nav link base */
-.navbar__nav-link {
+.html-course-root .navbar__nav-link {
   display: flex;
   align-items: center;
   gap: 0.45rem;
@@ -115,14 +115,14 @@
 }
 
 /* Icon inside nav link */
-.navbar__nav-link i {
+.html-course-root .navbar__nav-link i {
   font-size: 1rem;
   line-height: 1;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 /* Animated bottom underline indicator */
-.navbar__nav-link::after {
+.html-course-root .navbar__nav-link::after {
   content: "";
   position: absolute;
   bottom: 4px;
@@ -137,41 +137,41 @@
 }
 
 /* Hover state */
-.navbar__nav-link:hover {
+.html-course-root .navbar__nav-link:hover {
   color: #e34f26;
   background-color: var(--nav-link-active-bg, rgba(227, 79, 38, 0.07));
   transform: translateY(-1px);
 }
 
-.navbar__nav-link:hover::after {
+.html-course-root .navbar__nav-link:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
-.navbar__nav-link:hover i {
+.html-course-root .navbar__nav-link:hover i {
   color: #e34f26;
   transform: scale(1.15);
 }
 
 /* Active page state */
-.navbar__nav-link.active {
+.html-course-root .navbar__nav-link.active {
   color: #e34f26;
   background-color: var(--nav-link-active-bg, rgba(227, 79, 38, 0.07));
   font-weight: 600;
 }
 
-.navbar__nav-link.active::after {
+.html-course-root .navbar__nav-link.active::after {
   transform: translateX(-50%) scaleX(1);
   background: linear-gradient(90deg, #e34f26, #f16529);
 }
 
-.navbar__nav-link.active i {
+.html-course-root .navbar__nav-link.active i {
   color: #e34f26;
 }
 
 /* ============================================================
    RIGHT-SIDE ACTIONS (theme toggle + hamburger)
    ============================================================ */
-.navbar__actions {
+.html-course-root .navbar__actions {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -181,7 +181,7 @@
 /* ============================================================
    THEME TOGGLE BUTTON
    ============================================================ */
-.navbar__theme-btn {
+.html-course-root .navbar__theme-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,7 +203,7 @@
   overflow: hidden;
 }
 
-.navbar__theme-btn:hover {
+.html-course-root .navbar__theme-btn:hover {
   background: rgba(227, 79, 38, 0.08);
   border-color: rgba(227, 79, 38, 0.3);
   color: #e34f26;
@@ -211,36 +211,36 @@
   box-shadow: 0 0 0 4px rgba(227, 79, 38, 0.08);
 }
 
-.navbar__theme-btn i {
+.html-course-root .navbar__theme-btn i {
   line-height: 1;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
 }
 
 /* Sun icon (light mode visible) */
-.navbar__theme-btn .icon-sun {
+.html-course-root .navbar__theme-btn .icon-sun {
   display: inline-flex;
 }
 
 /* Moon icon (dark mode visible) */
-.navbar__theme-btn .icon-moon {
+.html-course-root .navbar__theme-btn .icon-moon {
   display: none;
 }
 
 /* In dark mode */
-html.dark .navbar__theme-btn .icon-sun {
+html.dark .html-course-root .navbar__theme-btn .icon-sun {
   display: none;
 }
 
-html.dark .navbar__theme-btn .icon-moon {
+html.dark .html-course-root .navbar__theme-btn .icon-moon {
   display: inline-flex;
 }
 
-html.dark .navbar__theme-btn {
+html.dark .html-course-root .navbar__theme-btn {
   border-color: rgba(241, 101, 41, 0.2);
   color: var(--nav-link, #f0f4ff);
 }
 
-html.dark .navbar__theme-btn:hover {
+html.dark .html-course-root .navbar__theme-btn:hover {
   background: rgba(241, 101, 41, 0.12);
   border-color: rgba(241, 101, 41, 0.4);
   color: #f16529;
@@ -249,7 +249,7 @@ html.dark .navbar__theme-btn:hover {
 /* ============================================================
    HAMBURGER BUTTON (mobile only)
    ============================================================ */
-.navbar__hamburger {
+.html-course-root .navbar__hamburger {
   display: none;
   align-items: center;
   justify-content: center;
@@ -270,19 +270,19 @@ html.dark .navbar__theme-btn:hover {
   flex-shrink: 0;
 }
 
-.navbar__hamburger:hover {
+.html-course-root .navbar__hamburger:hover {
   background: rgba(227, 79, 38, 0.08);
   border-color: rgba(227, 79, 38, 0.3);
   color: #e34f26;
   transform: scale(1.05);
 }
 
-html.dark .navbar__hamburger {
+html.dark .html-course-root .navbar__hamburger {
   border-color: rgba(255, 255, 255, 0.1);
   color: var(--nav-link, #f0f4ff);
 }
 
-html.dark .navbar__hamburger:hover {
+html.dark .html-course-root .navbar__hamburger:hover {
   background: rgba(241, 101, 41, 0.12);
   border-color: rgba(241, 101, 41, 0.3);
   color: #f16529;
@@ -291,7 +291,7 @@ html.dark .navbar__hamburger:hover {
 /* ============================================================
    MOBILE OVERLAY (backdrop)
    ============================================================ */
-.navbar__overlay {
+.html-course-root .navbar__overlay {
   display: none;
   position: fixed;
   inset: 0;
@@ -305,7 +305,7 @@ html.dark .navbar__hamburger:hover {
   pointer-events: none;
 }
 
-.navbar__overlay.open {
+.html-course-root .navbar__overlay.open {
   opacity: 1;
   pointer-events: auto;
 }
@@ -313,7 +313,7 @@ html.dark .navbar__hamburger:hover {
 /* ============================================================
    MOBILE MENU DRAWER
    ============================================================ */
-.navbar__mobile-menu {
+.html-course-root .navbar__mobile-menu {
   display: none;
   position: fixed;
   top: 0;
@@ -330,18 +330,18 @@ html.dark .navbar__hamburger:hover {
   padding: 0;
 }
 
-html.dark .navbar__mobile-menu {
+html.dark .html-course-root .navbar__mobile-menu {
   background: var(--bg-surface, #1a1a2e);
   border-left-color: var(--border-color, rgba(255, 255, 255, 0.07));
   box-shadow: -8px 0 40px rgba(0, 0, 0, 0.5);
 }
 
-.navbar__mobile-menu.open {
+.html-course-root .navbar__mobile-menu.open {
   right: 0;
 }
 
 /* Mobile menu header */
-.navbar__mobile-header {
+.html-course-root .navbar__mobile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -352,12 +352,12 @@ html.dark .navbar__mobile-menu {
   top: 0;
 }
 
-html.dark .navbar__mobile-header {
+html.dark .html-course-root .navbar__mobile-header {
   background: var(--bg-surface-alt, #16213e);
   border-bottom-color: var(--border-color, rgba(255, 255, 255, 0.06));
 }
 
-.navbar__mobile-logo {
+.html-course-root .navbar__mobile-logo {
   display: flex;
   align-items: center;
   gap: 0.15rem;
@@ -367,7 +367,7 @@ html.dark .navbar__mobile-header {
   color: var(--text-primary, #1a1a2e);
 }
 
-.navbar__mobile-close {
+.html-course-root .navbar__mobile-close {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -383,13 +383,13 @@ html.dark .navbar__mobile-header {
   flex-shrink: 0;
 }
 
-.navbar__mobile-close:hover {
+.html-course-root .navbar__mobile-close:hover {
   background: rgba(227, 79, 38, 0.15);
   transform: rotate(90deg) scale(1.1);
 }
 
 /* Mobile nav links list */
-.navbar__mobile-nav {
+.html-course-root .navbar__mobile-nav {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -398,7 +398,7 @@ html.dark .navbar__mobile-header {
   flex: 1;
 }
 
-.navbar__mobile-link {
+.html-course-root .navbar__mobile-link {
   display: flex;
   align-items: center;
   gap: 0.85rem;
@@ -417,7 +417,7 @@ html.dark .navbar__mobile-header {
   overflow: hidden;
 }
 
-.navbar__mobile-link i {
+.html-course-root .navbar__mobile-link i {
   font-size: 1.15rem;
   width: 22px;
   text-align: center;
@@ -426,18 +426,18 @@ html.dark .navbar__mobile-header {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.navbar__mobile-link:hover {
+.html-course-root .navbar__mobile-link:hover {
   background: rgba(227, 79, 38, 0.07);
   color: #e34f26;
   padding-left: 1.3rem;
 }
 
-.navbar__mobile-link:hover i {
+.html-course-root .navbar__mobile-link:hover i {
   color: #e34f26;
   transform: scale(1.15);
 }
 
-.navbar__mobile-link.active {
+.html-course-root .navbar__mobile-link.active {
   background: linear-gradient(
     135deg,
     rgba(227, 79, 38, 0.12) 0%,
@@ -449,12 +449,12 @@ html.dark .navbar__mobile-header {
   padding-left: 1.1rem;
 }
 
-.navbar__mobile-link.active i {
+.html-course-root .navbar__mobile-link.active i {
   color: #e34f26;
 }
 
 /* Active accent bar on left */
-.navbar__mobile-link.active::before {
+.html-course-root .navbar__mobile-link.active::before {
   content: "";
   position: absolute;
   left: 0;
@@ -467,7 +467,7 @@ html.dark .navbar__mobile-header {
 }
 
 /* Mobile menu footer section */
-.navbar__mobile-footer {
+.html-course-root .navbar__mobile-footer {
   padding: 1.2rem 1.5rem;
   border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.06));
   background: var(--bg-surface-alt, #fff0ea);
@@ -476,12 +476,12 @@ html.dark .navbar__mobile-header {
   gap: 0.75rem;
 }
 
-html.dark .navbar__mobile-footer {
+html.dark .html-course-root .navbar__mobile-footer {
   background: var(--bg-surface-alt, #16213e);
   border-top-color: var(--border-color, rgba(255, 255, 255, 0.06));
 }
 
-.navbar__mobile-theme-row {
+.html-course-root .navbar__mobile-theme-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -491,11 +491,11 @@ html.dark .navbar__mobile-footer {
   border: 1px solid var(--card-border, rgba(227, 79, 38, 0.08));
 }
 
-html.dark .navbar__mobile-theme-row {
+html.dark .html-course-root .navbar__mobile-theme-row {
   background: var(--card-bg, #1a1a2e);
 }
 
-.navbar__mobile-theme-label {
+.html-course-root .navbar__mobile-theme-label {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -504,27 +504,27 @@ html.dark .navbar__mobile-theme-row {
   color: var(--text-secondary, #4a5568);
 }
 
-.navbar__mobile-theme-label i {
+.html-course-root .navbar__mobile-theme-label i {
   font-size: 1rem;
   color: #e34f26;
 }
 
 /* Toggle switch for mobile */
-.navbar__toggle-switch {
+.html-course-root .navbar__toggle-switch {
   position: relative;
   width: 48px;
   height: 26px;
   flex-shrink: 0;
 }
 
-.navbar__toggle-switch input {
+.html-course-root .navbar__toggle-switch input {
   opacity: 0;
   width: 0;
   height: 0;
   position: absolute;
 }
 
-.navbar__toggle-track {
+.html-course-root .navbar__toggle-track {
   position: absolute;
   inset: 0;
   background: var(--border-color, rgba(0, 0, 0, 0.12));
@@ -533,7 +533,7 @@ html.dark .navbar__mobile-theme-row {
   transition: background 0.3s ease;
 }
 
-.navbar__toggle-track::before {
+.html-course-root .navbar__toggle-track::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -546,18 +546,18 @@ html.dark .navbar__mobile-theme-row {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-.navbar__toggle-switch input:checked + .navbar__toggle-track {
+.html-course-root .navbar__toggle-switch input:checked + .navbar__toggle-track {
   background: linear-gradient(135deg, #e34f26, #f16529);
 }
 
-.navbar__toggle-switch input:checked + .navbar__toggle-track::before {
+.html-course-root .navbar__toggle-switch input:checked + .navbar__toggle-track::before {
   transform: translateX(22px);
 }
 
 /* ============================================================
    SCROLL PROGRESS BAR (thin line at very bottom of navbar)
    ============================================================ */
-.navbar__progress {
+.html-course-root .navbar__progress {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -570,70 +570,70 @@ html.dark .navbar__mobile-theme-row {
 }
 
 /* ============================================================
-   DARK MODE — all navbar elements
+   DARK MODE â€” all navbar elements
    ============================================================ */
-html.dark .navbar {
+html.dark .html-course-root .navbar {
   background: var(--nav-bg, rgba(15, 15, 15, 0.95));
   border-bottom-color: var(--nav-border, rgba(227, 79, 38, 0.15));
 }
 
-html.dark .navbar.scrolled {
+html.dark .html-course-root .navbar.scrolled {
   box-shadow: var(--nav-shadow, 0 2px 20px rgba(0, 0, 0, 0.5));
 }
 
-html.dark .navbar__logo {
+html.dark .html-course-root .navbar__logo {
   color: var(--nav-link, #f0f4ff);
 }
 
-html.dark .navbar__logo-tag {
+html.dark .html-course-root .navbar__logo-tag {
   color: var(--text-primary, #f0f4ff);
 }
 
-html.dark .navbar__nav-link {
+html.dark .html-course-root .navbar__nav-link {
   color: var(--nav-link, #f0f4ff);
 }
 
-html.dark .navbar__nav-link:hover {
+html.dark .html-course-root .navbar__nav-link:hover {
   background-color: var(--nav-link-active-bg, rgba(241, 101, 41, 0.1));
   color: #f16529;
 }
 
-html.dark .navbar__nav-link.active {
+html.dark .html-course-root .navbar__nav-link.active {
   color: #f16529;
   background-color: var(--nav-link-active-bg, rgba(241, 101, 41, 0.1));
 }
 
-html.dark .navbar__nav-link.active i,
-html.dark .navbar__nav-link:hover i {
+html.dark .html-course-root .navbar__nav-link.active i,
+html.dark .html-course-root .navbar__nav-link:hover i {
   color: #f16529;
 }
 
-html.dark .navbar__mobile-link {
+html.dark .html-course-root .navbar__mobile-link {
   color: var(--text-primary, #f0f4ff);
 }
 
-html.dark .navbar__mobile-link:hover {
+html.dark .html-course-root .navbar__mobile-link:hover {
   color: #f16529;
   background: rgba(241, 101, 41, 0.1);
 }
 
-html.dark .navbar__mobile-link.active {
+html.dark .html-course-root .navbar__mobile-link.active {
   color: #f16529;
   background: rgba(241, 101, 41, 0.12);
   border-left-color: #f16529;
 }
 
-html.dark .navbar__mobile-link i {
+html.dark .html-course-root .navbar__mobile-link i {
   color: var(--text-muted, #718096);
 }
 
-html.dark .navbar__mobile-link:hover i,
-html.dark .navbar__mobile-link.active i {
+html.dark .html-course-root .navbar__mobile-link:hover i,
+html.dark .html-course-root .navbar__mobile-link.active i {
   color: #f16529;
 }
 
 /* ============================================================
-   RESPONSIVE — Mobile breakpoint
+   RESPONSIVE â€” Mobile breakpoint
    ============================================================ */
 @media (max-width: 900px) {
   /* Show hamburger */
@@ -692,9 +692,9 @@ html.dark .navbar__mobile-link.active i {
 }
 
 /* ============================================================
-   ANIMATION — mobile nav items stagger in
+   ANIMATION â€” mobile nav items stagger in
    ============================================================ */
-.navbar__mobile-nav .navbar__mobile-item {
+.html-course-root .navbar__mobile-nav .navbar__mobile-item {
   opacity: 0;
   transform: translateX(20px);
   transition:
@@ -702,31 +702,31 @@ html.dark .navbar__mobile-link.active i {
     transform 0.3s ease;
 }
 
-.navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item {
+.html-course-root .navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item {
   opacity: 1;
   transform: translateX(0);
 }
 
-.navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(1) {
+.html-course-root .navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(1) {
   transition-delay: 0.05s;
 }
-.navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(2) {
+.html-course-root .navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(2) {
   transition-delay: 0.1s;
 }
-.navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(3) {
+.html-course-root .navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(3) {
   transition-delay: 0.15s;
 }
-.navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(4) {
+.html-course-root .navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(4) {
   transition-delay: 0.2s;
 }
-.navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(5) {
+.html-course-root .navbar__mobile-menu.open .navbar__mobile-nav .navbar__mobile-item:nth-child(5) {
   transition-delay: 0.25s;
 }
 
 /* ============================================================
    SKIP LINK (accessibility)
    ============================================================ */
-.navbar__skip-link {
+.html-course-root .navbar__skip-link {
   position: absolute;
   top: -100px;
   left: 1rem;
@@ -741,7 +741,44 @@ html.dark .navbar__mobile-link.active i {
   transition: top 0.2s ease;
 }
 
-.navbar__skip-link:focus {
+.html-course-root .navbar__skip-link:focus {
   top: 0;
   outline: none;
+}
+
+
+/* == Back to Courses link ========================================== */
+.html-course-root .navbar__back-link,
+.js-basic-course-root .js-navbar__back-link,
+.js-int-course-root .navbar__back-link,
+.js-adv-course-root .navbar__back-link {
+  font-size: 0.8rem !important;
+  border: 1.5px solid currentColor;
+  border-radius: 20px;
+  padding: 0.25rem 0.8rem !important;
+  white-space: nowrap;
+  opacity: 0.85;
+  transition: all 0.2s ease;
+}
+
+.html-course-root .navbar__back-link:hover,
+.js-basic-course-root .js-navbar__back-link:hover,
+.js-int-course-root .navbar__back-link:hover,
+.js-adv-course-root .navbar__back-link:hover {
+  opacity: 1;
+  transform: translateX(-3px);
+}
+
+.html-course-root .navbar__back-link::after,
+.js-basic-course-root .js-navbar__back-link::after,
+.js-int-course-root .navbar__back-link::after,
+.js-adv-course-root .navbar__back-link::after {
+  display: none !important;
+}
+
+.html-course-root .js-navbar__mobile-back,
+.js-basic-course-root .js-navbar__mobile-back {
+  border-top: 1px solid rgba(255, 165, 0, 0.2);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
 }

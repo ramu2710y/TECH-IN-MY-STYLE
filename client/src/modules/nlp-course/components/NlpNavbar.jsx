@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+﻿import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBrain } from 'react-icons/fa';
 
@@ -56,3 +56,4 @@ export default function NlpNavbar() {
     </motion.nav>
   );
 }
+

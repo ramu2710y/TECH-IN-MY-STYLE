@@ -1,6 +1,11 @@
-.home-page {
+﻿.home-page {
   min-height: 100vh;
   background: transparent;
+  cursor: none !important;
+}
+
+.home-page * {
+  cursor: none !important;
 }
 
 /* Hero Section */
@@ -73,6 +78,10 @@
   line-height: 1.2;
   text-align: center;
   color: #000000;
+}
+
+[data-theme="dark"] .hero-content h2 {
+  color: #ffffff;
 }
 
 .hero-content p {
@@ -387,7 +396,7 @@
 }
 
 
-/* Custom Cursor — defined globally in index.css */
+/* Custom Cursor â€” defined globally in index.css */
 
 /* Welcome Message */
 .welcome-message {
@@ -577,6 +586,7 @@
 .about-text h2 {
   text-align: left;
   margin-bottom: 1.5rem;
+  font-weight: 900 !important;
 }
 
 .about-text p {
@@ -978,3 +988,4 @@ section {
     padding: var(--spacing-sm) var(--spacing-xl);
   }
 }
+

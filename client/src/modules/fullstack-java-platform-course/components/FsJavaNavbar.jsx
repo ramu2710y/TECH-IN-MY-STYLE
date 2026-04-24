@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaJava } from 'react-icons/fa'
@@ -101,3 +101,4 @@ export default function FsJavaNavbar() {
     </motion.nav>
   )
 }
+

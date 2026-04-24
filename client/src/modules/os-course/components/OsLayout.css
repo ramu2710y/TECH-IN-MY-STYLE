@@ -1,5 +1,5 @@
-/* ===== Aurora Layout Shell ===== */
-.app-shell {
+﻿/* ===== Aurora Layout Shell ===== */
+.os-course-root .app-shell {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: var(--topbar-height) 1fr;
@@ -10,8 +10,9 @@
     overflow: hidden;
 }
 
+
 /* ===== TopBar ===== */
-.topbar {
+.os-course-root .topbar {
     grid-area: topbar;
     display: flex;
     align-items: center;
@@ -26,13 +27,15 @@
     z-index: 100;
 }
 
-.topbar-brand {
+
+.os-course-root .topbar-brand {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.topbar-logo {
+
+.os-course-root .topbar-logo {
     width: 36px;
     height: 36px;
     border-radius: var(--radius-sm);
@@ -48,25 +51,29 @@
     box-shadow: 3px 3px 8px rgba(0,0,0,0.5), -2px -2px 5px rgba(255,255,255,0.03);
 }
 
-.topbar-text {
+
+.os-course-root .topbar-text {
     font-family: var(--font-heading);
     font-weight: 500;
     font-size: 1.05rem;
     color: var(--text-secondary);
 }
 
-.topbar-text-bold {
+
+.os-course-root .topbar-text-bold {
     font-weight: 700;
     color: var(--text-primary);
 }
 
-.topbar-actions {
+
+.os-course-root .topbar-actions {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.topbar-pill {
+
+.os-course-root .topbar-pill {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -79,7 +86,8 @@
     color: var(--accent-violet);
 }
 
-.topbar-pill-dot {
+
+.os-course-root .topbar-pill-dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -88,7 +96,8 @@
     animation: pulseGlow 2.5s ease-in-out infinite;
 }
 
-.sidebar-toggle {
+
+.os-course-root .sidebar-toggle {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -100,11 +109,13 @@
     transition: background var(--transition-fast);
 }
 
-.sidebar-toggle:hover {
+
+.os-course-root .sidebar-toggle:hover {
     background: rgba(139, 92, 246, 0.15);
 }
 
-.sidebar-toggle span {
+
+.os-course-root .sidebar-toggle span {
     display: block;
     width: 20px;
     height: 2px;
@@ -113,8 +124,9 @@
     transition: var(--transition-fast);
 }
 
+
 /* ===== Sidebar ===== */
-.sidebar {
+.os-course-root .sidebar {
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
@@ -133,19 +145,22 @@
     box-shadow: none;
 }
 
-.sidebar--open {
+
+.os-course-root .sidebar--open {
     left: 0;
     box-shadow: 10px 0 40px rgba(0, 0, 0, 0.6);
 }
 
-.sidebar-header {
+
+.os-course-root .sidebar-header {
     display: flex;
     align-items: center;
     padding: 20px 24px;
     border-bottom: 1px solid var(--border-glass);
 }
 
-.sidebar-logo-text {
+
+.os-course-root .sidebar-logo-text {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.95rem;
@@ -153,7 +168,8 @@
     letter-spacing: 0.5px;
 }
 
-.sidebar-nav {
+
+.os-course-root .sidebar-nav {
     flex: 1;
     padding: 12px;
     display: flex;
@@ -162,7 +178,8 @@
     overflow-y: auto;
 }
 
-.sidebar-link {
+
+.os-course-root .sidebar-link {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -176,12 +193,14 @@
     position: relative;
 }
 
-.sidebar-link:hover {
+
+.os-course-root .sidebar-link:hover {
     background: var(--bg-glass-hover);
     color: var(--text-primary);
 }
 
-.sidebar-link--active {
+
+.os-course-root .sidebar-link--active {
     background: rgba(139, 92, 246, 0.08);
     color: var(--text-primary);
     border-left: 3px solid var(--accent-violet);
@@ -190,11 +209,13 @@
         inset -2px -2px 5px rgba(255,255,255,0.02);
 }
 
-.sidebar-link--active .sidebar-link-icon {
+
+.os-course-root .sidebar-link--active .sidebar-link-icon {
     color: var(--accent-violet);
 }
 
-.sidebar-link-icon {
+
+.os-course-root .sidebar-link-icon {
     font-size: 1rem;
     width: 22px;
     text-align: center;
@@ -202,11 +223,13 @@
     transition: color var(--transition-fast);
 }
 
-.sidebar-link-label {
+
+.os-course-root .sidebar-link-label {
     flex: 1;
 }
 
-.sidebar-link-num {
+
+.os-course-root .sidebar-link-num {
     font-family: var(--font-mono);
     font-size: 0.65rem;
     color: var(--text-muted);
@@ -216,7 +239,8 @@
     border-radius: 4px;
 }
 
-.sidebar-footer {
+
+.os-course-root .sidebar-footer {
     padding: 16px 24px;
     border-top: 1px solid var(--border-glass);
     display: flex;
@@ -224,7 +248,8 @@
     align-items: center;
 }
 
-.sidebar-footer-version {
+
+.os-course-root .sidebar-footer-version {
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: var(--accent-violet);
@@ -235,17 +260,20 @@
     font-weight: 500;
 }
 
-.sidebar-footer-copy {
+
+.os-course-root .sidebar-footer-copy {
     font-size: 0.7rem;
     color: var(--text-muted);
 }
 
-.sidebar-overlay {
+
+.os-course-root .sidebar-overlay {
     display: none;
 }
 
+
 /* ===== Main Content ===== */
-.main-content {
+.os-course-root .main-content {
     grid-area: main;
     padding: 2.5rem 3rem;
     overflow-y: auto;
@@ -253,8 +281,9 @@
     animation: os-fadeIn 0.4s var(--ease-out);
 }
 
+
 /* ===== Overlay ===== */
-.sidebar-overlay {
+.os-course-root .sidebar-overlay {
     display: block;
     position: fixed;
     inset: 0;
@@ -263,12 +292,16 @@
     z-index: 250;
 }
 
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .main-content {
+    .os-course-root .main-content {
         padding: 1.5rem 1.25rem;
     }
-    .topbar {
+
+    .os-course-root .topbar {
         padding: 0 1rem;
     }
+
 }
+

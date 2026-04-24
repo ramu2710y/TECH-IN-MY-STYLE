@@ -1,7 +1,8 @@
-/* System Design Course scoped styles */
+﻿/* System Design Course scoped styles */
 .system-design-course-root {
   min-height: 100vh;
 }
+
 
 .system-design-course-root .sd-neumorphic {
   background: #e8e8e8;
@@ -9,31 +10,37 @@
   transition: all 0.3s ease;
 }
 
-.dark .system-design-course-root .sd-neumorphic {
+
+.system-design-course-root .dark .system-design-course-root .sd-neumorphic {
   background: #353535;
   box-shadow: 9px 9px 16px #2a2a2a, -9px -9px 16px #404040;
 }
+
 
 .system-design-course-root .sd-neumorphic:hover {
   box-shadow: 12px 12px 20px #d1d1d1, -12px -12px 20px #ffffff;
 }
 
-.dark .system-design-course-root .sd-neumorphic:hover {
+
+.system-design-course-root .dark .system-design-course-root .sd-neumorphic:hover {
   box-shadow: 12px 12px 20px #2a2a2a, -12px -12px 20px #404040;
 }
+
 
 .system-design-course-root .sd-neumorphic:active,
 .system-design-course-root .sd-neumorphic.pressed {
   box-shadow: inset 6px 6px 12px #d1d1d1, inset -6px -6px 12px #ffffff;
 }
 
-.dark .system-design-course-root .sd-neumorphic:active,
-.dark .system-design-course-root .sd-neumorphic.pressed {
+
+.system-design-course-root .dark .system-design-course-root .sd-neumorphic:active,
+.system-design-course-root .dark .system-design-course-root .sd-neumorphic.pressed {
   box-shadow: inset 6px 6px 12px #2a2a2a, inset -6px -6px 12px #404040;
 }
 
+
 /* Neumorphic button styles */
-.sd-neumorphic-btn {
+.system-design-course-root .sd-neumorphic-btn {
   background: #e8e8e8;
   border: none;
   border-radius: 12px;
@@ -45,32 +52,38 @@
   transition: all 0.3s ease;
 }
 
-.dark .sd-neumorphic-btn {
+
+.system-design-course-root .dark .sd-neumorphic-btn {
   background: #353535;
   box-shadow: 6px 6px 12px #2a2a2a, -6px -6px 12px #404040;
   color: #fff;
 }
 
-.sd-neumorphic-btn:hover {
+
+.system-design-course-root .sd-neumorphic-btn:hover {
   box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
   transform: translateY(-2px);
 }
 
-.dark .sd-neumorphic-btn:hover {
+
+.system-design-course-root .dark .sd-neumorphic-btn:hover {
   box-shadow: 8px 8px 16px #2a2a2a, -8px -8px 16px #404040;
 }
 
-.sd-neumorphic-btn:active {
+
+.system-design-course-root .sd-neumorphic-btn:active {
   box-shadow: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
   transform: translateY(0);
 }
 
-.dark .sd-neumorphic-btn:active {
+
+.system-design-course-root .dark .sd-neumorphic-btn:active {
   box-shadow: inset 4px 4px 8px #2a2a2a, inset -4px -4px 8px #404040;
 }
 
+
 /* Neumorphic input styles */
-.sd-neumorphic-input {
+.system-design-course-root .sd-neumorphic-input {
   background: #e8e8e8;
   border: none;
   border-radius: 12px;
@@ -81,23 +94,27 @@
   width: 100%;
 }
 
-.dark .sd-neumorphic-input {
+
+.system-design-course-root .dark .sd-neumorphic-input {
   background: #353535;
   box-shadow: inset 4px 4px 8px #2a2a2a, inset -4px -4px 8px #404040;
   color: #fff;
 }
 
-.sd-neumorphic-input:focus {
+
+.system-design-course-root .sd-neumorphic-input:focus {
   outline: none;
   box-shadow: inset 6px 6px 12px #d1d1d1, inset -6px -6px 12px #ffffff;
 }
 
-.dark .sd-neumorphic-input:focus {
+
+.system-design-course-root .dark .sd-neumorphic-input:focus {
   box-shadow: inset 6px 6px 12px #2a2a2a, inset -6px -6px 12px #404040;
 }
 
+
 /* Neumorphic card styles */
-.sd-neumorphic-card {
+.system-design-course-root .sd-neumorphic-card {
   background: #e8e8e8;
   border-radius: 20px;
   box-shadow: 12px 12px 24px #d1d1d1, -12px -12px 24px #ffffff;
@@ -105,25 +122,32 @@
   transition: all 0.3s ease;
 }
 
-.dark .sd-neumorphic-card {
+
+.system-design-course-root .dark .sd-neumorphic-card {
   background: #353535;
   box-shadow: 12px 12px 24px #2a2a2a, -12px -12px 24px #404040;
 }
 
-.sd-neumorphic-card:hover {
+
+.system-design-course-root .sd-neumorphic-card:hover {
   transform: translateY(-4px);
   box-shadow: 16px 16px 32px #d1d1d1, -16px -16px 32px #ffffff;
 }
 
-.dark .sd-neumorphic-card:hover {
+
+.system-design-course-root .dark .sd-neumorphic-card:hover {
   box-shadow: 16px 16px 32px #2a2a2a, -16px -16px 32px #404040;
 }
 
+
 /* SD course wrapper background */
-.sd-course {
+.system-design-course-root .sd-course {
   background: #e8e8e8;
 }
 
-.dark .sd-course {
+
+.system-design-course-root .dark .sd-course {
   background: #2a2a2a;
 }
+
+

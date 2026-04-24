@@ -55,6 +55,9 @@ export default function DsaNavbar() {
               </Link>
             );
           })}
+          <Link to="/courses" style={{ textDecoration: 'none', color: '#c9a96e', fontSize: '0.72rem', fontFamily: 'Bebas Neue, sans-serif', letterSpacing: '0.1em', padding: '0.35rem 0.75rem', borderRadius: 20, border: '1.5px solid rgba(201,169,110,0.5)', transition: 'all 0.2s', marginLeft: '0.25rem' }}>
+            ← Courses
+          </Link>
         </div>
 
         {/* Actions */}
@@ -114,6 +117,10 @@ export default function DsaNavbar() {
                 {l.label}
               </Link>
             ))}
+            <Link to="/courses" onClick={() => setMenuOpen(false)}
+              style={{ display: 'block', padding: '0.85rem 1.5rem', color: '#c9a96e', textDecoration: 'none', fontFamily: 'Bebas Neue, sans-serif', letterSpacing: '0.1em', fontSize: '0.9rem', borderLeft: '3px solid rgba(201,169,110,0.4)', transition: 'all 0.2s' }}>
+              ← Back to Courses
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

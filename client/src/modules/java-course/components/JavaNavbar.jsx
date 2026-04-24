@@ -73,6 +73,12 @@ export default function JavaNavbar() {
                 {link.name}
               </Link>
             ))}
+            <Link
+              to="/courses"
+              className="ml-2 px-3 py-1.5 text-xs font-semibold font-poppins border border-java-orange/60 text-java-orange rounded-full hover:bg-java-orange hover:text-white transition-all duration-200"
+            >
+              ← Courses
+            </Link>
           </div>
 
           {/* Right Controls */}
@@ -139,6 +145,12 @@ export default function JavaNavbar() {
               {link.name}
             </Link>
           ))}
+          <Link
+            to="/courses"
+            className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium font-poppins text-java-orange border border-java-orange/40 hover:bg-java-orange/10 transition-all duration-200 mt-2"
+          >
+            ← Back to All Courses
+          </Link>
         </div>
       </div>
     </nav>

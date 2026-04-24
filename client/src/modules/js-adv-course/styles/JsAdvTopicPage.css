@@ -1,10 +1,10 @@
-/* ═══════════════════════════════════════════════════════════════
-   JsAdvTopicPage.css — JavaScript Advanced In My Style
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   JsAdvTopicPage.css â€” JavaScript Advanced In My Style
    Brand: PRIMARY #06b6d4 (JS Yellow)  |  DARK var(--bg) (Deep Navy)
-   ═══════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ─── CSS Variables ──────────────────────────────────────────── */
-:root {
+/* â”€â”€â”€ CSS Variables â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root {
   --jsadv-cyan:       #06b6d4;
   --jsadv-cyan-dim:   #38bdf8;
   --jsadv-cyan-faint: rgba(6, 182, 212, 0.12);
@@ -28,8 +28,9 @@
   --shadow-panel:    0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* ─── Page Base ──────────────────────────────────────────────── */
-.topic-page {
+
+/* â”€â”€â”€ Page Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .topic-page {
   min-height: 100vh;
   background-color: #f0f2f5;
   display: flex;
@@ -39,13 +40,15 @@
   transition: background-color 0.3s ease;
 }
 
-.topic-page--dark {
+
+.js-adv-course-root .topic-page--dark {
   background-color: #0a0a14;
   color: var(--text-light);
 }
 
-/* ─── Fade-In Animation ──────────────────────────────────────── */
-@keyframes topicFadeIn {
+
+/* â”€â”€â”€ Fade-In Animation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@keyframes jsadvTopicFadeIn {
   from {
     opacity: 0;
     transform: translateY(6px);
@@ -56,14 +59,15 @@
   }
 }
 
-.animate-topic-fade {
-  animation: topicFadeIn 0.5s ease-out both;
+.js-adv-course-root .animate-topic-fade {
+  animation: jsadvTopicFadeIn 0.5s ease-out both;
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    LOADING OVERLAY
-   ═══════════════════════════════════════════════════════════════ */
-.topic-loading-overlay {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .topic-loading-overlay {
   position: fixed;
   inset: 0;
   background: linear-gradient(
@@ -78,26 +82,28 @@
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-  animation: overlayFadeIn 0.22s ease forwards;
+  animation: jsadvOverlayFadeIn 0.22s ease forwards;
 }
 
-@keyframes overlayFadeIn {
+
+@keyframes jsadvOverlayFadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-.topic-loading-overlay.fade-out {
-  animation: overlayFadeOut 0.42s ease forwards;
+.js-adv-course-root .topic-loading-overlay.fade-out {
+  animation: jsadvOverlayFadeOut 0.42s ease forwards;
   pointer-events: none;
 }
 
-@keyframes overlayFadeOut {
+
+@keyframes jsadvOverlayFadeOut {
   from { opacity: 1; }
   to   { opacity: 0; }
 }
 
 /* Spinner Ring + JS Text */
-.loading-logo-wrap {
+.js-adv-course-root .loading-logo-wrap {
   position: relative;
   width: 90px;
   height: 90px;
@@ -106,37 +112,40 @@
   justify-content: center;
 }
 
-.loading-spinner-ring {
+
+.js-adv-course-root .loading-spinner-ring {
   position: absolute;
   inset: 0;
   border-radius: 50%;
   border: 4px solid rgba(6, 182, 212, 0.18);
   border-top-color: var(--jsadv-cyan);
   border-right-color: rgba(6, 182, 212, 0.55);
-  animation: spinRing 0.9s linear infinite;
+  animation: jsadvSpinRing 0.9s linear infinite;
 }
 
-@keyframes spinRing {
+
+@keyframes jsadvSpinRing {
   to { transform: rotate(360deg); }
 }
 
-.loading-js-text {
+.js-adv-course-root .loading-js-text {
   font-family: var(--font-mono);
   font-size: 1.55rem;
   font-weight: 900;
   color: var(--jsadv-cyan);
   letter-spacing: -0.02em;
-  animation: jsPulse 0.9s ease-in-out infinite alternate;
+  animation: jsadvJsPulse 0.9s ease-in-out infinite alternate;
   text-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
 }
 
-@keyframes jsPulse {
+
+@keyframes jsadvJsPulse {
   from { transform: scale(0.88); opacity: 0.75; }
   to   { transform: scale(1.08); opacity: 1; }
 }
 
 /* Topic Name Pill */
-.loading-topic-name {
+.js-adv-course-root .loading-topic-name {
   font-family: var(--font-mono);
   font-size: 0.95rem;
   font-weight: 700;
@@ -153,30 +162,36 @@
   text-overflow: ellipsis;
 }
 
+
 /* Bouncing Dots */
-.loading-dots {
+.js-adv-course-root .loading-dots {
   display: flex;
   gap: 0.5rem;
 }
 
-.loading-dot {
+
+.js-adv-course-root .loading-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: rgba(6, 182, 212, 0.85);
-  animation: dotBounce 0.65s ease-in-out infinite;
+  animation: jsadvDotBounce 0.65s ease-in-out infinite;
 }
 
-.loading-dot:nth-child(1) { animation-delay: 0s;     }
-.loading-dot:nth-child(2) { animation-delay: 0.13s;  }
-.loading-dot:nth-child(3) { animation-delay: 0.26s;  }
 
-@keyframes dotBounce {
+.js-adv-course-root .loading-dot:nth-child(1) { animation-delay: 0s;     }
+
+.js-adv-course-root .loading-dot:nth-child(2) { animation-delay: 0.13s;  }
+
+.js-adv-course-root .loading-dot:nth-child(3) { animation-delay: 0.26s;  }
+
+
+@keyframes jsadvDotBounce {
   0%, 100% { transform: translateY(0);     opacity: 1;   }
   50%       { transform: translateY(-13px); opacity: 0.45; }
 }
 
-.loading-caption {
+.js-adv-course-root .loading-caption {
   color: rgba(6, 182, 212, 0.55);
   font-size: 0.78rem;
   font-weight: 500;
@@ -184,10 +199,11 @@
   text-transform: uppercase;
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HEADER BAR
-   ═══════════════════════════════════════════════════════════════ */
-.topic-page-header {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .topic-page-header {
   background: linear-gradient(
     to right,
     var(--js-navy) 0%,
@@ -203,7 +219,8 @@
   flex-shrink: 0;
 }
 
-.topic-header-inner {
+
+.js-adv-course-root .topic-header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -212,8 +229,9 @@
   gap: 0.75rem;
 }
 
-/* ── Back Button ── */
-.topic-back-btn {
+
+/* â”€â”€ Back Button â”€â”€ */
+.js-adv-course-root .topic-back-btn {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -231,14 +249,16 @@
   letter-spacing: 0.02em;
 }
 
-.topic-back-btn:hover {
+
+.js-adv-course-root .topic-back-btn:hover {
   background: rgba(6, 182, 212, 0.12);
   border-color: var(--jsadv-cyan);
   color: var(--jsadv-cyan);
 }
 
-/* ── Center Title ── */
-.topic-header-title {
+
+/* â”€â”€ Center Title â”€â”€ */
+.js-adv-course-root .topic-header-title {
   flex: 1;
   text-align: center;
   font-size: clamp(0.9rem, 2.4vw, 1.5rem);
@@ -256,8 +276,9 @@
   filter: drop-shadow(0 1px 8px rgba(6, 182, 212, 0.3));
 }
 
-/* ── Hamburger Menu Trigger ── */
-.topic-menu-trigger {
+
+/* â”€â”€ Hamburger Menu Trigger â”€â”€ */
+.js-adv-course-root .topic-menu-trigger {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -274,12 +295,14 @@
   transition: background 0.2s, border-color 0.2s;
 }
 
-.topic-menu-trigger:hover {
+
+.js-adv-course-root .topic-menu-trigger:hover {
   background: rgba(6, 182, 212, 0.18);
   border-color: rgba(6, 182, 212, 0.7);
 }
 
-.topic-menu-trigger span {
+
+.js-adv-course-root .topic-menu-trigger span {
   display: block;
   width: 100%;
   height: 2px;
@@ -288,21 +311,24 @@
   transition: transform 0.2s, opacity 0.2s;
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    INFO BANNER
-   ═══════════════════════════════════════════════════════════════ */
-.topic-info-banner {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .topic-info-banner {
   background: rgba(6, 182, 212, 0.07);
   border-left: 4px solid var(--jsadv-cyan);
   padding: 0.7rem 1.1rem;
   flex-shrink: 0;
 }
 
-.topic-page--dark .topic-info-banner {
+
+.js-adv-course-root .topic-page--dark .topic-info-banner {
   background: rgba(6, 182, 212, 0.06);
 }
 
-.topic-info-inner {
+
+.js-adv-course-root .topic-info-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -310,31 +336,36 @@
   gap: 0.5rem;
 }
 
-.topic-info-left {
+
+.js-adv-course-root .topic-info-left {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   flex-wrap: wrap;
 }
 
-.topic-info-right {
+
+.js-adv-course-root .topic-info-right {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
 }
 
-.topic-info-title {
+
+.js-adv-course-root .topic-info-title {
   font-size: 0.9rem;
   font-weight: 700;
   color: #1a1a2e;
 }
 
-.topic-page--dark .topic-info-title {
+
+.js-adv-course-root .topic-page--dark .topic-info-title {
   color: var(--jsadv-cyan);
 }
 
-.topic-info-category {
+
+.js-adv-course-root .topic-info-category {
   font-size: 0.75rem;
   font-weight: 600;
   color: #374151;
@@ -344,12 +375,14 @@
   letter-spacing: 0.03em;
 }
 
-.topic-page--dark .topic-info-category {
+
+.js-adv-course-root .topic-page--dark .topic-info-category {
   color: rgba(6, 182, 212, 0.7);
   background: rgba(6, 182, 212, 0.1);
 }
 
-.topic-difficulty-badge {
+
+.js-adv-course-root .topic-difficulty-badge {
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.2rem 0.65rem;
@@ -359,7 +392,8 @@
   text-transform: uppercase;
 }
 
-.topic-time-badge {
+
+.js-adv-course-root .topic-time-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
@@ -368,14 +402,16 @@
   color: #4b5563;
 }
 
-.topic-page--dark .topic-time-badge {
+
+.js-adv-course-root .topic-page--dark .topic-time-badge {
   color: var(--text-dim);
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    MAIN / SPLIT PANELS
-   ═══════════════════════════════════════════════════════════════ */
-.topic-main {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .topic-main {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -384,7 +420,8 @@
   box-sizing: border-box;
 }
 
-.topic-panels-grid {
+
+.js-adv-course-root .topic-panels-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.85rem;
@@ -393,17 +430,19 @@
   flex: 1;
 }
 
+
 @media (max-width: 768px) {
-  .topic-panels-grid {
+  .js-adv-course-root .topic-panels-grid {
     grid-template-columns: 1fr;
     min-height: unset;
   }
+
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    EDITOR PANEL
-   ═══════════════════════════════════════════════════════════════ */
-.editor-panel {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .editor-panel {
   background: var(--bg-panel);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -415,12 +454,14 @@
   transition: box-shadow 0.25s;
 }
 
-.editor-panel:hover {
+
+.js-adv-course-root .editor-panel:hover {
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(6, 182, 212, 0.12);
 }
 
+
 /* Panel Header */
-.editor-panel-header {
+.js-adv-course-root .editor-panel-header {
   background: var(--bg-dark);
   padding: 0.6rem 0.9rem;
   display: flex;
@@ -430,14 +471,16 @@
   border-bottom: 1px solid var(--border-dark);
 }
 
-.editor-panel-header-left {
+
+.js-adv-course-root .editor-panel-header-left {
   display: flex;
   align-items: center;
   gap: 0.55rem;
 }
 
+
 /* JS Yellow Language Badge */
-.editor-lang-badge {
+.js-adv-course-root .editor-lang-badge {
   background: var(--jsadv-cyan);
   color: var(--js-navy);
   font-size: 0.7rem;
@@ -449,37 +492,45 @@
   text-transform: uppercase;
 }
 
-.editor-label-text {
+
+.js-adv-course-root .editor-label-text {
   color: var(--text-muted);
   font-size: 0.78rem;
   font-weight: 500;
 }
 
+
 /* Window Dots */
-.editor-dots {
+.js-adv-course-root .editor-dots {
   display: flex;
   gap: 0.38rem;
 }
 
-.editor-dot {
+
+.js-adv-course-root .editor-dot {
   width: 11px;
   height: 11px;
   border-radius: 50%;
 }
 
-.editor-dot.red    { background: #ef4444; }
-.editor-dot.yellow { background: #f59e0b; }
-.editor-dot.green  { background: #22c55e; }
+
+.js-adv-course-root .editor-dot.red { background: #ef4444; }
+
+.js-adv-course-root .editor-dot.yellow { background: #f59e0b; }
+
+.js-adv-course-root .editor-dot.green { background: #22c55e; }
+
 
 /* Monaco Wrapper */
-.editor-monaco-wrap {
+.js-adv-course-root .editor-monaco-wrap {
   flex: 1;
   min-height: 0;
   overflow: hidden;
 }
 
+
 /* Action Buttons Bar */
-.editor-actions-bar {
+.js-adv-course-root .editor-actions-bar {
   background: var(--bg-dark);
   padding: 0.55rem 0.8rem;
   display: flex;
@@ -489,7 +540,8 @@
   border-top: 1px solid var(--border-dark);
 }
 
-.action-btn {
+
+.js-adv-course-root .action-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.38rem;
@@ -505,54 +557,63 @@
   font-family: var(--font-sans);
 }
 
-.action-btn:hover {
+
+.js-adv-course-root .action-btn:hover {
   filter: brightness(1.15);
   transform: translateY(-1px);
 }
 
-.action-btn:active {
+
+.js-adv-course-root .action-btn:active {
   transform: translateY(0);
   filter: brightness(0.95);
 }
 
-.action-btn svg {
+
+.js-adv-course-root .action-btn svg {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
 }
 
+
 /* Button Variants */
-.action-btn.run {
+.js-adv-course-root .action-btn.run {
   background: #16a34a;
   color: #fff;
   box-shadow: 0 2px 10px rgba(22, 163, 74, 0.35);
 }
 
-.action-btn.run:hover {
+
+.js-adv-course-root .action-btn.run:hover {
   box-shadow: 0 4px 14px rgba(22, 163, 74, 0.5);
 }
 
-.action-btn.copy {
+
+.js-adv-course-root .action-btn.copy {
   background: #2563eb;
   color: #fff;
   box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3);
 }
 
-.action-btn.reset {
+
+.js-adv-course-root .action-btn.reset {
   background: #4b5563;
   color: #e5e7eb;
 }
 
-.action-btn.download {
+
+.js-adv-course-root .action-btn.download {
   background: #7c3aed;
   color: #fff;
   box-shadow: 0 2px 10px rgba(124, 58, 237, 0.3);
 }
 
-/* ═══════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    OUTPUT PANEL
-   ═══════════════════════════════════════════════════════════════ */
-.output-panel {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .output-panel {
   background: var(--bg-panel);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -564,12 +625,14 @@
   transition: box-shadow 0.25s;
 }
 
-.output-panel:hover {
+
+.js-adv-course-root .output-panel:hover {
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(6, 182, 212, 0.12);
 }
 
-/* ── Tab Bar ── */
-.output-tabs {
+
+/* â”€â”€ Tab Bar â”€â”€ */
+.js-adv-course-root .output-tabs {
   background: var(--bg-dark);
   display: flex;
   align-items: stretch;
@@ -579,7 +642,8 @@
   overflow: hidden;
 }
 
-.output-tab {
+
+.js-adv-course-root .output-tab {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -597,23 +661,27 @@
   font-family: var(--font-sans);
 }
 
-.output-tab:hover {
+
+.js-adv-course-root .output-tab:hover {
   color: var(--text-dim);
   background: var(--surface);
 }
 
-.output-tab--active {
+
+.js-adv-course-root .output-tab--active {
   color: var(--jsadv-cyan);
   border-bottom-color: var(--jsadv-cyan);
   background: rgba(6, 182, 212, 0.05);
 }
 
-.output-tab--active svg {
+
+.js-adv-course-root .output-tab--active svg {
   stroke: var(--jsadv-cyan);
 }
 
+
 /* Log count bubble */
-.output-tab-count {
+.js-adv-course-root .output-tab-count {
   background: var(--jsadv-cyan);
   color: var(--js-navy);
   font-size: 0.62rem;
@@ -624,8 +692,9 @@
   text-align: center;
 }
 
+
 /* Hint text pushed to the right */
-.output-run-hint {
+.js-adv-course-root .output-run-hint {
   margin-left: auto;
   padding-right: 0.9rem;
   font-size: 0.72rem;
@@ -636,30 +705,33 @@
   font-style: italic;
 }
 
-/* ── Tab Panels (hidden / visible) ── */
-.output-tab-panel {
+
+/* â”€â”€ Tab Panels (hidden / visible) â”€â”€ */
+.js-adv-course-root .output-tab-panel {
   display: none;
   flex: 1;
   overflow: hidden;
   flex-direction: column;
 }
 
-.output-tab-panel--visible {
+
+.js-adv-course-root .output-tab-panel--visible {
   display: flex;
   flex-direction: column;
   flex: 1;
   animation: panelSlideIn 0.2s ease-out;
 }
 
+
 @keyframes panelSlideIn {
   from { opacity: 0; transform: translateY(4px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CONSOLE OUTPUT
-   ═══════════════════════════════════════════════════════════════ */
-.console-output {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .console-output {
   flex: 1;
   background: #0b0b18;
   overflow-y: auto;
@@ -670,21 +742,25 @@
   scrollbar-color: rgba(6, 182, 212, 0.3) transparent;
 }
 
-.console-output::-webkit-scrollbar {
+
+.js-adv-course-root .console-output::-webkit-scrollbar {
   width: 5px;
 }
 
-.console-output::-webkit-scrollbar-track {
+
+.js-adv-course-root .console-output::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.console-output::-webkit-scrollbar-thumb {
+
+.js-adv-course-root .console-output::-webkit-scrollbar-thumb {
   background: rgba(6, 182, 212, 0.25);
   border-radius: 4px;
 }
 
+
 /* Empty state */
-.console-empty {
+.js-adv-course-root .console-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -696,32 +772,38 @@
   padding: 2rem;
 }
 
-.console-empty svg {
+
+.js-adv-course-root .console-empty svg {
   stroke: rgba(6, 182, 212, 0.2);
 }
 
-.console-empty p {
+
+.js-adv-course-root .console-empty p {
   color: var(--text-dim);
   font-size: 0.88rem;
   margin: 0;
 }
 
-.console-empty p strong {
+
+.js-adv-course-root .console-empty p strong {
   color: var(--jsadv-cyan);
 }
 
-.console-empty span {
+
+.js-adv-course-root .console-empty span {
   color: var(--text-muted);
   font-size: 0.78rem;
 }
 
+
 /* Log lines */
-.console-lines {
+.js-adv-course-root .console-lines {
   display: flex;
   flex-direction: column;
 }
 
-.console-line {
+
+.js-adv-course-root .console-line {
   display: flex;
   align-items: flex-start;
   gap: 0.45rem;
@@ -730,12 +812,14 @@
   transition: background 0.1s;
 }
 
-.console-line:hover {
+
+.js-adv-course-root .console-line:hover {
   background: var(--surface);
 }
 
+
 /* Timestamp */
-.console-ts {
+.js-adv-course-root .console-ts {
   flex-shrink: 0;
   font-size: 0.67rem;
   color: #374151;
@@ -744,8 +828,9 @@
   font-family: var(--font-mono);
 }
 
+
 /* Icon column */
-.console-icon {
+.js-adv-course-root .console-icon {
   flex-shrink: 0;
   width: 15px;
   text-align: center;
@@ -753,47 +838,63 @@
   padding-top: 1px;
 }
 
+
 /* Text */
-.console-text {
+.js-adv-course-root .console-text {
   flex: 1;
   word-break: break-word;
   white-space: pre-wrap;
   line-height: 1.55;
 }
 
-/* ── Log type colours ── */
-.console-line--log .console-icon  { color: var(--text-muted); }
-.console-line--log .console-text  { color: #c9d1d9; }
 
-.console-line--warn {
+/* â”€â”€ Log type colours â”€â”€ */
+.js-adv-course-root .console-line--log .console-icon { color: var(--text-muted); }
+
+.js-adv-course-root .console-line--log .console-text { color: #c9d1d9; }
+
+
+.js-adv-course-root .console-line--warn {
   background: rgba(245, 158, 11, 0.05);
   border-left: 2px solid rgba(245, 158, 11, 0.5);
 }
-.console-line--warn .console-icon { color: #f59e0b; }
-.console-line--warn .console-text { color: #fcd34d; }
-.console-line--warn .console-ts   { color: #92400e; }
 
-.console-line--error {
+.js-adv-course-root .console-line--warn .console-icon { color: #f59e0b; }
+
+.js-adv-course-root .console-line--warn .console-text { color: #fcd34d; }
+
+.js-adv-course-root .console-line--warn .console-ts { color: #92400e; }
+
+
+.js-adv-course-root .console-line--error {
   background: rgba(239, 68, 68, 0.06);
   border-left: 2px solid rgba(239, 68, 68, 0.5);
 }
-.console-line--error .console-icon { color: #ef4444; }
-.console-line--error .console-text { color: #fca5a5; }
-.console-line--error .console-ts   { color: #7f1d1d; }
 
-.console-line--done {
+.js-adv-course-root .console-line--error .console-icon { color: #ef4444; }
+
+.js-adv-course-root .console-line--error .console-text { color: #fca5a5; }
+
+.js-adv-course-root .console-line--error .console-ts { color: #7f1d1d; }
+
+
+.js-adv-course-root .console-line--done {
   background: rgba(34, 197, 94, 0.05);
   border-top: 1px solid rgba(34, 197, 94, 0.1);
   margin-top: 2px;
 }
-.console-line--done .console-icon { color: #22c55e; }
-.console-line--done .console-text { color: #86efac; font-style: italic; }
-.console-line--done .console-ts   { color: #14532d; }
 
-/* ═══════════════════════════════════════════════════════════════
+.js-adv-course-root .console-line--done .console-icon { color: #22c55e; }
+
+.js-adv-course-root .console-line--done .console-text { color: #86efac; font-style: italic; }
+
+.js-adv-course-root .console-line--done .console-ts { color: #14532d; }
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    THEORY CONTENT
-   ═══════════════════════════════════════════════════════════════ */
-.theory-content {
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .theory-content {
   flex: 1;
   overflow-y: auto;
   padding: 1.25rem 1.1rem;
@@ -802,25 +903,30 @@
   scrollbar-color: rgba(6, 182, 212, 0.25) transparent;
 }
 
-.theory-content::-webkit-scrollbar {
+
+.js-adv-course-root .theory-content::-webkit-scrollbar {
   width: 5px;
 }
 
-.theory-content::-webkit-scrollbar-thumb {
+
+.js-adv-course-root .theory-content::-webkit-scrollbar-thumb {
   background: rgba(6, 182, 212, 0.2);
   border-radius: 4px;
 }
 
+
 /* Theory Section */
-.theory-section {
+.js-adv-course-root .theory-section {
   margin-bottom: 1.6rem;
 }
 
-.theory-section:last-of-type {
+
+.js-adv-course-root .theory-section:last-of-type {
   margin-bottom: 1rem;
 }
 
-.theory-section-title {
+
+.js-adv-course-root .theory-section-title {
   display: flex;
   align-items: center;
   gap: 0.45rem;
@@ -834,22 +940,25 @@
   border-bottom: 1px solid rgba(6, 182, 212, 0.12);
 }
 
-.theory-section-title svg {
+
+.js-adv-course-root .theory-section-title svg {
   flex-shrink: 0;
   stroke: var(--jsadv-cyan);
   opacity: 0.85;
 }
 
+
 /* Description */
-.theory-description {
+.js-adv-course-root .theory-description {
   color: var(--text-dim);
   font-size: 0.875rem;
   line-height: 1.72;
   margin: 0;
 }
 
+
 /* Key Points */
-.keypoints-list {
+.js-adv-course-root .keypoints-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -858,7 +967,8 @@
   gap: 0.55rem;
 }
 
-.keypoint-item {
+
+.js-adv-course-root .keypoint-item {
   display: flex;
   align-items: flex-start;
   gap: 0.55rem;
@@ -867,7 +977,8 @@
   line-height: 1.6;
 }
 
-.keypoint-bullet {
+
+.js-adv-course-root .keypoint-bullet {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
@@ -880,13 +991,15 @@
   margin-top: 1px;
 }
 
-.keypoint-bullet svg {
+
+.js-adv-course-root .keypoint-bullet svg {
   stroke: var(--jsadv-cyan);
   flex-shrink: 0;
 }
 
+
 /* Run Tip Box */
-.theory-tip {
+.js-adv-course-root .theory-tip {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -899,18 +1012,21 @@
   margin-top: 0.5rem;
 }
 
-.theory-tip svg {
+
+.js-adv-course-root .theory-tip svg {
   flex-shrink: 0;
   stroke: var(--jsadv-cyan);
   opacity: 0.75;
 }
 
-.theory-tip strong {
+
+.js-adv-course-root .theory-tip strong {
   color: var(--jsadv-cyan);
 }
 
+
 /* Empty State */
-.theory-empty {
+.js-adv-course-root .theory-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -922,111 +1038,134 @@
   padding: 2rem;
 }
 
-.theory-empty svg {
+
+.js-adv-course-root .theory-empty svg {
   stroke: rgba(6, 182, 212, 0.18);
 }
 
-.theory-empty p {
+
+.js-adv-course-root .theory-empty p {
   color: var(--text-dim);
   font-size: 0.88rem;
   margin: 0;
 }
 
-.theory-empty p strong {
+
+.js-adv-course-root .theory-empty p strong {
   color: rgba(6, 182, 212, 0.7);
 }
 
-.theory-empty span {
+
+.js-adv-course-root .theory-empty span {
   color: var(--text-muted);
   font-size: 0.78rem;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE — TABLET
-   ═══════════════════════════════════════════════════════════════ */
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” TABLET
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 1024px) {
-  .topic-header-title {
+  .js-adv-course-root .topic-header-title {
     font-size: clamp(0.85rem, 2vw, 1.2rem);
   }
+
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE — MOBILE
-   ═══════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” MOBILE
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 768px) {
-  .topic-main {
+  .js-adv-course-root .topic-main {
     padding: 0.6rem 0.6rem 1.2rem;
   }
 
-  .topic-panels-grid {
+
+  .js-adv-course-root .topic-panels-grid {
     grid-template-columns: 1fr;
     gap: 0.7rem;
   }
 
-  .editor-panel,
-  .output-panel {
+
+  .js-adv-course-root .editor-panel,
+.js-adv-course-root .output-panel {
     min-height: 460px;
   }
 
-  .output-run-hint {
+
+  .js-adv-course-root .output-run-hint {
     display: none;
   }
+
 }
 
 @media (max-width: 480px) {
-  .topic-page-header {
+  .js-adv-course-root .topic-page-header {
     height: 52px;
     padding: 0 0.7rem;
   }
 
-  .topic-header-title {
+
+  .js-adv-course-root .topic-header-title {
     font-size: 0.82rem;
     letter-spacing: 0.02em;
   }
 
-  .topic-back-btn {
+
+  .js-adv-course-root .topic-back-btn {
     padding: 0.32rem 0.55rem;
     font-size: 0.74rem;
   }
 
-  .topic-menu-trigger {
+
+  .js-adv-course-root .topic-menu-trigger {
     width: 34px;
     height: 32px;
   }
 
-  .action-btn {
+
+  .js-adv-course-root .action-btn {
     padding: 0.38rem 0.7rem;
     font-size: 0.76rem;
   }
 
-  .topic-info-banner {
+
+  .js-adv-course-root .topic-info-banner {
     padding: 0.55rem 0.75rem;
   }
 
-  .topic-info-title {
+
+  .js-adv-course-root .topic-info-title {
     font-size: 0.82rem;
   }
 
-  .loading-js-text {
+
+  .js-adv-course-root .loading-js-text {
     font-size: 1.3rem;
   }
 
-  .loading-topic-name {
+
+  .js-adv-course-root .loading-topic-name {
     font-size: 0.82rem;
     max-width: 220px;
   }
+
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    REDUCED MOTION
-   ═══════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (prefers-reduced-motion: reduce) {
-  .loading-spinner-ring,
-  .loading-js-text,
-  .loading-dot,
-  .animate-topic-fade,
-  .output-tab-panel--visible {
+  .js-adv-course-root .loading-spinner-ring,
+.js-adv-course-root .loading-js-text,
+.js-adv-course-root .loading-dot,
+.js-adv-course-root .animate-topic-fade,
+.js-adv-course-root .output-tab-panel--visible {
     animation: none !important;
     transition: none !important;
   }
+
 }
+
+
+

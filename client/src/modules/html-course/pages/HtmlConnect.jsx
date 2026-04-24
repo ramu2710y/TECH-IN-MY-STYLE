@@ -401,25 +401,25 @@ export default function HtmlConnect() {
             <div className="cn-stats__grid">
               {[
                 {
-                  icon: "bi bi-play-circle-fill",
-                  value: "11+",
-                  label: "Courses in Progress",
-                  color: "#FF0000",
-                },
-                {
-                  icon: "bi bi-people-fill",
-                  value: "10K+",
-                  label: "Community Members",
-                  color: "#25D366",
-                },
-                {
                   icon: "bi bi-tags-fill",
-                  value: "100+",
+                  value: "80+",
                   label: "HTML Tags Covered",
                   color: "#E34F26",
                 },
                 {
-                  icon: "bi bi-heart-fill",
+                  icon: "bi bi-collection-fill",
+                  value: "20",
+                  label: "Courses Available",
+                  color: "#F16529",
+                },
+                {
+                  icon: "bi bi-terminal-fill",
+                  value: "1",
+                  label: "Live Playground",
+                  color: "#FF6F00",
+                },
+                {
+                  icon: "bi bi-gift-fill",
                   value: "100%",
                   label: "Free Forever",
                   color: "#E1306C",

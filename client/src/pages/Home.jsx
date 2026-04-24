@@ -13,40 +13,6 @@ const Home = () => {
       once: true
     });
 
-    // Custom cursor implementation
-    const initCustomCursor = () => {
-      if (window.innerWidth <= 768) return;
-
-      // Remove any existing custom cursor
-      const existingCursor = document.querySelector('.custom-cursor');
-      if (existingCursor) {
-        existingCursor.remove();
-      }
-
-      const cursor = document.createElement('div');
-      cursor.classList.add('custom-cursor');
-      
-      const cursorDot = document.createElement('div');
-      cursorDot.classList.add('cursor-dot');
-      
-      cursor.appendChild(cursorDot);
-      document.body.appendChild(cursor);
-      
-      document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        cursor.style.opacity = '1';
-      });
-      
-      document.addEventListener('mouseout', (e) => {
-        if (e.clientY <= 0 || e.clientX <= 0 || e.clientX >= window.innerWidth || e.clientY >= window.innerHeight) {
-          cursor.style.opacity = '0';
-        }
-      });
-    };
-
-    initCustomCursor();
-
     // Welcome message
     const username = localStorage.getItem('username') || 'Guest';
     const welcomeEl = document.getElementById('welcome');
@@ -54,8 +20,31 @@ const Home = () => {
       welcomeEl.textContent = `Welcome, ${username}!`;
     }
 
+    // Remove any existing custom cursor
+    const existingCursor = document.querySelector('.custom-cursor');
+    if (existingCursor) {
+      existingCursor.remove();
+    }
+
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    
+    const cursorDot = document.createElement('div');
+    cursorDot.classList.add('cursor-dot');
+    cursor.appendChild(cursorDot);
+    
+    document.body.appendChild(cursor);
+    
+    const moveCursor = (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    };
+    
+    document.addEventListener('mousemove', moveCursor);
+
     // Cleanup function
     return () => {
+      document.removeEventListener('mousemove', moveCursor);
       const cursor = document.querySelector('.custom-cursor');
       if (cursor) {
         cursor.remove();

@@ -1,5 +1,10 @@
 .stay-connected-page {
   min-height: 100vh;
+  cursor: none !important;
+}
+
+.stay-connected-page * {
+  cursor: none !important;
 }
 
 /* Hero Section */

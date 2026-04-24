@@ -35,6 +35,7 @@ export default function DlNavbar() {
           {navLinks.map(l => (
             <Link key={l.to} to={l.to} className={location.pathname === l.to ? 'active' : ''}>{l.label}</Link>
           ))}
+          <Link to="/courses" style={{ opacity: 0.8, border: '1.5px solid rgba(255,255,255,0.6)', borderRadius: '20px', padding: '0.2rem 0.75rem', fontSize: '0.8rem' }}>← Back</Link>
         </div>
         <div
           className={`dl-mobile-menu-btn${menuOpen ? ' active' : ''}`}

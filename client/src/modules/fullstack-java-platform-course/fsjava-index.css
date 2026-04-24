@@ -170,11 +170,12 @@
 
 /* ── Footer ────────────────────────────────────────────────── */
 .fsjava-module .footer {
-  background: rgba(7,11,23,0.96);
+  background: rgba(7,11,23,0.96) !important;
   backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(248,152,32,0.12);
-  padding: 3rem 0 1.5rem;
+  border-top: 1px solid rgba(248,152,32,0.12) !important;
+  padding: 3rem 0 1.5rem !important;
   margin-top: 4rem;
+  color: #c8d8e8 !important;
 }
 .fsjava-module .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 .fsjava-module .footer-top {
@@ -184,7 +185,7 @@
   margin-bottom: 2rem;
 }
 .fsjava-module .footer-brand-col p {
-  color: #3a5060;
+  color: #3a5060 !important;
   font-size: 0.84rem;
   line-height: 1.65;
   margin-top: 0.75rem;
@@ -196,12 +197,12 @@
 }
 .fsjava-module .fb-logo span {
   font-family: 'Orbitron', monospace;
-  color: var(--java-orange);
+  color: var(--java-orange) !important;
   font-size: 0.88rem;
   font-weight: 700;
 }
 .fsjava-module .footer-col h5 {
-  color: var(--java-orange);
+  color: var(--java-orange) !important;
   font-family: 'Orbitron', monospace;
   font-size: 0.68rem;
   letter-spacing: 2px;
@@ -211,32 +212,32 @@
 .fsjava-module .footer-col ul { list-style: none; }
 .fsjava-module .footer-col ul li { margin-bottom: 0.5rem; }
 .fsjava-module .footer-col ul li a {
-  color: #3a5060;
+  color: #3a5060 !important;
   text-decoration: none;
   font-size: 0.84rem;
   transition: color 0.2s;
 }
-.fsjava-module .footer-col ul li a:hover { color: var(--java-orange); }
+.fsjava-module .footer-col ul li a:hover { color: var(--java-orange) !important; }
 .fsjava-module .footer-socials { display: flex; flex-direction: column; gap: 0.5rem; }
 .fsjava-module .fsoc {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #3a5060;
+  color: #3a5060 !important;
   text-decoration: none;
   font-size: 0.84rem;
   transition: color 0.2s;
 }
 .fsjava-module .fsoc svg { width: 15px; height: 15px; }
-.fsjava-module .fsoc:hover { color: var(--java-orange); }
+.fsjava-module .fsoc:hover { color: var(--java-orange) !important; }
 .fsjava-module .footer-bottom {
-  border-top: 1px solid rgba(83,130,161,0.1);
+  border-top: 1px solid rgba(83,130,161,0.1) !important;
   padding-top: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.fsjava-module .footer-bottom p { color: #243040; font-size: 0.78rem; }
+.fsjava-module .footer-bottom p { color: #243040 !important; font-size: 0.78rem; }
 
 @media (max-width: 768px) {
   .fsjava-module .footer-top { grid-template-columns: 1fr 1fr; }

@@ -1,4 +1,4 @@
-.ml-navbar {
+﻿.ml-course-root .ml-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,14 +13,16 @@
   transition: background var(--ml-transition);
 }
 
-.ml-logo {
+
+.ml-course-root .ml-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
 }
 
-.ml-logo-text {
+
+.ml-course-root .ml-logo-text {
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
   font-weight: 800;
@@ -28,13 +30,15 @@
   color: var(--ml-text-primary);
 }
 
-.ml-nav-menu {
+
+.ml-course-root .ml-nav-menu {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.ml-nav-menu li a {
+
+.ml-course-root .ml-nav-menu li a {
   color: var(--ml-text-secondary);
   font-weight: 500;
   font-size: 0.95rem;
@@ -44,7 +48,8 @@
   transition: all var(--ml-transition);
 }
 
-.ml-nav-menu li a::after {
+
+.ml-course-root .ml-nav-menu li a::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -57,25 +62,29 @@
   border-radius: 1px;
 }
 
-.ml-nav-menu li a:hover,
-.ml-nav-menu li a.active {
+
+.ml-course-root .ml-nav-menu li a:hover,
+.ml-course-root .ml-nav-menu li a.active {
   color: var(--ml-text-primary);
 }
 
-.ml-nav-menu li a:hover::after,
-.ml-nav-menu li a.active::after {
+
+.ml-course-root .ml-nav-menu li a:hover::after,
+.ml-course-root .ml-nav-menu li a.active::after {
   width: 60%;
 }
 
+
 /* Hamburger */
-.ml-menu-toggle {
+.ml-course-root .ml-menu-toggle {
   display: none;
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1001;
 }
 
-.ml-bar {
+
+.ml-course-root .ml-bar {
   display: block;
   width: 24px;
   height: 2.5px;
@@ -85,25 +94,30 @@
   transition: all 0.3s ease;
 }
 
-.ml-menu-toggle.active .ml-bar:nth-child(1) {
+
+.ml-course-root .ml-menu-toggle.active .ml-bar:nth-child(1) {
   transform: translateY(7.5px) rotate(45deg);
 }
 
-.ml-menu-toggle.active .ml-bar:nth-child(2) {
+
+.ml-course-root .ml-menu-toggle.active .ml-bar:nth-child(2) {
   opacity: 0;
   transform: translateX(-20px);
 }
 
-.ml-menu-toggle.active .ml-bar:nth-child(3) {
+
+.ml-course-root .ml-menu-toggle.active .ml-bar:nth-child(3) {
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
+
 @media (max-width: 768px) {
-  .ml-menu-toggle {
+  .ml-course-root .ml-menu-toggle {
     display: block;
   }
 
-  .ml-nav-menu {
+
+  .ml-course-root .ml-nav-menu {
     position: fixed;
     top: 0;
     right: -100%;
@@ -119,26 +133,33 @@
     border-left: 1px solid var(--ml-glass-border);
   }
 
-  .ml-nav-menu.active {
+
+  .ml-course-root .ml-nav-menu.active {
     right: 0;
   }
 
-  .ml-nav-menu li {
+
+  .ml-course-root .ml-nav-menu li {
     width: 100%;
   }
 
-  .ml-nav-menu li a {
+
+  .ml-course-root .ml-nav-menu li a {
     display: block;
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
     border-radius: var(--ml-radius-md);
   }
 
-  .ml-nav-menu li a:hover {
+
+  .ml-course-root .ml-nav-menu li a:hover {
     background: var(--ml-glass-bg-hover);
   }
 
-  .ml-nav-menu li a::after {
+
+  .ml-course-root .ml-nav-menu li a::after {
     display: none;
   }
+
 }
+

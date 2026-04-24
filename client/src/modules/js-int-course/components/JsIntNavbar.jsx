@@ -6,12 +6,14 @@ import '../styles/JsIntNavbar.css'
    NAV_LINKS
 ───────────────────────────────────────────────────────────────────────────── */
 const NAV_LINKS = [
-  { label: 'JsIntHome',          to: '/js-int-course/',          icon: 'bi bi-house-door-fill',  pageKey: 'home'      },
-  { label: 'JS Topics',     to: '/js-int-course/js-int',    icon: 'bi bi-braces-asterisk',  pageKey: 'js-int'    },
-  { label: 'JsIntResources',     to: '/js-int-course/resources', icon: 'bi bi-journal-code',     pageKey: 'resources' },
-  { label: 'Playground',   to: '/js-int-course/compiler',  icon: 'bi bi-terminal-fill',    pageKey: 'compiler'  },
-  { label: "Let's JsIntConnect", to: '/js-int-course/connect',   icon: 'bi bi-people-fill',      pageKey: 'connect'   },
+  { label: 'Home',           to: '/js-int-course/',          icon: 'bi bi-house-door-fill',  pageKey: 'home'      },
+  { label: 'JS Topics',      to: '/js-int-course/js-int',    icon: 'bi bi-braces-asterisk',  pageKey: 'js-int'    },
+  { label: 'Resources',      to: '/js-int-course/resources', icon: 'bi bi-journal-code',     pageKey: 'resources' },
+  { label: 'Playground',     to: '/js-int-course/compiler',  icon: 'bi bi-terminal-fill',    pageKey: 'compiler'  },
+  { label: "Let's Connect",  to: '/js-int-course/connect',   icon: 'bi bi-people-fill',      pageKey: 'connect'   },
 ]
+
+const BACK_LINK = { label: '← Back to Courses', to: '/courses', icon: 'bi bi-arrow-left-circle-fill', pageKey: 'back' }
 
 /* ─────────────────────────────────────────────────────────────────────────────
    useDarkMode hook  (exported so other modules can reuse it)
@@ -33,6 +35,10 @@ export function useDarkMode() {
     } else {
       root.classList.remove('dark')
       localStorage.setItem('theme', 'light')
+    }
+    // Remove html.dark on unmount so it doesn't bleed to main app pages
+    return () => {
+      document.documentElement.classList.remove('dark')
     }
   }, [dark])
 
@@ -184,6 +190,12 @@ export default function JsIntNavbar() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to={BACK_LINK.to} className="navbar__nav-link navbar__back-link">
+                <i className={BACK_LINK.icon} aria-hidden="true" />
+                <span>{BACK_LINK.label}</span>
+              </Link>
+            </li>
           </ul>
 
           {/* ── Right controls ────────────────────────────────────── */}

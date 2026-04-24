@@ -13,7 +13,7 @@
 }
 
 /* Dark mode for HTML course */
-html.dark .html-course-module {
+html.dark .html-course-root .html-course-module {
   background: #0d0d0d !important;
   color: #f0f0f0 !important;
 }

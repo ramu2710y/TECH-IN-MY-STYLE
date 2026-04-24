@@ -1,5 +1,5 @@
-/* ===== Aurora CodeBlock — Neumorphic ===== */
-.codeblock {
+﻿/* ===== Aurora CodeBlock — Neumorphic ===== */
+.os-course-root .codeblock {
     background: #080c18;
     border: none;
     border-radius: var(--radius-md);
@@ -11,18 +11,21 @@
     transition: box-shadow var(--transition-normal);
 }
 
-.codeblock:hover {
+
+.os-course-root .codeblock:hover {
     box-shadow:
         8px 8px 20px rgba(0, 0, 0, 0.65),
         -3px -3px 8px rgba(255, 255, 255, 0.03),
         0 0 16px rgba(139, 92, 246, 0.1);
 }
 
-.codeblock .terminal-header {
+
+.os-course-root .codeblock .terminal-header {
     background: #060a14;
 }
 
-.codeblock-title {
+
+.os-course-root .codeblock-title {
     margin-left: auto;
     font-family: var(--font-mono);
     font-size: 0.72rem;
@@ -30,7 +33,8 @@
     letter-spacing: 0.5px;
 }
 
-.codeblock-tabs {
+
+.os-course-root .codeblock-tabs {
     display: flex;
     gap: 2px;
     padding: 8px 12px;
@@ -38,7 +42,8 @@
     border-bottom: 1px solid var(--border-glass);
 }
 
-.codeblock-tab {
+
+.os-course-root .codeblock-tab {
     padding: 6px 16px;
     border: none;
     border-radius: var(--radius-full);
@@ -51,18 +56,22 @@
     transition: all var(--transition-fast);
 }
 
-.codeblock-tab:hover {
+
+.os-course-root .codeblock-tab:hover {
     background: rgba(148, 163, 184, 0.08);
     color: var(--text-secondary);
 }
 
-.codeblock-tab--active {
+
+.os-course-root .codeblock-tab--active {
     background: rgba(139, 92, 246, 0.15);
     color: var(--accent-violet);
 }
 
-.codeblock-body {
+
+.os-course-root .codeblock-body {
     background: rgba(10, 14, 22, 0.6);
     max-height: 500px;
     overflow-y: auto;
 }
+

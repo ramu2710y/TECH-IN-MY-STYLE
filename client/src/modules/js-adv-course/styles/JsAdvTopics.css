@@ -1,13 +1,13 @@
-/* ═══════════════════════════════════════════════════════════════════════════
-   JsAdvTopics.css — Advanced JavaScript "In My Style" JsAdvTopics Index Page
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   JsAdvTopics.css â€” Advanced JavaScript "In My Style" JsAdvTopics Index Page
    Brand: PRIMARY #06b6d4 (JS Yellow)  |  DARK var(--bg) (Deep Navy)
-   Design: Glassmorphism · Scroll Animations · Premium UI
-═══════════════════════════════════════════════════════════════════════════ */
+   Design: Glassmorphism Â· Scroll Animations Â· Premium UI
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ──────────────────────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    LOCAL TOKENS
-────────────────────────────────────────────────────────────────────────── */
-:root {
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root {
   --topics-navy:        var(--bg);
   --topics-navy-mid:    var(--surface);
   --topics-navy-light:  var(--surface);
@@ -18,9 +18,10 @@
   --topics-glass-bd:    rgba(255, 255, 255, 0.12);
 }
 
-/* ──────────────────────────────────────────────────────────────────────────
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    KEYFRAMES
-────────────────────────────────────────────────────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @keyframes topics-fade-up {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0);    }
@@ -57,20 +58,21 @@
   to   { opacity: 1; transform: translateY(0)    scale(1);   }
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    PAGE WRAPPER
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-topics-page {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-topics-page {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text-primary);
   overflow-x: hidden;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HERO BANNER
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-topics-hero {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-topics-hero {
   position: relative;
   background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 55%, var(--surface) 100%);
   padding: 5.5rem 2rem 4rem;
@@ -80,13 +82,15 @@
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
-.jsadv-topics-hero--visible {
+
+.js-adv-course-root .jsadv-topics-hero--visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ── Decorative blobs ── */
-.jsadv-topics-hero__blob {
+
+/* â”€â”€ Decorative blobs â”€â”€ */
+.js-adv-course-root .jsadv-topics-hero__blob {
   position: absolute;
   border-radius: 50%;
   filter: blur(72px);
@@ -94,7 +98,8 @@
   will-change: transform;
 }
 
-.jsadv-topics-hero__blob--1 {
+
+.js-adv-course-root .jsadv-topics-hero__blob--1 {
   width: 520px;
   height: 520px;
   top: -160px;
@@ -103,7 +108,8 @@
   animation: topics-blob-1 16s ease-in-out infinite;
 }
 
-.jsadv-topics-hero__blob--2 {
+
+.js-adv-course-root .jsadv-topics-hero__blob--2 {
   width: 380px;
   height: 380px;
   bottom: -100px;
@@ -112,8 +118,9 @@
   animation: topics-blob-2 20s ease-in-out infinite;
 }
 
-/* ── Inner container ── */
-.jsadv-topics-hero__inner {
+
+/* â”€â”€ Inner container â”€â”€ */
+.js-adv-course-root .jsadv-topics-hero__inner {
   position: relative;
   z-index: 2;
   max-width: 760px;
@@ -125,8 +132,9 @@
   gap: 1.2rem;
 }
 
-/* ── Badge ── */
-.jsadv-topics-hero__badge {
+
+/* â”€â”€ Badge â”€â”€ */
+.js-adv-course-root .jsadv-topics-hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -143,8 +151,9 @@
   animation: badge-pulse 3s ease-in-out infinite;
 }
 
-/* ── Title ── */
-.jsadv-topics-hero__title {
+
+/* â”€â”€ Title â”€â”€ */
+.js-adv-course-root .jsadv-topics-hero__title {
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 800;
   color: var(--text-primary);
@@ -153,12 +162,14 @@
   margin: 0;
 }
 
-.jsadv-topics-hero__title span {
+
+.js-adv-course-root .jsadv-topics-hero__title span {
   color: var(--topics-cyan);
 }
 
-/* ── Subtitle ── */
-.jsadv-topics-hero__subtitle {
+
+/* â”€â”€ Subtitle â”€â”€ */
+.js-adv-course-root .jsadv-topics-hero__subtitle {
   font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: var(--text-muted);
   line-height: 1.7;
@@ -166,17 +177,19 @@
   margin: 0;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SEARCH
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-topics-search {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-topics-search {
   position: relative;
   width: 100%;
   max-width: 540px;
   margin-top: 0.4rem;
 }
 
-.jsadv-topics-search__icon {
+
+.js-adv-course-root .jsadv-topics-search__icon {
   position: absolute;
   left: 1.1rem;
   top: 50%;
@@ -187,7 +200,8 @@
   z-index: 2;
 }
 
-.jsadv-topics-search__input {
+
+.js-adv-course-root .jsadv-topics-search__input {
   width: 100%;
   background: var(--surface);
   border: 1.5px solid rgba(255, 255, 255, 0.14);
@@ -201,18 +215,21 @@
   box-sizing: border-box;
 }
 
-.jsadv-topics-search__input::placeholder {
+
+.js-adv-course-root .jsadv-topics-search__input::placeholder {
   color: var(--text-muted);
 }
 
-.jsadv-topics-search__input:focus {
+
+.js-adv-course-root .jsadv-topics-search__input:focus {
   border-color: var(--topics-cyan);
   background: var(--surface);
   box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.18),
               0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
-.jsadv-topics-search__clear {
+
+.js-adv-course-root .jsadv-topics-search__clear {
   position: absolute;
   right: 0.9rem;
   top: 50%;
@@ -229,14 +246,16 @@
   z-index: 2;
 }
 
-.jsadv-topics-search__clear:hover {
+
+.js-adv-course-root .jsadv-topics-search__clear:hover {
   color: var(--text-muted);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    STATS BAR
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-topics-stats-bar {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-topics-stats-bar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,12 +270,14 @@
   backdrop-filter: blur(12px);
 }
 
-html.dark .jsadv-topics-stats-bar {
+
+html.dark .js-adv-course-root .jsadv-topics-stats-bar {
   background: rgba(22, 33, 62, 0.92);
   border-bottom-color: var(--text-muted);
 }
 
-.topics-stat {
+
+.js-adv-course-root .topics-stat {
   display: flex;
   align-items: center;
   gap: 0.45rem;
@@ -264,26 +285,30 @@ html.dark .jsadv-topics-stats-bar {
   color: var(--text-secondary);
 }
 
-.topics-stat i {
+
+.js-adv-course-root .topics-stat i {
   color: var(--topics-cyan);
   font-size: 0.92rem;
 }
 
-.topics-stat strong {
+
+.js-adv-course-root .topics-stat strong {
   color: var(--text-primary);
   font-weight: 700;
 }
 
-.topics-stat-sep {
+
+.js-adv-course-root .topics-stat-sep {
   color: var(--text-muted);
   font-size: 1.1rem;
   opacity: 0.5;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CONTROLS (view toggle + category pills)
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-topics-controls {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-topics-controls {
   max-width: 1280px;
   margin: 0 auto;
   padding: 1.6rem 2rem 0;
@@ -292,8 +317,9 @@ html.dark .jsadv-topics-stats-bar {
   gap: 1.1rem;
 }
 
-/* ── View Toggle ── */
-.view-toggle {
+
+/* â”€â”€ View Toggle â”€â”€ */
+.js-adv-course-root .view-toggle {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -304,12 +330,14 @@ html.dark .jsadv-topics-stats-bar {
   width: fit-content;
 }
 
-html.dark .view-toggle {
+
+html.dark .js-adv-course-root .view-toggle {
   background: rgba(255, 255, 255, 0.04);
   border-color: var(--text-muted);
 }
 
-.view-btn {
+
+.js-adv-course-root .view-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -325,27 +353,32 @@ html.dark .view-toggle {
   white-space: nowrap;
 }
 
-.view-btn:hover {
+
+.js-adv-course-root .view-btn:hover {
   background: rgba(6, 182, 212, 0.08);
   color: var(--text-primary);
 }
 
-.view-btn--active {
+
+.js-adv-course-root .view-btn--active {
   background: var(--topics-cyan);
   color: var(--topics-navy);
 }
 
-.view-btn--active:hover {
+
+.js-adv-course-root .view-btn--active:hover {
   background: var(--topics-cyan-dk);
   color: var(--topics-navy);
 }
 
-.view-btn i {
+
+.js-adv-course-root .view-btn i {
   font-size: 0.85rem;
 }
 
-/* ── Category Pills ── */
-.jsadv-category-pills {
+
+/* â”€â”€ Category Pills â”€â”€ */
+.js-adv-course-root .jsadv-category-pills {
   display: flex;
   align-items: center;
   gap: 0.55rem;
@@ -356,18 +389,22 @@ html.dark .view-toggle {
   scrollbar-color: rgba(6, 182, 212, 0.3) transparent;
 }
 
-.jsadv-category-pills::-webkit-scrollbar {
+
+.js-adv-course-root .jsadv-category-pills::-webkit-scrollbar {
   height: 3px;
 }
-.jsadv-category-pills::-webkit-scrollbar-track {
+
+.js-adv-course-root .jsadv-category-pills::-webkit-scrollbar-track {
   background: transparent;
 }
-.jsadv-category-pills::-webkit-scrollbar-thumb {
+
+.js-adv-course-root .jsadv-category-pills::-webkit-scrollbar-thumb {
   background: rgba(6, 182, 212, 0.35);
   border-radius: 99px;
 }
 
-.cat-pill {
+
+.js-adv-course-root .cat-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -384,19 +421,22 @@ html.dark .view-toggle {
   flex-shrink: 0;
 }
 
-html.dark .cat-pill {
+
+html.dark .js-adv-course-root .cat-pill {
   background: rgba(255, 255, 255, 0.04);
   border-color: var(--text-muted);
 }
 
-.cat-pill:hover {
+
+.js-adv-course-root .cat-pill:hover {
   border-color: var(--pill-color, var(--topics-cyan));
   color: var(--pill-color, var(--topics-cyan));
   background: color-mix(in srgb, var(--pill-color, var(--topics-cyan)) 8%, transparent);
   transform: translateY(-1px);
 }
 
-.cat-pill__dot {
+
+.js-adv-course-root .cat-pill__dot {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -404,10 +444,11 @@ html.dark .cat-pill {
   flex-shrink: 0;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CATEGORIES CONTAINER
-══════════════════════════════════════════════════════════════════════════ */
-.categories-container {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .categories-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem 2rem 4rem;
@@ -416,16 +457,18 @@ html.dark .cat-pill {
   gap: 3.5rem;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CATEGORY SECTION
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-category-section {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-category-section {
   scroll-margin-top: 80px;
   animation: card-in 0.4s ease both;
 }
 
-/* ── Section Header ── */
-.cat-section-header {
+
+/* â”€â”€ Section Header â”€â”€ */
+.js-adv-course-root .cat-section-header {
   display: flex;
   align-items: center;
   gap: 0.9rem;
@@ -434,7 +477,8 @@ html.dark .cat-pill {
   border-bottom: 1.5px solid var(--border-color);
 }
 
-.cat-section-icon {
+
+.js-adv-course-root .cat-section-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -445,7 +489,8 @@ html.dark .cat-pill {
   flex-shrink: 0;
 }
 
-.cat-section-title {
+
+.js-adv-course-root .cat-section-title {
   font-size: 1.35rem;
   font-weight: 750;
   letter-spacing: -0.01em;
@@ -453,7 +498,8 @@ html.dark .cat-pill {
   flex: 1;
 }
 
-.cat-topic-count {
+
+.js-adv-course-root .cat-topic-count {
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.25rem 0.7rem;
@@ -464,8 +510,9 @@ html.dark .cat-pill {
   flex-shrink: 0;
 }
 
-/* ── Section description ── */
-.cat-section-desc {
+
+/* â”€â”€ Section description â”€â”€ */
+.js-adv-course-root .cat-section-desc {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.65;
@@ -473,18 +520,20 @@ html.dark .cat-pill {
   max-width: 680px;
 }
 
-/* ── Topic grid ── */
-.cat-topic-grid {
+
+/* â”€â”€ Topic grid â”€â”€ */
+.js-adv-course-root .cat-topic-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TOPIC CARD (shared styles)
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-topic-card,
-.all-jsadv-topic-card {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-topic-card,
+.js-adv-course-root .all-jsadv-topic-card {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -500,8 +549,9 @@ html.dark .cat-pill {
   overflow: hidden;
 }
 
-.jsadv-topic-card::before,
-.all-jsadv-topic-card::before {
+
+.js-adv-course-root .jsadv-topic-card::before,
+.js-adv-course-root .all-jsadv-topic-card::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -516,8 +566,9 @@ html.dark .cat-pill {
   border-radius: inherit;
 }
 
-.jsadv-topic-card:hover,
-.all-jsadv-topic-card:hover {
+
+.js-adv-course-root .jsadv-topic-card:hover,
+.js-adv-course-root .all-jsadv-topic-card:hover {
   transform: translateY(-4px);
   border-color: color-mix(in srgb, var(--cat-glow, var(--topics-cyan)) 55%, transparent);
   box-shadow:
@@ -525,32 +576,37 @@ html.dark .cat-pill {
     0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.jsadv-topic-card:hover::before,
-.all-jsadv-topic-card:hover::before {
+
+.js-adv-course-root .jsadv-topic-card:hover::before,
+.js-adv-course-root .all-jsadv-topic-card:hover::before {
   opacity: 1;
 }
 
-html.dark .jsadv-topic-card,
-html.dark .all-jsadv-topic-card {
+
+html.dark .js-adv-course-root .jsadv-topic-card,
+html.dark .js-adv-course-root .all-jsadv-topic-card {
   background: rgba(255, 255, 255, 0.035);
   border-color: var(--text-muted);
 }
 
-html.dark .jsadv-topic-card:hover,
-html.dark .all-jsadv-topic-card:hover {
+
+html.dark .js-adv-course-root .jsadv-topic-card:hover,
+html.dark .js-adv-course-root .all-jsadv-topic-card:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: color-mix(in srgb, var(--cat-glow, var(--topics-cyan)) 50%, transparent);
 }
 
-/* ── Card body ── */
-.jsadv-topic-card__body {
+
+/* â”€â”€ Card body â”€â”€ */
+.js-adv-course-root .jsadv-topic-card__body {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.jsadv-topic-card__title {
+
+.js-adv-course-root .jsadv-topic-card__title {
   font-size: 0.97rem;
   font-weight: 660;
   line-height: 1.4;
@@ -559,12 +615,14 @@ html.dark .all-jsadv-topic-card:hover {
   transition: color 0.2s;
 }
 
-.jsadv-topic-card:hover .jsadv-topic-card__title,
-.all-jsadv-topic-card:hover .jsadv-topic-card__title {
+
+.js-adv-course-root .jsadv-topic-card:hover .jsadv-topic-card__title,
+.js-adv-course-root .all-jsadv-topic-card:hover .jsadv-topic-card__title {
   color: color-mix(in srgb, var(--cat-glow, var(--topics-cyan)) 90%, var(--text-primary));
 }
 
-.jsadv-topic-card__desc {
+
+.js-adv-course-root .jsadv-topic-card__desc {
   font-size: 0.82rem;
   color: var(--text-muted);
   line-height: 1.6;
@@ -575,8 +633,9 @@ html.dark .all-jsadv-topic-card:hover {
   overflow: hidden;
 }
 
-/* ── Card footer row ── */
-.jsadv-topic-card__footer {
+
+/* â”€â”€ Card footer row â”€â”€ */
+.js-adv-course-root .jsadv-topic-card__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -584,31 +643,35 @@ html.dark .all-jsadv-topic-card:hover {
   margin-top: auto;
 }
 
-.jsadv-topic-card__meta {
+
+.js-adv-course-root .jsadv-topic-card__meta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.45rem;
 }
 
-/* ── Arrow ── */
-.jsadv-topic-card__arrow {
+
+/* â”€â”€ Arrow â”€â”€ */
+.js-adv-course-root .jsadv-topic-card__arrow {
   font-size: 1rem;
   color: var(--text-muted);
   transition: color 0.2s, transform 0.2s;
   flex-shrink: 0;
 }
 
-.jsadv-topic-card:hover .jsadv-topic-card__arrow,
-.all-jsadv-topic-card:hover .jsadv-topic-card__arrow {
+
+.js-adv-course-root .jsadv-topic-card:hover .jsadv-topic-card__arrow,
+.js-adv-course-root .all-jsadv-topic-card:hover .jsadv-topic-card__arrow {
   color: var(--cat-glow, var(--topics-cyan));
   transform: translateX(4px);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DIFFICULTY BADGE
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-difficulty-badge {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-difficulty-badge {
   display: inline-flex;
   align-items: center;
   font-size: 0.7rem;
@@ -620,38 +683,44 @@ html.dark .all-jsadv-topic-card:hover {
   white-space: nowrap;
 }
 
-.diff--beginner {
+
+.js-adv-course-root .diff--beginner {
   background: rgba(16, 185, 129, 0.14);
   color: #059669;
   border: 1px solid rgba(16, 185, 129, 0.28);
 }
 
-.diff--intermediate {
+
+.js-adv-course-root .diff--intermediate {
   background: rgba(6, 182, 212, 0.15);
   color: #92700a;
   border: 1px solid rgba(6, 182, 212, 0.35);
 }
 
-html.dark .diff--intermediate {
+
+html.dark .js-adv-course-root .diff--intermediate {
   color: #d4a800;
 }
 
-.diff--advanced {
+
+.js-adv-course-root .diff--advanced {
   background: rgba(239, 68, 68, 0.12);
   color: #dc2626;
   border: 1px solid rgba(239, 68, 68, 0.28);
 }
 
-.diff--expert {
+
+.js-adv-course-root .diff--expert {
   background: rgba(139, 92, 246, 0.14);
   color: #7c3aed;
   border: 1px solid rgba(139, 92, 246, 0.28);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TIME BADGE
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-time-badge {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-time-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -660,38 +729,44 @@ html.dark .diff--intermediate {
   white-space: nowrap;
 }
 
-.jsadv-time-badge i {
+
+.js-adv-course-root .jsadv-time-badge i {
   font-size: 0.78rem;
   opacity: 0.75;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    ALL TOPICS VIEW
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-all-topics-count {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-all-topics-count {
   font-size: 0.88rem;
   color: var(--text-muted);
   margin-bottom: 1.2rem;
 }
 
-.jsadv-all-topics-count strong {
+
+.js-adv-course-root .jsadv-all-topics-count strong {
   color: var(--text-primary);
 }
 
-.jsadv-all-topics-count em {
+
+.js-adv-course-root .jsadv-all-topics-count em {
   color: var(--topics-cyan);
   font-style: normal;
   font-weight: 600;
 }
 
-.jsadv-all-topics-grid {
+
+.js-adv-course-root .jsadv-all-topics-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
 }
 
-/* ── Category chip (in jsadv-all-topics card) ── */
-.jsadv-cat-chip {
+
+/* â”€â”€ Category chip (in jsadv-all-topics card) â”€â”€ */
+.js-adv-course-root .jsadv-cat-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -706,14 +781,16 @@ html.dark .diff--intermediate {
   flex-shrink: 0;
 }
 
-.jsadv-cat-chip i {
+
+.js-adv-course-root .jsadv-cat-chip i {
   font-size: 0.78rem;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    EMPTY STATE
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-topics-empty {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-topics-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -724,21 +801,25 @@ html.dark .diff--intermediate {
   color: var(--text-muted);
 }
 
-.jsadv-topics-empty i {
+
+.js-adv-course-root .jsadv-topics-empty i {
   font-size: 2.8rem;
   opacity: 0.35;
 }
 
-.jsadv-topics-empty p {
+
+.js-adv-course-root .jsadv-topics-empty p {
   font-size: 1rem;
   margin: 0;
 }
 
-.jsadv-topics-empty p strong {
+
+.js-adv-course-root .jsadv-topics-empty p strong {
   color: var(--text-primary);
 }
 
-.jsadv-topics-empty__reset {
+
+.js-adv-course-root .jsadv-topics-empty__reset {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -753,15 +834,17 @@ html.dark .diff--intermediate {
   transition: background 0.2s, transform 0.15s;
 }
 
-.jsadv-topics-empty__reset:hover {
+
+.js-adv-course-root .jsadv-topics-empty__reset:hover {
   background: var(--topics-cyan-dk);
   transform: translateY(-1px);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BACK TO TOP BUTTON
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-back-top-btn {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-back-top-btn {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -782,162 +865,193 @@ html.dark .diff--intermediate {
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
-.jsadv-back-top-btn:hover {
+
+.js-adv-course-root .jsadv-back-top-btn:hover {
   background: var(--topics-cyan-dk);
   transform: translateY(-3px);
   box-shadow: 0 8px 28px rgba(6, 182, 212, 0.55);
 }
 
-.jsadv-back-top-btn:active {
+
+.js-adv-course-root .jsadv-back-top-btn:active {
   transform: translateY(0);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DARK MODE OVERRIDES
-══════════════════════════════════════════════════════════════════════════ */
-html.dark .jsadv-topics-page {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+html.dark .js-adv-course-root .jsadv-topics-page {
   background: #0d0d1a;
 }
 
-html.dark .cat-section-header {
+
+html.dark .js-adv-course-root .cat-section-header {
   border-bottom-color: var(--text-muted);
 }
 
-html.dark .view-toggle {
+
+html.dark .js-adv-course-root .view-toggle {
   background: rgba(255, 255, 255, 0.04);
   border-color: var(--text-muted);
 }
 
-html.dark .cat-pill {
+
+html.dark .js-adv-course-root .cat-pill {
   background: rgba(255, 255, 255, 0.04);
   border-color: var(--text-muted);
   color: var(--text-muted);
 }
 
-html.dark .cat-pill:hover {
+
+html.dark .js-adv-course-root .cat-pill:hover {
   background: color-mix(in srgb, var(--pill-color, var(--topics-cyan)) 10%, transparent);
 }
 
-html.dark .jsadv-topics-empty i {
+
+html.dark .js-adv-course-root .jsadv-topics-empty i {
   opacity: 0.2;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   RESPONSIVE — TABLET  ≤ 900px
-══════════════════════════════════════════════════════════════════════════ */
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” TABLET  â‰¤ 900px
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 900px) {
-  .jsadv-topics-hero {
+  .js-adv-course-root .jsadv-topics-hero {
     padding: 4rem 1.5rem 3rem;
   }
 
-  .cat-topic-grid,
-  .jsadv-all-topics-grid {
+
+  .js-adv-course-root .cat-topic-grid,
+.js-adv-course-root .jsadv-all-topics-grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
+
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   RESPONSIVE — MOBILE  ≤ 768px
-══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” MOBILE  â‰¤ 768px
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 768px) {
-  .jsadv-topics-hero {
+  .js-adv-course-root .jsadv-topics-hero {
     padding: 3.5rem 1.25rem 2.5rem;
   }
 
-  .jsadv-topics-hero__title {
+
+  .js-adv-course-root .jsadv-topics-hero__title {
     font-size: 1.85rem;
   }
 
-  .jsadv-topics-hero__subtitle {
+
+  .js-adv-course-root .jsadv-topics-hero__subtitle {
     font-size: 0.93rem;
   }
 
-  .jsadv-topics-controls {
+
+  .js-adv-course-root .jsadv-topics-controls {
     padding: 1.2rem 1.25rem 0;
   }
 
-  .categories-container {
+
+  .js-adv-course-root .categories-container {
     padding: 1.5rem 1.25rem 3rem;
     gap: 2.5rem;
   }
 
-  .cat-topic-grid,
-  .jsadv-all-topics-grid {
+
+  .js-adv-course-root .cat-topic-grid,
+.js-adv-course-root .jsadv-all-topics-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
 
-  .jsadv-topics-stats-bar {
+
+  .js-adv-course-root .jsadv-topics-stats-bar {
     gap: 0.5rem 1.2rem;
     font-size: 0.83rem;
   }
 
-  .view-toggle {
+
+  .js-adv-course-root .view-toggle {
     width: 100%;
     justify-content: center;
   }
 
-  .view-btn {
+
+  .js-adv-course-root .view-btn {
     flex: 1;
     justify-content: center;
   }
+
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   RESPONSIVE — SMALL MOBILE  ≤ 480px
-══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” SMALL MOBILE  â‰¤ 480px
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 480px) {
-  .jsadv-topics-hero {
+  .js-adv-course-root .jsadv-topics-hero {
     padding: 3rem 1rem 2rem;
   }
 
-  .jsadv-topics-hero__title {
+
+  .js-adv-course-root .jsadv-topics-hero__title {
     font-size: 1.55rem;
   }
 
-  .cat-topic-grid,
-  .jsadv-all-topics-grid {
+
+  .js-adv-course-root .cat-topic-grid,
+.js-adv-course-root .jsadv-all-topics-grid {
     grid-template-columns: 1fr;
   }
 
-  .cat-section-title {
+
+  .js-adv-course-root .cat-section-title {
     font-size: 1.1rem;
   }
 
-  .jsadv-category-pills {
+
+  .js-adv-course-root .jsadv-category-pills {
     gap: 0.4rem;
   }
 
-  .cat-pill {
+
+  .js-adv-course-root .cat-pill {
     font-size: 0.76rem;
     padding: 0.3rem 0.75rem;
   }
 
-  .jsadv-back-top-btn {
+
+  .js-adv-course-root .jsadv-back-top-btn {
     bottom: 1.25rem;
     right: 1.25rem;
     width: 40px;
     height: 40px;
   }
+
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    REDUCED MOTION
-══════════════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (prefers-reduced-motion: reduce) {
-  .jsadv-topics-hero,
-  .jsadv-topic-card,
-  .all-jsadv-topic-card,
-  .cat-pill,
-  .jsadv-back-top-btn,
-  .jsadv-topics-hero__blob--1,
-  .jsadv-topics-hero__blob--2 {
+  .js-adv-course-root .jsadv-topics-hero,
+.js-adv-course-root .jsadv-topic-card,
+.js-adv-course-root .all-jsadv-topic-card,
+.js-adv-course-root .cat-pill,
+.js-adv-course-root .jsadv-back-top-btn,
+.js-adv-course-root .jsadv-topics-hero__blob--1,
+.js-adv-course-root .jsadv-topics-hero__blob--2 {
     animation: none !important;
     transition: none !important;
   }
 
-  .jsadv-topics-hero {
+
+  .js-adv-course-root .jsadv-topics-hero {
     opacity: 1;
     transform: none;
   }
+
 }
+
+

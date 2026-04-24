@@ -1,13 +1,13 @@
-/* ═══════════════════════════════════════════════════════════════════════════
-   JsAdvHome.css — Advanced JavaScript "In My Style" JsAdvHome Page
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   JsAdvHome.css â€” Advanced JavaScript "In My Style" JsAdvHome Page
    Brand: PRIMARY #06b6d4 (JS Yellow)  |  DARK var(--bg) (Deep Navy)
-   Design: Glassmorphism · Scroll Animations · Premium UI
-═══════════════════════════════════════════════════════════════════════════ */
+   Design: Glassmorphism Â· Scroll Animations Â· Premium UI
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ──────────────────────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    LOCAL TOKENS  (extend the global index.css vars)
-────────────────────────────────────────────────────────────────────────── */
-:root {
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root {
   --navy:          var(--bg);
   --navy-mid:      var(--surface);
   --navy-light:    var(--surface);
@@ -22,37 +22,41 @@
   --section-gap:   6rem;
 }
 
+
 html.dark {
   --glass-bg:      rgba(255, 255, 255, 0.04);
   --glass-border:  var(--border-color);
   --jsadv-hero-glow:     rgba(6, 182, 212, 0.12);
 }
 
-/* ──────────────────────────────────────────────────────────────────────────
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    PAGE WRAPPER
-────────────────────────────────────────────────────────────────────────── */
-.home {
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .home {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text-primary);
   overflow-x: hidden;
 }
 
-/* ──────────────────────────────────────────────────────────────────────────
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    CONTAINER
-────────────────────────────────────────────────────────────────────────── */
-.home .container {
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .home .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   HERO
-══════════════════════════════════════════════════════════════════════════ */
 
-/* ── Keyframes ──────────────────────────────────────────────────────────── */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   HERO
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* â”€â”€ Keyframes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @keyframes blob-drift-1 {
   0%,  100% { transform: translate(0,   0)   scale(1);    }
   30%        { transform: translate(40px, -30px) scale(1.08); }
@@ -97,8 +101,8 @@ html.dark {
   100% { transform: scale(1);    opacity: 1; }
 }
 
-/* ── Shell ──────────────────────────────────────────────────────────────── */
-.jsadv-hero {
+/* â”€â”€ Shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .jsadv-hero {
   position: relative;
   background: linear-gradient(
     145deg,
@@ -114,9 +118,10 @@ html.dark {
   justify-content: center;
 }
 
-/* entrance — everything is invisible by default; .jsadv-hero--visible triggers it */
-.jsadv-hero__content,
-.jsadv-hero__code-wrap {
+
+/* entrance â€” everything is invisible by default; .jsadv-hero--visible triggers it */
+.js-adv-course-root .jsadv-hero__content,
+.js-adv-course-root .jsadv-hero__code-wrap {
   opacity: 0;
   transform: translateY(28px);
   transition:
@@ -124,18 +129,21 @@ html.dark {
     transform 0.75s var(--ease-decelerate, cubic-bezier(0, 0, 0.2, 1));
 }
 
-.jsadv-hero__code-wrap {
+
+.js-adv-course-root .jsadv-hero__code-wrap {
   transition-delay: 0.18s;
 }
 
-.jsadv-hero--visible .jsadv-hero__content,
-.jsadv-hero--visible .jsadv-hero__code-wrap {
+
+.js-adv-course-root .jsadv-hero--visible .jsadv-hero__content,
+.js-adv-course-root .jsadv-hero--visible .jsadv-hero__code-wrap {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ── Decorative blobs ───────────────────────────────────────────────────── */
-.jsadv-hero__blob {
+
+/* â”€â”€ Decorative blobs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .jsadv-hero__blob {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
@@ -143,7 +151,8 @@ html.dark {
   will-change: transform;
 }
 
-.jsadv-hero__blob--1 {
+
+.js-adv-course-root .jsadv-hero__blob--1 {
   width: 520px;
   height: 520px;
   top: -140px;
@@ -152,7 +161,8 @@ html.dark {
   animation: blob-drift-1 14s ease-in-out infinite;
 }
 
-.jsadv-hero__blob--2 {
+
+.js-adv-course-root .jsadv-hero__blob--2 {
   width: 380px;
   height: 380px;
   bottom: -80px;
@@ -161,7 +171,8 @@ html.dark {
   animation: blob-drift-2 18s ease-in-out infinite;
 }
 
-.jsadv-hero__blob--3 {
+
+.js-adv-course-root .jsadv-hero__blob--3 {
   width: 260px;
   height: 260px;
   top: 40%;
@@ -170,8 +181,9 @@ html.dark {
   animation: blob-drift-3 22s ease-in-out infinite;
 }
 
-/* ── Inner grid ─────────────────────────────────────────────────────────── */
-.jsadv-hero__inner {
+
+/* â”€â”€ Inner grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .jsadv-hero__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
@@ -180,15 +192,17 @@ html.dark {
   z-index: 1;
 }
 
-/* ── Left: content ──────────────────────────────────────────────────────── */
-.jsadv-hero__content {
+
+/* â”€â”€ Left: content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .jsadv-hero__content {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
 
+
 /* Badge (glassmorphism pill) */
-.jsadv-hero__badge {
+.js-adv-course-root .jsadv-hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -206,13 +220,15 @@ html.dark {
   width: fit-content;
 }
 
-.jsadv-hero__badge i {
+
+.js-adv-course-root .jsadv-hero__badge i {
   font-size: 0.9rem;
   color: var(--jsadv-cyan);
 }
 
+
 /* Title */
-.jsadv-hero__title {
+.js-adv-course-root .jsadv-hero__title {
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 900;
   line-height: 1.15;
@@ -221,7 +237,8 @@ html.dark {
   margin: 0;
 }
 
-.jsadv-hero__title-brand {
+
+.js-adv-course-root .jsadv-hero__title-brand {
   background: linear-gradient(135deg, #06b6d4 0%, #00e6fe 40%, #0ea5e9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -229,8 +246,9 @@ html.dark {
   text-shadow: none;
 }
 
+
 /* Subtitle */
-.jsadv-hero__subtitle {
+.js-adv-course-root .jsadv-hero__subtitle {
   font-size: clamp(1.05rem, 2vw, 1.3rem);
   font-weight: 600;
   color: rgba(6, 182, 212, 0.85);
@@ -238,8 +256,9 @@ html.dark {
   margin: 0;
 }
 
+
 /* Description */
-.jsadv-hero__desc {
+.js-adv-course-root .jsadv-hero__desc {
   font-size: 1.0rem;
   line-height: 1.75;
   color: var(--text-muted);
@@ -247,8 +266,9 @@ html.dark {
   margin: 0;
 }
 
+
 /* CTA buttons */
-.jsadv-hero__actions {
+.js-adv-course-root .jsadv-hero__actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -256,7 +276,8 @@ html.dark {
   margin-top: 0.4rem;
 }
 
-.jsadv-btn {
+
+.js-adv-course-root .jsadv-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -278,16 +299,19 @@ html.dark {
   overflow: hidden;
 }
 
-.jsadv-btn:active { transform: scale(0.97); }
+
+.js-adv-course-root .jsadv-btn:active { transform: scale(0.97); }
+
 
 /* Primary: dark bg with JS yellow text + glow */
-.jsadv-btn--primary {
+.js-adv-course-root .jsadv-btn--primary {
   background: var(--jsadv-cyan);
   color: var(--navy);
   box-shadow: 0 0 0 transparent;
 }
 
-.jsadv-btn--primary:hover {
+
+.js-adv-course-root .jsadv-btn--primary:hover {
   background: #ffe94d;
   box-shadow:
     0 0 24px rgba(6, 182, 212, 0.55),
@@ -295,23 +319,27 @@ html.dark {
   transform: translateY(-2px);
 }
 
-.jsadv-btn--primary i {
+
+.js-adv-course-root .jsadv-btn--primary i {
   transition: transform 0.2s ease;
 }
 
-.jsadv-btn--primary:hover i {
+
+.js-adv-course-root .jsadv-btn--primary:hover i {
   transform: translateX(4px);
 }
 
+
 /* Ghost: transparent with yellow border */
-.jsadv-btn--ghost {
+.js-adv-course-root .jsadv-btn--ghost {
   background: transparent;
   color: var(--text-muted);
   border: 1.5px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
 }
 
-.jsadv-btn--ghost:hover {
+
+.js-adv-course-root .jsadv-btn--ghost:hover {
   border-color: rgba(6, 182, 212, 0.60);
   color: var(--jsadv-cyan);
   background: rgba(6, 182, 212, 0.07);
@@ -319,15 +347,17 @@ html.dark {
   transform: translateY(-2px);
 }
 
+
 /* Trust row */
-.jsadv-hero__trust {
+.js-adv-course-root .jsadv-hero__trust {
   display: flex;
   gap: 1.4rem;
   flex-wrap: wrap;
   padding-top: 0.4rem;
 }
 
-.jsadv-hero__trust-item {
+
+.js-adv-course-root .jsadv-hero__trust-item {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -336,17 +366,20 @@ html.dark {
   font-weight: 500;
 }
 
-.jsadv-hero__trust-item i {
+
+.js-adv-course-root .jsadv-hero__trust-item i {
   color: var(--jsadv-cyan);
   font-size: 0.82rem;
 }
 
-/* ── Right: code window ──────────────────────────────────────────────────── */
-.jsadv-hero__code-wrap {
+
+/* â”€â”€ Right: code window â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .jsadv-hero__code-wrap {
   position: relative;
 }
 
-.jsadv-hero__code-window {
+
+.js-adv-course-root .jsadv-hero__code-window {
   border-radius: 16px;
   background: rgba(10, 10, 26, 0.88);
   border: 1px solid rgba(6, 182, 212, 0.18);
@@ -359,8 +392,9 @@ html.dark {
   overflow: hidden;
 }
 
+
 /* Traffic-light bar */
-.jsadv-hero__code-bar {
+.js-adv-course-root .jsadv-hero__code-bar {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -369,18 +403,23 @@ html.dark {
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.jsadv-hero__dot {
+
+.js-adv-course-root .jsadv-hero__dot {
   width: 13px;
   height: 13px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
-.jsadv-hero__dot--red    { background: #ff5f57; box-shadow: 0 0 8px rgba(255, 95, 87, 0.5); }
-.jsadv-hero__dot--yellow { background: #febc2e; box-shadow: 0 0 8px rgba(254, 188, 46, 0.5); }
-.jsadv-hero__dot--green  { background: #28c840; box-shadow: 0 0 8px rgba(40, 200, 64, 0.5); }
 
-.jsadv-hero__code-filename {
+.js-adv-course-root .jsadv-hero__dot--red { background: #ff5f57; box-shadow: 0 0 8px rgba(255, 95, 87, 0.5); }
+
+.js-adv-course-root .jsadv-hero__dot--yellow { background: #febc2e; box-shadow: 0 0 8px rgba(254, 188, 46, 0.5); }
+
+.js-adv-course-root .jsadv-hero__dot--green { background: #28c840; box-shadow: 0 0 8px rgba(40, 200, 64, 0.5); }
+
+
+.js-adv-course-root .jsadv-hero__code-filename {
   margin-left: 0.6rem;
   font-size: 0.78rem;
   color: var(--text-muted);
@@ -390,13 +429,15 @@ html.dark {
   gap: 0.35rem;
 }
 
-.jsadv-hero__code-filename i {
+
+.js-adv-course-root .jsadv-hero__code-filename i {
   color: var(--jsadv-cyan);
   opacity: 0.8;
 }
 
+
 /* Code body */
-.jsadv-hero__code-body {
+.js-adv-course-root .jsadv-hero__code-body {
   padding: 1.25rem 0.5rem 1.25rem 0;
   font-family: var(--font-mono, 'JetBrains Mono', 'Fira Code', monospace);
   font-size: 0.82rem;
@@ -407,12 +448,16 @@ html.dark {
   scrollbar-color: rgba(6, 182, 212, 0.2) transparent;
 }
 
-.jsadv-hero__code-body::-webkit-scrollbar { width: 4px; }
-.jsadv-hero__code-body::-webkit-scrollbar-track { background: transparent; }
-.jsadv-hero__code-body::-webkit-scrollbar-thumb { background: rgba(6, 182, 212, 0.22); border-radius: 4px; }
 
-/* Code lines — animate in one by one */
-.jsadv-hero__code-line {
+.js-adv-course-root .jsadv-hero__code-body::-webkit-scrollbar { width: 4px; }
+
+.js-adv-course-root .jsadv-hero__code-body::-webkit-scrollbar-track { background: transparent; }
+
+.js-adv-course-root .jsadv-hero__code-body::-webkit-scrollbar-thumb { background: rgba(6, 182, 212, 0.22); border-radius: 4px; }
+
+
+/* Code lines â€” animate in one by one */
+.js-adv-course-root .jsadv-hero__code-line {
   display: flex;
   align-items: flex-start;
   padding: 0.08rem 1.2rem 0.08rem 0;
@@ -422,12 +467,14 @@ html.dark {
   min-height: 1.55em;
 }
 
-.jsadv-hero__code-line:hover {
+
+.js-adv-course-root .jsadv-hero__code-line:hover {
   background: rgba(6, 182, 212, 0.04);
   border-radius: 4px;
 }
 
-.jsadv-hero__line-num {
+
+.js-adv-course-root .jsadv-hero__line-num {
   min-width: 2.4rem;
   text-align: right;
   padding-right: 1rem;
@@ -438,21 +485,29 @@ html.dark {
   padding-top: 0.05em;
 }
 
-.jsadv-hero__line-content {
+
+.js-adv-course-root .jsadv-hero__line-content {
   flex: 1;
   white-space: pre;
 }
 
+
 /* Syntax highlight classes */
-.hl-keyword { color: #cc99cd; font-weight: 600; }   /* purple-ish */
-.hl-string  { color: #7ec699; }                       /* green     */
-.hl-comment { color: #999; font-style: italic; }      /* gray      */
-.hl-number  { color: #f08d49; }                       /* orange-cyan */
-.hl-fn      { color: #6fb3d2; }                       /* blue      */
-.hl-punct   { color: var(--text-muted); }     /* near-white */
+.js-adv-course-root .hl-keyword { color: #cc99cd; font-weight: 600; }
+   /* purple-ish */
+.js-adv-course-root .hl-string { color: #7ec699; }
+                       /* green     */
+.js-adv-course-root .hl-comment { color: #999; font-style: italic; }
+      /* gray      */
+.js-adv-course-root .hl-number { color: #f08d49; }
+                       /* orange-cyan */
+.js-adv-course-root .hl-fn { color: #6fb3d2; }
+                       /* blue      */
+.js-adv-course-root .hl-punct { color: var(--text-muted); }
+     /* near-white */
 
 /* Floating badge */
-.jsadv-hero__float-badge {
+.js-adv-course-root .jsadv-hero__float-badge {
   position: absolute;
   bottom: -1.2rem;
   right: -1rem;
@@ -471,10 +526,12 @@ html.dark {
   z-index: 2;
 }
 
-.jsadv-hero__float-badge i { font-size: 0.88rem; }
 
-/* ── Scroll hint ──────────────────────────────────────────────────────────── */
-.jsadv-hero__scroll-hint {
+.js-adv-course-root .jsadv-hero__float-badge i { font-size: 0.88rem; }
+
+
+/* â”€â”€ Scroll hint â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.js-adv-course-root .jsadv-hero__scroll-hint {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -489,12 +546,14 @@ html.dark {
   z-index: 1;
 }
 
-.jsadv-hero__scroll-hint i { font-size: 1.1rem; }
 
-/* ══════════════════════════════════════════════════════════════════════════
+.js-adv-course-root .jsadv-hero__scroll-hint i { font-size: 1.1rem; }
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    STATS SECTION
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-stats-section {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-stats-section {
   padding: 4rem 0;
   background: var(--bg-surface);
   border-top: 1px solid var(--border-color);
@@ -503,18 +562,21 @@ html.dark {
   z-index: 1;
 }
 
-html.dark .jsadv-stats-section {
+
+html.dark .js-adv-course-root .jsadv-stats-section {
   background: rgba(255, 255, 255, 0.02);
   border-color: var(--border-color);
 }
 
-.jsadv-stats-grid {
+
+.js-adv-course-root .jsadv-stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
-.jsadv-stat-card {
+
+.js-adv-course-root .jsadv-stat-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -533,13 +595,15 @@ html.dark .jsadv-stats-section {
   animation: counter-pop 0.6s ease both;
 }
 
-html.dark .jsadv-stat-card {
+
+html.dark .js-adv-course-root .jsadv-stat-card {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(6, 182, 212, 0.14);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
-.jsadv-stat-card:hover {
+
+.js-adv-course-root .jsadv-stat-card:hover {
   transform: translateY(-4px);
   box-shadow:
     0 12px 40px rgba(0, 0, 0, 0.10),
@@ -547,14 +611,16 @@ html.dark .jsadv-stat-card {
     0 0 32px rgba(6, 182, 212, 0.12);
 }
 
-html.dark .jsadv-stat-card:hover {
+
+html.dark .js-adv-course-root .jsadv-stat-card:hover {
   box-shadow:
     0 12px 40px rgba(0, 0, 0, 0.50),
     0 0 0 1px rgba(6, 182, 212, 0.22),
     0 0 32px rgba(6, 182, 212, 0.10);
 }
 
-.jsadv-stat-card__icon {
+
+.js-adv-course-root .jsadv-stat-card__icon {
   width: 52px;
   height: 52px;
   border-radius: 14px;
@@ -567,12 +633,14 @@ html.dark .jsadv-stat-card:hover {
   color: var(--jsadv-cyan);
 }
 
-html.dark .jsadv-stat-card__icon {
+
+html.dark .js-adv-course-root .jsadv-stat-card__icon {
   background: rgba(6, 182, 212, 0.10);
   border-color: rgba(6, 182, 212, 0.18);
 }
 
-.jsadv-stat-card__value {
+
+.js-adv-course-root .jsadv-stat-card__value {
   font-size: 2.2rem;
   font-weight: 900;
   line-height: 1;
@@ -583,7 +651,8 @@ html.dark .jsadv-stat-card__icon {
   letter-spacing: -0.02em;
 }
 
-.jsadv-stat-card__label {
+
+.js-adv-course-root .jsadv-stat-card__label {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-muted);
@@ -591,12 +660,13 @@ html.dark .jsadv-stat-card__icon {
   letter-spacing: 0.07em;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SECTION SHARED HEADER
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-courses-section__header,
-.jsadv-features-section__header,
-.jsadv-testimonials-section__header {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-courses-section__header,
+.js-adv-course-root .jsadv-features-section__header,
+.js-adv-course-root .jsadv-testimonials-section__header {
   text-align: center;
   max-width: 660px;
   margin: 0 auto 3.5rem;
@@ -606,9 +676,10 @@ html.dark .jsadv-stat-card__icon {
   gap: 1rem;
 }
 
+
 /* Pill badge */
-.jsadv-courses-section__pill,
-.jsadv-testimonials-section__pill {
+.js-adv-course-root .jsadv-courses-section__pill,
+.js-adv-course-root .jsadv-testimonials-section__pill {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -623,15 +694,17 @@ html.dark .jsadv-stat-card__icon {
   letter-spacing: 0.07em;
 }
 
-html.dark .jsadv-courses-section__pill,
-html.dark .jsadv-testimonials-section__pill {
+
+html.dark .js-adv-course-root .jsadv-courses-section__pill,
+html.dark .js-adv-course-root .jsadv-testimonials-section__pill {
   color: var(--jsadv-cyan);
 }
 
+
 /* Section titles */
-.jsadv-courses-section__title,
-.jsadv-features-section__title,
-.jsadv-testimonials-section__title {
+.js-adv-course-root .jsadv-courses-section__title,
+.js-adv-course-root .jsadv-features-section__title,
+.js-adv-course-root .jsadv-testimonials-section__title {
   font-size: clamp(1.75rem, 3vw, 2.4rem);
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -640,31 +713,35 @@ html.dark .jsadv-testimonials-section__pill {
   margin: 0;
 }
 
+
 /* Section descriptions */
-.jsadv-courses-section__desc,
-.jsadv-features-section__desc {
+.js-adv-course-root .jsadv-courses-section__desc,
+.js-adv-course-root .jsadv-features-section__desc {
   font-size: 1rem;
   color: var(--text-muted);
   line-height: 1.7;
   margin: 0;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    COURSES / MODULES SECTION
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-courses-section {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-courses-section {
   padding: var(--section-gap) 0;
   scroll-margin-top: 80px;
 }
 
-.jsadv-courses-grid {
+
+.js-adv-course-root .jsadv-courses-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
+
 /* Course card */
-.jsadv-course-card {
+.js-adv-course-root .jsadv-course-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -685,7 +762,8 @@ html.dark .jsadv-testimonials-section__pill {
   overflow: hidden;
 }
 
-.jsadv-course-card::before {
+
+.js-adv-course-root .jsadv-course-card::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -700,18 +778,21 @@ html.dark .jsadv-testimonials-section__pill {
   pointer-events: none;
 }
 
-.jsadv-course-card:hover {
+
+.js-adv-course-root .jsadv-course-card:hover {
   transform: translateY(-6px);
   box-shadow:
     var(--card-shadow-hover),
     0 0 0 1px rgba(6, 182, 212, 0.20);
 }
 
-.jsadv-course-card:hover::before {
+
+.js-adv-course-root .jsadv-course-card:hover::before {
   opacity: 1;
 }
 
-.jsadv-course-card__icon {
+
+.js-adv-course-root .jsadv-course-card__icon {
   width: 48px;
   height: 48px;
   border-radius: 12px;
@@ -726,18 +807,21 @@ html.dark .jsadv-testimonials-section__pill {
   transition: background 0.22s ease, transform 0.22s ease;
 }
 
-.jsadv-course-card:hover .jsadv-course-card__icon {
+
+.js-adv-course-root .jsadv-course-card:hover .jsadv-course-card__icon {
   background: rgba(6, 182, 212, 0.18);
   transform: scale(1.08) rotate(-3deg);
 }
 
-.jsadv-course-card__meta {
+
+.js-adv-course-root .jsadv-course-card__meta {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.jsadv-course-card__count {
+
+.js-adv-course-root .jsadv-course-card__count {
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.2rem 0.65rem;
@@ -749,12 +833,14 @@ html.dark .jsadv-testimonials-section__pill {
   text-transform: uppercase;
 }
 
-html.dark .jsadv-course-card__count {
+
+html.dark .js-adv-course-root .jsadv-course-card__count {
   color: var(--jsadv-cyan);
   background: rgba(6, 182, 212, 0.08);
 }
 
-.jsadv-course-card__title {
+
+.js-adv-course-root .jsadv-course-card__title {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -762,7 +848,8 @@ html.dark .jsadv-course-card__count {
   line-height: 1.3;
 }
 
-.jsadv-course-card__desc {
+
+.js-adv-course-root .jsadv-course-card__desc {
   font-size: 0.87rem;
   color: var(--text-muted);
   line-height: 1.6;
@@ -770,7 +857,8 @@ html.dark .jsadv-course-card__count {
   flex: 1;
 }
 
-.jsadv-course-card__cta {
+
+.js-adv-course-root .jsadv-course-card__cta {
   display: flex;
   align-items: center;
   gap: 0.2rem;
@@ -782,52 +870,61 @@ html.dark .jsadv-course-card__count {
   transition: gap 0.18s ease;
 }
 
-html.dark .jsadv-course-card__cta {
+
+html.dark .js-adv-course-root .jsadv-course-card__cta {
   color: var(--jsadv-cyan);
 }
 
-.jsadv-course-card:hover .jsadv-course-card__cta {
+
+.js-adv-course-root .jsadv-course-card:hover .jsadv-course-card__cta {
   gap: 0.5rem;
 }
 
-.jsadv-course-card__cta i {
+
+.js-adv-course-root .jsadv-course-card__cta i {
   font-size: 1.1rem;
   transition: transform 0.2s ease;
 }
 
-.jsadv-course-card:hover .jsadv-course-card__cta i {
+
+.js-adv-course-root .jsadv-course-card:hover .jsadv-course-card__cta i {
   transform: translateX(3px);
 }
 
+
 /* JsAdvFooter link */
-.jsadv-courses-section__footer {
+.js-adv-course-root .jsadv-courses-section__footer {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FEATURES SECTION
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-features-section {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-features-section {
   padding: var(--section-gap) 0;
   background: var(--bg-surface-alt, #fffde7);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 
-html.dark .jsadv-features-section {
+
+html.dark .js-adv-course-root .jsadv-features-section {
   background: rgba(255, 255, 255, 0.015);
 }
 
-.features-grid {
+
+.js-adv-course-root .features-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.25rem;
 }
 
+
 /* Feature card */
-.jsadv-feature-card {
+.js-adv-course-root .jsadv-feature-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -847,7 +944,8 @@ html.dark .jsadv-features-section {
   animation: jsadv-hero-fade-up 0.5s ease both;
 }
 
-.jsadv-feature-card::after {
+
+.js-adv-course-root .jsadv-feature-card::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -859,30 +957,43 @@ html.dark .jsadv-features-section {
   transition: opacity 0.22s ease;
 }
 
-.jsadv-feature-card:hover {
+
+.js-adv-course-root .jsadv-feature-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--card-shadow-hover);
 }
 
-.jsadv-feature-card:hover::after { opacity: 1; }
+
+.js-adv-course-root .jsadv-feature-card:hover::after { opacity: 1; }
+
 
 /* Color variants */
-.jsadv-feature-card--cyan   .jsadv-feature-card__icon { background: rgba(6,   182, 212, 0.12); color: #06b6d4; border-color: rgba(6,   182, 212, 0.25); }
-.jsadv-feature-card--cyan::after                 { background: #06b6d4; }
+.js-adv-course-root .jsadv-feature-card--cyan   .jsadv-feature-card__icon { background: rgba(6,   182, 212, 0.12); color: #06b6d4; border-color: rgba(6,   182, 212, 0.25); }
 
-.jsadv-feature-card--purple .jsadv-feature-card__icon { background: rgba(168, 85,  247, 0.12); color: #a855f7; border-color: rgba(168, 85,  247, 0.25); }
-.jsadv-feature-card--purple::after               { background: #a855f7; }
+.js-adv-course-root .jsadv-feature-card--cyan::after { background: #06b6d4; }
 
-.jsadv-feature-card--orange .jsadv-feature-card__icon { background: rgba(249, 115,  22, 0.12); color: #f97316; border-color: rgba(249, 115,  22, 0.25); }
-.jsadv-feature-card--orange::after               { background: #f97316; }
 
-.jsadv-feature-card--green  .jsadv-feature-card__icon { background: rgba( 34, 197,  94, 0.12); color: #22c55e; border-color: rgba( 34, 197,  94, 0.25); }
-.jsadv-feature-card--green::after                { background: #22c55e; }
+.js-adv-course-root .jsadv-feature-card--purple .jsadv-feature-card__icon { background: rgba(168, 85,  247, 0.12); color: #a855f7; border-color: rgba(168, 85,  247, 0.25); }
 
-.jsadv-feature-card--pink   .jsadv-feature-card__icon { background: rgba(236,  72, 153, 0.12); color: #ec4899; border-color: rgba(236,  72, 153, 0.25); }
-.jsadv-feature-card--pink::after                 { background: #ec4899; }
+.js-adv-course-root .jsadv-feature-card--purple::after { background: #a855f7; }
 
-.jsadv-feature-card__icon {
+
+.js-adv-course-root .jsadv-feature-card--orange .jsadv-feature-card__icon { background: rgba(249, 115,  22, 0.12); color: #f97316; border-color: rgba(249, 115,  22, 0.25); }
+
+.js-adv-course-root .jsadv-feature-card--orange::after { background: #f97316; }
+
+
+.js-adv-course-root .jsadv-feature-card--green  .jsadv-feature-card__icon { background: rgba( 34, 197,  94, 0.12); color: #22c55e; border-color: rgba( 34, 197,  94, 0.25); }
+
+.js-adv-course-root .jsadv-feature-card--green::after { background: #22c55e; }
+
+
+.js-adv-course-root .jsadv-feature-card--pink   .jsadv-feature-card__icon { background: rgba(236,  72, 153, 0.12); color: #ec4899; border-color: rgba(236,  72, 153, 0.25); }
+
+.js-adv-course-root .jsadv-feature-card--pink::after { background: #ec4899; }
+
+
+.js-adv-course-root .jsadv-feature-card__icon {
   width: 52px;
   height: 52px;
   border-radius: 14px;
@@ -895,11 +1006,13 @@ html.dark .jsadv-features-section {
   flex-shrink: 0;
 }
 
-.jsadv-feature-card:hover .jsadv-feature-card__icon {
+
+.js-adv-course-root .jsadv-feature-card:hover .jsadv-feature-card__icon {
   transform: scale(1.1) rotate(-4deg);
 }
 
-.jsadv-feature-card__title {
+
+.js-adv-course-root .jsadv-feature-card__title {
   font-size: 0.96rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -907,7 +1020,8 @@ html.dark .jsadv-features-section {
   line-height: 1.3;
 }
 
-.jsadv-feature-card__desc {
+
+.js-adv-course-root .jsadv-feature-card__desc {
   font-size: 0.83rem;
   color: var(--text-muted);
   line-height: 1.55;
@@ -915,32 +1029,37 @@ html.dark .jsadv-features-section {
   flex: 1;
 }
 
-.jsadv-feature-card__arrow {
+
+.js-adv-course-root .jsadv-feature-card__arrow {
   font-size: 1.3rem;
   color: var(--text-faint);
   margin-top: auto;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.jsadv-feature-card:hover .jsadv-feature-card__arrow {
+
+.js-adv-course-root .jsadv-feature-card:hover .jsadv-feature-card__arrow {
   transform: translateX(4px);
   color: var(--text-muted);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TESTIMONIALS SECTION
-══════════════════════════════════════════════════════════════════════════ */
-.jsadv-testimonials-section {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .jsadv-testimonials-section {
   padding: var(--section-gap) 0;
 }
 
-.testimonials-grid {
+
+.js-adv-course-root .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
-.jsadv-testimonial-card {
+
+.js-adv-course-root .jsadv-testimonial-card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -955,7 +1074,8 @@ html.dark .jsadv-features-section {
   overflow: hidden;
 }
 
-.jsadv-testimonial-card::before {
+
+.js-adv-course-root .jsadv-testimonial-card::before {
   content: '\201C';
   position: absolute;
   top: -0.5rem;
@@ -968,24 +1088,28 @@ html.dark .jsadv-features-section {
   user-select: none;
 }
 
-.jsadv-testimonial-card:hover {
+
+.js-adv-course-root .jsadv-testimonial-card:hover {
   transform: translateY(-5px);
   box-shadow:
     var(--card-shadow-hover),
     0 0 0 1px rgba(6, 182, 212, 0.15);
 }
 
-.jsadv-testimonial-card__stars {
+
+.js-adv-course-root .jsadv-testimonial-card__stars {
   display: flex;
   gap: 0.25rem;
 }
 
-.jsadv-testimonial-card__stars i {
+
+.js-adv-course-root .jsadv-testimonial-card__stars i {
   font-size: 0.8rem;
   color: var(--jsadv-cyan);
 }
 
-.jsadv-testimonial-card__quote {
+
+.js-adv-course-root .jsadv-testimonial-card__quote {
   font-size: 0.9rem;
   line-height: 1.7;
   color: var(--text-secondary);
@@ -994,7 +1118,8 @@ html.dark .jsadv-features-section {
   flex: 1;
 }
 
-.jsadv-testimonial-card__author {
+
+.js-adv-course-root .jsadv-testimonial-card__author {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1002,7 +1127,8 @@ html.dark .jsadv-features-section {
   border-top: 1px solid var(--border-color);
 }
 
-.jsadv-testimonial-card__avatar {
+
+.js-adv-course-root .jsadv-testimonial-card__avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1016,29 +1142,33 @@ html.dark .jsadv-features-section {
   flex-shrink: 0;
 }
 
-.jsadv-testimonial-card__info {
+
+.js-adv-course-root .jsadv-testimonial-card__info {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
 }
 
-.jsadv-testimonial-card__name {
+
+.js-adv-course-root .jsadv-testimonial-card__name {
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
 }
 
-.jsadv-testimonial-card__role {
+
+.js-adv-course-root .jsadv-testimonial-card__role {
   font-size: 0.75rem;
   color: var(--text-muted);
   font-weight: 500;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BACK TO TOP BUTTON
-══════════════════════════════════════════════════════════════════════════ */
-.back-to-top {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.js-adv-course-root .back-to-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -1064,7 +1194,8 @@ html.dark .jsadv-features-section {
   animation: jsadv-hero-fade-up 0.4s ease both;
 }
 
-.back-to-top:hover {
+
+.js-adv-course-root .back-to-top:hover {
   transform: translateY(-4px) scale(1.08);
   background: #ffe94d;
   box-shadow:
@@ -1072,157 +1203,200 @@ html.dark .jsadv-features-section {
     0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.back-to-top:active {
+
+.js-adv-course-root .back-to-top:active {
   transform: scale(0.94);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DARK MODE CARD OVERRIDES
-══════════════════════════════════════════════════════════════════════════ */
-html.dark .jsadv-course-card,
-html.dark .jsadv-feature-card,
-html.dark .jsadv-testimonial-card {
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+html.dark .js-adv-course-root .jsadv-course-card,
+html.dark .js-adv-course-root .jsadv-feature-card,
+html.dark .js-adv-course-root .jsadv-testimonial-card {
   background: var(--card-bg);
   border-color: var(--card-border);
   box-shadow: var(--card-shadow);
 }
 
-html.dark .jsadv-course-card:hover,
-html.dark .jsadv-feature-card:hover,
-html.dark .jsadv-testimonial-card:hover {
+
+html.dark .js-adv-course-root .jsadv-course-card:hover,
+html.dark .js-adv-course-root .jsadv-feature-card:hover,
+html.dark .js-adv-course-root .jsadv-testimonial-card:hover {
   box-shadow: var(--card-shadow-hover);
 }
 
-html.dark .jsadv-hero__code-body { color: var(--text-muted); }
-html.dark .hl-punct { color: var(--text-muted); }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   RESPONSIVE — 1024px
-══════════════════════════════════════════════════════════════════════════ */
+html.dark .js-adv-course-root .jsadv-hero__code-body { color: var(--text-muted); }
+
+html.dark .js-adv-course-root .hl-punct { color: var(--text-muted); }
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” 1024px
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 1024px) {
-  .jsadv-hero {
+  .js-adv-course-root .jsadv-hero {
     padding: 6rem 0 4rem;
     min-height: auto;
   }
 
-  .jsadv-hero__inner {
+
+  .js-adv-course-root .jsadv-hero__inner {
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
   }
 
-  .jsadv-hero__content {
+
+  .js-adv-course-root .jsadv-hero__content {
     align-items: center;
   }
 
-  .jsadv-hero__desc { max-width: 600px; }
-  .jsadv-hero__actions { justify-content: center; }
-  .jsadv-hero__trust { justify-content: center; }
 
-  .jsadv-hero__code-wrap {
+  .js-adv-course-root .jsadv-hero__desc { max-width: 600px; }
+
+  .js-adv-course-root .jsadv-hero__actions { justify-content: center; }
+
+  .js-adv-course-root .jsadv-hero__trust { justify-content: center; }
+
+
+  .js-adv-course-root .jsadv-hero__code-wrap {
     max-width: 600px;
     margin: 0 auto;
   }
 
-  .jsadv-stats-grid {
+
+  .js-adv-course-root .jsadv-stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .jsadv-courses-grid {
+
+  .js-adv-course-root .jsadv-courses-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .features-grid {
+
+  .js-adv-course-root .features-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .testimonials-grid {
+
+  .js-adv-course-root .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   RESPONSIVE — 768px
-══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” 768px
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 768px) {
   :root { --section-gap: 4rem; }
 
-  .home .container { padding: 0 1.25rem; }
 
-  .jsadv-hero {
+  .js-adv-course-root .home .container { padding: 0 1.25rem; }
+
+
+  .js-adv-course-root .jsadv-hero {
     padding: 5rem 0 3rem;
   }
 
-  .jsadv-hero__title { font-size: 2rem; }
 
-  .jsadv-hero__code-body { max-height: 280px; font-size: 0.76rem; }
+  .js-adv-course-root .jsadv-hero__title { font-size: 2rem; }
 
-  .jsadv-hero__float-badge {
+
+  .js-adv-course-root .jsadv-hero__code-body { max-height: 280px; font-size: 0.76rem; }
+
+
+  .js-adv-course-root .jsadv-hero__float-badge {
     bottom: -0.8rem;
     right: 0.5rem;
     font-size: 0.72rem;
   }
 
-  .jsadv-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .jsadv-stat-card  { padding: 1.5rem 1rem; }
-  .jsadv-stat-card__value { font-size: 1.9rem; }
 
-  .jsadv-courses-grid      { grid-template-columns: 1fr; }
-  .features-grid     { grid-template-columns: repeat(2, 1fr); }
-  .testimonials-grid { grid-template-columns: 1fr; }
+  .js-adv-course-root .jsadv-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
-  .jsadv-courses-section__header,
-  .jsadv-features-section__header,
-  .jsadv-testimonials-section__header {
+  .js-adv-course-root .jsadv-stat-card { padding: 1.5rem 1rem; }
+
+  .js-adv-course-root .jsadv-stat-card__value { font-size: 1.9rem; }
+
+
+  .js-adv-course-root .jsadv-courses-grid { grid-template-columns: 1fr; }
+
+  .js-adv-course-root .features-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .js-adv-course-root .testimonials-grid { grid-template-columns: 1fr; }
+
+
+  .js-adv-course-root .jsadv-courses-section__header,
+.js-adv-course-root .jsadv-features-section__header,
+.js-adv-course-root .jsadv-testimonials-section__header {
     margin-bottom: 2.5rem;
   }
+
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   RESPONSIVE — 480px
-══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” 480px
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 480px) {
   :root { --section-gap: 3rem; }
 
-  .home .container { padding: 0 1rem; }
 
-  .jsadv-hero__actions { flex-direction: column; align-items: stretch; }
-  .jsadv-btn { justify-content: center; }
+  .js-adv-course-root .home .container { padding: 0 1rem; }
 
-  .jsadv-hero__badge { font-size: 0.75rem; }
 
-  .jsadv-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-  .jsadv-stat-card  { padding: 1.25rem 0.75rem; }
+  .js-adv-course-root .jsadv-hero__actions { flex-direction: column; align-items: stretch; }
 
-  .features-grid {
+  .js-adv-course-root .jsadv-btn { justify-content: center; }
+
+
+  .js-adv-course-root .jsadv-hero__badge { font-size: 0.75rem; }
+
+
+  .js-adv-course-root .jsadv-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+
+  .js-adv-course-root .jsadv-stat-card { padding: 1.25rem 0.75rem; }
+
+
+  .js-adv-course-root .features-grid {
     grid-template-columns: 1fr;
   }
 
-  .back-to-top { bottom: 1.25rem; right: 1.25rem; width: 44px; height: 44px; }
 
-  .jsadv-testimonial-card::before { font-size: 4rem; }
+  .js-adv-course-root .back-to-top { bottom: 1.25rem; right: 1.25rem; width: 44px; height: 44px; }
+
+
+  .js-adv-course-root .jsadv-testimonial-card::before { font-size: 4rem; }
+
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    REDUCED MOTION
-══════════════════════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (prefers-reduced-motion: reduce) {
-  .jsadv-hero__blob--1,
-  .jsadv-hero__blob--2,
-  .jsadv-hero__blob--3,
-  .jsadv-hero__float-badge,
-  .jsadv-hero__scroll-hint,
-  .jsadv-hero__content,
-  .jsadv-hero__code-wrap,
-  .jsadv-hero__code-line,
-  .jsadv-stat-card,
-  .jsadv-course-card,
-  .jsadv-feature-card,
-  .jsadv-testimonial-card,
-  .back-to-top {
+  .js-adv-course-root .jsadv-hero__blob--1,
+.js-adv-course-root .jsadv-hero__blob--2,
+.js-adv-course-root .jsadv-hero__blob--3,
+.js-adv-course-root .jsadv-hero__float-badge,
+.js-adv-course-root .jsadv-hero__scroll-hint,
+.js-adv-course-root .jsadv-hero__content,
+.js-adv-course-root .jsadv-hero__code-wrap,
+.js-adv-course-root .jsadv-hero__code-line,
+.js-adv-course-root .jsadv-stat-card,
+.js-adv-course-root .jsadv-course-card,
+.js-adv-course-root .jsadv-feature-card,
+.js-adv-course-root .jsadv-testimonial-card,
+.js-adv-course-root .back-to-top {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
+
 }
+
+

@@ -75,6 +75,14 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-6">
             <div className="w-px h-6" style={{ background: "rgba(196,160,100,0.2)" }} />
+            <Link to="/courses"
+              className="text-xs tracking-widest uppercase transition-colors px-4 py-1.5"
+              style={{ color: '#6b6055', border: '1.5px solid rgba(196,160,100,0.4)', borderRadius: '20px' }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#c4a064'; }}
+              onMouseLeave={e => { e.currentTarget.style.color = '#6b6055'; }}
+            >
+              ← Back
+            </Link>
             <Link to="/genai-course/topics" className="btn-rr text-xs">
               <span>Begin</span>
               <i className="fas fa-arrow-right text-xs" />
@@ -107,7 +115,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-4">
-                <Link to="/genai-course/topics" className="btn-rr text-xs w-full justify-center">
+                <Link to="/courses" className="btn-rr text-xs w-full justify-center" style={{ background: "transparent", border: "1.5px solid currentColor", borderRadius: "20px", marginBottom: "0.5rem" }}>
+                  <span>← Back to Courses</span>
+                </Link>
+              <Link to="/genai-course/topics" className="btn-rr text-xs w-full justify-center">
                   <span>Begin Learning</span>
                 </Link>
               </div>

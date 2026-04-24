@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import '../styles/HtmlNavbar.css'
 
 /* ============================================================
-   useDarkMode — custom hook
+   useDarkMode â€” custom hook
    Reads/writes to localStorage, syncs <html class="dark">
    Exported so any page can consume theme state directly.
    ============================================================ */
@@ -30,6 +30,10 @@ export function useDarkMode() {
       localStorage.setItem('theme', dark ? 'dark' : 'light')
     } catch {
       /* storage might be blocked in incognito */
+    }
+    // Remove html.dark on unmount so it doesn't bleed to main app pages
+    return () => {
+      document.documentElement.classList.remove('dark')
     }
   }, [dark])
 
@@ -86,8 +90,10 @@ const NAV_LINKS = [
   },
 ]
 
+const BACK_LINK = { label: '← Back to Courses', to: '/courses', icon: 'bi bi-arrow-left-circle-fill', pageKey: 'back' }
+
 /* ============================================================
-   Helper — derive active page key from current pathname
+   Helper â€” derive active page key from current pathname
    ============================================================ */
 function getActiveKey(pathname) {
   if (pathname === '/html-course') return 'home'
@@ -101,7 +107,7 @@ function getActiveKey(pathname) {
 /* ============================================================
    Navbar component
    Props:
-     activePage  — optional override (string pageKey). Falls back
+     activePage  â€” optional override (string pageKey). Falls back
                    to auto-detection from useLocation().
    ============================================================ */
 export default function HtmlNavbar({ activePage }) {
@@ -114,7 +120,7 @@ export default function HtmlNavbar({ activePage }) {
   /* Scroll shadow */
   const [scrolled, setScrolled] = useState(false)
 
-  /* Scroll progress bar width (0–100) */
+  /* Scroll progress bar width (0â€“100) */
   const [progress, setProgress] = useState(0)
 
   /* Ref for mobile menu (focus trap) */
@@ -124,7 +130,7 @@ export default function HtmlNavbar({ activePage }) {
   /* Active page key */
   const activeKey = activePage ?? getActiveKey(location.pathname)
 
-  /* ── Scroll listener ── */
+  /* â”€â”€ Scroll listener â”€â”€ */
   useEffect(() => {
     let ticking = false
     const onScroll = () => {
@@ -146,12 +152,12 @@ export default function HtmlNavbar({ activePage }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  /* ── Close menu on route change ── */
+  /* â”€â”€ Close menu on route change â”€â”€ */
   useEffect(() => {
     setMenuOpen(false)
   }, [location.pathname])
 
-  /* ── Lock body scroll when menu is open ── */
+  /* â”€â”€ Lock body scroll when menu is open â”€â”€ */
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden'
@@ -167,7 +173,7 @@ export default function HtmlNavbar({ activePage }) {
     }
   }, [menuOpen])
 
-  /* ── Keyboard: close menu on Escape ── */
+  /* â”€â”€ Keyboard: close menu on Escape â”€â”€ */
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape' && menuOpen) {
@@ -187,12 +193,12 @@ export default function HtmlNavbar({ activePage }) {
      ============================================================ */
   return (
     <>
-      {/* ── Skip to content (accessibility) ── */}
+      {/* â”€â”€ Skip to content (accessibility) â”€â”€ */}
       <a href="#main-content" className="navbar__skip-link">
         Skip to content
       </a>
 
-      {/* ── Navbar shell ── */}
+      {/* â”€â”€ Navbar shell â”€â”€ */}
       <header className={`navbar${scrolled ? ' scrolled' : ''}`} role="banner">
         {/* Scroll progress bar */}
         <div
@@ -203,18 +209,18 @@ export default function HtmlNavbar({ activePage }) {
         />
 
         <div className="navbar__inner">
-          {/* ── Logo ── */}
+          {/* â”€â”€ Logo â”€â”€ */}
           <Link
             to="/html-course"
             className="navbar__logo"
-            aria-label="HTML in My Style — Home"
+            aria-label="HTML in My Style â€” Home"
             onClick={closeMenu}
           >
             <span className="navbar__logo-tag">&lt;/&gt;</span>
             <span className="navbar__logo-html">HTML</span>
           </Link>
 
-          {/* ── Desktop navigation ── */}
+          {/* â”€â”€ Desktop navigation â”€â”€ */}
           <nav aria-label="Main navigation">
             <ul className="navbar__nav" role="list">
               {NAV_LINKS.map(({ label, to, icon, pageKey }) => (
@@ -229,12 +235,18 @@ export default function HtmlNavbar({ activePage }) {
                   </Link>
                 </li>
               ))}
+              <li className="navbar__nav-item">
+                <Link to={BACK_LINK.to} className="navbar__nav-link navbar__back-link">
+                  <i className={BACK_LINK.icon} aria-hidden="true" />
+                  {BACK_LINK.label}
+                </Link>
+              </li>
             </ul>
           </nav>
 
-          {/* ── Right-side actions ── */}
+          {/* â”€â”€ Right-side actions â”€â”€ */}
           <div className="navbar__actions">
-            {/* Dark / Light toggle — desktop */}
+            {/* Dark / Light toggle â€” desktop */}
             <button
               className="navbar__theme-btn"
               onClick={toggle}
@@ -247,7 +259,7 @@ export default function HtmlNavbar({ activePage }) {
               <i className="bi bi-moon-stars-fill icon-moon" aria-hidden="true" />
             </button>
 
-            {/* Hamburger — mobile only */}
+            {/* Hamburger â€” mobile only */}
             <button
               ref={hamburgerRef}
               className="navbar__hamburger"
@@ -267,7 +279,7 @@ export default function HtmlNavbar({ activePage }) {
         </div>
       </header>
 
-      {/* ── Mobile overlay (backdrop) ── */}
+      {/* â”€â”€ Mobile overlay (backdrop) â”€â”€ */}
       <div
         className={`navbar__overlay${menuOpen ? ' open' : ''}`}
         onClick={closeMenu}
@@ -275,7 +287,7 @@ export default function HtmlNavbar({ activePage }) {
         tabIndex={-1}
       />
 
-      {/* ── Mobile drawer menu ── */}
+      {/* â”€â”€ Mobile drawer menu â”€â”€ */}
       <nav
         id="mobile-menu"
         ref={mobileMenuRef}
@@ -291,7 +303,7 @@ export default function HtmlNavbar({ activePage }) {
             to="/html-course"
             className="navbar__mobile-logo"
             onClick={closeMenu}
-            aria-label="HTML in My Style — Home"
+            aria-label="HTML in My Style â€” Home"
           >
             <span
               style={{
@@ -343,7 +355,7 @@ export default function HtmlNavbar({ activePage }) {
           ))}
         </ul>
 
-        {/* Drawer footer — theme toggle row */}
+        {/* Drawer footer â€” theme toggle row */}
         <div className="navbar__mobile-footer">
           <div className="navbar__mobile-theme-row">
             <span className="navbar__mobile-theme-label">
@@ -456,3 +468,4 @@ export default function HtmlNavbar({ activePage }) {
     </>
   )
 }
+
