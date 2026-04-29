@@ -30,103 +30,103 @@ const INITIAL_PREVIEW_HTML = `
 `;
 
 /* ─── Default fallback code ─────────────────────────────────────── */
-function buildDefaultCode(topic) {
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${topic} — JS Basic</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: #FFFDE7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 2rem;
-  }
-  .card {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 2.5rem;
-    text-align: center;
-    box-shadow: 0 8px 32px rgba(247, 223, 30, 0.25);
-    border: 1.5px solid rgba(247, 223, 30, 0.35);
-    max-width: 480px;
-    width: 100%;
-  }
-  .badge {
-    display: inline-block;
-    background: #F7DF1E;
-    color: #323330;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 900;
-    font-size: 0.85rem;
-    padding: 0.3rem 0.9rem;
-    border-radius: 9999px;
-    margin-bottom: 1.25rem;
-    letter-spacing: 0.05em;
-  }
-  h1 {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: #323330;
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.03em;
-  }
-  p {
-    color: #5a5a2a;
-    line-height: 1.7;
-    margin-bottom: 1.25rem;
-  }
-  code {
-    background: rgba(247, 223, 30, 0.2);
-    color: #7a6000;
-    padding: 0.2rem 0.55rem;
-    border-radius: 6px;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    font-size: 0.9em;
-    border: 1px solid rgba(247, 223, 30, 0.35);
-  }
-  button {
-    margin-top: 1rem;
-    padding: 0.75rem 2rem;
-    background: #F7DF1E;
-    color: #323330;
-    border: none;
-    border-radius: 12px;
-    font-weight: 800;
-    font-size: 1rem;
-    cursor: pointer;
-    font-family: inherit;
-    transition: all 0.25s;
-    box-shadow: 0 4px 14px rgba(247, 223, 30, 0.35);
-  }
-  button:hover {
-    background: #FFE566;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(247, 223, 30, 0.45);
-  }
-</style>
-</head>
-<body>
-  <div class="card">
-    <div class="badge">JS</div>
-    <h1>${topic}</h1>
-    <p>
-      This page demonstrates <code>${topic}</code> in JavaScript.
-      Edit the code and click <strong>Run</strong> to see the output.
-    </p>
-    <button onclick="this.textContent = 'JavaScript is awesome! 🎉'">
-      Click Me!
-    </button>
-  </div>
-</body>
-</html>`;
+function buildDefaultHtml(topic) {
+  return `<div class="card">
+  <div class="badge">JS</div>
+  <h1>${topic}</h1>
+  <p>
+    This page demonstrates <code>${topic}</code> in JavaScript.
+    Edit the code and click <strong>Run</strong> to see the output.
+  </p>
+  <button id="demoBtn">Click Me!</button>
+</div>`;
+}
+
+function buildDefaultCss(topic) {
+  return `* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #FFFDE7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(247, 223, 30, 0.25);
+  border: 1.5px solid rgba(247, 223, 30, 0.35);
+  max-width: 480px;
+  width: 100%;
+}
+.badge {
+  display: inline-block;
+  background: #F7DF1E;
+  color: #323330;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 900;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #323330;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.03em;
+}
+p {
+  color: #5a5a2a;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+code {
+  background: rgba(247, 223, 30, 0.2);
+  color: #7a6000;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 0.9em;
+  border: 1px solid rgba(247, 223, 30, 0.35);
+}
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: #F7DF1E;
+  color: #323330;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.25s;
+  box-shadow: 0 4px 14px rgba(247, 223, 30, 0.35);
+}
+button:hover {
+  background: #FFE566;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(247, 223, 30, 0.45);
+}`;
+}
+
+function buildDefaultJs(topic) {
+  return `const btn = document.getElementById('demoBtn');
+
+btn.addEventListener('click', () => {
+  btn.textContent = 'JavaScript is awesome! 🎉';
+  console.log('${topic} demo clicked!');
+});
+
+console.log('${topic} demo loaded!');`;
 }
 
 /* ─── Component ─────────────────────────────────────────────────── */
@@ -140,18 +140,31 @@ export default function JsTopicPage() {
   const [fadeOut, setFadeOut] = useState(false);
   const [consoleLogs, setConsoleLogs] = useState([]);
   const [consoleOpen, setConsoleOpen] = useState(true);
+  const [activeTab, setActiveTab] = useState("html");
 
   const iframeRef = useRef(null);
-  const editorRef = useRef(null);
+  const htmlEditorRef = useRef(null);
+  const cssEditorRef = useRef(null);
+  const jsEditorRef = useRef(null);
   const consoleEndRef = useRef(null);
 
   /* ── Fetch example data ── */
   const example = getTopicExample(topic);
   const details = getTopicDetails(topic);
 
-  const defaultCode = useMemo(() => {
-    if (example?.code) return example.code;
-    return buildDefaultCode(topic || "");
+  const defaultHtml = useMemo(() => {
+    if (example?.html) return example.html;
+    return buildDefaultHtml(topic || "");
+  }, [example, topic]);
+
+  const defaultCss = useMemo(() => {
+    if (example?.css) return example.css;
+    return buildDefaultCss(topic || "");
+  }, [example, topic]);
+
+  const defaultJs = useMemo(() => {
+    if (example?.js) return example.js;
+    return buildDefaultJs(topic || "");
   }, [example, topic]);
 
   const rawDescription = useMemo(() => {
@@ -213,22 +226,44 @@ export default function JsTopicPage() {
   }, [consoleLogs]);
 
   /* ── Editor mount ── */
-  function handleEditorMount(editor) {
-    editorRef.current = editor;
+  function handleHtmlEditorMount(editor) {
+    htmlEditorRef.current = editor;
+  }
+
+  function handleCssEditorMount(editor) {
+    cssEditorRef.current = editor;
+  }
+
+  function handleJsEditorMount(editor) {
+    jsEditorRef.current = editor;
   }
 
   /* ── Run code → inject into iframe ── */
   function runCode() {
-    const rawCode = editorRef.current
-      ? editorRef.current.getValue()
-      : defaultCode;
+    const htmlCode = htmlEditorRef.current
+      ? htmlEditorRef.current.getValue()
+      : defaultHtml;
+    const cssCode = cssEditorRef.current
+      ? cssEditorRef.current.getValue()
+      : defaultCss;
+    const jsCode = jsEditorRef.current
+      ? jsEditorRef.current.getValue()
+      : defaultJs;
 
-    if (!iframeRef.current) return;
-
-    /* Inject console interceptor so JS logs appear in our panel */
-    const intercepted = rawCode.replace(
-      /<\/head>/i,
-      `<script>
+    // Combine into full HTML document
+    const fullCode = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${topic} — JS Basic</title>
+<style>
+${cssCode}
+</style>
+</head>
+<body>
+${htmlCode}
+<script>
 (function(){
   const _log=console.log,_err=console.error,_warn=console.warn;
   console.log=(...a)=>{window.parent.postMessage({type:'log',content:a.join(' ')},'*');_log(...a);};
@@ -236,22 +271,34 @@ export default function JsTopicPage() {
   console.warn=(...a)=>{window.parent.postMessage({type:'warn',content:a.join(' ')},'*');_warn(...a);};
   window.addEventListener('error',e=>{window.parent.postMessage({type:'error',content:e.message},'*');});
 })();
-<\/script></head>`,
-    );
+${jsCode}
+<\/script>
+</body>
+</html>`;
+
+    if (!iframeRef.current) return;
 
     try {
       const doc = iframeRef.current.contentWindow.document;
       doc.open();
-      doc.write(intercepted);
+      doc.write(fullCode);
       doc.close();
     } catch {
-      iframeRef.current.srcdoc = intercepted;
+      iframeRef.current.srcdoc = fullCode;
     }
   }
 
   /* ── Copy code ── */
   const handleCopy = useCallback(async () => {
-    const code = editorRef.current ? editorRef.current.getValue() : defaultCode;
+    let code = "";
+    if (activeTab === "html") {
+      code = htmlEditorRef.current ? htmlEditorRef.current.getValue() : defaultHtml;
+    } else if (activeTab === "css") {
+      code = cssEditorRef.current ? cssEditorRef.current.getValue() : defaultCss;
+    } else {
+      code = jsEditorRef.current ? jsEditorRef.current.getValue() : defaultJs;
+    }
+
     try {
       await navigator.clipboard.writeText(code);
       setCopyLabel("Copied!");
@@ -272,7 +319,7 @@ export default function JsTopicPage() {
       }
       document.body.removeChild(ta);
     }
-  }, [defaultCode]);
+  }, [activeTab, defaultHtml, defaultCss, defaultJs]);
 
   function clearConsole() {
     setConsoleLogs([]);
@@ -385,11 +432,27 @@ export default function JsTopicPage() {
         <div className="js-topic-panels-grid" style={{ flex: 1 }}>
           {/* ── Editor Panel ─────────────────────────────────────── */}
           <div className="js-editor-panel hover-scale">
-            {/* Panel header bar */}
+            {/* Panel header bar with tabs */}
             <div className="js-editor-panel-header">
               <div className="js-editor-panel-header-left">
-                <span className="js-editor-lang-badge">JS</span>
-                <span className="js-editor-label-text">Editable Code</span>
+                <button
+                  className={`js-editor-tab ${activeTab === "html" ? "active" : ""}`}
+                  onClick={() => setActiveTab("html")}
+                >
+                  <span className="js-editor-lang-badge">HTML</span>
+                </button>
+                <button
+                  className={`js-editor-tab ${activeTab === "css" ? "active" : ""}`}
+                  onClick={() => setActiveTab("css")}
+                >
+                  <span className="js-editor-lang-badge">CSS</span>
+                </button>
+                <button
+                  className={`js-editor-tab ${activeTab === "js" ? "active" : ""}`}
+                  onClick={() => setActiveTab("js")}
+                >
+                  <span className="js-editor-lang-badge">JS</span>
+                </button>
               </div>
               <div className="js-editor-dots">
                 <div className="js-editor-dot red" />
@@ -398,40 +461,104 @@ export default function JsTopicPage() {
               </div>
             </div>
 
-            {/* Monaco Editor */}
+            {/* Monaco Editors - show based on active tab */}
             <div
               className="js-editor-monaco-wrap"
               style={{ flex: 1, minHeight: 0 }}
             >
-              <Editor
-                height="100%"
-                defaultLanguage="html"
-                defaultValue={defaultCode}
-                theme="vs-dark"
-                onMount={handleEditorMount}
-                options={{
-                  minimap: { enabled: !isMobile },
-                  fontSize: isMobile ? 12 : 14,
-                  fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
-                  fontLigatures: true,
-                  scrollBeyondLastLine: false,
-                  wordWrap: "on",
-                  folding: !isMobile,
-                  lineNumbers: "on",
-                  automaticLayout: true,
-                  padding: { top: 12, bottom: 12 },
-                  smoothScrolling: true,
-                  cursorSmoothCaretAnimation: "on",
-                  bracketPairColorization: { enabled: true },
-                  renderLineHighlight: "all",
-                  scrollbar: {
-                    vertical: "visible",
-                    horizontal: "visible",
-                    verticalScrollbarSize: isMobile ? 6 : 8,
-                    horizontalScrollbarSize: isMobile ? 6 : 8,
-                  },
-                }}
-              />
+              {activeTab === "html" && (
+                <Editor
+                  height="100%"
+                  defaultLanguage="html"
+                  defaultValue={defaultHtml}
+                  theme="vs-dark"
+                  onMount={handleHtmlEditorMount}
+                  options={{
+                    minimap: { enabled: !isMobile },
+                    fontSize: isMobile ? 12 : 14,
+                    fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+                    fontLigatures: true,
+                    scrollBeyondLastLine: false,
+                    wordWrap: "on",
+                    folding: !isMobile,
+                    lineNumbers: "on",
+                    automaticLayout: true,
+                    padding: { top: 12, bottom: 12 },
+                    smoothScrolling: true,
+                    cursorSmoothCaretAnimation: "on",
+                    bracketPairColorization: { enabled: true },
+                    renderLineHighlight: "all",
+                    scrollbar: {
+                      vertical: "visible",
+                      horizontal: "visible",
+                      verticalScrollbarSize: isMobile ? 6 : 8,
+                      horizontalScrollbarSize: isMobile ? 6 : 8,
+                    },
+                  }}
+                />
+              )}
+              {activeTab === "css" && (
+                <Editor
+                  height="100%"
+                  defaultLanguage="css"
+                  defaultValue={defaultCss}
+                  theme="vs-dark"
+                  onMount={handleCssEditorMount}
+                  options={{
+                    minimap: { enabled: !isMobile },
+                    fontSize: isMobile ? 12 : 14,
+                    fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+                    fontLigatures: true,
+                    scrollBeyondLastLine: false,
+                    wordWrap: "on",
+                    folding: !isMobile,
+                    lineNumbers: "on",
+                    automaticLayout: true,
+                    padding: { top: 12, bottom: 12 },
+                    smoothScrolling: true,
+                    cursorSmoothCaretAnimation: "on",
+                    bracketPairColorization: { enabled: true },
+                    renderLineHighlight: "all",
+                    scrollbar: {
+                      vertical: "visible",
+                      horizontal: "visible",
+                      verticalScrollbarSize: isMobile ? 6 : 8,
+                      horizontalScrollbarSize: isMobile ? 6 : 8,
+                    },
+                  }}
+                />
+              )}
+              {activeTab === "js" && (
+                <Editor
+                  height="100%"
+                  defaultLanguage="javascript"
+                  defaultValue={defaultJs}
+                  theme="vs-dark"
+                  onMount={handleJsEditorMount}
+                  options={{
+                    minimap: { enabled: !isMobile },
+                    fontSize: isMobile ? 12 : 14,
+                    fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+                    fontLigatures: true,
+                    scrollBeyondLastLine: false,
+                    wordWrap: "on",
+                    folding: !isMobile,
+                    lineNumbers: "on",
+                    automaticLayout: true,
+                    padding: { top: 12, bottom: 12 },
+                    smoothScrolling: true,
+                    cursorSmoothCaretAnimation: "on",
+                    bracketPairColorization: { enabled: true },
+                    renderLineHighlight: "all",
+                    scrollbar: {
+                      vertical: "visible",
+                      horizontal: "visible",
+                      verticalScrollbarSize: isMobile ? 6 : 8,
+                      horizontalScrollbarSize: isMobile ? 6 : 8,
+                    },
+                  }}
+                />
+              )}
             </div>
 
             {/* Action buttons */}

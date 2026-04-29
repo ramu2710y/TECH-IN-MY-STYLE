@@ -368,6 +368,29 @@ html.dark .js-basic-course-root .js-topic-info-text code {
     gap: 0.55rem;
 }
 
+.js-basic-course-root .js-editor-tab {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.js-basic-course-root .js-editor-tab:hover {
+    background: rgba(247, 223, 30, 0.1);
+}
+
+.js-basic-course-root .js-editor-tab.active {
+    background: rgba(247, 223, 30, 0.18);
+}
+
+.js-basic-course-root .js-editor-tab.active .js-editor-lang-badge {
+    background: rgba(247, 223, 30, 0.25);
+    border-color: rgba(247, 223, 30, 0.4);
+}
+
 .js-basic-course-root .js-editor-lang-badge {
     background: rgba(247, 223, 30, 0.18);
     color: #F7DF1E;

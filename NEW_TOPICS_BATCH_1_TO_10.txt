@@ -1,0 +1,17 @@
+This file contains topics 35-44 to be added to jsTopicExamples.jsx
+
+Topics to add:
+1. assignment-operators
+2. logical-operators  
+3. spread-operator
+4. destructuring
+5. else-if
+6. short-circuit
+7. nullish-coalescing
+8. optional-chaining
+9. do-while
+10. for-of
+
+These will be added before the closing ] bracket in jsTopicExamples.jsx
+Each topic follows the structure: { topic, description, code }
+Where code is a complete HTML document with inline CSS and JavaScript

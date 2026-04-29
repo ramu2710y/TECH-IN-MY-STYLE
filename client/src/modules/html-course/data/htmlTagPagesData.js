@@ -8,82 +8,105 @@ const tagPagesData = [
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anchor Tag Example</title>
+  <style>
+    a { color: #007bff; text-decoration: none; padding: 2px 4px; border-radius: 2px; transition: all 0.3s; }
+    a:hover { background: #e8f0fe; text-decoration: underline; }
+    .link-demo { background: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0; }
+  </style>
 </head>
 <body>
-  <h2>Anchor Tag Example:</h2>
-  <p><a href="https://techinmystyle.com" target="_self">Open site in same tab</a></p>
-  <p><a href="https://techinmystyle.com" target="_blank">Open site in a new tab</a></p>
-  <p><a href="https://techinmystyle.com" target="_parent">Open site in parent frame</a></p>
-  <p><a href="https://techinmystyle.com" target="_top">Open site in full window</a></p>
-  <p><a href="#section1">Jump to section 1</a></p>
-  <p><a href="mailto:example@example.com">Send Email</a></p>
-  <p><a href="tel:+1234567890">Call Us</a></p>
-  <p><a href="document.pdf" download>Download PDF</a></p>
-  <h3 id="section1">Section 1</h3>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <h2>Anchor Tag Examples:</h2>
+
+  <div class="link-demo">
+    <h3>Basic Links:</h3>
+    <p><a href="https://www.example.com">Regular link to Example</a></p>
+    <p><a href="https://www.example.com" target="_blank">Open in new tab</a></p>
+    <p><a href="https://www.example.com" target="_self">Open in same tab</a></p>
+  </div>
+
+  <div class="link-demo">
+    <h3>Special Links:</h3>
+    <p><a href="#section1">Jump to Section 1 Below</a></p>
+    <p><a href="mailto:contact@example.com">Send Email</a></p>
+    <p><a href="tel:+14155552671">Call: +1-415-555-2671</a></p>
+    <p><a href="https://example.com/file.pdf" download>Download PDF</a></p>
+  </div>
+
+  <h3 id="section1">Section 1 - Successfully Jumped Here!</h3>
+  <mark>Click links above to see different behaviors</mark>
 </body>
 </html>`
   },
   {
     tag: 'abbr',
-    description: 'The <abbr> tag defines an abbreviation or an acronym. The title attribute is used to show the full form of the abbreviation when hovered.',
+    description: 'The <abbr> tag defines an abbreviation or acronym. The title attribute shows the full form when hovered.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abbr Tag Example</title>
+  <title>Abbreviation Tag Example</title>
   <style>
-    abbr { text-decoration: underline dotted; cursor: help; }
+    abbr { border-bottom: 2px dotted #007bff; cursor: help; padding: 2px 0; }
+    .info-box { background: #e8f4fd; padding: 15px; border-radius: 6px; margin: 10px 0; border-left: 4px solid #007bff; }
   </style>
 </head>
 <body>
-  <h2>Abbreviation Tag Example:</h2>
-  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-  <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for web pages.</p>
-  <p><abbr title="Cascading Style Sheets">CSS</abbr> is used to style HTML documents.</p>
-  <p>I work at <abbr title="National Aeronautics and Space Administration">NASA</abbr>.</p>
-  <p><abbr title="As Soon As Possible">ASAP</abbr> means as quickly as possible.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <h2>Abbreviation Tag Examples:</h2>
+
+  <div class="info-box">
+    <p>The <abbr title="World Health Organization">WHO</abbr> was established in 1948.</p>
+    <p><abbr title="HyperText Markup Language">HTML</abbr> is the foundation of web pages.</p>
+    <p><abbr title="Cascading Style Sheets">CSS</abbr> controls visual presentation.</p>
+    <p><abbr title="National Aeronautics and Space Administration">NASA</abbr> explores space.</p>
+    <p><abbr title="As Soon As Possible">ASAP</abbr> means immediately.</p>
+  </div>
+
+  <mark>Hover over abbreviations to see full forms</mark>
 </body>
 </html>`
   },
   {
     tag: 'address',
-    description: 'The <address> tag defines contact information for the author/owner of a document or an article. It typically renders in italic and is used to provide postal or digital contact details.',
+    description: 'The <address> tag defines contact information for the author/owner of a document.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Address Tag Example</title>
+  <style>
+    address { background: #f8f9fa; padding: 15px; border-radius: 6px; border-left: 4px solid #28a745; font-style: italic; line-height: 1.8; }
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-  <h2>Address Tag Example:</h2>
+  <h2>Address Tag Examples:</h2>
+
   <h3>Author Contact:</h3>
   <address>
-    Written by <a href="mailto:john@example.com">John Doe</a>.<br>
-    Visit us at:<br>
-    Example.com<br>
-    Box 564, Disneyland<br>
-    USA
+    Written by <a href="mailto:author@example.com">John Developer</a><br>
+    Location: San Francisco, CA<br>
+    Email: <a href="mailto:contact@example.com">contact@example.com</a><br>
+    Phone: <a href="tel:+14155552671">+1-415-555-2671</a>
   </address>
 
   <h3>Business Address:</h3>
   <address>
-    <strong>Tech In My Style</strong><br>
-    123 Web Developer Lane<br>
+    <strong>Tech Academy Inc.</strong><br>
+    456 Code Street<br>
     Silicon Valley, CA 94025<br>
-    Phone: <a href="tel:+11234567890">+1 (123) 456-7890</a><br>
-    Email: <a href="mailto:info@techinmystyle.com">info@techinmystyle.com</a>
+    <a href="mailto:info@techacademy.com">info@techacademy.com</a>
   </address>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Address information is semantic and searchable</mark>
 </body>
 </html>`
   },
   {
     tag: 'article',
-    description: 'The <article> tag specifies independent, self-contained content. An article should make sense on its own and can be distributed independently (blog post, news article, forum post, etc.).',
+    description: 'The <article> tag specifies independent, self-contained content like blog posts or news items.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,35 +114,37 @@ const tagPagesData = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Article Tag Example</title>
   <style>
-    article { border: 1px solid #ccc; padding: 15px; margin: 10px 0; border-radius: 5px; }
-    article h3 { color: #333; }
+    article { border: 1px solid #ddd; padding: 20px; margin: 15px 0; border-radius: 8px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    article h3 { color: #007bff; margin-top: 0; }
+    footer { color: #888; font-size: 0.9em; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
   </style>
 </head>
 <body>
-  <h2>Article Tag Example:</h2>
+  <h2>Article Tag Examples:</h2>
 
   <article>
-    <h3>What is HTML?</h3>
-    <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages.</p>
+    <h3>Understanding HTML Semantics</h3>
+    <p>Semantic HTML improves accessibility and search engine optimization. Using proper tags like article, section, and nav makes your content more meaningful.</p>
     <footer>
-      <p>Posted by <strong>Jane Doe</strong> on <time datetime="2024-01-15">January 15, 2024</time></p>
+      By Jane Smith | <time datetime="2024-01-15">January 15, 2024</time>
     </footer>
   </article>
 
   <article>
-    <h3>Introduction to CSS</h3>
-    <p>CSS stands for Cascading Style Sheets. It is used to style and layout web pages.</p>
+    <h3>CSS Grid vs Flexbox</h3>
+    <p>While Flexbox excels at one-dimensional layouts, CSS Grid is powerful for two-dimensional designs. Understanding when to use each is crucial for modern web development.</p>
     <footer>
-      <p>Posted by <strong>John Smith</strong> on <time datetime="2024-02-20">February 20, 2024</time></p>
+      By Mike Johnson | <time datetime="2024-01-20">January 20, 2024</time>
     </footer>
   </article>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Each article is independent and can be distributed separately</mark>
 </body>
 </html>`
   },
   {
     tag: 'aside',
-    description: 'The <aside> tag defines content that is placed aside from the content it is placed in. It is used for sidebars, pull quotes, or any content that is tangentially related to surrounding content.',
+    description: 'The <aside> tag defines content placed aside from the main content, like sidebars or related information.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,103 +152,139 @@ const tagPagesData = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aside Tag Example</title>
   <style>
-    body { display: flex; gap: 20px; font-family: Arial, sans-serif; }
-    main { flex: 3; }
-    aside { flex: 1; background: #f0f0f0; padding: 15px; border-left: 3px solid #007bff; border-radius: 5px; }
-    aside h4 { margin-top: 0; }
+    body { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; font-family: Arial, sans-serif; padding: 20px; }
+    main { background: white; }
+    aside { background: #f0f4ff; padding: 15px; border-radius: 8px; border-left: 4px solid #007bff; }
+    aside h4 { margin-top: 0; color: #007bff; }
+    aside ul { list-style: none; padding-left: 0; }
+    aside li { padding: 5px 0; }
   </style>
 </head>
 <body>
   <main>
-    <h2>Learning HTML</h2>
-    <p>HTML is the backbone of all web pages. It provides the structure for content on the web, defining elements like headings, paragraphs, links, and images.</p>
-    <p>Every webpage you visit is built using HTML at its core, making it one of the most important skills for a web developer to learn.</p>
+    <h2>Web Development Fundamentals</h2>
+    <p>HTML provides structure to web content. It defines elements like headings, paragraphs, links, and images. Combined with CSS for styling and JavaScript for interactivity, HTML forms the complete web development toolkit.</p>
+    <p>Understanding semantic HTML is crucial for creating accessible, SEO-friendly websites that work well across all devices and browsers.</p>
   </main>
+
   <aside>
-    <h4>Did You Know?</h4>
-    <p>HTML was created by Tim Berners-Lee in 1991.</p>
+    <h4>Quick Facts</h4>
+    <ul>
+      <li>HTML created: 1989</li>
+      <li>Current version: HTML5</li>
+      <li>Standardized by: W3C</li>
+    </ul>
+
     <h4>Related Topics</h4>
     <ul>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Web Design</li>
+      <li>CSS Styling</li>
+      <li>JavaScript DOM</li>
+      <li>Web Accessibility</li>
+      <li>SEO Basics</li>
     </ul>
   </aside>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Aside content is tangentially related to main content</mark>
 </body>
 </html>`
   },
   {
     tag: 'audio',
-    description: 'The <audio> tag is used to embed sound content in a document. It may contain one or more <source> tags with different audio formats so the browser can pick the one it supports.',
+    description: 'The <audio> tag embeds sound content. It supports multiple source formats for browser compatibility.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Audio Tag Example</title>
+  <style>
+    .audio-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #28a745; }
+    audio { width: 100%; margin: 10px 0; }
+    h3 { color: #333; }
+  </style>
 </head>
 <body>
-  <h2>Audio Tag Example:</h2>
+  <h2>Audio Tag Examples:</h2>
 
-  <h3>Basic Audio with Controls:</h3>
-  <audio controls>
-    <source src="audio.mp3" type="audio/mpeg">
-    <source src="audio.ogg" type="audio/ogg">
-    Your browser does not support the audio element.
-  </audio>
+  <div class="audio-demo">
+    <h3>Basic Audio with Controls:</h3>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
-  <h3>Autoplay and Loop:</h3>
-  <audio controls autoplay loop>
-    <source src="background.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <div class="audio-demo">
+    <h3>Autoplay and Loop:</h3>
+    <audio controls autoplay loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
-  <h3>Muted Audio:</h3>
-  <audio controls muted>
-    <source src="audio.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <div class="audio-demo">
+    <h3>Muted Audio (Background):</h3>
+    <audio controls muted>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
   <h3>Audio Attributes:</h3>
   <ul>
-    <li><strong>controls</strong> - Displays play/pause, volume controls</li>
-    <li><strong>autoplay</strong> - Audio starts automatically</li>
-    <li><strong>loop</strong> - Audio replays after ending</li>
-    <li><strong>muted</strong> - Audio is muted by default</li>
-    <li><strong>preload</strong> - Specifies if audio should be preloaded</li>
+    <li><strong>controls</strong> - Shows play/pause controls</li>
+    <li><strong>autoplay</strong> - Starts playing automatically</li>
+    <li><strong>loop</strong> - Repeats after ending</li>
+    <li><strong>muted</strong> - Audio is muted initially</li>
+    <li><strong>preload</strong> - When to load audio (auto, metadata, none)</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Multiple source formats ensure compatibility</mark>
 </body>
 </html>`
   },
   {
     tag: 'b',
-    description: 'The <b> tag specifies bold text without any extra importance. It is used to draw attention to text without conveying extra importance or emphasis (use <strong> for semantic importance).',
+    description: 'The <b> tag specifies bold text without semantic importance. Use for visual emphasis only.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bold Tag Example</title>
+  <style>
+    .demo-box { background: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0; }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+  </style>
 </head>
 <body>
-  <h2>Bold Tag Example:</h2>
-  <p>This is <b>bold text</b> using the b tag.</p>
-  <p>Product: <b>Laptop Pro X200</b> - Available in stores now.</p>
-  <p>Recipe: Add <b>2 cups of flour</b>, <b>1 cup of sugar</b>, and <b>3 eggs</b>.</p>
-  <p>Keywords: <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b> are core web technologies.</p>
+  <h2>Bold (b) Tag Examples:</h2>
 
-  <h3>Difference between b and strong:</h3>
-  <p><b>Bold text</b> - visual only, no semantic importance.</p>
-  <p><strong>Strong text</strong> - semantic importance, also renders bold.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <div class="demo-box">
+    <h3>Visual Emphasis:</h3>
+    <p>Product: <b>Premium Laptop Pro X1</b> - Now in stock!</p>
+    <p>Recipe: Mix <b>2 cups flour</b>, <b>1 cup sugar</b>, and <b>3 eggs</b>.</p>
+    <p>Key technologies: <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>.</p>
+  </div>
+
+  <div class="comparison">
+    <div>
+      <h4>Using b tag:</h4>
+      <p>This text is <b>bold</b> - visual only</p>
+    </div>
+    <div>
+      <h4>Using strong tag:</h4>
+      <p>This text is <strong>important</strong> - semantic</p>
+    </div>
+  </div>
+
+  <mark>Use &lt;b&gt; for stylistic bolding, &lt;strong&gt; for semantic importance</mark>
 </body>
 </html>`
   },
   {
     tag: 'base',
-    description: 'The <base> tag specifies the base URL and/or target for all relative URLs in a document. There can only be one <base> element in a document, and it must be inside the <head> element.',
+    description: 'The <base> tag specifies the base URL and target for all relative URLs in a document.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -231,104 +292,124 @@ const tagPagesData = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Base Tag Example</title>
   <base href="https://www.example.com/" target="_blank">
+  <style>
+    .code-box { background: #f4f4f4; padding: 15px; border-radius: 6px; font-family: monospace; margin: 10px 0; border-left: 3px solid #007bff; }
+    a { color: #007bff; }
+  </style>
 </head>
 <body>
   <h2>Base Tag Example:</h2>
-  <p>The base tag is placed in the head and sets a base URL for all relative links on the page.</p>
 
-  <h3>Relative links using the base URL:</h3>
-  <p><a href="about.html">About Us</a> - resolves to https://www.example.com/about.html</p>
-  <p><a href="contact.html">Contact</a> - resolves to https://www.example.com/contact.html</p>
-  <p><a href="images/logo.png">Logo</a> - resolves to https://www.example.com/images/logo.png</p>
+  <p>The base tag in the head sets: href="https://www.example.com/" and target="_blank"</p>
+
+  <h3>Relative Links (resolve using base URL):</h3>
+  <ul>
+    <li><a href="about.html">About Us</a> → https://www.example.com/about.html</li>
+    <li><a href="services.html">Services</a> → https://www.example.com/services.html</li>
+    <li><a href="images/logo.png">Logo</a> → https://www.example.com/images/logo.png</li>
+  </ul>
+
+  <div class="code-box">
+    &lt;base href="https://www.example.com/" target="_blank"&gt;
+  </div>
 
   <h3>Base Tag Attributes:</h3>
   <ul>
-    <li><strong>href</strong> - Specifies the base URL for all relative URLs</li>
-    <li><strong>target</strong> - Specifies the default target for all links (_blank, _self, _parent, _top)</li>
+    <li><strong>href</strong> - Base URL for relative URLs</li>
+    <li><strong>target</strong> - Default target for all links</li>
   </ul>
 
-  <h3>Usage in head:</h3>
-  <pre>&lt;base href="https://www.example.com/" target="_blank"&gt;</pre>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Only one base element allowed per document, must be in head</mark>
 </body>
 </html>`
   },
   {
     tag: 'bdi',
-    description: 'The <bdi> tag stands for Bidirectional Isolation. It isolates a part of text that might be formatted in a different direction from other text outside it, useful when dealing with user-generated content of unknown directionality.',
+    description: 'The <bdi> tag isolates text that might have different directionality, useful for multilingual content.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BDI Tag Example</title>
+  <style>
+    .leaderboard { background: #f8f9fa; padding: 15px; border-radius: 8px; }
+    .leaderboard li { padding: 8px 0; border-bottom: 1px solid #ddd; }
+    .leaderboard li:last-child { border-bottom: none; }
+  </style>
 </head>
 <body>
-  <h2>BDI (Bidirectional Isolation) Tag Example:</h2>
-  <p>The bdi tag is useful when displaying user-submitted text that may contain right-to-left languages.</p>
+  <h2>BDI (Bidirectional Isolation) Tag:</h2>
+
+  <p>BDI safely handles names and content from different language backgrounds.</p>
 
   <h3>Leaderboard Example:</h3>
+  <div class="leaderboard">
+    <ol>
+      <li>Rank 1: <bdi>Ahmed Mohamed</bdi> - 950 points</li>
+      <li>Rank 2: <bdi>Juan García</bdi> - 920 points</li>
+      <li>Rank 3: <bdi>李明</bdi> - 890 points</li>
+      <li>Rank 4: <bdi>Sarah Johnson</bdi> - 850 points</li>
+      <li>Rank 5: <bdi>Yuki Tanaka</bdi> - 810 points</li>
+    </ol>
+  </div>
+
+  <h3>Use Cases:</h3>
   <ul>
-    <li>User: <bdi>John Smith</bdi> - Score: 95</li>
-    <li>User: <bdi>Ahmed Mohamed</bdi> - Score: 88</li>
-    <li>User: <bdi>李明</bdi> - Score: 82</li>
+    <li>User-generated names from different languages</li>
+    <li>Mixed LTR and RTL text</li>
+    <li>Foreign language citations</li>
+    <li>International product listings</li>
   </ul>
 
-  <h3>Without bdi (may cause layout issues with RTL text):</h3>
-  <p>User: <span>Ahmed</span> scored 100 points.</p>
-
-  <h3>With bdi (safely isolated):</h3>
-  <p>User: <bdi>Ahmed</bdi> scored 100 points.</p>
-
-  <h3>When to use bdi:</h3>
-  <ul>
-    <li>Displaying usernames from different language backgrounds</li>
-    <li>Showing user-generated content of unknown directionality</li>
-    <li>Mixing LTR and RTL text safely</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>BDI prevents layout issues with bidirectional text</mark>
 </body>
 </html>`
   },
   {
     tag: 'bdo',
-    description: 'The <bdo> tag stands for Bidirectional Override. It is used to override the current text direction, allowing you to display text in the opposite direction using the dir attribute.',
+    description: 'The <bdo> tag overrides text direction. Use dir="rtl" for right-to-left or dir="ltr" for left-to-right.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BDO Tag Example</title>
+  <style>
+    .direction-demo { background: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 4px; }
+  </style>
 </head>
 <body>
-  <h2>BDO (Bidirectional Override) Tag Example:</h2>
+  <h2>BDO (Bidirectional Override) Tag:</h2>
 
-  <h3>Normal text direction (LTR):</h3>
+  <h3>Normal Text Direction:</h3>
   <p>This is normal left-to-right text.</p>
 
-  <h3>Right-to-left override:</h3>
-  <p><bdo dir="rtl">This text will be displayed right to left.</bdo></p>
+  <h3>Right-to-Left Override:</h3>
+  <div class="direction-demo">
+    <p>Normal: Hello World</p>
+    <p>RTL: <bdo dir="rtl">Hello World</bdo></p>
+  </div>
 
-  <h3>Left-to-right override:</h3>
-  <p><bdo dir="ltr">This text is forced left to right.</bdo></p>
-
-  <h3>More examples:</h3>
-  <p>Normal: Hello World</p>
-  <p>RTL: <bdo dir="rtl">Hello World</bdo></p>
-  <p>The word "Hello" reversed: <bdo dir="rtl">Hello</bdo></p>
+  <h3>Word Reversal Examples:</h3>
+  <div class="direction-demo">
+    <p>Normal word: <strong>Reversed</strong></p>
+    <p>RTL output: <bdo dir="rtl">desreveR</bdo></p>
+  </div>
 
   <h3>BDO Attributes:</h3>
   <ul>
     <li><strong>dir="ltr"</strong> - Left to Right</li>
     <li><strong>dir="rtl"</strong> - Right to Left</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>BDO changes visual direction, not semantic meaning</mark>
 </body>
 </html>`
   },
   {
     tag: 'blockquote',
-    description: 'The <blockquote> tag specifies a section that is quoted from another source. Browsers usually indent blockquote elements. The cite attribute can specify the source URL.',
+    description: 'The <blockquote> tag specifies a section quoted from another source, typically indented.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -338,43 +419,49 @@ const tagPagesData = [
   <style>
     blockquote {
       border-left: 4px solid #007bff;
-      padding: 10px 20px;
-      margin: 20px 0;
-      background: #f9f9f9;
-      color: #555;
+      padding: 15px 20px;
+      margin: 15px 0;
+      background: #f0f4ff;
+      color: #333;
       font-style: italic;
+      border-radius: 0 6px 6px 0;
     }
-    blockquote footer { font-style: normal; color: #333; font-size: 0.9em; }
+    blockquote footer { font-style: normal; color: #666; font-size: 0.9em; margin-top: 10px; }
   </style>
 </head>
 <body>
-  <h2>Blockquote Tag Example:</h2>
+  <h2>Blockquote Tag Examples:</h2>
 
-  <h3>Basic Blockquote:</h3>
-  <blockquote cite="https://www.example.com">
+  <blockquote>
     <p>The only way to do great work is to love what you do.</p>
     <footer>— Steve Jobs</footer>
   </blockquote>
 
-  <h3>Another Example:</h3>
-  <blockquote cite="https://www.brainyquote.com">
-    <p>In the middle of every difficulty lies opportunity.</p>
-    <footer>— Albert Einstein</footer>
+  <blockquote>
+    <p>Innovation distinguishes between a leader and a follower.</p>
+    <footer>— Steve Jobs</footer>
   </blockquote>
 
-  <h3>Multi-paragraph Blockquote:</h3>
   <blockquote>
-    <p>HTML is not a programming language; it is a markup language.</p>
-    <p>It tells the browser how to display the content.</p>
-    <footer>— Web Development Fundamentals</footer>
+    <p>Life is what happens when you're busy making other plans.</p>
+    <footer>— John Lennon</footer>
   </blockquote>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <h3>Blockquote Features:</h3>
+  <ul>
+    <li>Semantically indicates quoted content</li>
+    <li>Can include cite attribute for source URL</li>
+    <li>Footer element for attribution</li>
+    <li>Helpful for testimonials and quotes</li>
+  </ul>
+
+  <mark>Use for long quotations; use &lt;q&gt; for inline quotes</mark>
 </body>
 </html>`
   },
   {
     tag: 'button',
-    description: 'The <button> tag defines a clickable button. It can contain text or images and is used to submit forms, trigger JavaScript actions, or act as a UI control element.',
+    description: 'The <button> tag defines a clickable button used to trigger actions or submit forms.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -382,46 +469,51 @@ const tagPagesData = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Button Tag Example</title>
   <style>
-    button { margin: 5px; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
-    .primary { background: #007bff; color: white; border: none; }
-    .danger  { background: #dc3545; color: white; border: none; }
-    .outline { background: transparent; color: #007bff; border: 2px solid #007bff; }
+    button { margin: 5px; padding: 10px 20px; border-radius: 5px; cursor: pointer; border: none; font-weight: bold; transition: all 0.3s; }
+    .primary { background: #007bff; color: white; }
+    .primary:hover { background: #0056b3; }
+    .success { background: #28a745; color: white; }
+    .success:hover { background: #218838; }
+    .danger { background: #dc3545; color: white; }
+    .danger:hover { background: #c82333; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .button-group { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>Button Tag Example:</h2>
+  <h2>Button Tag Examples:</h2>
 
-  <h3>Button Types:</h3>
-  <button type="button" onclick="alert('Button clicked!')">Click Me</button>
-  <button type="submit">Submit Form</button>
-  <button type="reset">Reset Form</button>
+  <div class="button-group">
+    <h3>Button Types:</h3>
+    <button type="button" class="primary" onclick="alert('Button clicked!')">Click Me</button>
+    <button type="submit" class="success">Submit Form</button>
+    <button type="reset" class="primary">Reset Form</button>
+  </div>
 
-  <h3>Styled Buttons:</h3>
-  <button class="primary">Primary Button</button>
-  <button class="danger">Danger Button</button>
-  <button class="outline">Outline Button</button>
+  <div class="button-group">
+    <h3>Button Styles:</h3>
+    <button class="primary">Primary Action</button>
+    <button class="success">Success Action</button>
+    <button class="danger">Delete Item</button>
+    <button disabled>Disabled Button</button>
+  </div>
 
-  <h3>Disabled Button:</h3>
-  <button disabled>Disabled Button</button>
+  <div class="button-group">
+    <h3>Form Example:</h3>
+    <form onsubmit="event.preventDefault(); alert('Form submitted!');">
+      <input type="text" placeholder="Enter your name" required>
+      <button type="submit" class="success">Submit</button>
+      <button type="reset" class="primary">Clear</button>
+    </form>
+  </div>
 
-  <h3>Button with Icon Text:</h3>
-  <button type="button">&#128269; Search</button>
-  <button type="button">&#10004; Confirm</button>
-  <button type="button">&#10008; Cancel</button>
-
-  <h3>Form Example:</h3>
-  <form action="#" method="post">
-    <input type="text" placeholder="Enter your name">
-    <button type="submit">Submit</button>
-    <button type="reset">Clear</button>
-  </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Buttons can have type: button, submit, or reset</mark>
 </body>
 </html>`
   },
   {
     tag: 'canvas',
-    description: 'The <canvas> tag is used to draw graphics via JavaScript. It is a container for graphics and you must use JavaScript to actually draw the graphics using the Canvas API.',
+    description: 'The <canvas> tag is a container for graphics drawn with JavaScript using the Canvas API.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -429,51 +521,77 @@ const tagPagesData = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Canvas Tag Example</title>
   <style>
-    canvas { border: 2px solid #333; display: block; margin: 10px 0; }
+    canvas { border: 2px solid #ddd; border-radius: 6px; display: block; margin: 15px 0; background: white; }
+    .canvas-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>Canvas Tag Example:</h2>
+  <h2>Canvas Tag Examples:</h2>
 
-  <h3>Drawing a Rectangle:</h3>
-  <canvas id="rectCanvas" width="300" height="150"></canvas>
+  <div class="canvas-demo">
+    <h3>Rectangle and Shapes:</h3>
+    <canvas id="shapeCanvas" width="350" height="150"></canvas>
+  </div>
 
-  <h3>Drawing a Circle:</h3>
-  <canvas id="circleCanvas" width="300" height="150"></canvas>
+  <div class="canvas-demo">
+    <h3>Circle and Arc:</h3>
+    <canvas id="circleCanvas" width="350" height="150"></canvas>
+  </div>
 
-  <h3>Drawing Text on Canvas:</h3>
-  <canvas id="textCanvas" width="300" height="100"></canvas>
+  <div class="canvas-demo">
+    <h3>Text and Lines:</h3>
+    <canvas id="textCanvas" width="350" height="150"></canvas>
+  </div>
 
   <script>
-    // Rectangle
-    var ctx1 = document.getElementById('rectCanvas').getContext('2d');
+    // Shapes: Rectangle
+    const ctx1 = document.getElementById('shapeCanvas').getContext('2d');
     ctx1.fillStyle = '#007bff';
-    ctx1.fillRect(20, 20, 200, 100);
-    ctx1.strokeStyle = '#ff0000';
-    ctx1.strokeRect(240, 20, 50, 50);
+    ctx1.fillRect(20, 20, 120, 80);
+    ctx1.strokeStyle = '#dc3545';
+    ctx1.lineWidth = 3;
+    ctx1.strokeRect(160, 20, 120, 80);
+    ctx1.fillStyle = '#28a745';
+    ctx1.beginPath();
+    ctx1.moveTo(290, 20);
+    ctx1.lineTo(340, 80);
+    ctx1.lineTo(290, 140);
+    ctx1.closePath();
+    ctx1.fill();
 
     // Circle
-    var ctx2 = document.getElementById('circleCanvas').getContext('2d');
+    const ctx2 = document.getElementById('circleCanvas').getContext('2d');
     ctx2.beginPath();
-    ctx2.arc(75, 75, 60, 0, Math.PI * 2);
+    ctx2.arc(80, 75, 50, 0, Math.PI * 2);
     ctx2.fillStyle = '#28a745';
     ctx2.fill();
-    ctx2.strokeStyle = '#000';
+    ctx2.strokeStyle = '#333';
+    ctx2.lineWidth = 2;
+    ctx2.stroke();
+
+    ctx2.beginPath();
+    ctx2.arc(200, 75, 40, 0, Math.PI);
+    ctx2.fillStyle = '#ffc107';
+    ctx2.fill();
     ctx2.stroke();
 
     // Text
-    var ctx3 = document.getElementById('textCanvas').getContext('2d');
-    ctx3.font = '24px Arial';
-    ctx3.fillStyle = '#333';
-    ctx3.fillText('Hello Canvas!', 50, 60);
+    const ctx3 = document.getElementById('textCanvas').getContext('2d');
+    ctx3.font = 'bold 24px Arial';
+    ctx3.fillStyle = '#007bff';
+    ctx3.fillText('Canvas Drawing!', 50, 60);
+    ctx3.font = '14px Arial';
+    ctx3.fillStyle = '#666';
+    ctx3.fillText('Interactive graphics with JavaScript', 50, 100);
   </script>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Canvas requires JavaScript to draw graphics</mark>
 </body>
 </html>`
   },
   {
     tag: 'caption',
-    description: 'The <caption> tag defines a table caption (title). It must be inserted immediately after the <table> tag. By default, it is centered above the table.',
+    description: 'The <caption> tag defines a title for a table. It must be placed immediately after the opening <table> tag.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -481,88 +599,94 @@ const tagPagesData = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caption Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; margin: 20px 0; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    table { border-collapse: collapse; width: 100%; max-width: 600px; margin: 15px 0; }
+    caption { font-size: 1.2em; font-weight: bold; padding: 12px; background: #e9ecef; text-align: left; border-radius: 6px 6px 0 0; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
     th { background: #007bff; color: white; }
-    caption { font-size: 1.2em; font-weight: bold; padding: 10px; background: #e9ecef; }
+    tbody tr:hover { background: #f0f4ff; }
   </style>
 </head>
 <body>
-  <h2>Caption Tag Example:</h2>
+  <h2>Caption Tag Examples:</h2>
 
   <table>
-    <caption>Student Grade Report - 2024</caption>
+    <caption>Student Performance Report - 2024</caption>
     <thead>
       <tr>
         <th>Student Name</th>
         <th>Subject</th>
-        <th>Grade</th>
         <th>Score</th>
+        <th>Grade</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>Alice Johnson</td><td>Mathematics</td><td>A</td><td>95</td></tr>
-      <tr><td>Bob Smith</td><td>Science</td><td>B+</td><td>87</td></tr>
-      <tr><td>Carol White</td><td>English</td><td>A-</td><td>91</td></tr>
+      <tr><td>Alice Johnson</td><td>Mathematics</td><td>95</td><td>A+</td></tr>
+      <tr><td>Bob Smith</td><td>Science</td><td>87</td><td>B+</td></tr>
+      <tr><td>Carol Davis</td><td>English</td><td>92</td><td>A</td></tr>
+      <tr><td>David Lee</td><td>History</td><td>78</td><td>C+</td></tr>
     </tbody>
   </table>
 
   <table>
-    <caption>Monthly Sales Data</caption>
+    <caption>Monthly Sales Summary</caption>
     <thead>
       <tr><th>Month</th><th>Sales</th><th>Revenue</th></tr>
     </thead>
     <tbody>
-      <tr><td>January</td><td>150</td><td>$15,000</td></tr>
-      <tr><td>February</td><td>180</td><td>$18,000</td></tr>
+      <tr><td>January</td><td>156</td><td>$18,500</td></tr>
+      <tr><td>February</td><td>189</td><td>$22,300</td></tr>
+      <tr><td>March</td><td>201</td><td>$25,100</td></tr>
     </tbody>
   </table>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Caption provides context for table data</mark>
 </body>
 </html>`
   },
   {
     tag: 'cite',
-    description: 'The <cite> tag defines the title of a creative work (book, poem, song, movie, painting, etc.). The text in the <cite> element usually renders in italic.',
+    description: 'The <cite> tag defines the title of a creative work like a book, song, movie, or painting.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cite Tag Example</title>
+  <style>
+    cite { font-style: italic; color: #007bff; }
+    .quote-box { background: #f0f4ff; padding: 15px; border-left: 4px solid #007bff; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  </style>
 </head>
 <body>
-  <h2>Cite Tag Example:</h2>
+  <h2>Cite Tag Examples:</h2>
 
-  <h3>Citing a Book:</h3>
-  <p><cite>The Great Gatsby</cite> was written by F. Scott Fitzgerald.</p>
+  <h3>Books:</h3>
+  <p><cite>To Kill a Mockingbird</cite> by Harper Lee is a classic novel.</p>
+  <p>I recommend reading <cite>1984</cite> by George Orwell.</p>
 
-  <h3>Citing a Movie:</h3>
-  <p>My favourite movie is <cite>The Shawshank Redemption</cite>.</p>
+  <h3>Movies and Shows:</h3>
+  <p>My favorite movie is <cite>The Shawshank Redemption</cite>.</p>
+  <p><cite>Inception</cite> features mind-bending science fiction concepts.</p>
 
-  <h3>Citing a Song:</h3>
+  <h3>Music:</h3>
   <p>The song <cite>Bohemian Rhapsody</cite> was performed by Queen.</p>
+  <p><cite>Imagine</cite> by John Lennon is an iconic track.</p>
 
-  <h3>Citing a Painting:</h3>
-  <p>The famous painting <cite>Mona Lisa</cite> was created by Leonardo da Vinci.</p>
-
-  <h3>Citing with Blockquote:</h3>
-  <figure>
+  <h3>Quotes with Citations:</h3>
+  <div class="quote-box">
     <blockquote>
-      <p>To be, or not to be, that is the question.</p>
+      <p>It was the best of times, it was the worst of times.</p>
+      <footer>From <cite>A Tale of Two Cities</cite> by Charles Dickens</footer>
     </blockquote>
-    <figcaption>From <cite>Hamlet</cite> by William Shakespeare</figcaption>
-  </figure>
+  </div>
 
-  <h3>Citing a Website:</h3>
-  <p>More information can be found at <cite><a href="https://techinmystyle.com">Tech In My Style</a></cite>.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Cite tag is for work titles, not for author citations</mark>
 </body>
 </html>`
   },
   {
     tag: 'code',
-    description: 'The <code> tag is used to define a piece of computer code. The content inside is displayed in the browser default monospace font, making it visually distinct from regular text.',
+    description: 'The <code> tag defines a piece of computer code displayed in monospace font.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -570,39 +694,53 @@ const tagPagesData = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Tag Example</title>
   <style>
-    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: monospace; color: #c7254e; }
-    pre code { display: block; padding: 15px; background: #282c34; color: #abb2bf; border-radius: 5px; font-size: 14px; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: monospace; color: #d73a49; }
+    pre { background: #282c34; color: #abb2bf; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 14px; line-height: 1.6; }
+    pre code { color: #abb2bf; background: none; padding: 0; }
+    .inline-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>Code Tag Example:</h2>
+  <h2>Code Tag Examples:</h2>
 
-  <h3>Inline Code:</h3>
-  <p>Use the <code>console.log()</code> function to print output in JavaScript.</p>
-  <p>The <code>document.getElementById()</code> method returns an element by its ID.</p>
-  <p>In Python, use <code>print()</code> to display output.</p>
+  <div class="inline-demo">
+    <h3>Inline Code:</h3>
+    <p>Use <code>console.log()</code> to print output in JavaScript.</p>
+    <p>The <code>document.getElementById()</code> method finds elements by ID.</p>
+    <p>In Python, use <code>print()</code> to display text.</p>
+  </div>
 
-  <h3>Block of Code (with pre):</h3>
-  <pre><code>function greet(name) {
-  console.log("Hello, " + name + "!");
+  <div class="inline-demo">
+    <h3>Code Block (with pre):</h3>
+    <pre><code>function greet(name) {
+  const message = "Hello, " + name + "!";
+  console.log(message);
+  return message;
 }
-greet("World");</code></pre>
 
-  <h3>HTML Code Example:</h3>
-  <pre><code>&lt;!DOCTYPE html&gt;
+greet("World");</code></pre>
+  </div>
+
+  <div class="inline-demo">
+    <h3>HTML Code Example:</h3>
+    <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;My First Heading&lt;/h1&gt;
-    &lt;p&gt;My first paragraph.&lt;/p&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  </div>
+
+  <mark>Always use &lt;pre&gt; with &lt;code&gt; for multi-line code</mark>
 </body>
 </html>`
   },
   {
     tag: 'col',
-    description: 'The <col> tag specifies column properties for each column within a <colgroup> element. It is useful for applying styles to entire columns instead of repeating the style on each row.',
+    description: 'The <col> tag specifies column properties within a <colgroup> element for styling entire table columns.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -610,20 +748,21 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Col Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    table { border-collapse: collapse; width: 100%; max-width: 600px; margin: 15px 0; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #007bff; color: white; }
   </style>
 </head>
 <body>
   <h2>Col Tag Example:</h2>
 
-  <h3>Applying Column Styles:</h3>
+  <h3>Column-Specific Styling:</h3>
   <table>
     <colgroup>
-      <col style="background-color: #ffeeba;">
-      <col style="background-color: #d4edda;">
-      <col style="background-color: #cce5ff;">
-      <col style="background-color: #f8d7da;">
+      <col style="background-color: #fffde7; width: 25%;">
+      <col style="background-color: #d4edda; width: 25%;">
+      <col style="background-color: #cce5ff; width: 25%;">
+      <col style="background-color: #f8d7da; width: 25%;">
     </colgroup>
     <thead>
       <tr>
@@ -636,11 +775,11 @@ greet("World");</code></pre>
     <tbody>
       <tr><td>Alice</td><td>Math</td><td>95</td><td>A</td></tr>
       <tr><td>Bob</td><td>Science</td><td>82</td><td>B</td></tr>
-      <tr><td>Carol</td><td>English</td><td>91</td><td>A</td></tr>
+      <tr><td>Carol</td><td>English</td><td>91</td><td>A-</td></tr>
     </tbody>
   </table>
 
-  <h3>Col with Span:</h3>
+  <h3>Using col with span:</h3>
   <table>
     <colgroup>
       <col span="2" style="background-color: #e2e3e5;">
@@ -650,50 +789,104 @@ greet("World");</code></pre>
     <tr><td>Laptop</td><td>Electronics</td><td>$999</td></tr>
     <tr><td>Book</td><td>Education</td><td>$29</td></tr>
   </table>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Col allows styling entire columns at once</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'colgroup',
+    description: 'The <colgroup> tag groups one or more <col> elements for applying styles to multiple columns.',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colgroup Tag Example</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; max-width: 650px; margin: 15px 0; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+    th { background: #007bff; color: white; }
+  </style>
+</head>
+<body>
+  <h2>Colgroup Tag Example:</h2>
+
+  <table>
+    <colgroup>
+      <col style="background-color: #fffde7;">
+      <col span="2" style="background-color: #d4edda;">
+      <col style="background-color: #cce5ff;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Q1 Sales</th>
+        <th>Q2 Sales</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Widgets</td><td>150</td><td>180</td><td>330</td></tr>
+      <tr><td>Gadgets</td><td>200</td><td>220</td><td>420</td></tr>
+      <tr><td>Tools</td><td>120</td><td>140</td><td>260</td></tr>
+    </tbody>
+  </table>
+
+  <mark>Colgroup groups columns for styling or span multiple columns</mark>
 </body>
 </html>`
   },
   {
     tag: 'data',
-    description: 'The <data> tag links a given piece of content with a machine-readable translation. The value attribute provides the machine-readable form while the content between tags is human-readable.',
+    description: 'The <data> tag links content with a machine-readable value for scripts and data processing.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Tag Example</title>
+  <style>
+    .product-list { background: #f8f9fa; padding: 15px; border-radius: 8px; }
+    .product-item { background: white; padding: 12px; margin: 8px 0; border-radius: 4px; border-left: 4px solid #007bff; }
+  </style>
 </head>
 <body>
   <h2>Data Tag Example:</h2>
 
-  <h3>Product Catalog with Machine-Readable IDs:</h3>
+  <p>The data tag embeds machine-readable values alongside human-readable text.</p>
+
+  <h3>Product Catalog:</h3>
+  <div class="product-list">
+    <div class="product-item">
+      <data value="SKU-001">iPhone 15 Pro - $999</data>
+    </div>
+    <div class="product-item">
+      <data value="SKU-002">Samsung Galaxy S24 - $899</data>
+    </div>
+    <div class="product-item">
+      <data value="SKU-003">Google Pixel 8 - $699</data>
+    </div>
+  </div>
+
+  <h3>Temperature Data:</h3>
+  <p>Room temperature: <data value="21.5">21.5°C</data></p>
+  <p>Water freezing point: <data value="0">0°C</data></p>
+
+  <h3>Menu Pricing:</h3>
   <ul>
-    <li><data value="prod-001">Apple iPhone 15</data> - $999</li>
-    <li><data value="prod-002">Samsung Galaxy S24</data> - $899</li>
-    <li><data value="prod-003">Google Pixel 8</data> - $699</li>
+    <li><data value="3.50">Small Coffee</data></li>
+    <li><data value="4.50">Medium Coffee</data></li>
+    <li><data value="5.50">Large Coffee</data></li>
   </ul>
 
-  <h3>Using Data with Values:</h3>
-  <p>Temperature: <data value="21.5">21.5 degrees Celsius</data></p>
-  <p>Item Code: <data value="SKU-98765">Blue Running Shoes</data></p>
-
-  <h3>Menu with Prices:</h3>
-  <ul>
-    <li><data value="1.99">Small Coffee</data></li>
-    <li><data value="2.99">Medium Coffee</data></li>
-    <li><data value="3.99">Large Coffee</data></li>
-  </ul>
-
-  <h3>When to Use Data:</h3>
-  <p>The data tag is useful when you want to display human-readable text while embedding machine-readable values for scripts or search engines.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Data values are machine-readable for processing and scripting</mark>
 </body>
 </html>`
   },
   {
     tag: 'datalist',
-    description: 'The <datalist> tag specifies a list of pre-defined options for an <input> element. It provides an autocomplete feature on input fields, showing suggestions as the user types.',
+    description: 'The <datalist> tag provides autocomplete suggestions for an <input> element.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -701,49 +894,110 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datalist Tag Example</title>
   <style>
-    input { padding: 8px; width: 250px; margin: 5px 0; border: 1px solid #ccc; border-radius: 4px; }
-    label { display: block; margin-top: 10px; font-weight: bold; }
+    .input-group { margin: 15px 0; }
+    label { display: block; font-weight: bold; margin-bottom: 5px; }
+    input { padding: 8px; width: 300px; border: 1px solid #ccc; border-radius: 4px; }
+    input:focus { outline: none; border-color: #007bff; box-shadow: 0 0 0 3px rgba(0,123,255,0.15); }
   </style>
 </head>
 <body>
   <h2>Datalist Tag Example:</h2>
 
-  <h3>Country Suggestions:</h3>
-  <label for="country">Choose a country:</label>
-  <input list="countries" id="country" name="country" placeholder="Start typing a country...">
-  <datalist id="countries">
-    <option value="United States">
-    <option value="United Kingdom">
-    <option value="Canada">
-    <option value="Australia">
-    <option value="Germany">
-    <option value="France">
-    <option value="India">
-    <option value="Japan">
-    <option value="Brazil">
-    <option value="South Africa">
-  </datalist>
+  <p>Start typing to see autocomplete suggestions:</p>
 
-  <h3>Programming Languages:</h3>
-  <label for="language">Favourite language:</label>
-  <input list="languages" id="language" name="language" placeholder="Type a language...">
-  <datalist id="languages">
-    <option value="HTML">
-    <option value="CSS">
-    <option value="JavaScript">
-    <option value="Python">
-    <option value="Java">
-    <option value="C++">
-    <option value="TypeScript">
-    <option value="PHP">
-  </datalist>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <div class="input-group">
+    <label for="country">Select a Country:</label>
+    <input list="countries" id="country" placeholder="Try typing 'united' or 'ind'...">
+    <datalist id="countries">
+      <option value="United States">
+      <option value="United Kingdom">
+      <option value="United Arab Emirates">
+      <option value="India">
+      <option value="Indonesia">
+      <option value="Ireland">
+      <option value="Canada">
+      <option value="Australia">
+      <option value="Germany">
+      <option value="France">
+    </datalist>
+  </div>
+
+  <div class="input-group">
+    <label for="language">Programming Language:</label>
+    <input list="languages" id="language" placeholder="Try typing 'java' or 'python'...">
+    <datalist id="languages">
+      <option value="HTML">
+      <option value="CSS">
+      <option value="JavaScript">
+      <option value="TypeScript">
+      <option value="Python">
+      <option value="Java">
+      <option value="C++">
+      <option value="PHP">
+      <option value="Ruby">
+      <option value="Go">
+    </datalist>
+  </div>
+
+  <mark>Datalist provides suggestions while allowing custom input</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'dd',
+    description: 'The <dd> tag defines the description in a <dl> (description list) paired with <dt> (term).',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DD Tag Example</title>
+  <style>
+    dl { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0; }
+    dt { font-weight: bold; color: #007bff; margin-top: 12px; }
+    dd { margin-left: 20px; margin-bottom: 10px; color: #666; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h2>DD (Description) Tag Examples:</h2>
+
+  <h3>Glossary:</h3>
+  <dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language is the standard markup language for creating web pages and web applications.</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in HTML.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>JavaScript is a programming language commonly used to create interactive effects within web browsers.</dd>
+
+    <dt>API</dt>
+    <dd>Application Programming Interface is a set of protocols and tools for building software applications.</dd>
+
+    <dt>DOM</dt>
+    <dd>Document Object Model is a programming interface for web documents that represents the page structure.</dd>
+  </dl>
+
+  <h3>Web Concepts:</h3>
+  <dl>
+    <dt>Responsive Design</dt>
+    <dd>Design approach that makes websites work well on devices of all sizes and resolutions.</dd>
+
+    <dt>SEO</dt>
+    <dd>Search Engine Optimization refers to practices that improve website visibility in search results.</dd>
+
+    <dt>Accessibility</dt>
+    <dd>The practice of making websites usable by everyone, including people with disabilities.</dd>
+  </dl>
+
+  <mark>DD provides descriptions for terms in a definition list</mark>
 </body>
 </html>`
   },
   {
     tag: 'del',
-    description: 'The <del> tag defines text that has been deleted from a document. It is typically rendered with a strikethrough line. It is often used alongside <ins> to show document revisions.',
+    description: 'The <del> tag marks text that has been deleted, typically displayed with strikethrough.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -751,44 +1005,47 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Del Tag Example</title>
   <style>
-    del { color: #dc3545; }
-    ins { color: #28a745; text-decoration: none; }
+    del { color: #dc3545; text-decoration: line-through; }
+    ins { color: #28a745; background: #d4edda; text-decoration: none; padding: 0 2px; }
+    .revision-box { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #ffc107; }
   </style>
 </head>
 <body>
-  <h2>Del (Deleted Text) Tag Example:</h2>
+  <h2>Del (Deleted Text) Tag Examples:</h2>
 
-  <h3>Basic Deleted Text:</h3>
-  <p>My favourite colour is <del>blue</del> <ins>green</ins>.</p>
+  <div class="revision-box">
+    <h3>Corrections:</h3>
+    <p>My favorite color is <del>blue</del> <ins>green</ins>.</p>
+    <p>The event is on <del>Friday</del> <ins>Saturday</ins>.</p>
+  </div>
 
-  <h3>Price Change Example:</h3>
-  <p>Sale Price: <del>$99.99</del> <strong>$49.99</strong></p>
-  <p>Old plan: <del>$19/month</del> New plan: $9/month</p>
+  <div class="revision-box">
+    <h3>Price Changes:</h3>
+    <p>Sale Price: <del>$199.99</del> <ins>$99.99</ins></p>
+    <p>Regular: <del>$50/month</del> <ins>$30/month</ins></p>
+  </div>
 
-  <h3>Document Revision:</h3>
-  <p><del datetime="2024-01-15">The meeting is on Monday.</del></p>
-  <p><ins datetime="2024-01-16">The meeting has been moved to Wednesday.</ins></p>
+  <div class="revision-box">
+    <h3>Document Revisions:</h3>
+    <p><del datetime="2024-01-15">The meeting is scheduled for 10 AM.</del></p>
+    <p><ins datetime="2024-01-16">The meeting has been moved to 2 PM.</ins></p>
+  </div>
 
-  <h3>Shopping List Update:</h3>
+  <h3>Shopping List:</h3>
   <ul>
-    <li><del>Milk</del> (already bought)</li>
-    <li><del>Eggs</del> (already bought)</li>
+    <li><del>Milk</del> ✓</li>
+    <li><del>Eggs</del> ✓</li>
     <li>Bread</li>
-    <li>Butter</li>
+    <li>Cheese</li>
   </ul>
 
-  <h3>Del Attributes:</h3>
-  <ul>
-    <li><strong>cite</strong> - URL explaining the change</li>
-    <li><strong>datetime</strong> - Date/time of the deletion</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Del marks deletions; ins marks insertions for version tracking</mark>
 </body>
 </html>`
   },
   {
     tag: 'details',
-    description: 'The <details> tag creates a disclosure widget in which information is visible only when toggled open. A <summary> element provides a visible heading. The content toggles open/closed when clicked.',
+    description: 'The <details> tag creates a disclosure widget with a <summary> that users can click to expand/collapse.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -796,45 +1053,55 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Details Tag Example</title>
   <style>
-    details { border: 1px solid #aaa; border-radius: 4px; padding: 10px; margin: 10px 0; }
-    summary { font-weight: bold; cursor: pointer; color: #007bff; }
-    details[open] summary { color: #dc3545; }
+    details { border: 1px solid #ddd; border-radius: 6px; margin: 10px 0; overflow: hidden; }
+    summary { background: #007bff; color: white; padding: 12px 16px; cursor: pointer; font-weight: bold; }
+    summary:hover { background: #0056b3; }
+    details[open] summary { background: #0056b3; }
+    details > *:not(summary) { padding: 15px 16px; background: white; }
   </style>
 </head>
 <body>
-  <h2>Details Tag Example:</h2>
+  <h2>Details Tag Examples:</h2>
 
   <details>
     <summary>What is HTML?</summary>
-    <p>HTML stands for HyperText Markup Language. It is the standard language used to create and structure content on the web.</p>
+    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It provides the structure and content of websites.</p>
   </details>
 
   <details>
     <summary>What is CSS?</summary>
-    <p>CSS stands for Cascading Style Sheets. It is used to style and layout web pages, including changing fonts, colors, and spacing.</p>
+    <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls colors, fonts, spacing, positioning, and animations.</p>
   </details>
 
   <details open>
     <summary>What is JavaScript? (Open by default)</summary>
-    <p>JavaScript is a scripting language used to create dynamic and interactive content on websites.</p>
+    <p>JavaScript is a programming language that enables interactive and dynamic content on web pages, including user interactions and animations.</p>
   </details>
 
   <details>
     <summary>System Requirements</summary>
     <ul>
-      <li>Operating System: Windows 10 or later</li>
+      <li>Operating System: Windows 10+ or macOS 10.12+</li>
       <li>RAM: Minimum 4GB</li>
       <li>Storage: At least 10GB free</li>
-      <li>Internet Connection: Required</li>
+      <li>Browser: Chrome, Firefox, Safari, or Edge (latest)</li>
+      <li>Internet: Broadband connection recommended</li>
     </ul>
   </details>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <details>
+    <summary>Troubleshooting Guide</summary>
+    <p><strong>Issue:</strong> Page not loading</p>
+    <p><strong>Solution:</strong> Clear browser cache and refresh the page.</p>
+  </details>
+
+  <mark>Click summaries to toggle details visibility</mark>
 </body>
 </html>`
   },
   {
     tag: 'dfn',
-    description: 'The <dfn> tag stands for "definition element" and marks the term being defined within a sentence. It specifies a term that is being defined in the context of a definition phrase.',
+    description: 'The <dfn> tag marks the term being defined within a definition phrase.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -842,37 +1109,45 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dfn Tag Example</title>
   <style>
-    dfn { font-style: italic; font-weight: bold; color: #007bff; }
+    dfn { font-weight: bold; color: #007bff; font-style: italic; }
+    .definition-box { background: #f0f4ff; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #007bff; }
   </style>
 </head>
 <body>
-  <h2>Dfn (Definition) Tag Example:</h2>
+  <h2>Dfn (Definition) Tag Examples:</h2>
 
-  <h3>Basic Definitions:</h3>
-  <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
-  <p><dfn>CSS</dfn> is a stylesheet language used to describe the presentation of a document.</p>
-  <p><dfn>JavaScript</dfn> is a programming language used to make web pages interactive.</p>
+  <div class="definition-box">
+    <p><dfn>HTML</dfn> is the standard markup language for creating web pages and applications.</p>
+    <p><dfn>CSS</dfn> provides styling and layout capabilities for HTML documents.</p>
+    <p><dfn>JavaScript</dfn> enables interactive and dynamic behavior on web pages.</p>
+  </div>
 
-  <h3>Dfn with Title Attribute:</h3>
-  <p>The <dfn title="World Wide Web Consortium">W3C</dfn> is the main international standards organization for the web.</p>
+  <div class="definition-box">
+    <p>The <dfn title="World Wide Web Consortium">W3C</dfn> is the main international standards organization for the web.</p>
+  </div>
 
-  <h3>Dfn with Abbr Inside:</h3>
-  <p>The <dfn><abbr title="Application Programming Interface">API</abbr></dfn> allows different software applications to communicate.</p>
+  <div class="definition-box">
+    <h3>Important Terms:</h3>
+    <p><dfn>Responsive Design</dfn> means a website adapts to different screen sizes and devices.</p>
+    <p><dfn>Accessibility</dfn> ensures websites are usable by everyone, including people with disabilities.</p>
+    <p><dfn>SEO</dfn> refers to practices that improve a website's visibility in search results.</p>
+  </div>
 
-  <h3>Glossary Example:</h3>
+  <h3>Technical Glossary:</h3>
   <dl>
-    <dt><dfn>Browser</dfn></dt>
-    <dd>A software application used to access and navigate the internet.</dd>
-    <dt><dfn>Server</dfn></dt>
-    <dd>A computer that provides data to other computers over a network.</dd>
+    <dt><dfn>API</dfn></dt>
+    <dd>Application Programming Interface - a set of rules for software communication.</dd>
+    <dt><dfn>DOM</dfn></dt>
+    <dd>Document Object Model - a representation of the page structure.</dd>
   </dl>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>DFN marks the term being defined for the first time</mark>
 </body>
 </html>`
   },
   {
     tag: 'dialog',
-    description: 'The <dialog> tag defines a dialog box or other interactive component, like a dismissible alert, inspector, or subwindow. JavaScript is used to open and close it using the showModal() and close() methods.',
+    description: 'The <dialog> tag defines a dialog box or modal window opened with showModal() or close() methods.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -880,46 +1155,56 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dialog Tag Example</title>
   <style>
-    dialog { border: none; border-radius: 8px; padding: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); min-width: 300px; }
-    dialog h3 { margin-top: 0; }
-    button { padding: 8px 16px; margin: 5px; border-radius: 4px; cursor: pointer; }
-    .open-btn { background: #007bff; color: white; border: none; }
-    .close-btn { background: #dc3545; color: white; border: none; }
+    dialog { border: none; border-radius: 8px; padding: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); min-width: 350px; }
+    dialog h3 { margin-top: 0; color: #007bff; }
+    button { margin: 5px; padding: 8px 16px; border-radius: 4px; cursor: pointer; border: none; }
+    .open-btn { background: #007bff; color: white; }
+    .close-btn { background: #dc3545; color: white; }
+    .button-group { margin-top: 15px; display: flex; gap: 10px; }
+    .demo-buttons { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; }
   </style>
 </head>
 <body>
-  <h2>Dialog Tag Example:</h2>
+  <h2>Dialog Tag Examples:</h2>
 
-  <h3>Modal Dialog:</h3>
-  <button class="open-btn" onclick="document.getElementById('myDialog').showModal()">Open Modal Dialog</button>
+  <div class="demo-buttons">
+    <button class="open-btn" onclick="document.getElementById('modal1').showModal()">Open Modal</button>
+    <button class="open-btn" onclick="document.getElementById('modal2').showModal()">Confirmation Dialog</button>
+    <button class="open-btn" onclick="document.getElementById('modal3').showModal()">Alert Dialog</button>
+  </div>
 
-  <dialog id="myDialog">
-    <h3>Dialog Box Title</h3>
-    <p>This is a modal dialog box. You can put any content here.</p>
-    <p>Click the button below to close this dialog.</p>
-    <button class="close-btn" onclick="document.getElementById('myDialog').close()">Close Dialog</button>
+  <dialog id="modal1">
+    <h3>Welcome Dialog</h3>
+    <p>This is a modal dialog box. Users must interact with it before returning to the main page.</p>
+    <div class="button-group">
+      <button class="close-btn" onclick="document.getElementById('modal1').close()">Close</button>
+    </div>
   </dialog>
 
-  <h3>Non-modal Dialog (open attribute):</h3>
-  <dialog open>
-    <p>This dialog is open by default using the open attribute.</p>
-  </dialog>
-
-  <h3>Confirmation Dialog:</h3>
-  <button class="open-btn" onclick="document.getElementById('confirmDialog').showModal()">Delete Item</button>
-  <dialog id="confirmDialog">
-    <h3>Confirm Deletion</h3>
+  <dialog id="modal2">
+    <h3>Confirm Delete</h3>
     <p>Are you sure you want to delete this item? This action cannot be undone.</p>
-    <button class="close-btn" onclick="document.getElementById('confirmDialog').close()">Cancel</button>
-    <button style="background:#28a745;color:white;border:none;padding:8px 16px;border-radius:4px;cursor:pointer;" onclick="document.getElementById('confirmDialog').close()">Confirm</button>
+    <div class="button-group">
+      <button class="close-btn" onclick="document.getElementById('modal2').close()">Cancel</button>
+      <button style="background:#28a745; color:white;" onclick="alert('Deleted!'); document.getElementById('modal2').close()">Delete</button>
+    </div>
   </dialog>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <dialog id="modal3">
+    <h3>Success!</h3>
+    <p>Your action was completed successfully.</p>
+    <div class="button-group">
+      <button class="open-btn" onclick="document.getElementById('modal3').close()">OK</button>
+    </div>
+  </dialog>
+
+  <mark>Use showModal() to display modal, close() to dismiss</mark>
 </body>
 </html>`
   },
   {
     tag: 'div',
-    description: 'The <div> tag defines a division or section in an HTML document. It is a block-level container element used to group other elements for styling or scripting purposes. It has no special semantic meaning.',
+    description: 'The <div> tag is a generic container for grouping elements and applying styles or scripts.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -927,118 +1212,250 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Div Tag Example</title>
   <style>
-    .container { max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; }
-    .header { background: #007bff; color: white; padding: 20px; border-radius: 5px; margin-bottom: 10px; }
-    .content { display: flex; gap: 10px; }
-    .main { flex: 3; background: #f8f9fa; padding: 15px; border-radius: 5px; }
-    .sidebar { flex: 1; background: #e9ecef; padding: 15px; border-radius: 5px; }
-    .footer { background: #343a40; color: white; padding: 15px; border-radius: 5px; margin-top: 10px; text-align: center; }
-    .card { background: white; border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 5px; }
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; }
+    .header { background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+    .container { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+    .main { background: white; }
+    .card { background: #f8f9fa; padding: 15px; border-radius: 6px; margin-bottom: 15px; border-left: 4px solid #007bff; }
+    .sidebar { background: #e9ecef; padding: 15px; border-radius: 8px; }
+    .footer { background: #343a40; color: white; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>Website Header</h1>
-      <p>Navigation goes here</p>
-    </div>
-    <div class="content">
-      <div class="main">
-        <h2>Main Content</h2>
-        <div class="card">
-          <h3>Article 1</h3>
-          <p>This is the first article content.</p>
-        </div>
-        <div class="card">
-          <h3>Article 2</h3>
-          <p>This is the second article content.</p>
-        </div>
-      </div>
-      <div class="sidebar">
-        <h3>Sidebar</h3>
-        <p>Side content here.</p>
-      </div>
-    </div>
-    <div class="footer">Footer Content</div>
+  <div class="header">
+    <h1>Website Layout with Divs</h1>
+    <p>Divs are essential for structuring page layouts</p>
   </div>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <div class="container">
+    <div class="main">
+      <h2>Main Content</h2>
+
+      <div class="card">
+        <h3>Article 1</h3>
+        <p>This is the primary content of the page. Divs group related elements together for styling and organization.</p>
+      </div>
+
+      <div class="card">
+        <h3>Article 2</h3>
+        <p>Multiple divs can be nested and styled independently using CSS classes or IDs.</p>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <h3>Sidebar</h3>
+      <p>This sidebar is created using a div with grid layout.</p>
+      <ul>
+        <li>Related Topic 1</li>
+        <li>Related Topic 2</li>
+        <li>Related Topic 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2024 Website. All rights reserved.</p>
+  </div>
+
+  <mark>Divs are non-semantic; use semantic tags when possible</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'dl',
+    description: 'The <dl> tag defines a description list containing terms (<dt>) and their definitions (<dd>).',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DL Tag Example</title>
+  <style>
+    dl { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0; }
+    dt { font-weight: bold; color: #007bff; margin-top: 12px; margin-bottom: 5px; }
+    dd { margin-left: 20px; margin-bottom: 10px; color: #666; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h2>DL (Description List) Examples:</h2>
+
+  <h3>HTML Glossary:</h3>
+  <dl>
+    <dt>Semantic HTML</dt>
+    <dd>HTML code that clearly describes its meaning and purpose, improving accessibility and SEO.</dd>
+
+    <dt>Block Element</dt>
+    <dd>HTML element that takes up the full width and starts on a new line (e.g., div, p, h1).</dd>
+
+    <dt>Inline Element</dt>
+    <dd>HTML element that only takes up as much width as necessary (e.g., span, a, strong).</dd>
+
+    <dt>Void Element</dt>
+    <dd>HTML element that has no closing tag (e.g., img, br, input, meta).</dd>
+  </dl>
+
+  <h3>Web Development Terms:</h3>
+  <dl>
+    <dt>DOM</dt>
+    <dd>Document Object Model - the structure of a web page that JavaScript can manipulate.</dd>
+
+    <dt>API</dt>
+    <dd>Application Programming Interface - a set of rules for software applications to communicate.</dd>
+
+    <dt>Responsive Design</dt>
+    <dd>Design approach that makes websites work on devices of all sizes.</dd>
+
+    <dt>Cross-browser Compatibility</dt>
+    <dd>Ensuring websites work correctly on all major web browsers.</dd>
+  </dl>
+
+  <mark>DL is ideal for glossaries, definitions, and terminology</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'dt',
+    description: 'The <dt> tag defines a term in a <dl> (description list).',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DT Tag Example</title>
+  <style>
+    dl { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0; }
+    dt { font-weight: bold; color: #007bff; font-size: 1.05em; margin-top: 12px; }
+    dd { margin-left: 20px; margin-bottom: 10px; color: #666; }
+  </style>
+</head>
+<body>
+  <h2>DT (Definition Term) Tag:</h2>
+
+  <h3>Technical Vocabulary:</h3>
+  <dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language used for creating web pages.</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets for styling web content.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Programming language for interactive web features.</dd>
+
+    <dt>Responsive</dt>
+    <dd>Design that adapts to different screen sizes.</dd>
+  </dl>
+
+  <h3>Business Terms:</h3>
+  <dl>
+    <dt>ROI</dt>
+    <dd>Return on Investment - profit from an investment.</dd>
+
+    <dt>UX</dt>
+    <dd>User Experience - how users interact with a product.</dd>
+
+    <dt>UI</dt>
+    <dd>User Interface - visual elements users interact with.</dd>
+  </dl>
+
+  <mark>DT must be paired with DD in a DL element</mark>
 </body>
 </html>`
   },
   {
     tag: 'em',
-    description: 'The <em> tag is used to define emphasized text. The content inside is typically displayed in italic. A screen reader will pronounce the text with verbal stress, conveying semantic emphasis.',
+    description: 'The <em> tag emphasizes text semantically, typically displayed in italic with semantic meaning.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Em Tag Example</title>
+  <style>
+    .example-box { background: #f0f4ff; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #007bff; }
+    em { color: #d73a49; font-weight: 600; }
+  </style>
 </head>
 <body>
-  <h2>Em (Emphasis) Tag Example:</h2>
+  <h2>Em (Emphasis) Tag Examples:</h2>
 
-  <h3>Basic Emphasis:</h3>
-  <p>You <em>must</em> submit the form before midnight.</p>
-  <p>The answer is <em>not</em> what you expected.</p>
-  <p>I <em>really</em> enjoy learning web development.</p>
+  <div class="example-box">
+    <h3>Important Statements:</h3>
+    <p>You <em>must</em> submit the form before the deadline.</p>
+    <p>The answer is <em>definitely not</em> what you expected.</p>
+    <p>I <em>really</em> enjoy learning web development.</p>
+  </div>
 
-  <h3>Emphasis Changes Meaning:</h3>
-  <p><em>Cats</em> are better than dogs. (cats, not something else)</p>
-  <p>Cats are <em>better</em> than dogs. (better, not just equal)</p>
-  <p>Cats are better than <em>dogs</em>. (dogs, not other animals)</p>
+  <div class="example-box">
+    <h3>Semantic Emphasis Changes Meaning:</h3>
+    <p><em>Cats</em> are better than dogs. (emphasis on cats, not dogs)</p>
+    <p>Cats are <em>better</em> than dogs. (better, not equal to)</p>
+    <p>Cats are better than <em>dogs</em>. (comparing to dogs specifically)</p>
+  </div>
 
-  <h3>Difference Between em and i:</h3>
-  <p><em>Emphasized text</em> (semantic importance for screen readers)</p>
-  <p><i>Italic text</i> (visual only, no semantic meaning)</p>
+  <div class="example-box">
+    <h3>Em vs I vs B vs Strong:</h3>
+    <ul>
+      <li><em>Em</em> - Semantic emphasis (screen readers emphasize)</li>
+      <li><i>Italic</i> - Visual italics only</li>
+      <li><b>Bold</b> - Visual bold only</li>
+      <li><strong>Strong</strong> - Semantic importance</li>
+    </ul>
+  </div>
 
-  <h3>Nested Emphasis:</h3>
-  <p>This is <em>very <em>very</em> important</em> information.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Em has semantic meaning; screen readers pronounce with stress</mark>
 </body>
 </html>`
   },
   {
     tag: 'embed',
-    description: 'The <embed> tag defines a container for external content such as a plugin, media, or an interactive application. It is a void element with no closing tag.',
+    description: 'The <embed> tag embeds external content like plugins, media, or interactive applications.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Embed Tag Example</title>
+  <style>
+    .embed-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #007bff; }
+    embed { border-radius: 4px; }
+  </style>
 </head>
 <body>
   <h2>Embed Tag Example:</h2>
 
-  <h3>Embedding a YouTube Video:</h3>
-  <embed width="560" height="315"
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    type="text/html">
+  <div class="embed-demo">
+    <h3>Embedded SVG Image:</h3>
+    <embed src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect width='200' height='100' fill='%23007bff'/%3E%3Ctext x='50' y='55' fill='white' font-size='18'%3EEmbedded SVG%3C/text%3E%3C/svg%3E" type="image/svg+xml" width="200" height="100">
+  </div>
 
-  <h3>Embedding a PDF:</h3>
-  <embed src="document.pdf" type="application/pdf" width="600" height="400">
+  <div class="embed-demo">
+    <h3>Embed Attributes:</h3>
+    <ul>
+      <li><strong>src</strong> - URL of the embedded content</li>
+      <li><strong>type</strong> - MIME type of the embedded content</li>
+      <li><strong>width / height</strong> - Dimensions of the embedded content</li>
+      <li><strong>style</strong> - CSS styling</li>
+    </ul>
+  </div>
 
-  <h3>Embedding an SVG Image:</h3>
-  <embed src="image.svg" type="image/svg+xml" width="200" height="200">
+  <div class="embed-demo">
+    <h3>Common MIME Types:</h3>
+    <ul>
+      <li>image/svg+xml - SVG images</li>
+      <li>application/pdf - PDF documents</li>
+      <li>text/html - HTML pages</li>
+      <li>application/x-shockwave-flash - Flash content</li>
+    </ul>
+  </div>
 
-  <h3>Embed Attributes:</h3>
-  <ul>
-    <li><strong>src</strong> - URL of the embedded content</li>
-    <li><strong>type</strong> - MIME type of the embedded content</li>
-    <li><strong>width</strong> - Width of the embedded content</li>
-    <li><strong>height</strong> - Height of the embedded content</li>
-  </ul>
-
-  <h3>Note:</h3>
-  <p>The embed tag is used to embed external applications, especially plugins. For video/audio, the video/audio tags are preferred. For web pages, iframe is preferred.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>For video/audio, use &lt;video&gt; or &lt;audio&gt; instead</mark>
 </body>
 </html>`
   },
   {
     tag: 'fieldset',
-    description: 'The <fieldset> tag is used to group related elements in a form. It draws a box around related elements and is typically used with the <legend> tag to provide a caption for the group.',
+    description: 'The <fieldset> tag groups related form elements with a border and optional <legend> title.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1046,45 +1463,64 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fieldset Tag Example</title>
   <style>
-    fieldset { border: 2px solid #007bff; border-radius: 5px; padding: 15px; margin: 15px 0; }
+    fieldset { border: 2px solid #007bff; border-radius: 6px; padding: 15px; margin: 15px 0; max-width: 400px; }
     legend { font-weight: bold; color: #007bff; padding: 0 10px; }
-    input, select { display: block; margin: 8px 0; padding: 6px; width: 200px; border: 1px solid #ccc; border-radius: 4px; }
-    label { font-weight: bold; }
-    button { padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .form-group { margin: 10px 0; }
+    label { display: block; font-weight: bold; margin-bottom: 4px; }
+    input { width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    button { margin-top: 10px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
   </style>
 </head>
 <body>
   <h2>Fieldset Tag Example:</h2>
 
-  <form action="#" method="post">
+  <form>
     <fieldset>
       <legend>Personal Information</legend>
-      <label>First Name: <input type="text" name="fname" placeholder="Enter first name"></label>
-      <label>Last Name: <input type="text" name="lname" placeholder="Enter last name"></label>
-      <label>Email: <input type="email" name="email" placeholder="Enter email"></label>
+      <div class="form-group">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" placeholder="Enter first name" required>
+      </div>
+      <div class="form-group">
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" placeholder="Enter last name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter email" required>
+      </div>
     </fieldset>
 
     <fieldset>
       <legend>Address Details</legend>
-      <label>Street: <input type="text" name="street" placeholder="Enter street"></label>
-      <label>City: <input type="text" name="city" placeholder="Enter city"></label>
-      <label>Country: <select name="country"><option>USA</option><option>UK</option><option>India</option></select></label>
-    </fieldset>
-
-    <fieldset disabled>
-      <legend>Disabled Section</legend>
-      <label>Card Number: <input type="text" placeholder="Disabled field"></label>
+      <div class="form-group">
+        <label for="street">Street:</label>
+        <input type="text" id="street" placeholder="Enter street address">
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" placeholder="Enter city">
+      </div>
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country" style="width:100%; padding:6px;">
+          <option>USA</option>
+          <option>UK</option>
+          <option>India</option>
+        </select>
+      </div>
     </fieldset>
 
     <button type="submit">Submit</button>
   </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Fieldset helps organize form elements logically</mark>
 </body>
 </html>`
   },
   {
     tag: 'figcaption',
-    description: 'The <figcaption> tag defines a caption for a <figure> element. It can be placed as the first or last child of a <figure> element, providing a visible description for the figure content.',
+    description: 'The <figcaption> tag provides a caption for <figure> content.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1092,42 +1528,44 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Figcaption Tag Example</title>
   <style>
-    figure { border: 1px solid #ddd; padding: 10px; display: inline-block; margin: 10px; border-radius: 5px; }
-    figcaption { text-align: center; font-style: italic; color: #555; margin-top: 8px; }
-    img { width: 200px; height: 150px; object-fit: cover; border-radius: 3px; background: #e0e0e0; display: block; }
+    figure { border: 1px solid #ddd; padding: 15px; display: inline-block; margin: 15px 10px 15px 0; border-radius: 8px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    figcaption { text-align: center; font-style: italic; color: #666; margin-top: 10px; font-weight: 500; }
+    img { width: 200px; height: 150px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }
   </style>
 </head>
 <body>
-  <h2>Figcaption Tag Example:</h2>
+  <h2>Figcaption Tag Examples:</h2>
 
   <figure>
-    <img src="mountain.jpg" alt="A beautiful mountain landscape">
-    <figcaption>Fig. 1 - A breathtaking mountain landscape at sunrise.</figcaption>
+    <svg width="200" height="150" style="background:#f0f4ff;">
+      <rect width="200" height="150" fill="#cce5ff"/>
+      <text x="50" y="75" font-size="16" fill="#007bff">Sample Image 1</text>
+    </svg>
+    <figcaption>Fig 1: A descriptive caption for this figure</figcaption>
   </figure>
 
   <figure>
-    <img src="ocean.jpg" alt="Ocean view">
-    <figcaption>Fig. 2 - The Pacific Ocean as seen from the coast of California.</figcaption>
+    <svg width="200" height="150" style="background:#d4edda;">
+      <rect width="200" height="150" fill="#b1e0b6"/>
+      <text x="50" y="75" font-size="16" fill="#28a745">Sample Image 2</text>
+    </svg>
+    <figcaption>Fig 2: Another figure with caption</figcaption>
   </figure>
 
   <figure>
-    <pre><code>function hello() {
-  console.log("Hello, World!");
+    <pre style="margin:0;"><code>function example() {
+  return "Hello";
 }</code></pre>
-    <figcaption>Code Listing 1 - A simple Hello World function in JavaScript.</figcaption>
+    <figcaption>Code Listing 1: JavaScript function</figcaption>
   </figure>
 
-  <figure>
-    <blockquote>Learning never exhausts the mind.</blockquote>
-    <figcaption>— Leonardo da Vinci</figcaption>
-  </figure>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Figcaption provides context and attribution for figures</mark>
 </body>
 </html>`
   },
   {
     tag: 'figure',
-    description: 'The <figure> tag specifies self-contained content like illustrations, diagrams, photos, code listings, etc. A <figcaption> element can be added inside to provide a caption for the figure.',
+    description: 'The <figure> tag groups self-contained content like images, diagrams, or code with an optional caption.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1135,41 +1573,44 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Figure Tag Example</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
-    figure { border: 1px solid #ccc; border-radius: 6px; padding: 10px; margin: 20px 0; background: #f9f9f9; }
-    figcaption { font-style: italic; color: #666; margin-top: 8px; text-align: center; }
-    figure img { width: 100%; max-width: 400px; display: block; margin: auto; border-radius: 4px; }
+    figure { border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 15px 0; background: #f9f9f9; }
+    figcaption { font-style: italic; color: #666; margin-top: 10px; text-align: center; }
+    svg { display: block; margin: auto; border-radius: 4px; }
   </style>
 </head>
 <body>
-  <h2>Figure Tag Example:</h2>
-
-  <p>The figure tag is used to group self-contained content with an optional caption.</p>
+  <h2>Figure Tag Examples:</h2>
 
   <figure>
-    <img src="https://via.placeholder.com/400x250" alt="Placeholder Image">
-    <figcaption>Figure 1: A sample placeholder image demonstrating the figure element.</figcaption>
-  </figure>
-
-  <figure>
-    <svg width="200" height="100">
-      <rect width="200" height="100" style="fill:#3498db;"/>
-      <text x="50" y="55" fill="white" font-size="20">SVG Graphic</text>
+    <svg width="300" height="200" style="background:#f0f4ff;">
+      <rect width="300" height="200" fill="#cce5ff"/>
+      <circle cx="150" cy="100" r="40" fill="#007bff"/>
+      <text x="100" y="180" font-size="16" fill="#333">Figure Illustration</text>
     </svg>
-    <figcaption>Figure 2: An inline SVG graphic inside a figure element.</figcaption>
+    <figcaption>Example of a figure with SVG graphics</figcaption>
   </figure>
 
   <figure>
-    <pre>SELECT * FROM users WHERE active = 1;</pre>
-    <figcaption>Code 1: SQL query to fetch all active users.</figcaption>
+    <svg width="300" height="150" style="background:#fffde7;">
+      <rect width="300" height="150" fill="#fff8e1"/>
+      <rect x="20" y="20" width="100" height="110" fill="#ffc107" stroke="#ff9800" stroke-width="2"/>
+      <text x="30" y="85" font-size="14" fill="black">Chart</text>
+    </svg>
+    <figcaption>A sample chart figure</figcaption>
   </figure>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <figure>
+    <blockquote>The future belongs to those who believe in the beauty of their dreams.</blockquote>
+    <figcaption>— Eleanor Roosevelt</figcaption>
+  </figure>
+
+  <mark>Figure groups visual content with semantic meaning</mark>
 </body>
 </html>`
   },
   {
     tag: 'footer',
-    description: 'The <footer> tag defines a footer for a document or section. It typically contains authorship information, copyright data, links to related documents, contact information, and sitemap links.',
+    description: 'The <footer> tag defines footer content like copyright, links, and contact information.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1177,52 +1618,59 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Footer Tag Example</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
-    main { flex: 1; padding: 20px; }
-    footer { background: #343a40; color: white; padding: 30px 20px; }
-    .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    body { display: flex; flex-direction: column; min-height: 100vh; font-family: Arial, sans-serif; }
+    main { flex: 1; padding: 20px; max-width: 900px; margin: 0 auto; }
+    footer { background: #343a40; color: white; padding: 30px 20px; margin-top: 20px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 20px; }
+    footer h4 { margin-top: 0; color: #ffc107; }
     footer a { color: #adb5bd; text-decoration: none; display: block; margin: 5px 0; }
     footer a:hover { color: white; }
-    .footer-bottom { border-top: 1px solid #495057; margin-top: 20px; padding-top: 15px; text-align: center; color: #6c757d; }
+    .footer-bottom { border-top: 1px solid #495057; padding-top: 15px; text-align: center; color: #6c757d; }
   </style>
 </head>
 <body>
   <main>
-    <h2>Footer Tag Example</h2>
-    <p>Scroll down to see the footer at the bottom of the page.</p>
+    <h2>Page Content</h2>
+    <p>This page demonstrates footer usage. The footer is at the bottom.</p>
   </main>
 
   <footer>
     <div class="footer-grid">
       <div>
-        <h4>About Us</h4>
-        <a href="#">Our Story</a>
+        <h4>Company</h4>
+        <a href="#">About Us</a>
         <a href="#">Careers</a>
-        <a href="#">Blog</a>
+        <a href="#">Press</a>
       </div>
       <div>
-        <h4>Services</h4>
-        <a href="#">Web Design</a>
-        <a href="#">Development</a>
-        <a href="#">Consulting</a>
+        <h4>Resources</h4>
+        <a href="#">Blog</a>
+        <a href="#">Documentation</a>
+        <a href="#">Support</a>
       </div>
       <div>
         <h4>Contact</h4>
         <a href="mailto:info@example.com">info@example.com</a>
-        <a href="tel:+1234567890">+1 (234) 567-890</a>
+        <a href="tel:+14155552671">+1-415-555-2671</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Tech In My Style. All rights reserved.</p>
+      <p>&copy; 2024 Web Academy. All rights reserved.</p>
     </div>
   </footer>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Footer appears at the bottom with company/contact information</mark>
 </body>
 </html>`
   },
   {
     tag: 'form',
-    description: 'The <form> tag creates an HTML form for user input. It can contain text fields, checkboxes, radio buttons, submit buttons, and more. The action and method attributes control where and how data is sent.',
+    description: 'The <form> tag creates a user input form with various input elements and a submit button.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1230,101 +1678,272 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Tag Example</title>
   <style>
-    form { max-width: 400px; background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; }
+    form { max-width: 450px; background: #f8f9fa; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
     .form-group { margin-bottom: 15px; }
-    label { display: block; font-weight: bold; margin-bottom: 5px; }
-    input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-    button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%; }
+    label { display: block; font-weight: bold; margin-bottom: 5px; color: #333; }
+    input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: #007bff; box-shadow: 0 0 0 3px rgba(0,123,255,0.15); }
+    button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    button:hover { background: #0056b3; }
   </style>
 </head>
 <body>
   <h2>Form Tag Example:</h2>
 
-  <form action="https://example.com/register" method="post" enctype="multipart/form-data">
+  <form onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
     <h3>User Registration</h3>
+
     <div class="form-group">
       <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter full name" required>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
     </div>
+
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter email" required>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
     </div>
+
     <div class="form-group">
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" placeholder="Enter password" required>
     </div>
+
     <div class="form-group">
-      <label for="gender">Gender:</label>
-      <select id="gender" name="gender">
-        <option value="">Select gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">-- Select Country --</option>
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="india">India</option>
       </select>
     </div>
+
     <div class="form-group">
-      <label><input type="checkbox" name="terms"> I agree to the Terms and Conditions</label>
+      <label><input type="checkbox" name="terms"> I agree to Terms and Conditions</label>
     </div>
+
     <button type="submit">Register</button>
   </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Forms collect and send user data to servers</mark>
 </body>
 </html>`
   },
   {
-    tag: 'h1-h6',
-    description: 'The <h1> to <h6> tags define HTML headings. <h1> defines the most important heading and <h6> the least. Headings are used to structure content hierarchically and are important for SEO and accessibility.',
+    tag: 'h1',
+    description: 'The <h1> tag defines the main heading on a page. There should be only one h1 per page.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Headings Tag Example</title>
+  <title>H1 Tag Example</title>
   <style>
-    .heading-demo { background: #f8f9fa; padding: 15px; border-left: 4px solid #007bff; margin: 10px 0; }
-    h1 { color: #1a1a2e; }
-    h2 { color: #16213e; }
-    h3 { color: #0f3460; }
-    h4 { color: #533483; }
-    h5 { color: #e94560; }
-    h6 { color: #0f3460; }
+    h1 { color: #1a1a2e; font-size: 2.5em; margin-bottom: 20px; border-bottom: 3px solid #007bff; padding-bottom: 10px; }
   </style>
 </head>
 <body>
-  <h2>HTML Headings (h1 - h6) Example:</h2>
+  <h1>Main Page Title - Only One Per Page</h1>
+  <p>This is the primary heading of the page. It should describe the main topic clearly for both users and search engines.</p>
 
-  <div class="heading-demo">
-    <h1>Heading 1 - Main Title (Largest)</h1>
-    <h2>Heading 2 - Section Title</h2>
-    <h3>Heading 3 - Sub-section Title</h3>
-    <h4>Heading 4 - Sub-sub-section</h4>
-    <h5>Heading 5 - Minor Heading</h5>
-    <h6>Heading 6 - Smallest Heading</h6>
-  </div>
-
-  <h3>Practical Page Structure:</h3>
-  <h1>Website Name</h1>
-    <h2>Main Section: HTML Basics</h2>
-      <h3>What is HTML?</h3>
-        <h4>History of HTML</h4>
-          <h5>HTML 1.0</h5>
-          <h5>HTML 5</h5>
-      <h3>HTML Elements</h3>
-    <h2>Main Section: CSS Basics</h2>
-
-  <h3>Important Notes:</h3>
+  <h2>Why Use H1 Correctly?</h2>
   <ul>
-    <li>Use only one <code>h1</code> per page (main title)</li>
-    <li>Do not skip heading levels</li>
-    <li>Headings improve SEO and accessibility</li>
+    <li>Improves SEO - search engines prioritize h1 content</li>
+    <li>Accessibility - screen readers use h1 for navigation</li>
+    <li>Structure - defines page hierarchy clearly</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Use only one &lt;h1&gt; per page for best results</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'h2',
+    description: 'The <h2> tag defines a second-level heading, used for main sections.',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H2 Tag Example</title>
+  <style>
+    h1 { color: #007bff; }
+    h2 { color: #0056b3; font-size: 1.8em; margin-top: 20px; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h1>HTML Headings Guide</h1>
+
+  <h2>Introduction to Headings</h2>
+  <p>HTML provides six heading levels (h1-h6) to structure content hierarchically.</p>
+
+  <h2>Best Practices</h2>
+  <ul>
+    <li>Use one h1 per page</li>
+    <li>Use h2 for main sections</li>
+    <li>Follow sequential order</li>
+  </ul>
+
+  <h2>Common Uses</h2>
+  <p>H2 tags are perfect for section titles in articles, documentation, and web pages.</p>
+
+  <mark>H2 starts the section hierarchy after H1</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'h3',
+    description: 'The <h3> tag defines a third-level heading, used for subsections.',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H3 Tag Example</title>
+  <style>
+    h1 { color: #007bff; }
+    h2 { color: #0056b3; }
+    h3 { color: #0056b3; font-size: 1.3em; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h1>Web Development Course</h1>
+
+  <h2>Module 1: HTML Basics</h2>
+
+  <h3>Introduction</h3>
+  <p>Learn the fundamentals of HTML for web development.</p>
+
+  <h3>HTML Elements</h3>
+  <p>Understanding semantic and structural elements.</p>
+
+  <h3>Best Practices</h3>
+  <p>Writing clean and accessible HTML code.</p>
+
+  <h2>Module 2: CSS Styling</h2>
+
+  <h3>Selectors</h3>
+  <p>CSS selectors for targeting HTML elements.</p>
+
+  <h3>Layouts</h3>
+  <p>Creating responsive layouts with Flexbox and Grid.</p>
+
+  <mark>H3 breaks sections into subsections</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'h4',
+    description: 'The <h4> tag defines a fourth-level heading for sub-subsections.',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H4 Tag Example</title>
+  <style>
+    h1 { color: #007bff; }
+    h2 { color: #0056b3; }
+    h3 { color: #0056b3; }
+    h4 { color: #533483; font-size: 1.1em; }
+  </style>
+</head>
+<body>
+  <h1>Programming Languages</h1>
+
+  <h2>Web Development</h2>
+  <h3>Frontend</h3>
+  <h4>JavaScript Frameworks</h4>
+  <p>React, Vue, Angular are popular frameworks.</p>
+
+  <h4>CSS Libraries</h4>
+  <p>Tailwind, Bootstrap, Foundation for styling.</p>
+
+  <h3>Backend</h3>
+  <h4>Node.js Libraries</h4>
+  <p>Express, Koa, Fastify for server development.</p>
+
+  <h4>Database Tools</h4>
+  <p>MongoDB, PostgreSQL, MySQL for data storage.</p>
+
+  <mark>H4 provides deep structural hierarchy</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'h5',
+    description: 'The <h5> tag defines a fifth-level heading for detailed sub-subsections.',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H5 Tag Example</title>
+  <style>
+    h1 { color: #007bff; }
+    h2 { color: #0056b3; }
+    h3 { color: #0056b3; }
+    h4 { color: #533483; }
+    h5 { color: #e94560; font-size: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Advanced Web Development</h1>
+
+  <h2>Performance Optimization</h2>
+  <h3>Frontend Techniques</h3>
+  <h4>Image Optimization</h4>
+  <h5>WebP Format Benefits</h5>
+  <p>Smaller file sizes with better quality compared to JPEG/PNG.</p>
+
+  <h5>Lazy Loading Implementation</h5>
+  <p>Load images only when they're about to be viewed.</p>
+
+  <h4>Code Splitting</h4>
+  <h5>Dynamic Imports</h5>
+  <p>Load JavaScript modules on demand for faster initial load.</p>
+
+  <mark>H5 provides very detailed content hierarchy</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'h6',
+    description: 'The <h6> tag defines a sixth-level heading, the smallest heading level.',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H6 Tag Example</title>
+  <style>
+    h1 { color: #007bff; }
+    h2 { color: #0056b3; }
+    h3 { color: #0056b3; }
+    h4 { color: #533483; }
+    h5 { color: #e94560; }
+    h6 { color: #999; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <h1>Enterprise Solutions</h1>
+  <h2>Cloud Infrastructure</h2>
+  <h3>Deployment</h3>
+  <h4>Kubernetes</h4>
+  <h5>Container Orchestration</h5>
+  <h6>Service Discovery and Load Balancing</h6>
+  <p>Automatic service discovery with load balancing across containers.</p>
+
+  <h6>Health Checks and Auto-Recovery</h6>
+  <p>Automatic detection and recovery of failed containers.</p>
+
+  <mark>H6 is the smallest and deepest level heading</mark>
 </body>
 </html>`
   },
   {
     tag: 'header',
-    description: 'The <header> tag represents a container for introductory content or navigational links. It typically contains a logo, site name, search bar, or navigation menu. A page can have multiple header elements.',
+    description: 'The <header> tag represents introductory content, logos, navigation menus, and site titles.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1333,45 +1952,45 @@ greet("World");</code></pre>
   <title>Header Tag Example</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; }
-    header { background: #007bff; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-    header .logo { font-size: 1.5em; font-weight: bold; }
-    header nav a { color: white; text-decoration: none; margin-left: 20px; }
-    header nav a:hover { text-decoration: underline; }
-    article header { background: #e9ecef; color: #333; padding: 10px 15px; border-left: 3px solid #007bff; margin: 15px 0 5px 0; }
+    header { background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .logo { font-size: 1.5em; font-weight: bold; }
+    nav a { color: white; text-decoration: none; margin-left: 25px; transition: all 0.3s; }
+    nav a:hover { opacity: 0.8; border-bottom: 2px solid white; }
     main { padding: 20px; }
+    article header { background: #e9ecef; color: #333; padding: 10px 15px; border-left: 4px solid #007bff; margin: 15px 0; }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Tech In My Style</div>
+    <div class="logo">Tech Academy</div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Tutorials</a>
+      <a href="#">Courses</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
     </nav>
   </header>
 
   <main>
-    <h2>Header Tag Example</h2>
-    <p>The header above is the main page header. Articles can also have their own headers:</p>
+    <h2>Web Page Header</h2>
+    <p>The header above contains the main site navigation and branding.</p>
 
     <article>
       <header>
-        <h3>Understanding HTML Semantics</h3>
-        <p>By John Doe | Published: January 2024 | 5 min read</p>
+        <h3>Article Title</h3>
+        <p>By John Smith | Published January 15, 2024</p>
       </header>
-      <p>Semantic HTML helps both browsers and developers understand the structure and meaning of web content...</p>
+      <p>Articles can also have their own headers with metadata.</p>
     </article>
   </main>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Header contains navigation and introductory content</mark>
 </body>
 </html>`
   },
   {
     tag: 'hgroup',
-    description: 'The <hgroup> tag is used to group a heading with related content such as subheadings, taglines, or other supplementary text. It groups an h1-h6 element with one or more p elements.',
+    description: 'The <hgroup> tag groups a main heading with supplementary headings or subheadings.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1380,84 +1999,120 @@ greet("World");</code></pre>
   <title>Hgroup Tag Example</title>
   <style>
     hgroup { background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #007bff; }
-    hgroup h1, hgroup h2 { margin: 0 0 5px 0; color: #333; }
-    hgroup p { margin: 0; color: #666; font-size: 0.95em; }
-    article { border: 1px solid #ddd; border-radius: 6px; padding: 20px; margin: 15px 0; }
+    hgroup h1, hgroup h2, hgroup h3 { margin: 0 0 5px 0; }
+    hgroup h1 { color: #007bff; font-size: 1.8em; }
+    hgroup h2 { color: #666; font-size: 1.1em; font-weight: normal; }
+    hgroup p { margin: 5px 0 0 0; color: #999; font-size: 0.9em; }
   </style>
 </head>
 <body>
-  <h2>Hgroup Tag Example:</h2>
+  <h1>Hgroup Tag Examples:</h1>
 
   <hgroup>
-    <h1>Tech In My Style</h1>
-    <p>Learn Web Development the Easy Way</p>
+    <h1>Web Development Mastery</h1>
+    <h2>Complete Guide for Beginners</h2>
   </hgroup>
-
-  <article>
-    <hgroup>
-      <h2>Mastering HTML5</h2>
-      <p>A complete guide for beginners and intermediate developers</p>
-    </hgroup>
-    <p>This article covers everything you need to know about HTML5 features...</p>
-  </article>
-
-  <article>
-    <hgroup>
-      <h2>CSS Grid Layout</h2>
-      <p>Published on January 15, 2024 &bull; 8 min read</p>
-    </hgroup>
-    <p>CSS Grid is a powerful two-dimensional layout system that revolutionizes web design...</p>
-  </article>
 
   <hgroup>
-    <h3>Chapter 5: Advanced JavaScript</h3>
-    <p>Prerequisites: Basic JavaScript, Functions, and Arrays</p>
+    <h1>Advanced JavaScript Patterns</h1>
+    <h2>Level: Intermediate to Advanced</h2>
+    <p>Duration: 8 hours | Difficulty: ★★★★☆</p>
   </hgroup>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <hgroup>
+    <h2>Chapter 5: CSS Grid Layout</h2>
+    <p>Learn modern CSS layout techniques for responsive design</p>
+  </hgroup>
+
+  <mark>Hgroup groups heading with related subtitles or metadata</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'hr',
+    description: 'The <hr> tag represents a thematic break or divider between content sections.',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Tag Example</title>
+  <style>
+    hr { border: none; border-top: 2px solid #007bff; margin: 30px 0; }
+    .styled-hr { border: none; border-top: 3px dashed #28a745; margin: 20px 0; }
+    .custom-hr { border: none; height: 4px; background: linear-gradient(to right, #007bff, transparent); margin: 30px 0; }
+  </style>
+</head>
+<body>
+  <h2>HR Tag Examples:</h2>
+
+  <h3>Introduction Section</h3>
+  <p>This is the introduction to our topic on HTML semantic tags and their proper usage.</p>
+
+  <hr>
+
+  <h3>Main Content Section</h3>
+  <p>Here we dive deeper into the specific use cases and benefits of semantic HTML.</p>
+
+  <hr class="styled-hr">
+
+  <h3>Another Section</h3>
+  <p>Understanding proper HTML structure improves accessibility and SEO.</p>
+
+  <hr class="custom-hr">
+
+  <h3>Conclusion</h3>
+  <p>Semantic HTML is essential for modern web development practices.</p>
+
+  <mark>HR creates visual breaks between major content sections</mark>
 </body>
 </html>`
   },
   {
     tag: 'i',
-    description: 'The <i> tag defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic. Use it for technical terms, foreign phrases, or thoughts. For semantic emphasis, use <em> instead.',
+    description: 'The <i> tag represents italic text for technical terms, foreign phrases, or thoughts.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I Tag Example</title>
+  <style>
+    .demo-box { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; }
+  </style>
 </head>
 <body>
-  <h2>I (Italic) Tag Example:</h2>
+  <h2>I (Italic) Tag Examples:</h2>
 
-  <h3>Technical Terms:</h3>
-  <p>In HTML, the <i>Document Object Model</i> (DOM) represents the page structure.</p>
+  <div class="demo-box">
+    <h3>Technical Terms:</h3>
+    <p>In web development, the <i>Document Object Model</i> (DOM) is crucial for JavaScript.</p>
+    <p>The <i>event loop</i> is fundamental to understanding asynchronous JavaScript.</p>
+  </div>
 
-  <h3>Foreign Words:</h3>
-  <p>The Latin phrase <i>carpe diem</i> means "seize the day".</p>
-  <p>The French word <i>bonjour</i> means "good day".</p>
+  <div class="demo-box">
+    <h3>Foreign Words:</h3>
+    <p>The Latin phrase <i>carpe diem</i> means "seize the day".</p>
+    <p>In Spanish, <i>gracias</i> means thank you.</p>
+  </div>
 
-  <h3>Thoughts or Inner Monologue:</h3>
-  <p>She looked at the broken vase. <i>How am I going to explain this?</i> she thought.</p>
+  <div class="demo-box">
+    <h3>Thoughts and Inner Monologue:</h3>
+    <p>Looking at the code, she thought, <i>This must be an error somewhere.</i></p>
+  </div>
 
-  <h3>Taxonomic Names (Scientific):</h3>
-  <p>The lion is scientifically known as <i>Panthera leo</i>.</p>
-  <p>Humans belong to the species <i>Homo sapiens</i>.</p>
+  <div class="demo-box">
+    <h3>Scientific Names:</h3>
+    <p>The lion is scientifically known as <i>Panthera leo</i>.</p>
+  </div>
 
-  <h3>Icons (Font Awesome style):</h3>
-  <p><i class="icon">&#9733;</i> Star rating</p>
-  <p><i class="icon">&#10003;</i> Checkmark</p>
-
-  <h3>Difference between i and em:</h3>
-  <p><i>Italic text</i> - visual styling only</p>
-  <p><em>Emphasized text</em> - semantic meaning (stress)</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>I tag is visual only; use &lt;em&gt; for semantic emphasis</mark>
 </body>
 </html>`
   },
   {
     tag: 'iframe',
-    description: 'The <iframe> tag defines an inline frame used to embed another document within the current HTML document. It is commonly used to embed maps, videos, social media posts, and other external content.',
+    description: 'The <iframe> tag embeds another HTML page within the current page.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1465,44 +2120,38 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iframe Tag Example</title>
   <style>
-    iframe { border: 2px solid #ddd; border-radius: 5px; display: block; margin: 10px 0; }
+    .iframe-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; }
+    iframe { border: 2px solid #ddd; border-radius: 6px; width: 100%; }
   </style>
 </head>
 <body>
   <h2>Iframe Tag Example:</h2>
 
-  <h3>Embedding a YouTube Video:</h3>
-  <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    title="YouTube video player"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+  <div class="iframe-demo">
+    <h3>Embedded Video:</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
-  <h3>Embedding Google Maps:</h3>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305!2d-74.25987!3d40.697149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890"
-    width="600" height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
+  <div class="iframe-demo">
+    <h3>Embedded Map:</h3>
+    <iframe width="100%" height="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-74.0!3d40.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNew%20York!5e0!3m2!1sen!2sus!4v1234567890" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 
   <h3>Iframe Attributes:</h3>
   <ul>
     <li><strong>src</strong> - URL of the page to embed</li>
     <li><strong>width / height</strong> - Dimensions</li>
     <li><strong>allowfullscreen</strong> - Allow fullscreen mode</li>
-    <li><strong>loading="lazy"</strong> - Lazy load the iframe</li>
-    <li><strong>sandbox</strong> - Applies restrictions on content</li>
+    <li><strong>loading="lazy"</strong> - Lazy load iframe</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Iframes embed external content within a page</mark>
 </body>
 </html>`
   },
   {
     tag: 'img',
-    description: 'The <img> tag is used to embed an image in an HTML page. Images are not inserted into a page; they are linked to web pages. The src and alt attributes are required.',
+    description: 'The <img> tag embeds an image. The src and alt attributes are required.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1510,44 +2159,50 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Img Tag Example</title>
   <style>
-    img { border: 2px solid #ddd; border-radius: 5px; margin: 5px; }
+    .img-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; }
+    img { border-radius: 6px; margin: 10px 0; }
     .responsive { max-width: 100%; height: auto; }
     .thumbnail { width: 100px; height: 100px; object-fit: cover; }
   </style>
 </head>
 <body>
-  <h2>Image Tag Example:</h2>
+  <h2>Img Tag Examples:</h2>
 
-  <h3>Basic Image:</h3>
-  <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" width="300" height="200">
+  <div class="img-demo">
+    <h3>Basic Image:</h3>
+    <img src="https://via.placeholder.com/300x200" alt="Placeholder image" width="300" height="200">
+  </div>
 
-  <h3>Image with Title (tooltip):</h3>
-  <img src="https://via.placeholder.com/200x150" alt="Sample Image" title="Hover to see this tooltip" width="200" height="150">
+  <div class="img-demo">
+    <h3>Image with Title (Tooltip):</h3>
+    <img src="https://via.placeholder.com/250x180" alt="Sample" title="Hover to see this tooltip" width="250" height="180">
+  </div>
 
-  <h3>Responsive Image:</h3>
-  <img src="https://via.placeholder.com/800x400" alt="Responsive Image" class="responsive">
+  <div class="img-demo">
+    <h3>Responsive Image:</h3>
+    <img src="https://via.placeholder.com/600x300" alt="Responsive image" class="responsive">
+  </div>
 
-  <h3>Thumbnail Image:</h3>
-  <img src="https://via.placeholder.com/300x300" alt="Thumbnail" class="thumbnail">
-
-  <h3>Lazy Loading:</h3>
-  <img src="https://via.placeholder.com/300x200" alt="Lazy loaded image" loading="lazy" width="300">
+  <div class="img-demo">
+    <h3>Thumbnail Image:</h3>
+    <img src="https://via.placeholder.com/300x300" alt="Thumbnail" class="thumbnail">
+  </div>
 
   <h3>Image Attributes:</h3>
   <ul>
-    <li><strong>src</strong> - Path to the image file</li>
-    <li><strong>alt</strong> - Alternative text description</li>
-    <li><strong>width / height</strong> - Image dimensions</li>
-    <li><strong>loading</strong> - lazy or eager loading</li>
-    <li><strong>title</strong> - Tooltip text on hover</li>
+    <li><strong>src</strong> - Image file path</li>
+    <li><strong>alt</strong> - Alternative text for accessibility</li>
+    <li><strong>width / height</strong> - Dimensions</li>
+    <li><strong>loading="lazy"</strong> - Lazy load</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Always include descriptive alt text for accessibility</mark>
 </body>
 </html>`
   },
   {
     tag: 'input',
-    description: 'The <input> tag specifies an input field where the user can enter data. It is a void element with many types: text, password, email, number, checkbox, radio, file, date, and many more.',
+    description: 'The <input> tag specifies an input field where users can enter data, with many types available.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1555,53 +2210,40 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Input Tag Example</title>
   <style>
-    .input-group { margin: 10px 0; }
+    .input-group { margin: 12px 0; }
     label { display: block; font-weight: bold; margin-bottom: 4px; }
-    input[type="text"], input[type="email"], input[type="password"],
-    input[type="number"], input[type="date"], input[type="tel"],
-    input[type="url"], input[type="search"] {
-      padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 250px;
-    }
-    .row { display: flex; flex-wrap: wrap; gap: 20px; }
+    input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+    input:focus { outline: none; border-color: #007bff; box-shadow: 0 0 0 3px rgba(0,123,255,0.15); }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
   </style>
 </head>
 <body>
-  <h2>Input Tag Example:</h2>
-  <form>
-    <div class="row">
-      <div>
-        <div class="input-group"><label>Text:</label><input type="text" placeholder="Enter text"></div>
-        <div class="input-group"><label>Email:</label><input type="email" placeholder="email@example.com"></div>
-        <div class="input-group"><label>Password:</label><input type="password" placeholder="Password"></div>
-        <div class="input-group"><label>Number:</label><input type="number" min="0" max="100" value="50"></div>
-        <div class="input-group"><label>Date:</label><input type="date"></div>
-        <div class="input-group"><label>Tel:</label><input type="tel" placeholder="+1 234 567 8900"></div>
-        <div class="input-group"><label>URL:</label><input type="url" placeholder="https://example.com"></div>
-        <div class="input-group"><label>Search:</label><input type="search" placeholder="Search..."></div>
-        <div class="input-group"><label>Color:</label><input type="color" value="#007bff"></div>
-        <div class="input-group"><label>Range:</label><input type="range" min="0" max="100" value="50"></div>
-      </div>
-      <div>
-        <div class="input-group"><label>Checkbox:</label><input type="checkbox" checked> Accept Terms</div>
-        <div class="input-group"><label>Radio:</label>
-          <input type="radio" name="option" value="yes"> Yes
-          <input type="radio" name="option" value="no"> No
-        </div>
-        <div class="input-group"><label>File:</label><input type="file"></div>
-        <div class="input-group"><label>Hidden:</label><input type="hidden" value="hidden-value"></div>
-        <div class="input-group"><input type="submit" value="Submit"></div>
-        <div class="input-group"><input type="reset" value="Reset"></div>
-        <div class="input-group"><input type="button" value="Click Me"></div>
-      </div>
+  <h2>Input Tag Examples:</h2>
+
+  <div class="row">
+    <div>
+      <div class="input-group"><label>Text:</label><input type="text" placeholder="Enter text"></div>
+      <div class="input-group"><label>Email:</label><input type="email" placeholder="email@example.com"></div>
+      <div class="input-group"><label>Password:</label><input type="password" placeholder="Password"></div>
+      <div class="input-group"><label>Number:</label><input type="number" min="0" max="100" value="50"></div>
+      <div class="input-group"><label>Date:</label><input type="date"></div>
     </div>
-  </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+    <div>
+      <div class="input-group"><label>Phone:</label><input type="tel" placeholder="+1 234 567 8900"></div>
+      <div class="input-group"><label>URL:</label><input type="url" placeholder="https://example.com"></div>
+      <div class="input-group"><label>Color:</label><input type="color" value="#007bff"></div>
+      <div class="input-group"><label>Checkbox:</label><input type="checkbox"> Accept terms</div>
+      <div class="input-group"><label>File:</label><input type="file"></div>
+    </div>
+  </div>
+
+  <mark>Input types: text, email, password, number, date, tel, url, color, checkbox, radio, file, submit, reset</mark>
 </body>
 </html>`
   },
   {
     tag: 'ins',
-    description: 'The <ins> tag defines a text that has been inserted into a document. Browsers will typically underline the inserted text. It is commonly used alongside <del> to show document changes and revisions.',
+    description: 'The <ins> tag marks text that has been inserted, typically displayed with underline.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1609,45 +2251,38 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ins Tag Example</title>
   <style>
-    del { color: #dc3545; }
+    del { color: #dc3545; text-decoration: line-through; }
     ins { color: #28a745; background: #d4edda; text-decoration: none; padding: 0 2px; }
   </style>
 </head>
 <body>
-  <h2>Ins (Inserted Text) Tag Example:</h2>
+  <h2>Ins (Inserted Text) Tag Examples:</h2>
 
-  <h3>Basic Inserted Text:</h3>
-  <p>My favourite color is <del>blue</del> <ins>green</ins>.</p>
+  <h3>Text Corrections:</h3>
+  <p>My favorite color is <del>blue</del> <ins>green</ins>.</p>
+  <p>The meeting is <del>Tuesday at 10am</del> <ins>Wednesday at 2pm</ins>.</p>
 
-  <h3>Document Revision:</h3>
-  <p>The meeting is <del>on Monday at 10am</del> <ins>on Wednesday at 2pm</ins>.</p>
-
-  <h3>Using datetime and cite Attributes:</h3>
+  <h3>Using Attributes:</h3>
   <p>
-    <del datetime="2024-01-01">Price: $50</del>
-    <ins datetime="2024-06-01" cite="https://example.com/pricelist">Price: $35</ins>
+    <del datetime="2024-01-01">Price: $99</del>
+    <ins datetime="2024-02-01">Price: $59</ins>
   </p>
 
-  <h3>New Content Added to Document:</h3>
-  <p>Original paragraph content here.</p>
-  <ins>
-    <p>This entire paragraph was added in the latest revision of this document.</p>
-    <p>It shows multiple paragraphs being inserted at once.</p>
-  </ins>
-
-  <h3>Shopping Cart Update:</h3>
+  <h3>Document Updates:</h3>
+  <p><ins>This new feature was added in version 2.0.</ins></p>
   <ul>
-    <li>Laptop - <del>$1200</del> <ins>$999</ins></li>
-    <li>Mouse - $25</li>
-    <li><ins>Keyboard - $45</ins> (newly added)</li>
+    <li>Original feature 1</li>
+    <li><ins>New feature added</ins></li>
+    <li>Original feature 2</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Ins and del mark document revisions and changes</mark>
 </body>
 </html>`
   },
   {
     tag: 'kbd',
-    description: 'The <kbd> tag defines keyboard input. It is used to mark text that should be typed on the keyboard. The content is typically displayed in a monospace font and is useful for documentation and tutorials.',
+    description: 'The <kbd> tag defines keyboard input text, typically displayed in monospace.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1655,46 +2290,44 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kbd Tag Example</title>
   <style>
-    kbd {
-      background-color: #f7f7f7;
-      border: 1px solid #ccc;
-      border-bottom: 3px solid #aaa;
-      border-radius: 4px;
-      color: #333;
-      display: inline-block;
-      font-family: monospace;
-      font-size: 0.9em;
-      padding: 2px 6px;
-      margin: 0 2px;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-    }
-    .shortcut { background: #f8f9fa; padding: 10px; border-radius: 5px; margin: 8px 0; }
+    kbd { background: #f7f7f7; border: 1px solid #ccc; border-bottom: 3px solid #999; border-radius: 4px; color: #333; display: inline-block; font-family: monospace; font-size: 0.9em; padding: 2px 6px; margin: 0 2px; box-shadow: 0 1px 0 rgba(0,0,0,0.2); }
+    .shortcut-box { background: #f8f9fa; padding: 12px; border-radius: 6px; margin: 8px 0; border-left: 4px solid #007bff; }
   </style>
 </head>
 <body>
-  <h2>Kbd (Keyboard Input) Tag Example:</h2>
+  <h2>Kbd (Keyboard Input) Tag Examples:</h2>
 
-  <h3>Common Keyboard Shortcuts:</h3>
-  <div class="shortcut">Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy</div>
-  <div class="shortcut">Press <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste</div>
-  <div class="shortcut">Press <kbd>Ctrl</kbd> + <kbd>Z</kbd> to undo</div>
-  <div class="shortcut">Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save</div>
-  <div class="shortcut">Press <kbd>Alt</kbd> + <kbd>F4</kbd> to close the window</div>
-  <div class="shortcut">Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> to open DevTools</div>
+  <div class="shortcut-box">
+    Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy selected text
+  </div>
 
-  <h3>Navigation Keys:</h3>
-  <p>Use <kbd>Arrow Up</kbd>, <kbd>Arrow Down</kbd>, <kbd>Arrow Left</kbd>, <kbd>Arrow Right</kbd> to navigate.</p>
+  <div class="shortcut-box">
+    Press <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste text
+  </div>
 
-  <h3>Command Line Instructions:</h3>
-  <p>Type <kbd>npm install</kbd> to install dependencies.</p>
-  <p>Type <kbd>git commit -m "message"</kbd> to commit changes.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <div class="shortcut-box">
+    Press <kbd>Ctrl</kbd> + <kbd>Z</kbd> to undo last action
+  </div>
+
+  <div class="shortcut-box">
+    Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save file
+  </div>
+
+  <div class="shortcut-box">
+    Press <kbd>Alt</kbd> + <kbd>Tab</kbd> to switch windows
+  </div>
+
+  <div class="shortcut-box">
+    Press <kbd>F12</kbd> to open developer tools
+  </div>
+
+  <mark>Kbd displays keyboard keys and shortcuts</mark>
 </body>
 </html>`
   },
   {
     tag: 'label',
-    description: 'The <label> tag defines a label for several form elements. It improves usability and accessibility by allowing users to click the label to focus/activate the associated input element.',
+    description: 'The <label> tag associates text with form elements, improving usability and accessibility.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1702,25 +2335,28 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Label Tag Example</title>
   <style>
-    form { max-width: 400px; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+    form { max-width: 400px; padding: 20px; background: #f8f9fa; border-radius: 8px; }
     .form-group { margin: 12px 0; }
-    label { display: block; font-weight: bold; margin-bottom: 5px; color: #333; cursor: pointer; }
-    input[type="text"], input[type="email"], select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-    .radio-group label, .checkbox-group label { display: inline; font-weight: normal; margin-left: 5px; }
-    button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+    label { display: block; font-weight: bold; margin-bottom: 5px; cursor: pointer; }
+    input, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .radio-group label, .checkbox-group label { display: inline; font-weight: normal; margin-left: 5px; margin-right: 15px; }
+    button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
   </style>
 </head>
 <body>
   <h2>Label Tag Example:</h2>
+
   <form>
     <div class="form-group">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" placeholder="Enter username">
     </div>
+
     <div class="form-group">
       <label for="email">Email Address:</label>
       <input type="email" id="email" name="email" placeholder="Enter email">
     </div>
+
     <div class="form-group">
       <label for="country">Country:</label>
       <select id="country" name="country">
@@ -1729,26 +2365,29 @@ greet("World");</code></pre>
         <option>India</option>
       </select>
     </div>
-    <div class="radio-group form-group">
-      <strong>Gender:</strong><br>
+
+    <div class="form-group radio-group">
       <input type="radio" id="male" name="gender" value="male">
       <label for="male">Male</label>
       <input type="radio" id="female" name="gender" value="female">
       <label for="female">Female</label>
     </div>
-    <div class="checkbox-group form-group">
+
+    <div class="form-group checkbox-group">
       <input type="checkbox" id="terms" name="terms">
-      <label for="terms">I agree to the Terms and Conditions</label>
+      <label for="terms">I agree to Terms and Conditions</label>
     </div>
+
     <button type="submit">Submit</button>
   </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Labels improve accessibility by associating text with inputs</mark>
 </body>
 </html>`
   },
   {
     tag: 'legend',
-    description: 'The <legend> tag defines a caption for the <fieldset> element. It must be the first child element of a fieldset and gives users a clear description of the group of related form controls inside.',
+    description: 'The <legend> tag defines a caption for a <fieldset> element.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1756,19 +2395,19 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legend Tag Example</title>
   <style>
-    fieldset { border: 2px solid #007bff; border-radius: 5px; padding: 15px; margin: 15px 0; max-width: 400px; }
+    fieldset { border: 2px solid #007bff; border-radius: 6px; padding: 15px; margin: 15px 0; max-width: 400px; }
     legend { font-weight: bold; font-size: 1.1em; color: #007bff; padding: 0 10px; }
     .form-group { margin: 10px 0; }
     label { display: block; font-weight: bold; margin-bottom: 4px; }
     input { width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-    .radio-label { display: inline; font-weight: normal; margin-left: 5px; }
   </style>
 </head>
 <body>
   <h2>Legend Tag Example:</h2>
+
   <form>
     <fieldset>
-      <legend>Personal Details</legend>
+      <legend>Personal Information</legend>
       <div class="form-group">
         <label for="fullname">Full Name:</label>
         <input type="text" id="fullname" placeholder="John Doe">
@@ -1794,18 +2433,19 @@ greet("World");</code></pre>
     <fieldset>
       <legend>Preferences</legend>
       <div class="form-group">
-        <input type="radio" name="theme" id="light"> <label class="radio-label" for="light">Light Theme</label><br>
-        <input type="radio" name="theme" id="dark"> <label class="radio-label" for="dark">Dark Theme</label>
+        <label><input type="radio" name="theme"> Light Theme</label>
+        <label><input type="radio" name="theme"> Dark Theme</label>
       </div>
     </fieldset>
   </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Legend provides a title for fieldset groups</mark>
 </body>
 </html>`
   },
   {
     tag: 'li',
-    description: 'The <li> tag defines a list item. It is used inside ordered lists (<ol>), unordered lists (<ul>), and menu lists (<menu>). In ordered lists, the value attribute sets the item number.',
+    description: 'The <li> tag defines a list item in <ul>, <ol>, or <menu> elements.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1815,13 +2455,10 @@ greet("World");</code></pre>
   <style>
     ul, ol { margin: 10px 0; padding-left: 25px; }
     li { margin: 5px 0; line-height: 1.6; }
-    .custom-list { list-style: none; padding: 0; }
-    .custom-list li::before { content: "▶ "; color: #007bff; }
-    .value-demo li { font-weight: bold; }
   </style>
 </head>
 <body>
-  <h2>Li (List Item) Tag Example:</h2>
+  <h2>Li (List Item) Tag Examples:</h2>
 
   <h3>Unordered List:</h3>
   <ul>
@@ -1833,22 +2470,14 @@ greet("World");</code></pre>
 
   <h3>Ordered List:</h3>
   <ol>
-    <li>Open the browser</li>
-    <li>Navigate to the website</li>
-    <li>Click on Register</li>
-    <li>Fill in the form</li>
-    <li>Click Submit</li>
+    <li>Open browser</li>
+    <li>Navigate to website</li>
+    <li>Click Register</li>
+    <li>Fill form</li>
+    <li>Submit</li>
   </ol>
 
-  <h3>Using the value Attribute in Ordered List:</h3>
-  <ol class="value-demo">
-    <li value="5">Item starting at 5</li>
-    <li>Item 6</li>
-    <li value="10">Item starting at 10</li>
-    <li>Item 11</li>
-  </ol>
-
-  <h3>Nested List Items:</h3>
+  <h3>Nested Lists:</h3>
   <ul>
     <li>Frontend
       <ul>
@@ -1865,73 +2494,53 @@ greet("World");</code></pre>
     </li>
   </ul>
 
-  <h3>Custom Styled List:</h3>
-  <ul class="custom-list">
-    <li>Learn HTML Basics</li>
-    <li>Master CSS Styling</li>
-    <li>Build with JavaScript</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Li items belong inside ul, ol, or menu elements</mark>
 </body>
 </html>`
   },
   {
     tag: 'link',
-    description: 'The <link> tag defines the relationship between the current document and an external resource. It is most commonly used to link to external stylesheets and is placed in the <head> section.',
+    description: 'The <link> tag defines relationships with external resources like stylesheets.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Link Tag Example</title>
-
-  <!-- Linking an external CSS stylesheet -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Linking a favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- Linking a canonical URL -->
   <link rel="canonical" href="https://www.example.com/page">
-
-  <!-- Preloading a font -->
-  <link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
-
-  <!-- Alternate stylesheet -->
-  <link rel="alternate stylesheet" href="dark-theme.css" title="Dark Theme">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .code-box { background: #f4f4f4; padding: 15px; border-radius: 6px; font-family: monospace; margin: 10px 0; border-left: 3px solid #007bff; }
+  </style>
 </head>
 <body>
   <h2>Link Tag Example:</h2>
-  <p>The link tag is placed in the head section. It connects your HTML document to external resources.</p>
 
-  <h3>Common Uses of the Link Tag:</h3>
+  <p>The link tag connects external resources to your document.</p>
+
+  <h3>Common Link Uses:</h3>
   <ul>
-    <li><code>rel="stylesheet"</code> - Link to external CSS file</li>
-    <li><code>rel="icon"</code> - Link to favicon</li>
-    <li><code>rel="canonical"</code> - Specify the canonical URL</li>
-    <li><code>rel="preload"</code> - Preload resources for performance</li>
-    <li><code>rel="alternate"</code> - Link to alternate versions</li>
-    <li><code>rel="preconnect"</code> - Establish early connections</li>
+    <li>rel="stylesheet" - Link to CSS file</li>
+    <li>rel="icon" - Link to favicon</li>
+    <li>rel="canonical" - Specify canonical URL</li>
+    <li>rel="preload" - Preload resource</li>
+    <li>rel="preconnect" - Establish connection</li>
   </ul>
 
-  <h3>Link Attributes:</h3>
-  <ul>
-    <li><strong>rel</strong> - Relationship between document and linked resource</li>
-    <li><strong>href</strong> - URL of the linked resource</li>
-    <li><strong>type</strong> - MIME type of the linked resource</li>
-    <li><strong>media</strong> - What media/device the resource is for</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <div class="code-box">
+    &lt;link rel="stylesheet" href="styles.css"&gt;<br>
+    &lt;link rel="icon" href="favicon.ico"&gt;<br>
+    &lt;link rel="canonical" href="https://example.com"&gt;
+  </div>
+
+  <mark>Link tags go in the head section</mark>
 </body>
 </html>`
   },
   {
     tag: 'main',
-    description: 'The <main> tag specifies the main content of a document. The content inside the <main> element should be unique to the document. There should only be one <main> element per page, and it should not be inside header, footer, nav, aside, or article elements.',
+    description: 'The <main> tag specifies the primary content of a document. There should be only one main element.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1939,50 +2548,40 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Tag Example</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: Arial, sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
-    header { background: #007bff; color: white; padding: 15px 20px; }
-    nav { background: #0056b3; padding: 10px 20px; }
-    nav a { color: white; text-decoration: none; margin-right: 15px; }
-    main { flex: 1; padding: 30px 20px; max-width: 900px; margin: 0 auto; width: 100%; }
-    main h2 { color: #333; margin-bottom: 15px; }
-    .content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-top: 20px; }
-    article { background: #f8f9fa; padding: 20px; border-radius: 8px; }
-    aside { background: #e9ecef; padding: 15px; border-radius: 8px; }
+    header { background: #007bff; color: white; padding: 15px; }
+    main { flex: 1; padding: 30px; max-width: 900px; margin: 0 auto; width: 100%; }
+    aside { background: #e9ecef; padding: 15px; border-radius: 6px; }
     footer { background: #343a40; color: white; padding: 15px; text-align: center; }
   </style>
 </head>
 <body>
   <header><h1>My Website</h1></header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Articles</a>
-    <a href="#">About</a>
-  </nav>
 
   <main>
-    <h2>Welcome to the Main Content Area</h2>
-    <p>This is the primary content of the page. The main tag wraps the most important and unique content.</p>
-    <div class="content-grid">
-      <article>
-        <h3>Latest Article</h3>
-        <p>This is the main article content. It is the primary reason the user visited this page.</p>
-      </article>
-      <aside>
-        <h4>Related Links</h4>
-        <ul><li>Link 1</li><li>Link 2</li></ul>
-      </aside>
-    </div>
+    <h2>Main Content Area</h2>
+    <p>This is the primary content section of the page. The main tag wraps all unique page content.</p>
+
+    <article>
+      <h3>Featured Article</h3>
+      <p>Content unique to this page goes inside the main element.</p>
+    </article>
+
+    <aside>
+      <h4>Related Information</h4>
+      <p>Sidebar or related content goes here, but typically outside main.</p>
+    </aside>
   </main>
 
-  <footer>&copy; 2024 My Website</footer>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <footer>&copy; 2024 Website</footer>
+
+  <mark>Only one &lt;main&gt; element per document</mark>
 </body>
 </html>`
   },
   {
     tag: 'mark',
-    description: 'The <mark> tag defines text that should be highlighted. It is used to mark or highlight parts of text that are relevant to the user, such as search results or important keywords.',
+    description: 'The <mark> tag highlights text relevant to the user, typically displayed with yellow background.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1991,82 +2590,72 @@ greet("World");</code></pre>
   <title>Mark Tag Example</title>
   <style>
     mark { background-color: yellow; color: black; padding: 0 3px; border-radius: 2px; }
-    .custom-mark { background-color: #90EE90; }
-    .important-mark { background-color: #FFB6C1; font-weight: bold; }
-    .search-result { border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin: 10px 0; }
+    .green-mark { background-color: #90EE90; }
+    .pink-mark { background-color: #FFB6C1; font-weight: bold; }
   </style>
 </head>
 <body>
-  <h2>Mark (Highlight) Tag Example:</h2>
+  <h2>Mark (Highlight) Tag Examples:</h2>
 
-  <h3>Basic Highlight:</h3>
-  <p>The most <mark>important concept</mark> in HTML is understanding the document structure.</p>
+  <h3>Basic Highlighting:</h3>
+  <p>The most <mark>important concept</mark> in learning is understanding <mark>fundamentals</mark>.</p>
 
-  <h3>Search Result Highlighting:</h3>
-  <div class="search-result">
-    <p>Learn <mark>HTML</mark> and CSS to build beautiful websites. <mark>HTML</mark> stands for HyperText Markup Language.</p>
-  </div>
+  <h3>Search Results:</h3>
+  <p>Learn <mark>HTML</mark> and CSS to build beautiful websites. <mark>HTML</mark> provides the structure.</p>
 
-  <h3>Custom Styled Marks:</h3>
-  <p>This is <mark class="custom-mark">green highlighted</mark> text.</p>
-  <p>This is <mark class="important-mark">important highlighted</mark> text.</p>
+  <h3>Custom Styling:</h3>
+  <p>This is <mark class="green-mark">green highlighted</mark> text.</p>
+  <p>This is <mark class="pink-mark">pink highlighted</mark> text.</p>
 
-  <h3>Multiple Highlights in a Paragraph:</h3>
+  <h3>Multiple Highlights:</h3>
   <p>In web development, <mark>HTML</mark> provides structure, <mark>CSS</mark> provides styling, and <mark>JavaScript</mark> provides interactivity.</p>
 
-  <h3>Mark in a Quote:</h3>
-  <blockquote>
-    The only way to do <mark>great work</mark> is to <mark>love what you do</mark>.
-    <footer>— Steve Jobs</footer>
-  </blockquote>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Mark tag highlights important or relevant text</mark>
 </body>
 </html>`
   },
   {
     tag: 'meta',
-    description: 'The <meta> tag defines metadata about an HTML document. Metadata is not displayed on the page but provides information about the page to browsers, search engines, and other web services.',
+    description: 'The <meta> tag provides metadata about HTML documents that doesn\'t display on the page.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A comprehensive tutorial on HTML meta tags and their usage in web development.">
-  <meta name="keywords" content="HTML, meta tags, SEO, web development, tutorial">
-  <meta name="author" content="Tech In My Style">
+  <meta name="description" content="Learn HTML, CSS, and JavaScript from beginner to advanced.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, web development, tutorials">
+  <meta name="author" content="Tech Academy">
   <meta name="robots" content="index, follow">
-  <meta http-equiv="refresh" content="30">
-  <meta property="og:title" content="HTML Meta Tags Tutorial">
-  <meta property="og:description" content="Learn all about HTML meta tags.">
-  <meta property="og:image" content="https://example.com/image.jpg">
-  <meta property="og:url" content="https://example.com/meta-tags">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="HTML Meta Tags Tutorial">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Meta Tag Example</title>
+  <style>
+    .info { background: #e8f4fd; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #007bff; }
+  </style>
 </head>
 <body>
   <h2>Meta Tag Example:</h2>
-  <p>All meta tags are placed in the &lt;head&gt; section. They are not visible on the page.</p>
 
-  <h3>Common Meta Tags Used in this Page:</h3>
-  <ul>
-    <li><code>charset="UTF-8"</code> - Character encoding for the document</li>
-    <li><code>name="viewport"</code> - Makes the page responsive on mobile devices</li>
-    <li><code>name="description"</code> - Page description for search engines</li>
-    <li><code>name="keywords"</code> - Keywords for search engines</li>
-    <li><code>name="author"</code> - Author of the document</li>
-    <li><code>name="robots"</code> - Instructions for search engine crawlers</li>
-    <li><code>http-equiv="refresh"</code> - Auto-refresh the page</li>
-    <li><code>property="og:..."</code> - Open Graph tags for social sharing</li>
-    <li><code>name="twitter:..."</code> - Twitter Card metadata</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <p>Meta tags provide information about the HTML document to browsers and search engines.</p>
+
+  <div class="info">
+    <h3>Common Meta Tags:</h3>
+    <ul>
+      <li><strong>charset</strong> - Document character encoding</li>
+      <li><strong>viewport</strong> - Mobile device display settings</li>
+      <li><strong>description</strong> - Page description for search engines</li>
+      <li><strong>keywords</strong> - Page keywords</li>
+      <li><strong>author</strong> - Document author</li>
+      <li><strong>robots</strong> - Search engine crawling instructions</li>
+    </ul>
+  </div>
+
+  <mark>Meta tags are not visible on the page</mark>
 </body>
 </html>`
   },
   {
     tag: 'meter',
-    description: 'The <meter> tag defines a scalar measurement within a known range, or a fractional value (such as disk usage, query result relevance, or voting population). It should not be used for progress — use <progress> for that.',
+    description: 'The <meter> tag represents a scalar measurement within a known range.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2074,52 +2663,41 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meter Tag Example</title>
   <style>
-    .meter-group { margin: 15px 0; }
-    label { display: block; font-weight: bold; margin-bottom: 5px; }
-    meter { width: 300px; height: 20px; }
+    .meter-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; }
+    label { display: block; font-weight: bold; margin: 10px 0 5px 0; }
+    meter { width: 100%; height: 20px; }
   </style>
 </head>
 <body>
-  <h2>Meter Tag Example:</h2>
+  <h2>Meter Tag Examples:</h2>
 
-  <h3>Disk Usage:</h3>
-  <div class="meter-group">
-    <label>Disk Space Used (70%):</label>
-    <meter value="0.7">70%</meter> 70%
+  <div class="meter-demo">
+    <label>Disk Usage: 70%</label>
+    <meter value="0.7" low="0.3" high="0.8" optimum="0.5">70%</meter>
   </div>
 
-  <h3>Battery Level:</h3>
-  <div class="meter-group">
-    <label>Battery (85%):</label>
-    <meter value="85" min="0" max="100" low="20" high="80" optimum="100">85%</meter> 85%
+  <div class="meter-demo">
+    <label>Battery Level: 85%</label>
+    <meter value="85" min="0" max="100" low="20" high="80" optimum="100">85%</meter>
   </div>
 
-  <h3>Grade/Score:</h3>
-  <div class="meter-group">
+  <div class="meter-demo">
     <label>Test Score - Alice (92/100):</label>
-    <meter value="92" min="0" max="100" low="40" high="70" optimum="100">92</meter> 92/100
-  </div>
-  <div class="meter-group">
-    <label>Test Score - Bob (35/100) - Low:</label>
-    <meter value="35" min="0" max="100" low="40" high="70" optimum="100">35</meter> 35/100
+    <meter value="92" min="0" max="100" low="40" high="70" optimum="100">92</meter>
   </div>
 
-  <h3>Meter Attributes:</h3>
-  <ul>
-    <li><strong>value</strong> - Current value</li>
-    <li><strong>min</strong> - Minimum value (default: 0)</li>
-    <li><strong>max</strong> - Maximum value (default: 1)</li>
-    <li><strong>low</strong> - Lower bound of "low" range</li>
-    <li><strong>high</strong> - Upper bound of "high" range</li>
-    <li><strong>optimum</strong> - Optimal value</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <div class="meter-demo">
+    <label>Test Score - Bob (35/100 - Low):</label>
+    <meter value="35" min="0" max="100" low="40" high="70" optimum="100">35</meter>
+  </div>
+
+  <mark>Meter shows measurements within ranges</mark>
 </body>
 </html>`
   },
   {
     tag: 'nav',
-    description: 'The <nav> tag defines a set of navigation links. Not all links of a document should be inside a nav element — only major blocks of navigational links such as site menus, tables of contents, and indexes.',
+    description: 'The <nav> tag defines a set of navigation links for major navigation sections.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2127,71 +2705,96 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nav Tag Example</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; }
     header { background: #1a1a2e; padding: 15px 30px; }
-    header nav { display: flex; align-items: center; justify-content: space-between; }
-    header nav .brand { color: white; font-size: 1.5em; font-weight: bold; }
-    header nav ul { list-style: none; display: flex; gap: 20px; }
-    header nav ul li a { color: #aaa; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background 0.2s; }
-    header nav ul li a:hover { background: #007bff; color: white; }
+    header nav { display: flex; gap: 20px; }
+    header nav a { color: white; text-decoration: none; transition: all 0.3s; }
+    header nav a:hover { color: #ffc107; }
     .breadcrumb { background: #f8f9fa; padding: 12px 20px; }
-    .breadcrumb nav a { color: #007bff; text-decoration: none; }
-    .breadcrumb nav span { margin: 0 8px; color: #999; }
-    .sidebar nav ul { list-style: none; padding: 0; }
-    .sidebar nav ul li a { display: block; padding: 8px 15px; color: #333; text-decoration: none; border-bottom: 1px solid #eee; }
-    .sidebar nav ul li a:hover { background: #007bff; color: white; }
-    .content-area { display: flex; gap: 20px; padding: 20px; }
-    .sidebar { width: 200px; background: #f8f9fa; border-radius: 8px; padding: 10px; }
-    main { flex: 1; }
+    .breadcrumb a { color: #007bff; text-decoration: none; margin: 0 5px; }
   </style>
 </head>
 <body>
   <header>
     <nav>
-      <span class="brand">Tech In My Style</span>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tutorials</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <a href="#">Home</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
   <div class="breadcrumb">
     <nav aria-label="breadcrumb">
-      <a href="#">Home</a>
-      <span>/</span>
-      <a href="#">HTML</a>
-      <span>/</span>
+      <a href="#">Home</a> /
+      <a href="#">HTML</a> /
       <a href="#">Nav Tag</a>
     </nav>
   </div>
 
-  <div class="content-area">
-    <div class="sidebar">
-      <nav aria-label="sidebar">
-        <ul>
-          <li><a href="#">HTML Basics</a></li>
-          <li><a href="#">CSS Styling</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">React</a></li>
-        </ul>
-      </nav>
+  <h2>Navigation Examples</h2>
+
+  <p>The nav tag defines major navigation sections on a page.</p>
+
+  <h3>Uses of Nav:</h3>
+  <ul>
+    <li>Main site navigation menu</li>
+    <li>Breadcrumb navigation</li>
+    <li>Page table of contents</li>
+    <li>Pagination links</li>
+    <li>Related links section</li>
+  </ul>
+
+  <mark>Nav is for major navigation blocks only</mark>
+</body>
+</html>`
+  },
+  {
+    tag: 'noscript',
+    description: 'The <noscript> tag defines content displayed when JavaScript is disabled in the browser.',
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noscript Tag Example</title>
+  <style>
+    .noscript-warning { background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; padding: 15px; margin: 15px 0; }
+  </style>
+</head>
+<body>
+  <h2>Noscript Tag Example:</h2>
+
+  <noscript>
+    <div class="noscript-warning">
+      <strong>Important:</strong> This website requires JavaScript to be enabled. Please enable JavaScript in your browser settings.
     </div>
-    <main>
-      <h2>Nav Tag Example</h2>
-      <p>This page demonstrates three types of navigation: main nav, breadcrumb nav, and sidebar nav.</p>
-    </main>
+  </noscript>
+
+  <div id="main-content">
+    <h3>JavaScript-Dependent Content</h3>
+    <p>This content requires JavaScript to function properly.</p>
+    <button onclick="alert('Button clicked!')">Click Me</button>
   </div>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <script>
+    document.getElementById('main-content').innerHTML += '<p>JavaScript is enabled and working!</p>';
+  </script>
+
+  <h3>When to Use Noscript:</h3>
+  <ul>
+    <li>Display messages when JavaScript is disabled</li>
+    <li>Provide alternative content for users without JS</li>
+    <li>Direct users to enable JavaScript</li>
+  </ul>
+
+  <mark>Noscript shows content only when JavaScript is off</mark>
 </body>
 </html>`
   },
   {
     tag: 'object',
-    description: 'The <object> tag defines a container for an external resource such as a web page, image, PDF, or plug-in. The <param> element is used to pass parameters to the embedded object.',
+    description: 'The <object> tag embeds external resources like plugins, media, or web pages.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2199,45 +2802,34 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Object Tag Example</title>
   <style>
-    object { border: 2px solid #ddd; border-radius: 5px; display: block; margin: 10px 0; }
+    object { border: 2px solid #ddd; border-radius: 6px; display: block; margin: 15px 0; }
+    .demo-box { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; }
   </style>
 </head>
 <body>
   <h2>Object Tag Example:</h2>
 
-  <h3>Embedding a PDF:</h3>
-  <object data="document.pdf" type="application/pdf" width="600" height="400">
-    <p>Your browser does not support PDFs. <a href="document.pdf">Download the PDF</a> instead.</p>
-  </object>
-
-  <h3>Embedding an Image:</h3>
-  <object data="https://via.placeholder.com/300x200" type="image/png" width="300" height="200">
-    <p>Image could not be loaded.</p>
-  </object>
-
-  <h3>Embedding with Parameters:</h3>
-  <object data="media-player.swf" type="application/x-shockwave-flash" width="400" height="300">
-    <param name="movie" value="media-player.swf">
-    <param name="allowfullscreen" value="true">
-    <param name="autoplay" value="false">
-    <p>Flash content not supported. Please update your browser.</p>
-  </object>
+  <div class="demo-box">
+    <h3>Embedded SVG:</h3>
+    <object data="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='100'%3E%3Crect width='300' height='100' fill='%23007bff'/%3E%3Ctext x='80' y='55' fill='white' font-size='20'%3EEmbedded Object%3C/text%3E%3C/svg%3E" type="image/svg+xml" width="300" height="100">
+    </object>
+  </div>
 
   <h3>Object Attributes:</h3>
   <ul>
     <li><strong>data</strong> - URL of the resource</li>
-    <li><strong>type</strong> - MIME type of the resource</li>
-    <li><strong>width / height</strong> - Dimensions of the object</li>
-    <li><strong>name</strong> - Name for the object (for scripting)</li>
-    <li><strong>form</strong> - Associated form element</li>
+    <li><strong>type</strong> - MIME type</li>
+    <li><strong>width / height</strong> - Dimensions</li>
+    <li><strong>param</strong> - Parameters for plugin</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Object embeds external content or plugins</mark>
 </body>
 </html>`
   },
   {
     tag: 'ol',
-    description: 'The <ol> tag defines an ordered list. An ordered list can be numerical or alphabetical. The list items are marked with numbers by default. Each item is defined with an <li> tag.',
+    description: 'The <ol> tag defines an ordered (numbered) list of items.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2250,14 +2842,14 @@ greet("World");</code></pre>
   </style>
 </head>
 <body>
-  <h2>Ordered List (ol) Tag Example:</h2>
+  <h2>Ordered List (ol) Tag Examples:</h2>
 
   <h3>Default (Numbers):</h3>
   <ol>
-    <li>Learn HTML</li>
-    <li>Learn CSS</li>
+    <li>Learn HTML basics</li>
+    <li>Learn CSS styling</li>
     <li>Learn JavaScript</li>
-    <li>Build Projects</li>
+    <li>Build projects</li>
   </ol>
 
   <h3>Lowercase Letters (type="a"):</h3>
@@ -2265,13 +2857,6 @@ greet("World");</code></pre>
     <li>First item</li>
     <li>Second item</li>
     <li>Third item</li>
-  </ol>
-
-  <h3>Uppercase Letters (type="A"):</h3>
-  <ol type="A">
-    <li>Option A</li>
-    <li>Option B</li>
-    <li>Option C</li>
   </ol>
 
   <h3>Roman Numerals (type="i"):</h3>
@@ -2295,23 +2880,13 @@ greet("World");</code></pre>
     <li>First place</li>
   </ol>
 
-  <h3>Nested Ordered List:</h3>
-  <ol>
-    <li>Main Step 1
-      <ol type="a">
-        <li>Sub step a</li>
-        <li>Sub step b</li>
-      </ol>
-    </li>
-    <li>Main Step 2</li>
-  </ol>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Ol creates numbered lists</mark>
 </body>
 </html>`
   },
   {
     tag: 'optgroup',
-    description: 'The <optgroup> tag is used to group related options in a <select> element. It creates a visual grouping of options with a label, making long dropdown lists easier to navigate.',
+    description: 'The <optgroup> tag groups related options in a <select> dropdown list.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2319,17 +2894,16 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Optgroup Tag Example</title>
   <style>
-    select { padding: 8px; width: 250px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; margin: 10px 0; display: block; }
-    label { font-weight: bold; display: block; margin-top: 15px; }
+    select { padding: 8px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 4px; }
+    label { display: block; font-weight: bold; margin-bottom: 5px; margin-top: 15px; }
   </style>
 </head>
 <body>
   <h2>Optgroup Tag Example:</h2>
 
-  <h3>Programming Languages by Type:</h3>
-  <label for="lang">Select a Language:</label>
-  <select id="lang" name="language">
-    <option value="">-- Choose a Language --</option>
+  <label for="lang">Programming Languages:</label>
+  <select id="lang">
+    <option value="">-- Select Language --</option>
     <optgroup label="Frontend">
       <option value="html">HTML</option>
       <option value="css">CSS</option>
@@ -2340,40 +2914,33 @@ greet("World");</code></pre>
       <option value="python">Python</option>
       <option value="java">Java</option>
       <option value="php">PHP</option>
-      <option value="nodejs">Node.js</option>
+      <option value="node">Node.js</option>
     </optgroup>
     <optgroup label="Database">
       <option value="mysql">MySQL</option>
-      <option value="mongodb">MongoDB</option>
-      <option value="postgres">PostgreSQL</option>
+      <option value="mongo">MongoDB</option>
     </optgroup>
   </select>
 
-  <h3>Cars by Brand:</h3>
-  <label for="car">Select a Car:</label>
-  <select id="car" name="car">
-    <optgroup label="Japanese Brands">
-      <option value="toyota">Toyota Camry</option>
-      <option value="honda">Honda Civic</option>
-      <option value="mazda">Mazda 3</option>
+  <label for="car">Car Brands:</label>
+  <select id="car">
+    <optgroup label="Japanese">
+      <option value="toyota">Toyota</option>
+      <option value="honda">Honda</option>
     </optgroup>
-    <optgroup label="European Brands">
-      <option value="bmw">BMW 3 Series</option>
-      <option value="audi">Audi A4</option>
-      <option value="mercedes">Mercedes C-Class</option>
-    </optgroup>
-    <optgroup label="American Brands" disabled>
-      <option value="ford">Ford Mustang</option>
-      <option value="chevy">Chevrolet Corvette</option>
+    <optgroup label="European">
+      <option value="bmw">BMW</option>
+      <option value="audi">Audi</option>
     </optgroup>
   </select>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Optgroup organizes options into categories</mark>
 </body>
 </html>`
   },
   {
     tag: 'option',
-    description: 'The <option> tag defines an option in a select list or datalist. It must be contained in a <select>, <optgroup>, or <datalist> element. The value attribute specifies what is submitted with the form.',
+    description: 'The <option> tag defines an option in a <select> dropdown, <datalist>, or <optgroup>.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2381,57 +2948,45 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Option Tag Example</title>
   <style>
-    .form-group { margin: 15px 0; }
+    .option-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; }
     label { display: block; font-weight: bold; margin-bottom: 5px; }
-    select { padding: 8px; width: 250px; border: 1px solid #ccc; border-radius: 4px; }
-    button { padding: 8px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+    select { padding: 8px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 4px; }
   </style>
 </head>
 <body>
   <h2>Option Tag Example:</h2>
-  <form>
-    <div class="form-group">
-      <label for="country">Country:</label>
-      <select id="country" name="country">
-        <option value="">-- Select Country --</option>
-        <option value="us">United States</option>
-        <option value="uk">United Kingdom</option>
-        <option value="in" selected>India</option>
-        <option value="ca">Canada</option>
-        <option value="au">Australia</option>
-        <option value="de" disabled>Germany (unavailable)</option>
-      </select>
-    </div>
 
-    <div class="form-group">
-      <label for="size">T-Shirt Size:</label>
-      <select id="size" name="size" multiple size="5">
-        <option value="xs">XS - Extra Small</option>
-        <option value="s">S - Small</option>
-        <option value="m" selected>M - Medium</option>
-        <option value="l">L - Large</option>
-        <option value="xl" selected>XL - Extra Large</option>
-      </select>
-      <small>(Hold Ctrl/Cmd to select multiple)</small>
-    </div>
+  <div class="option-demo">
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="">-- Select Country --</option>
+      <option value="us">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="in" selected>India</option>
+      <option value="ca">Canada</option>
+      <option value="au">Australia</option>
+    </select>
+  </div>
 
-    <button type="submit">Submit</button>
-  </form>
+  <div class="option-demo">
+    <label for="size">T-Shirt Size (Multiple):</label>
+    <select id="size" name="size" multiple size="5">
+      <option value="xs">XS - Extra Small</option>
+      <option value="s">S - Small</option>
+      <option value="m" selected>M - Medium</option>
+      <option value="l">L - Large</option>
+      <option value="xl">XL - Extra Large</option>
+    </select>
+    <small>Hold Ctrl/Cmd to select multiple</small>
+  </div>
 
-  <h3>Option Attributes:</h3>
-  <ul>
-    <li><strong>value</strong> - Data sent to the server</li>
-    <li><strong>selected</strong> - Pre-selects this option</li>
-    <li><strong>disabled</strong> - Makes this option unselectable</li>
-    <li><strong>label</strong> - Alternate label for the option</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Option values are submitted with form data</mark>
 </body>
 </html>`
   },
   {
     tag: 'output',
-    description: 'The <output> tag represents the result of a calculation or user action. It is often used in forms to display the result of a calculation based on user inputs, typically using JavaScript or the oninput event.',
+    description: 'The <output> tag represents the result of a calculation or user action.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2439,57 +2994,38 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Output Tag Example</title>
   <style>
-    form { max-width: 450px; background: #f8f9fa; padding: 20px; border-radius: 8px; }
+    form { max-width: 400px; background: #f8f9fa; padding: 20px; border-radius: 8px; }
     .form-group { margin: 15px 0; }
     label { display: block; font-weight: bold; margin-bottom: 5px; }
-    input[type="range"], input[type="number"] { width: 200px; }
-    output { background: #007bff; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 1.1em; }
-    .result-box { margin-top: 15px; padding: 15px; background: white; border-radius: 5px; border: 1px solid #ddd; }
+    input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    output { display: inline-block; background: #007bff; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; margin-left: 10px; }
   </style>
 </head>
 <body>
   <h2>Output Tag Example:</h2>
 
-  <h3>Volume Control:</h3>
-  <form oninput="vol.value = volume.value">
+  <form oninput="result.value = parseInt(a.value) + parseInt(b.value)">
     <div class="form-group">
-      <label>Volume: <input type="range" id="volume" name="volume" min="0" max="100" value="50"></label>
-      <output name="vol" for="volume">50</output>
+      <label for="a">Number 1:</label>
+      <input type="number" id="a" name="a" value="10" min="0">
+    </div>
+    <div class="form-group">
+      <label for="b">Number 2:</label>
+      <input type="number" id="b" name="b" value="5" min="0">
+    </div>
+    <div class="form-group">
+      <label>Sum:</label>
+      <output id="result" for="a b">15</output>
     </div>
   </form>
 
-  <h3>Calculator:</h3>
-  <form oninput="result.value = parseInt(num1.value) + parseInt(num2.value)">
-    <div class="form-group">
-      <label>Number 1: <input type="number" id="num1" name="num1" value="10" min="0"></label>
-    </div>
-    <div class="form-group">
-      <label>Number 2: <input type="number" id="num2" name="num2" value="5" min="0"></label>
-    </div>
-    <div class="result-box">
-      Sum = <output name="result" for="num1 num2">15</output>
-    </div>
-  </form>
-
-  <h3>BMI Calculator:</h3>
-  <form oninput="bmi.value = (weight.value / ((height.value/100) * (height.value/100))).toFixed(1)">
-    <div class="form-group">
-      <label>Weight (kg): <input type="number" id="weight" name="weight" value="70" min="1"></label>
-    </div>
-    <div class="form-group">
-      <label>Height (cm): <input type="number" id="height" name="height" value="170" min="1"></label>
-    </div>
-    <div class="result-box">
-      BMI = <output name="bmi" for="weight height">24.2</output>
-    </div>
-  </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Output displays calculation or computation results</mark>
 </body>
 </html>`
   },
   {
     tag: 'p',
-    description: 'The <p> tag defines a paragraph. Browsers automatically add some space (margin) before and after each paragraph. Paragraphs are block-level elements and always start on a new line.',
+    description: 'The <p> tag defines a paragraph of text. Browsers add spacing around paragraphs.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2497,84 +3033,64 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paragraph Tag Example</title>
   <style>
-    .styled-p { color: #555; line-height: 1.8; font-size: 1.05em; }
-    .lead { font-size: 1.25em; color: #333; font-weight: 300; }
-    .text-center { text-align: center; }
-    .text-right { text-align: right; }
-    .drop-cap::first-letter { font-size: 3em; float: left; line-height: 1; margin-right: 8px; color: #007bff; font-weight: bold; }
+    p { line-height: 1.8; color: #333; margin: 15px 0; }
+    .lead { font-size: 1.2em; color: #666; font-weight: 300; }
   </style>
 </head>
 <body>
-  <h2>Paragraph Tag Example:</h2>
+  <h2>Paragraph Tag Examples:</h2>
 
-  <h3>Basic Paragraphs:</h3>
-  <p>This is the first paragraph. HTML paragraphs are defined using the p tag.</p>
-  <p>This is the second paragraph. Browsers automatically add space between paragraphs.</p>
+  <p>This is a basic paragraph. HTML paragraphs are defined with the p tag.</p>
 
-  <h3>Lead Paragraph:</h3>
-  <p class="lead">This is a lead paragraph with larger text, often used for introductory content.</p>
+  <p>Browsers automatically add space before and after each paragraph element.</p>
 
-  <h3>Styled Paragraph:</h3>
-  <p class="styled-p">HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page and consists of a series of elements that tell the browser how to display the content.</p>
+  <p class="lead">This is a lead paragraph with larger text, typically used for introductions.</p>
 
-  <h3>Text Alignment:</h3>
-  <p class="text-center">This paragraph is centered.</p>
-  <p class="text-right">This paragraph is right-aligned.</p>
+  <p>HTML provides semantic structure to web content. Combined with CSS for styling and JavaScript for interactivity, HTML forms the foundation of web development.</p>
 
-  <h3>Drop Cap Effect:</h3>
-  <p class="drop-cap">Once upon a time in a land of beautiful code, there was a developer who discovered the power of semantic HTML and used it to build amazing websites that were accessible, fast, and search-engine friendly.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Each p tag creates a separate paragraph with default spacing</mark>
 </body>
 </html>`
   },
   {
     tag: 'param',
-    description: 'The <param> tag defines parameters for an <object> element. It is used inside the <object> element to specify how the object behaves. It is a void element and has no content or closing tag.',
+    description: 'The <param> tag defines parameters for an <object> element.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Param Tag Example</title>
+  <style>
+    .info-box { background: #e8f4fd; border: 1px solid #bee5eb; border-radius: 6px; padding: 15px; margin: 15px 0; }
+  </style>
 </head>
 <body>
   <h2>Param Tag Example:</h2>
 
-  <h3>Using Param with Object (Flash/Media):</h3>
-  <object data="movie.swf" type="application/x-shockwave-flash" width="400" height="300">
-    <param name="movie" value="movie.swf">
+  <object data="https://example.com/media.swf" type="application/x-shockwave-flash" width="400" height="300">
+    <param name="movie" value="media.swf">
     <param name="quality" value="high">
     <param name="bgcolor" value="#ffffff">
-    <param name="play" value="true">
-    <param name="loop" value="false">
-    <param name="allowfullscreen" value="true">
     <p>Flash content is not supported in your browser.</p>
   </object>
 
-  <h3>Using Param with a Video Object:</h3>
-  <object data="sample-video.mp4" type="video/mp4" width="400" height="300">
-    <param name="autoplay" value="false">
-    <param name="controls" value="true">
-    <param name="loop" value="false">
-    <param name="muted" value="true">
-    <p>Video not supported. <a href="sample-video.mp4">Download the video</a>.</p>
-  </object>
+  <div class="info-box">
+    <h3>Param Attributes:</h3>
+    <ul>
+      <li><strong>name</strong> - Parameter name</li>
+      <li><strong>value</strong> - Parameter value</li>
+    </ul>
+    <p>Param elements customize object behavior through name-value pairs.</p>
+  </div>
 
-  <h3>Param Attributes:</h3>
-  <ul>
-    <li><strong>name</strong> - The name of the parameter</li>
-    <li><strong>value</strong> - The value of the parameter</li>
-  </ul>
-
-  <h3>Notes:</h3>
-  <p>The param element is a void element (no closing tag). Its behavior depends entirely on the type of object it is used with.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Param passes configuration to embedded objects</mark>
 </body>
 </html>`
   },
   {
     tag: 'picture',
-    description: 'The <picture> tag gives web developers more flexibility in specifying image resources. It contains zero or more <source> elements and one <img> element to offer alternative versions of an image for different devices and scenarios.',
+    description: 'The <picture> tag provides multiple image sources for responsive images.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2582,49 +3098,38 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Picture Tag Example</title>
   <style>
-    picture img { max-width: 100%; border: 2px solid #ddd; border-radius: 5px; display: block; margin: 10px 0; }
-    .demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; }
+    picture img { max-width: 100%; border-radius: 6px; display: block; margin: 15px 0; }
   </style>
 </head>
 <body>
   <h2>Picture Tag Example:</h2>
 
-  <h3>Responsive Image Sources:</h3>
+  <h3>Responsive Image (different sizes for different screens):</h3>
   <picture>
-    <source media="(min-width: 900px)" srcset="https://via.placeholder.com/900x300" type="image/jpeg">
-    <source media="(min-width: 600px)" srcset="https://via.placeholder.com/600x250" type="image/jpeg">
-    <img src="https://via.placeholder.com/400x200" alt="Responsive image example">
+    <source media="(min-width: 900px)" srcset="https://via.placeholder.com/900x400">
+    <source media="(min-width: 600px)" srcset="https://via.placeholder.com/600x300">
+    <img src="https://via.placeholder.com/400x200" alt="Responsive image">
   </picture>
 
-  <h3>Modern Image Format with Fallback:</h3>
+  <h3>Modern Image Format (WebP with fallback):</h3>
   <picture>
-    <source srcset="image.avif" type="image/avif">
-    <source srcset="image.webp" type="image/webp">
-    <img src="image.jpg" alt="Image with modern format fallback" width="400">
+    <source srcset="https://via.placeholder.com/600x300.webp" type="image/webp">
+    <img src="https://via.placeholder.com/600x300" alt="Image with modern format">
   </picture>
 
   <h3>Dark Mode Image:</h3>
   <picture>
-    <source srcset="logo-dark.png" media="(prefers-color-scheme: dark)">
-    <img src="logo-light.png" alt="Logo that adapts to dark/light mode">
+    <source srcset="https://via.placeholder.com/300x200?text=Dark+Mode" media="(prefers-color-scheme: dark)">
+    <img src="https://via.placeholder.com/300x200?text=Light+Mode" alt="Adaptive image">
   </picture>
 
-  <h3>How Picture Works:</h3>
-  <div class="demo">
-    <ol>
-      <li>Browser reads source elements from top to bottom</li>
-      <li>It uses the first source whose conditions match</li>
-      <li>If no source matches, the img fallback is used</li>
-      <li>The img alt text is always used for accessibility</li>
-    </ol>
-  </div>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Picture provides multiple sources for flexible image selection</mark>
 </body>
 </html>`
   },
   {
     tag: 'pre',
-    description: 'The <pre> tag defines preformatted text. Text in a <pre> element is displayed in a fixed-width font (usually monospace) and preserves both spaces and line breaks, making it ideal for code and ASCII art.',
+    description: 'The <pre> tag displays preformatted text with spaces and line breaks preserved.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2632,53 +3137,48 @@ greet("World");</code></pre>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pre Tag Example</title>
   <style>
-    pre { background: #282c34; color: #abb2bf; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 15px 0; }
-    pre.poem { background: #f8f9fa; color: #333; border-left: 4px solid #007bff; }
+    pre { background: #282c34; color: #abb2bf; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 14px; line-height: 1.6; margin: 15px 0; }
   </style>
 </head>
 <body>
-  <h2>Pre (Preformatted Text) Tag Example:</h2>
+  <h2>Pre (Preformatted Text) Tag Examples:</h2>
 
   <h3>Code Block:</h3>
-  <pre>
-function fibonacci(n) {
+  <pre>function fibonacci(n) {
     if (n &lt;= 1) return n;
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-// Print first 10 fibonacci numbers
 for (let i = 0; i &lt; 10; i++) {
     console.log(fibonacci(i));
-}
-  </pre>
+}</pre>
+
+  <h3>ASCII Art:</h3>
+  <pre>
+    /\\_/\\
+   ( o.o )
+    > ^ <
+   /|   |\\
+  (_|   |_)</pre>
 
   <h3>HTML Structure:</h3>
-  <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;My Page&lt;/title&gt;
+    &lt;title&gt;Page&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
   &lt;/body&gt;
-&lt;/html&gt;
-  </pre>
+&lt;/html&gt;</pre>
 
-  <h3>Poem (preserving whitespace):</h3>
-  <pre class="poem">
-    Roses are red,
-    Violets are blue,
-    HTML is awesome,
-    And so are you!
-  </pre>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Pre preserves exact spacing and line breaks</mark>
 </body>
 </html>`
   },
   {
     tag: 'progress',
-    description: 'The <progress> tag represents the completion progress of a task. It is typically used to show how much of a download, file upload, or form completion has been done. It is different from <meter> which shows a gauge.',
+    description: 'The <progress> tag represents the progress of a task, showing completion percentage.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2686,57 +3186,56 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Progress Tag Example</title>
   <style>
-    .progress-group { margin: 15px 0; }
+    .progress-demo { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; }
     label { display: block; font-weight: bold; margin-bottom: 5px; }
-    progress { width: 300px; height: 20px; }
+    progress { width: 100%; height: 25px; }
     button { padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; margin: 5px; }
   </style>
 </head>
 <body>
-  <h2>Progress Tag Example:</h2>
+  <h2>Progress Tag Examples:</h2>
 
-  <h3>File Download Progress:</h3>
-  <div class="progress-group">
-    <label>Downloading: file.zip</label>
-    <progress value="70" max="100">70%</progress> 70%
+  <div class="progress-demo">
+    <label>File Download:</label>
+    <progress value="65" max="100">65%</progress>
+    <p>65 of 100 MB downloaded</p>
   </div>
 
-  <h3>Course Completion:</h3>
-  <div class="progress-group">
-    <label>HTML Course: </label>
-    <progress value="45" max="60">45 of 60 lessons</progress> 45/60 lessons
+  <div class="progress-demo">
+    <label>Course Progress:</label>
+    <progress value="42" max="100">42%</progress>
+    <p>42 of 100 lessons completed</p>
   </div>
 
-  <h3>Indeterminate Progress (no value):</h3>
-  <div class="progress-group">
-    <label>Loading... (unknown duration)</label>
-    <progress>Loading...</progress>
-  </div>
-
-  <h3>Interactive Progress Bar:</h3>
-  <div class="progress-group">
-    <label>Manual Control:</label>
+  <div class="progress-demo">
+    <label>Interactive Progress:</label>
     <progress id="myProgress" value="0" max="100">0%</progress>
-    <span id="progressLabel">0%</span>
+    <p><span id="percent">0</span>%</p>
+    <button onclick="updateProgress(10)">+10%</button>
+    <button onclick="updateProgress(-10)">-10%</button>
+    <button onclick="resetProgress()">Reset</button>
   </div>
-  <button onclick="changeProgress(-10)">-10%</button>
-  <button onclick="changeProgress(10)">+10%</button>
 
   <script>
-    function changeProgress(amount) {
-      var p = document.getElementById('myProgress');
-      var newVal = Math.min(100, Math.max(0, p.value + amount));
-      p.value = newVal;
-      document.getElementById('progressLabel').textContent = newVal + '%';
+    function updateProgress(amount) {
+      const p = document.getElementById('myProgress');
+      let newVal = p.value + amount;
+      p.value = Math.max(0, Math.min(100, newVal));
+      document.getElementById('percent').textContent = p.value;
+    }
+    function resetProgress() {
+      document.getElementById('myProgress').value = 0;
+      document.getElementById('percent').textContent = '0';
     }
   </script>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Progress shows task completion visually</mark>
 </body>
 </html>`
   },
   {
     tag: 'q',
-    description: 'The <q> tag defines a short inline quotation. Browsers normally insert quotation marks around the text. For long quotations that require their own block, use <blockquote> instead.',
+    description: 'The <q> tag defines a short inline quotation, automatically adding quotation marks.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2745,39 +3244,32 @@ for (let i = 0; i &lt; 10; i++) {
   <title>Q Tag Example</title>
   <style>
     q { color: #555; font-style: italic; }
-    q::before { content: open-quote; }
-    q::after  { content: close-quote; }
-    .custom-quote { quotes: '"' '"' "'" "'"; }
   </style>
 </head>
 <body>
-  <h2>Q (Inline Quotation) Tag Example:</h2>
+  <h2>Q (Inline Quotation) Tag Examples:</h2>
 
-  <h3>Basic Inline Quotes:</h3>
-  <p>According to Einstein, <q>Imagination is more important than knowledge.</q></p>
-  <p>Shakespeare wrote: <q>To be, or not to be, that is the question.</q></p>
+  <h3>Basic Quotes:</h3>
+  <p>According to Steve Jobs, <q>The only way to do great work is to love what you do.</q></p>
 
-  <h3>Quote with Cite Attribute:</h3>
-  <p>According to the MDN docs, <q cite="https://developer.mozilla.org">The q element indicates that the enclosed text is a short inline quotation.</q></p>
+  <p>Shakespeare wrote, <q>To be, or not to be, that is the question.</q></p>
 
   <h3>Nested Quotations:</h3>
-  <p>She said, <q>He told me <q>I will be there</q> but he never came.</q></p>
+  <p>She said, <q>He told me <q>I will be there</q> but never came.</q></p>
 
-  <h3>Difference Between q and blockquote:</h3>
-  <p>For short inline quotes use <code>q</code>:</p>
-  <p>Einstein said <q>E = mc squared</q> which changed physics.</p>
-  <p>For long block quotes use <code>blockquote</code>:</p>
-  <blockquote>
-    <p>Two roads diverged in a wood, and I took the one less traveled by, and that has made all the difference.</p>
-    <footer>— Robert Frost, <cite>The Road Not Taken</cite></footer>
-  </blockquote>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <h3>Quote with Citation:</h3>
+  <p>According to the MDN docs, <q cite="https://developer.mozilla.org">The q element indicates that the enclosed text is a short inline quotation.</q></p>
+
+  <h3>Q vs Blockquote:</h3>
+  <p>Use <code>&lt;q&gt;</code> for short inline quotes. For long block quotes use <code>&lt;blockquote&gt;</code>.</p>
+
+  <mark>Q automatically adds quotation marks</mark>
 </body>
 </html>`
   },
   {
     tag: 's',
-    description: 'The <s> tag specifies text that is no longer correct, accurate or relevant. The text will be displayed with a strikethrough line. It differs from <del> which marks text deleted from a document revision.',
+    description: 'The <s> tag represents text that is no longer correct or accurate, displayed with strikethrough.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2786,39 +3278,43 @@ for (let i = 0; i &lt; 10; i++) {
   <title>S Tag Example</title>
   <style>
     s { color: #999; }
-    .price-new { color: #28a745; font-weight: bold; font-size: 1.2em; }
-    .price-old { color: #dc3545; }
-    .sale-tag { background: #dc3545; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.8em; margin-left: 5px; }
+    .sale-item { background: #f8f9fa; padding: 12px; border-radius: 6px; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>S (Strikethrough) Tag Example:</h2>
+  <h2>S (Strikethrough) Tag Examples:</h2>
 
   <h3>Price Discounts:</h3>
-  <p>Regular Price: <s class="price-old">$199.99</s> <span class="price-new">$99.99</span> <span class="sale-tag">SALE</span></p>
-  <p>Was: <s>$49</s> Now: $29</p>
+  <div class="sale-item">
+    Regular Price: <s>$199.99</s> <strong style="color:#28a745;">Sale Price: $99.99</strong>
+  </div>
+  <div class="sale-item">
+    Was: <s>$49</s> Now: <strong>$29</strong>
+  </div>
 
   <h3>Outdated Information:</h3>
-  <p>The event is on <s>Friday, January 10</s> Monday, January 13.</p>
-  <p>Contact: <s>support@old-email.com</s> help@new-email.com</p>
+  <div class="sale-item">
+    Event Date: <s>Friday, January 10</s> Rescheduled to Monday, January 13
+  </div>
 
   <h3>Product Availability:</h3>
   <ul>
-    <li>Blue Widget - $15 <span class="sale-tag">Available</span></li>
-    <li><s>Red Widget - $20</s> <span style="color:#dc3545;">(Out of Stock)</span></li>
-    <li>Green Widget - $18 <span class="sale-tag">Available</span></li>
+    <li>Blue Widget - $15 ✓</li>
+    <li><s>Red Widget - $20</s> (Out of Stock)</li>
+    <li>Green Widget - $18 ✓</li>
   </ul>
 
-  <h3>Difference between s and del:</h3>
-  <p><s>Text that is no longer accurate</s> - use &lt;s&gt;</p>
-  <p><del>Text that was deliberately removed from a document</del> - use &lt;del&gt;</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <h3>S vs Del:</h3>
+  <p><s>Incorrect information</s> — use &lt;s&gt; for inaccurate text</p>
+  <p><del>Deleted content</del> — use &lt;del&gt; for removed text</p>
+
+  <mark>S shows text that is no longer relevant or accurate</mark>
 </body>
 </html>`
   },
   {
     tag: 'section',
-    description: 'The <section> tag defines a section in a document. A section is a thematic grouping of content, typically with a heading. Sections can be nested and help organize page content semantically.',
+    description: 'The <section> tag defines a thematic grouping of content with a heading.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2826,52 +3322,38 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Section Tag Example</title>
   <style>
-    section { border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 15px 0; background: #fff; }
+    section { border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 15px 0; background: white; }
     section h2 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px; }
-    section h3 { color: #0056b3; }
-    .highlight { background: #e8f4fd; border-left: 4px solid #007bff; padding: 15px; }
   </style>
 </head>
 <body>
   <h1>Web Development Guide</h1>
 
-  <section id="html">
+  <section>
     <h2>HTML Section</h2>
-    <p>HTML is the standard markup language for creating web pages. It stands for HyperText Markup Language.</p>
-    <section class="highlight">
-      <h3>Key Features</h3>
-      <ul>
-        <li>Defines the structure of web pages</li>
-        <li>Uses elements and tags</li>
-        <li>Platform independent</li>
-      </ul>
-    </section>
+    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages.</p>
+    <p>It provides structure and semantic meaning to web content.</p>
   </section>
 
-  <section id="css">
+  <section>
     <h2>CSS Section</h2>
-    <p>CSS stands for Cascading Style Sheets. It is used to control the layout and visual appearance of HTML elements.</p>
-    <section class="highlight">
-      <h3>Key Features</h3>
-      <ul>
-        <li>Controls colors, fonts, spacing</li>
-        <li>Enables responsive design</li>
-        <li>Supports animations</li>
-      </ul>
-    </section>
+    <p>CSS (Cascading Style Sheets) is used to style HTML elements.</p>
+    <p>It controls layout, colors, fonts, and responsive design.</p>
   </section>
 
-  <section id="js">
+  <section>
     <h2>JavaScript Section</h2>
-    <p>JavaScript is the programming language of the web, enabling dynamic and interactive content.</p>
+    <p>JavaScript enables interactive and dynamic content on web pages.</p>
+    <p>It allows client-side programming for enhanced user experiences.</p>
   </section>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Section groups thematic content with semantic meaning</mark>
 </body>
 </html>`
   },
   {
     tag: 'select',
-    description: 'The <select> tag creates a drop-down list. It is used inside a form to collect user input. It works with <option> and <optgroup> child elements to define the available choices.',
+    description: 'The <select> tag creates a dropdown list for user selection within forms.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2879,19 +3361,20 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select Tag Example</title>
   <style>
-    .form-group { margin: 15px 0; }
+    form { max-width: 350px; background: #f8f9fa; padding: 20px; border-radius: 8px; }
+    .form-group { margin-bottom: 15px; }
     label { display: block; font-weight: bold; margin-bottom: 5px; }
-    select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 250px; }
-    button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px; }
-    form { max-width: 400px; background: #f9f9f9; padding: 20px; border-radius: 8px; }
+    select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+    button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
   </style>
 </head>
 <body>
   <h2>Select Tag Example:</h2>
+
   <form>
     <div class="form-group">
       <label for="country">Country:</label>
-      <select id="country" name="country">
+      <select id="country" name="country" required>
         <option value="">-- Select Country --</option>
         <option value="us">United States</option>
         <option value="uk">United Kingdom</option>
@@ -2901,7 +3384,7 @@ for (let i = 0; i &lt; 10; i++) {
     </div>
 
     <div class="form-group">
-      <label for="tech">Grouped Technologies:</label>
+      <label for="tech">Technologies:</label>
       <select id="tech" name="tech">
         <optgroup label="Frontend">
           <option value="html">HTML</option>
@@ -2915,26 +3398,16 @@ for (let i = 0; i &lt; 10; i++) {
       </select>
     </div>
 
-    <div class="form-group">
-      <label for="skills">Multiple Selection (hold Ctrl):</label>
-      <select id="skills" name="skills" multiple size="4">
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="js">JavaScript</option>
-        <option value="react">React</option>
-        <option value="node">Node.js</option>
-      </select>
-    </div>
-
     <button type="submit">Submit</button>
   </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Select creates dropdown menus for form selection</mark>
 </body>
 </html>`
   },
   {
     tag: 'small',
-    description: 'The <small> tag defines smaller text. It is typically used for fine print, copyright notices, legal text, disclaimers, and side comments. The rendered text is one font size smaller than the surrounding text.',
+    description: 'The <small> tag represents smaller text for fine print, disclaimers, or side comments.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2943,36 +3416,32 @@ for (let i = 0; i &lt; 10; i++) {
   <title>Small Tag Example</title>
 </head>
 <body>
-  <h2>Small Tag Example:</h2>
+  <h2>Small Tag Examples:</h2>
 
   <h3>Copyright Footer:</h3>
-  <p>&copy; 2024 Tech In My Style. <small>All rights reserved.</small></p>
+  <p>&copy; 2024 Tech Academy. <small>All rights reserved.</small></p>
 
-  <h3>Terms and Conditions:</h3>
-  <p>By using this service, you agree to our Terms of Service.</p>
-  <small>This agreement is subject to change without notice. Please review periodically.</small>
-
-  <h3>Price with Fine Print:</h3>
+  <h3>Pricing Information:</h3>
   <p><strong>$9.99/month</strong> <small>(billed annually, cancel anytime)</small></p>
 
   <h3>Legal Disclaimer:</h3>
-  <p>Results may vary. <small>*Individual results are not guaranteed. Past performance does not predict future results.</small></p>
+  <p>Results may vary. <small>*Individual results are not guaranteed. Past performance does not guarantee future results.</small></p>
 
   <h3>Product Details:</h3>
   <h1>SuperPhone X <small>by TechBrand</small></h1>
+  <p>Advanced smartphone for professionals. <small>Patent pending</small></p>
 
-  <h3>Version Info:</h3>
-  <p>App Version 3.2.1 <small>(Released January 2024)</small></p>
+  <h3>Terms and Conditions:</h3>
+  <p>By using this service, you agree to our terms.</p>
+  <small>This agreement is subject to change without notice. Please review periodically.</small>
 
-  <h3>Nested Small:</h3>
-  <p>Normal text <small>small text <small>smaller text</small></small></p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Small text is typically one font size smaller</mark>
 </body>
 </html>`
   },
   {
     tag: 'source',
-    description: 'The <source> tag specifies multiple media resources for the <picture>, <video>, and <audio> elements. It allows you to specify alternative media files the browser can choose between based on support and conditions.',
+    description: 'The <source> tag specifies media resources for <picture>, <video>, and <audio> elements.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2980,51 +3449,40 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Source Tag Example</title>
   <style>
-    video, audio { display: block; margin: 10px 0; border-radius: 5px; }
-    picture img { max-width: 100%; border-radius: 5px; border: 2px solid #ddd; }
+    video, audio { display: block; margin: 15px 0; border-radius: 6px; }
   </style>
 </head>
 <body>
   <h2>Source Tag Example:</h2>
 
-  <h3>Source in Video Element:</h3>
+  <h3>Video with Multiple Formats:</h3>
   <video width="400" controls>
     <source src="video.webm" type="video/webm">
     <source src="video.mp4" type="video/mp4">
-    <source src="video.ogg" type="video/ogg">
     Your browser does not support the video tag.
   </video>
 
-  <h3>Source in Audio Element:</h3>
+  <h3>Audio with Multiple Formats:</h3>
   <audio controls>
     <source src="audio.ogg" type="audio/ogg">
     <source src="audio.mp3" type="audio/mpeg">
-    <source src="audio.wav" type="audio/wav">
     Your browser does not support the audio element.
   </audio>
 
-  <h3>Source in Picture Element (Responsive Images):</h3>
+  <h3>Picture with Responsive Sources:</h3>
   <picture>
-    <source media="(min-width: 900px)" srcset="https://via.placeholder.com/800x300" type="image/jpeg">
-    <source media="(min-width: 600px)" srcset="https://via.placeholder.com/600x250" type="image/jpeg">
-    <img src="https://via.placeholder.com/400x200" alt="Responsive example">
+    <source media="(min-width: 900px)" srcset="https://via.placeholder.com/800x400">
+    <source media="(min-width: 600px)" srcset="https://via.placeholder.com/600x300">
+    <img src="https://via.placeholder.com/400x200" alt="Responsive">
   </picture>
 
-  <h3>Source Attributes:</h3>
-  <ul>
-    <li><strong>src</strong> - URL of the media file (for video/audio)</li>
-    <li><strong>srcset</strong> - URL of the image (for picture)</li>
-    <li><strong>type</strong> - MIME type of the media file</li>
-    <li><strong>media</strong> - Media condition (for picture)</li>
-    <li><strong>sizes</strong> - Image sizes for different layouts</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Source provides fallback options for media elements</mark>
 </body>
 </html>`
   },
   {
     tag: 'span',
-    description: 'The <span> tag is an inline container used to mark up a part of a text, or a part of a document. It has no default visual effect and is used to apply CSS styles or JavaScript to a specific portion of inline content.',
+    description: 'The <span> tag is an inline container for styling a portion of text or content.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3036,45 +3494,32 @@ for (let i = 0; i &lt; 10; i++) {
     .red { color: red; font-weight: bold; }
     .blue { color: #007bff; }
     .badge { background: #28a745; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; }
-    .price { color: #dc3545; font-size: 1.3em; font-weight: bold; }
-    .old-price { text-decoration: line-through; color: #999; font-size: 0.9em; }
-    .tag { background: #e9ecef; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; margin: 2px; display: inline-block; }
   </style>
 </head>
 <body>
-  <h2>Span Tag Example:</h2>
+  <h2>Span Tag Examples:</h2>
 
   <h3>Inline Styling:</h3>
   <p>My car is <span class="red">red</span> and my bike is <span class="blue">blue</span>.</p>
 
-  <h3>Highlight Important Text:</h3>
-  <p>Please note: <span class="highlight">Payment is due by January 31st</span>.</p>
+  <h3>Highlighting:</h3>
+  <p>Note: <span class="highlight">Payment is due by January 31st</span>.</p>
 
-  <h3>Badge/Label:</h3>
+  <h3>Badges:</h3>
   <p>HTML Tutorial <span class="badge">New</span></p>
   <p>JavaScript Course <span class="badge" style="background:#007bff;">Updated</span></p>
 
-  <h3>Price Display:</h3>
-  <p><span class="old-price">$99.99</span> <span class="price">$49.99</span></p>
-
-  <h3>Tags/Keywords:</h3>
-  <p>Related:
-    <span class="tag">HTML</span>
-    <span class="tag">CSS</span>
-    <span class="tag">JavaScript</span>
-    <span class="tag">React</span>
-  </p>
-
   <h3>Span vs Div:</h3>
-  <p><span style="color:green;">Span is inline</span> — it doesn't break the line.</p>
-  <div style="color:purple; border: 1px solid purple; padding: 5px;">Div is block — it takes up the full width.</div>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <p><span style="color:green;">Span is inline</span> — doesn't break the line.</p>
+  <div style="color:purple; border: 1px solid purple; padding: 5px;">Div is block — takes full width.</div>
+
+  <mark>Span is inline; Div is block-level</mark>
 </body>
 </html>`
   },
   {
     tag: 'strong',
-    description: 'The <strong> tag defines text with strong importance. The content inside is typically displayed in bold. Unlike <b>, the <strong> tag has semantic meaning, indicating the text is of great importance.',
+    description: 'The <strong> tag indicates text with strong importance, typically displayed bold.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3083,36 +3528,34 @@ for (let i = 0; i &lt; 10; i++) {
   <title>Strong Tag Example</title>
 </head>
 <body>
-  <h2>Strong Tag Example:</h2>
+  <h2>Strong Tag Examples:</h2>
 
-  <h3>Basic Strong Text:</h3>
-  <p>This is <strong>very important</strong> information you must read.</p>
+  <h3>Important Warnings:</h3>
+  <p><strong>Warning:</strong> Do not leave the oven unattended.</p>
+  <p><strong>Important:</strong> Save your work frequently.</p>
+  <p><strong>Note:</strong> All fields marked * are required.</p>
 
-  <h3>Warning Messages:</h3>
-  <p><strong>Warning:</strong> Do not leave the oven unattended while cooking.</p>
-  <p><strong>Important:</strong> Save your work frequently to avoid data loss.</p>
-  <p><strong>Note:</strong> All fields marked with * are required.</p>
-
-  <h3>Highlighting Key Terms:</h3>
-  <p>The three pillars of web development are <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.</p>
+  <h3>Emphasizing Key Terms:</h3>
+  <p>The three core technologies are <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.</p>
 
   <h3>Step Instructions:</h3>
   <ol>
-    <li><strong>First</strong>, install Node.js from the official website.</li>
-    <li><strong>Then</strong>, open your terminal and run npm install.</li>
-    <li><strong>Finally</strong>, start the server with npm start.</li>
+    <li><strong>First</strong>, install Node.js.</li>
+    <li><strong>Then</strong>, run npm install.</li>
+    <li><strong>Finally</strong>, start the server.</li>
   </ol>
 
   <h3>Strong vs Bold:</h3>
-  <p><strong>Strong text</strong> — has semantic importance (screen readers emphasize this)</p>
-  <p><b>Bold text</b> — only visual, no semantic meaning</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <p><strong>Strong</strong> — semantic importance (screen readers emphasize)</p>
+  <p><b>Bold</b> — visual styling only</p>
+
+  <mark>Strong indicates semantic importance</mark>
 </body>
 </html>`
   },
   {
     tag: 'style',
-    description: 'The <style> tag is used to define style information (CSS) for an HTML document. It is placed inside the <head> section. For multiple pages, external stylesheets (using the link tag) are recommended.',
+    description: 'The <style> tag defines CSS styles for an HTML document, placed in the head section.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3121,62 +3564,44 @@ for (let i = 0; i &lt; 10; i++) {
   <title>Style Tag Example</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-      min-height: 100vh;
       padding: 20px;
     }
-    h2 { color: #1a1a2e; text-align: center; }
+    h2 { color: #007bff; text-align: center; }
     .card {
       background: white;
       border-radius: 10px;
       padding: 20px;
       margin: 15px auto;
-      max-width: 500px;
+      max-width: 400px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
     }
-    .card:hover { transform: translateY(-5px); }
-    .card h3 { color: #007bff; margin-top: 0; }
-    .badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.85em;
-      font-weight: bold;
-    }
+    .card h3 { color: #007bff; }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; }
     .badge-blue { background: #cce5ff; color: #004085; }
-    .badge-green { background: #d4edda; color: #155724; }
-    .badge-red { background: #f8d7da; color: #721c24; }
-    @media (max-width: 600px) {
-      .card { margin: 10px; }
-    }
   </style>
 </head>
 <body>
   <h2>Style Tag Example</h2>
   <div class="card">
-    <h3>HTML Tutorial</h3>
-    <p>Learn the building blocks of the web.</p>
+    <h3>HTML Fundamentals</h3>
+    <p>Learn the building blocks of web development.</p>
     <span class="badge badge-blue">Beginner</span>
   </div>
   <div class="card">
-    <h3>CSS Mastery</h3>
-    <p>Style your web pages like a pro.</p>
-    <span class="badge badge-green">Intermediate</span>
+    <h3>CSS Advanced</h3>
+    <p>Master modern CSS layout techniques.</p>
+    <span class="badge badge-blue">Intermediate</span>
   </div>
-  <div class="card">
-    <h3>JavaScript Advanced</h3>
-    <p>Master asynchronous programming and more.</p>
-    <span class="badge badge-red">Advanced</span>
-  </div>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Style tag contains CSS for the document</mark>
 </body>
 </html>`
   },
   {
     tag: 'sub',
-    description: 'The <sub> tag defines subscript text. Subscript text appears half a character below the normal line and is sometimes rendered in a smaller font. It is commonly used for chemical formulas and mathematical expressions.',
+    description: 'The <sub> tag defines subscript text, displayed lower than normal text.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3184,36 +3609,34 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sub Tag Example</title>
   <style>
-    .formula { font-size: 1.1em; background: #f8f9fa; padding: 10px; border-left: 3px solid #007bff; margin: 10px 0; }
+    .formula { background: #f8f9fa; padding: 12px; border-left: 3px solid #007bff; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>Sub (Subscript) Tag Example:</h2>
+  <h2>Sub (Subscript) Tag Examples:</h2>
 
   <h3>Chemical Formulas:</h3>
   <div class="formula">Water: H<sub>2</sub>O</div>
   <div class="formula">Carbon Dioxide: CO<sub>2</sub></div>
   <div class="formula">Glucose: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></div>
-  <div class="formula">Sulphuric Acid: H<sub>2</sub>SO<sub>4</sub></div>
-  <div class="formula">Methane: CH<sub>4</sub></div>
+  <div class="formula">Sulfuric Acid: H<sub>2</sub>SO<sub>4</sub></div>
 
   <h3>Mathematical Expressions:</h3>
-  <p>Logarithm base 10: log<sub>10</sub>(100) = 2</p>
-  <p>Logarithm base 2: log<sub>2</sub>(8) = 3</p>
+  <p>Logarithm: log<sub>10</sub>(100) = 2</p>
+  <p>Base 2: log<sub>2</sub>(8) = 3</p>
 
   <h3>Footnotes:</h3>
-  <p>The study was conducted by Smith et al.<sub>1</sub> and confirmed by Jones<sub>2</sub>.</p>
-  <p>
-    <sub>1</sub> Smith, J., et al. (2024). Research Journal.<br>
-    <sub>2</sub> Jones, A. (2024). Science Review.
-  </p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <p>Research shows<sub>1</sub> that learning is effective<sub>2</sub>.</p>
+  <p><sub>1</sub> Smith et al. (2024). Research Journal.</p>
+  <p><sub>2</sub> Jones (2024). Science Review.</p>
+
+  <mark>Sub positions text as subscript</mark>
 </body>
 </html>`
   },
   {
     tag: 'summary',
-    description: 'The <summary> tag defines a visible heading for the <details> element. The heading can be clicked to view/hide the details. It must be the first child element of <details>.',
+    description: 'The <summary> tag provides a visible heading for the <details> disclosure widget.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3222,55 +3645,36 @@ for (let i = 0; i &lt; 10; i++) {
   <title>Summary Tag Example</title>
   <style>
     details { border: 1px solid #ddd; border-radius: 6px; margin: 10px 0; overflow: hidden; }
-    summary {
-      background: #007bff;
-      color: white;
-      padding: 12px 16px;
-      cursor: pointer;
-      font-weight: bold;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: '+'; font-size: 1.3em; }
-    details[open] summary { background: #0056b3; }
-    details[open] summary::after { content: '-'; }
-    .details-content { padding: 15px; background: #f8f9fa; }
+    summary { background: #007bff; color: white; padding: 12px 16px; cursor: pointer; font-weight: bold; }
+    summary:hover { background: #0056b3; }
+    details > *:not(summary) { padding: 15px 16px; background: white; }
   </style>
 </head>
 <body>
-  <h2>Summary Tag Example:</h2>
-  <p>The summary tag provides a heading for a details element. Click to expand/collapse:</p>
+  <h2>Summary Tag Examples:</h2>
 
   <details>
     <summary>What is HTML?</summary>
-    <div class="details-content">
-      <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It defines the structure and content of web documents using elements and tags.</p>
-    </div>
+    <p>HTML provides the structure and content for web pages.</p>
   </details>
 
   <details>
     <summary>What is CSS?</summary>
-    <div class="details-content">
-      <p>CSS (Cascading Style Sheets) is the language used to style and layout web pages, including design, layout, and variations in display for different devices and screen sizes.</p>
-    </div>
+    <p>CSS handles styling and layout of HTML elements.</p>
   </details>
 
   <details open>
-    <summary>What is JavaScript? (open by default)</summary>
-    <div class="details-content">
-      <p>JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and everything else in web pages.</p>
-    </div>
+    <summary>What is JavaScript? (Open by default)</summary>
+    <p>JavaScript enables interactive features on web pages.</p>
   </details>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Click summaries to expand details</mark>
 </body>
 </html>`
   },
   {
     tag: 'sup',
-    description: 'The <sup> tag defines superscript text. Superscript text appears half a character above the normal line and is often rendered in a smaller font. It is commonly used in math, footnotes, and ordinal numbers.',
+    description: 'The <sup> tag defines superscript text, displayed higher than normal text.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3278,37 +3682,35 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sup Tag Example</title>
   <style>
-    .formula { font-size: 1.1em; background: #f8f9fa; padding: 10px; border-left: 3px solid #28a745; margin: 10px 0; }
+    .formula { background: #f8f9fa; padding: 12px; border-left: 3px solid #28a745; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>Sup (Superscript) Tag Example:</h2>
+  <h2>Sup (Superscript) Tag Examples:</h2>
 
   <h3>Mathematical Powers:</h3>
-  <div class="formula">x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup> (Pythagorean theorem)</div>
+  <div class="formula">x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></div>
   <div class="formula">2<sup>10</sup> = 1024</div>
-  <div class="formula">E = mc<sup>2</sup> (Einstein's mass-energy equivalence)</div>
-  <div class="formula">a<sup>n</sup> + b<sup>n</sup> = c<sup>n</sup></div>
+  <div class="formula">E = mc<sup>2</sup></div>
 
   <h3>Ordinal Numbers:</h3>
   <p>1<sup>st</sup> place, 2<sup>nd</sup> place, 3<sup>rd</sup> place, 4<sup>th</sup> place</p>
 
   <h3>Trademarks and Copyright:</h3>
-  <p>Google<sup>&trade;</sup> is a registered trademark.</p>
-  <p>Tech In My Style<sup>&reg;</sup> is a registered company.</p>
-  <p>Content &copy; 2024<sup>*</sup></p>
+  <p>Google<sup>&trade;</sup> is a trademark.</p>
+  <p>Tech Academy<sup>&reg;</sup> is registered.</p>
 
-  <h3>Footnote References:</h3>
-  <p>Climate change is a global challenge<sup>1</sup> requiring immediate action<sup>2</sup>.</p>
+  <h3>Footnotes:</h3>
+  <p>Climate change requires action<sup>1</sup>.</p>
   <p><sup>1</sup> UN Climate Report, 2023</p>
-  <p><sup>2</sup> IPCC Guidelines, 2022</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Sup positions text as superscript</mark>
 </body>
 </html>`
   },
   {
     tag: 'svg',
-    description: 'The <svg> tag defines a container for SVG (Scalable Vector Graphics). SVG allows you to draw vector-based graphics directly in HTML using XML-based syntax. They scale perfectly at any size without loss of quality.',
+    description: 'The <svg> tag defines a container for scalable vector graphics.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3317,45 +3719,40 @@ for (let i = 0; i &lt; 10; i++) {
   <title>SVG Tag Example</title>
 </head>
 <body>
-  <h2>SVG Tag Example:</h2>
+  <h2>SVG Tag Examples:</h2>
 
   <h3>Basic Shapes:</h3>
   <svg width="400" height="120" xmlns="http://www.w3.org/2000/svg">
     <rect x="10" y="10" width="80" height="80" fill="#007bff" rx="5"/>
     <circle cx="160" cy="50" r="40" fill="#28a745"/>
     <ellipse cx="270" cy="50" rx="60" ry="35" fill="#dc3545"/>
-    <line x1="340" y1="10" x2="390" y2="110" stroke="#333" stroke-width="3"/>
   </svg>
 
   <h3>Text in SVG:</h3>
   <svg width="300" height="60" xmlns="http://www.w3.org/2000/svg">
-    <text x="10" y="40" font-family="Arial" font-size="30" fill="#007bff" font-weight="bold">Hello SVG!</text>
+    <text x="10" y="40" font-family="Arial" font-size="30" fill="#007bff" font-weight="bold">SVG Text</text>
   </svg>
 
-  <h3>SVG Path (Star):</h3>
+  <h3>Star Polygon:</h3>
   <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="50,5 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35"
-      fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+    <polygon points="50,5 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" fill="#FFD700"/>
   </svg>
 
-  <h3>SVG with Gradient:</h3>
-  <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <h3>Circle with Gradient:</h3>
+  <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:#007bff;stop-opacity:1"/>
-        <stop offset="100%" style="stop-color:#28a745;stop-opacity:1"/>
-      </linearGradient>
+      <radialGradient id="grad"><stop offset="0%" style="stop-color:#007bff"/><stop offset="100%" style="stop-color:#0056b3"/></radialGradient>
     </defs>
-    <rect width="200" height="100" fill="url(#grad1)" rx="10"/>
-    <text x="40" y="55" fill="white" font-size="18" font-weight="bold">Gradient</text>
+    <circle cx="75" cy="75" r="70" fill="url(#grad)"/>
   </svg>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>SVG creates scalable vector graphics</mark>
 </body>
 </html>`
   },
   {
     tag: 'table',
-    description: 'The <table> tag defines an HTML table. It contains one or more table-related elements: thead, tbody, tfoot, tr, th, td, caption, col, colgroup. Tables should only be used for tabular data, not for layout.',
+    description: 'The <table> tag defines an HTML table with rows and columns for tabular data.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3363,54 +3760,37 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Table Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
-    th, td { border: 1px solid #ddd; padding: 12px 15px; text-align: left; }
-    thead tr { background-color: #007bff; color: white; }
-    tbody tr:nth-child(even) { background-color: #f2f2f2; }
-    tbody tr:hover { background-color: #dde8ff; }
-    tfoot tr { background-color: #e9ecef; font-weight: bold; }
-    caption { font-size: 1.2em; font-weight: bold; padding: 10px; text-align: left; }
+    table { border-collapse: collapse; width: 100%; max-width: 700px; margin: 15px 0; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background: #007bff; color: white; }
+    tbody tr:hover { background: #f0f4ff; }
   </style>
 </head>
 <body>
   <h2>Table Tag Example:</h2>
 
   <table>
-    <caption>Employee Salary Report - Q1 2024</caption>
-    <colgroup>
-      <col style="width:30%">
-      <col style="width:25%">
-      <col style="width:20%">
-      <col style="width:25%">
-    </colgroup>
+    <caption>Student Report Card - 2024</caption>
     <thead>
-      <tr>
-        <th>Employee Name</th>
-        <th>Department</th>
-        <th>Role</th>
-        <th>Salary</th>
-      </tr>
+      <tr><th>Name</th><th>Subject</th><th>Score</th><th>Grade</th></tr>
     </thead>
     <tbody>
-      <tr><td>Alice Johnson</td><td>Engineering</td><td>Senior Dev</td><td>$95,000</td></tr>
-      <tr><td>Bob Smith</td><td>Design</td><td>UI Designer</td><td>$75,000</td></tr>
-      <tr><td>Carol White</td><td>Marketing</td><td>Manager</td><td>$82,000</td></tr>
-      <tr><td>David Lee</td><td>Engineering</td><td>Junior Dev</td><td>$62,000</td></tr>
+      <tr><td>Alice</td><td>Math</td><td>95</td><td>A+</td></tr>
+      <tr><td>Bob</td><td>Science</td><td>87</td><td>B+</td></tr>
+      <tr><td>Carol</td><td>English</td><td>92</td><td>A</td></tr>
     </tbody>
     <tfoot>
-      <tr>
-        <td colspan="3">Total</td>
-        <td>$314,000</td>
-      </tr>
+      <tr><td colspan="2">Class Average</td><td>91.3</td><td>A</td></tr>
     </tfoot>
   </table>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Tables organize data into rows and columns</mark>
 </body>
 </html>`
   },
   {
     tag: 'tbody',
-    description: 'The <tbody> tag groups the body content in an HTML table. It is used in conjunction with the <thead> and <tfoot> elements, which specify other parts of the table. It enables independent scrolling of the table body.',
+    description: 'The <tbody> tag groups the body content of a table.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3418,47 +3798,38 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tbody Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
-    thead { background: #007bff; color: white; position: sticky; top: 0; }
-    tbody { overflow-y: auto; }
-    tbody tr:nth-child(even) { background: #f8f9fa; }
-    tbody tr:hover { background: #e8f0fe; cursor: pointer; }
-    tfoot { background: #343a40; color: white; font-weight: bold; }
-    .table-container { max-height: 250px; overflow-y: auto; border: 1px solid #ddd; border-radius: 5px; }
+    table { border-collapse: collapse; width: 100%; max-width: 600px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+    thead { background: #007bff; color: white; }
+    tbody tr:hover { background: #f0f4ff; }
+    tfoot { background: #e9ecef; font-weight: bold; }
   </style>
 </head>
 <body>
   <h2>Tbody Tag Example:</h2>
-  <p>The tbody groups the main data rows. Notice the scrollable body with fixed header:</p>
 
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr><th>#</th><th>Name</th><th>Subject</th><th>Score</th><th>Grade</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Alice</td><td>Math</td><td>95</td><td>A</td></tr>
-        <tr><td>2</td><td>Bob</td><td>Science</td><td>82</td><td>B</td></tr>
-        <tr><td>3</td><td>Carol</td><td>English</td><td>91</td><td>A-</td></tr>
-        <tr><td>4</td><td>David</td><td>History</td><td>78</td><td>C+</td></tr>
-        <tr><td>5</td><td>Eve</td><td>Math</td><td>88</td><td>B+</td></tr>
-        <tr><td>6</td><td>Frank</td><td>Science</td><td>96</td><td>A</td></tr>
-        <tr><td>7</td><td>Grace</td><td>English</td><td>74</td><td>C</td></tr>
-        <tr><td>8</td><td>Henry</td><td>History</td><td>85</td><td>B</td></tr>
-      </tbody>
-      <tfoot>
-        <tr><td colspan="3">Class Average</td><td>86.1</td><td>B+</td></tr>
-      </tfoot>
-    </table>
-  </div>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Name</th><th>Score</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Alice</td><td>95</td></tr>
+      <tr><td>2</td><td>Bob</td><td>82</td></tr>
+      <tr><td>3</td><td>Carol</td><td>91</td></tr>
+      <tr><td>4</td><td>David</td><td>78</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="2">Average</td><td>86.5</td></tr>
+    </tfoot>
+  </table>
+
+  <mark>Tbody groups table body rows</mark>
 </body>
 </html>`
   },
   {
     tag: 'td',
-    description: 'The <td> tag defines a standard data cell in an HTML table. It represents one cell of a table row. It can contain text, images, lists, other tables, and more. The colspan and rowspan attributes let it span multiple columns/rows.',
+    description: 'The <td> tag defines a data cell in a table row.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3466,16 +3837,15 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Td Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
-    th, td { border: 2px solid #333; padding: 10px 14px; text-align: center; }
+    table { border-collapse: collapse; width: 100%; max-width: 600px; }
+    th, td { border: 2px solid #333; padding: 10px; text-align: center; }
     th { background: #007bff; color: white; }
-    .merged { background: #fffde7; font-weight: bold; }
   </style>
 </head>
 <body>
   <h2>Td (Table Data Cell) Tag Example:</h2>
 
-  <h3>Basic Table Cells:</h3>
+  <h3>Basic Table:</h3>
   <table>
     <tr><th>Name</th><th>Age</th><th>City</th></tr>
     <tr><td>Alice</td><td>28</td><td>New York</td></tr>
@@ -3484,39 +3854,19 @@ for (let i = 0; i &lt; 10; i++) {
 
   <h3>Colspan and Rowspan:</h3>
   <table>
-    <tr>
-      <th colspan="3">Student Report Card</th>
-    </tr>
-    <tr>
-      <th>Name</th>
-      <th>Subject</th>
-      <th>Score</th>
-    </tr>
-    <tr>
-      <td rowspan="3" class="merged">Alice</td>
-      <td>Math</td>
-      <td>95</td>
-    </tr>
-    <tr>
-      <td>Science</td>
-      <td>88</td>
-    </tr>
-    <tr>
-      <td>English</td>
-      <td>92</td>
-    </tr>
-    <tr>
-      <td colspan="2" style="text-align:right; font-weight:bold;">Average:</td>
-      <td>91.7</td>
-    </tr>
+    <tr><th colspan="3">Student Report</th></tr>
+    <tr><th>Name</th><th>Subject</th><th>Score</th></tr>
+    <tr><td rowspan="2">Alice</td><td>Math</td><td>95</td></tr>
+    <tr><td>Science</td><td>88</td></tr>
   </table>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Td cells contain table data</mark>
 </body>
 </html>`
   },
   {
     tag: 'textarea',
-    description: 'The <textarea> tag defines a multi-line text input control. It can hold an unlimited number of characters. The size of the text area is defined by the cols and rows attributes, or with CSS width and height.',
+    description: 'The <textarea> tag defines a multi-line text input for forms.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3524,48 +3874,42 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Textarea Tag Example</title>
   <style>
+    form { max-width: 400px; background: #f8f9fa; padding: 20px; border-radius: 8px; }
     .form-group { margin: 15px 0; }
     label { display: block; font-weight: bold; margin-bottom: 5px; }
-    textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; font-size: 14px; resize: vertical; }
-    textarea:focus { outline: none; border-color: #007bff; box-shadow: 0 0 0 3px rgba(0,123,255,0.15); }
-    button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
-    #charCount { color: #666; font-size: 0.9em; }
+    textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; resize: vertical; }
+    button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
   </style>
 </head>
 <body>
   <h2>Textarea Tag Example:</h2>
-  <form>
+
+  <form onsubmit="event.preventDefault(); alert('Submitted!');">
     <div class="form-group">
-      <label for="message">Message (basic):</label>
-      <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..."></textarea>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message..."></textarea>
     </div>
 
     <div class="form-group">
-      <label for="bio">Biography (with default text):</label>
-      <textarea id="bio" name="bio" rows="5" cols="50">Hello! I am a web developer with 5 years of experience in HTML, CSS, and JavaScript. I love building user-friendly websites.</textarea>
+      <label for="bio">Biography:</label>
+      <textarea id="bio" name="bio" rows="5">Hello! I am a web developer with experience in HTML, CSS, and JavaScript.</textarea>
     </div>
 
     <div class="form-group">
-      <label for="feedback">Feedback (disabled):</label>
-      <textarea id="feedback" rows="3" cols="50" disabled>This textarea is disabled and cannot be edited.</textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="review">Review (with char counter):</label>
-      <textarea id="review" name="review" rows="4" cols="50" maxlength="200" placeholder="Max 200 characters..."
-        oninput="document.getElementById('charCount').textContent = this.value.length + '/200'"></textarea>
-      <span id="charCount">0/200</span>
+      <label for="review">Feedback (max 200 chars):</label>
+      <textarea id="review" name="review" rows="4" maxlength="200" placeholder="Max 200 characters..."></textarea>
     </div>
 
     <button type="submit">Submit</button>
   </form>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Textarea accepts multiple lines of text</mark>
 </body>
 </html>`
   },
   {
     tag: 'tfoot',
-    description: 'The <tfoot> tag groups the footer content in an HTML table. It should contain summary rows like totals, averages, or other aggregate information. It always appears at the bottom of the table, even if placed before tbody in the HTML.',
+    description: 'The <tfoot> tag groups the footer content in a table, typically for totals or summaries.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3573,49 +3917,39 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tfoot Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; max-width: 600px; margin: 15px 0; }
-    th, td { border: 1px solid #ddd; padding: 10px 15px; text-align: left; }
-    thead tr { background: #007bff; color: white; }
-    tbody tr:nth-child(even) { background: #f8f9fa; }
-    tfoot tr { background: #343a40; color: white; font-weight: bold; font-size: 1.05em; }
-    tfoot td { border-top: 3px solid #007bff; }
-    .currency { text-align: right; }
+    table { border-collapse: collapse; width: 100%; max-width: 600px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    thead { background: #007bff; color: white; }
+    tbody tr:hover { background: #f0f4ff; }
+    tfoot { background: #343a40; color: white; font-weight: bold; }
   </style>
 </head>
 <body>
   <h2>Tfoot (Table Footer) Tag Example:</h2>
 
   <table>
-    <caption>Monthly Expense Report</caption>
+    <caption>Monthly Expenses</caption>
     <thead>
-      <tr>
-        <th>Category</th>
-        <th>Description</th>
-        <th class="currency">Amount</th>
-      </tr>
+      <tr><th>Category</th><th>Description</th><th>Amount</th></tr>
     </thead>
     <tfoot>
-      <tr>
-        <td colspan="2">Total Monthly Expenses</td>
-        <td class="currency">$3,150.00</td>
-      </tr>
+      <tr><td colspan="2">Total</td><td>$2,150</td></tr>
     </tfoot>
     <tbody>
-      <tr><td>Housing</td><td>Rent</td><td class="currency">$1,200.00</td></tr>
-      <tr><td>Food</td><td>Groceries & Dining</td><td class="currency">$450.00</td></tr>
-      <tr><td>Transport</td><td>Car & Gas</td><td class="currency">$350.00</td></tr>
-      <tr><td>Utilities</td><td>Electric, Water, Internet</td><td class="currency">$200.00</td></tr>
-      <tr><td>Entertainment</td><td>Streaming, Movies</td><td class="currency">$100.00</td></tr>
-      <tr><td>Savings</td><td>Monthly Savings</td><td class="currency">$850.00</td></tr>
+      <tr><td>Housing</td><td>Rent</td><td>$1,200</td></tr>
+      <tr><td>Food</td><td>Groceries</td><td>$450</td></tr>
+      <tr><td>Transport</td><td>Gas</td><td>$250</td></tr>
+      <tr><td>Utilities</td><td>Electric</td><td>$250</td></tr>
     </tbody>
   </table>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Tfoot shows table summaries and totals</mark>
 </body>
 </html>`
   },
   {
     tag: 'th',
-    description: 'The <th> tag defines a header cell in an HTML table. Text in <th> elements are bold and centered by default. The scope attribute indicates whether the header is for a row, column, row group, or column group.',
+    description: 'The <th> tag defines a header cell in a table, typically bold and centered.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3623,10 +3957,9 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Th Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
-    th, td { border: 1px solid #ccc; padding: 10px 14px; }
+    table { border-collapse: collapse; width: 100%; max-width: 600px; }
+    th, td { border: 1px solid #ccc; padding: 10px; }
     th { background: #007bff; color: white; text-align: center; }
-    th[scope="row"] { background: #0056b3; text-align: left; }
     td { text-align: center; }
     tbody tr:hover { background: #f0f4ff; }
   </style>
@@ -3636,46 +3969,31 @@ for (let i = 0; i &lt; 10; i++) {
 
   <h3>Column Headers:</h3>
   <table>
-    <thead>
-      <tr>
-        <th scope="col">Student</th>
-        <th scope="col">Math</th>
-        <th scope="col">Science</th>
-        <th scope="col">English</th>
-        <th scope="col">Average</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Alice</td><td>95</td><td>88</td><td>91</td><td>91.3</td></tr>
-      <tr><td>Bob</td><td>82</td><td>76</td><td>85</td><td>81.0</td></tr>
-      <tr><td>Carol</td><td>90</td><td>94</td><td>89</td><td>91.0</td></tr>
-    </tbody>
+    <tr>
+      <th>Student</th>
+      <th>Math</th>
+      <th>Science</th>
+      <th>English</th>
+      <th>Average</th>
+    </tr>
+    <tr><td>Alice</td><td>95</td><td>88</td><td>91</td><td>91.3</td></tr>
+    <tr><td>Bob</td><td>82</td><td>76</td><td>85</td><td>81.0</td></tr>
   </table>
 
-  <h3>Row Headers (scope="row"):</h3>
+  <h3>Row Headers:</h3>
   <table>
-    <tr>
-      <th scope="col">Subject</th>
-      <th scope="col">Q1</th>
-      <th scope="col">Q2</th>
-      <th scope="col">Q3</th>
-    </tr>
-    <tr>
-      <th scope="row">Math</th>
-      <td>88</td><td>91</td><td>95</td>
-    </tr>
-    <tr>
-      <th scope="row">Science</th>
-      <td>82</td><td>79</td><td>86</td>
-    </tr>
+    <tr><th>Subject</th><th>Q1</th><th>Q2</th><th>Q3</th></tr>
+    <tr><th>Math</th><td>88</td><td>91</td><td>95</td></tr>
+    <tr><th>Science</th><td>82</td><td>79</td><td>86</td></tr>
   </table>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Th cells are table headers, typically bold</mark>
 </body>
 </html>`
   },
   {
     tag: 'thead',
-    description: 'The <thead> tag groups the header content in an HTML table. It is used in conjunction with <tbody> and <tfoot> to clearly separate the header rows from the body and footer rows of the table.',
+    description: 'The <thead> tag groups the header content in a table.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3683,51 +4001,42 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thead Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; max-width: 650px; }
-    th, td { border: 1px solid #ddd; padding: 11px 15px; text-align: left; }
-    thead tr { background: linear-gradient(90deg, #007bff, #0056b3); color: white; }
-    thead th { font-size: 0.95em; letter-spacing: 0.5px; text-transform: uppercase; }
-    tbody tr:nth-child(odd) { background: white; }
-    tbody tr:nth-child(even) { background: #f4f8ff; }
-    tbody tr:hover { background: #dde8ff; }
-    tfoot { background: #e9ecef; font-weight: bold; }
-    .table-scroll { overflow-x: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 11px; text-align: left; }
+    thead { background: linear-gradient(90deg, #007bff, #0056b3); color: white; }
+    tbody tr:hover { background: #f0f4ff; }
+    tfoot { background: #e9ecef; }
   </style>
 </head>
 <body>
   <h2>Thead (Table Header) Tag Example:</h2>
-  <p>The thead provides a semantic and styled header for the table:</p>
 
-  <div class="table-scroll">
-    <table>
-      <thead>
-        <tr>
-          <th>Order ID</th>
-          <th>Product</th>
-          <th>Customer</th>
-          <th>Date</th>
-          <th>Status</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>#1001</td><td>Laptop</td><td>Alice</td><td>2024-01-10</td><td>Delivered</td><td>$999</td></tr>
-        <tr><td>#1002</td><td>Mouse</td><td>Bob</td><td>2024-01-11</td><td>Shipped</td><td>$25</td></tr>
-        <tr><td>#1003</td><td>Keyboard</td><td>Carol</td><td>2024-01-12</td><td>Processing</td><td>$75</td></tr>
-        <tr><td>#1004</td><td>Monitor</td><td>David</td><td>2024-01-13</td><td>Delivered</td><td>$450</td></tr>
-      </tbody>
-      <tfoot>
-        <tr><td colspan="5">Total Revenue</td><td>$1,549</td></tr>
-      </tfoot>
-    </table>
-  </div>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <table>
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Product</th>
+        <th>Customer</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>#1001</td><td>Laptop</td><td>Alice</td><td>$999</td></tr>
+      <tr><td>#1002</td><td>Mouse</td><td>Bob</td><td>$25</td></tr>
+      <tr><td>#1003</td><td>Keyboard</td><td>Carol</td><td>$75</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="3">Total Revenue</td><td>$1,099</td></tr>
+    </tfoot>
+  </table>
+
+  <mark>Thead groups table header rows</mark>
 </body>
 </html>`
   },
   {
     tag: 'time',
-    description: 'The <time> tag defines a specific time (or datetime). The datetime attribute is used to specify machine-readable date/time for search engines, calendars, and other applications.',
+    description: 'The <time> tag represents a specific time or date for search engines and scripts.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3736,86 +4045,71 @@ for (let i = 0; i &lt; 10; i++) {
   <title>Time Tag Example</title>
   <style>
     time { color: #007bff; font-weight: bold; }
-    .event { background: #f8f9fa; border-left: 4px solid #007bff; padding: 12px; margin: 10px 0; border-radius: 0 5px 5px 0; }
-    .event-date { display: block; color: #888; font-size: 0.85em; margin-bottom: 5px; }
+    .event { background: #f8f9fa; border-left: 4px solid #007bff; padding: 12px; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>Time Tag Example:</h2>
+  <h2>Time Tag Examples:</h2>
 
-  <h3>Simple Time:</h3>
-  <p>The store opens at <time>09:00</time> and closes at <time>21:00</time>.</p>
+  <h3>Store Hours:</h3>
+  <p>Opens at <time>09:00</time> and closes at <time>21:00</time> daily.</p>
 
-  <h3>Date:</h3>
+  <h3>Historical Date:</h3>
   <p>HTML5 was published on <time datetime="2014-10-28">October 28, 2014</time>.</p>
 
-  <h3>Date and Time:</h3>
-  <p>The event starts on <time datetime="2024-12-25T18:00:00">December 25, 2024 at 6:00 PM</time>.</p>
+  <h3>DateTime:</h3>
+  <p>Meeting scheduled for <time datetime="2024-12-25T18:00:00">December 25 at 6 PM</time>.</p>
 
-  <h3>Blog Post Timestamps:</h3>
-  <article class="event">
-    <time class="event-date" datetime="2024-01-15T10:30:00">Published: January 15, 2024 at 10:30 AM</time>
-    <strong>Introduction to HTML5 Features</strong>
-    <p>Explore the new features introduced in HTML5...</p>
-  </article>
-  <article class="event">
-    <time class="event-date" datetime="2024-02-20">Published: February 20, 2024</time>
-    <strong>CSS Grid vs Flexbox</strong>
-    <p>A comparison of the two layout systems...</p>
-  </article>
+  <h3>Blog Post Timestamp:</h3>
+  <div class="event">
+    <p><time datetime="2024-01-15T10:30:00">January 15, 2024 at 10:30 AM</time></p>
+    <strong>Introduction to HTML5</strong>
+    <p>Explore new features introduced in HTML5...</p>
+  </div>
 
-  <h3>Duration:</h3>
-  <p>The tutorial takes approximately <time datetime="PT2H30M">2 hours and 30 minutes</time>.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Time element provides machine-readable dates</mark>
 </body>
 </html>`
   },
   {
     tag: 'title',
-    description: 'The <title> tag defines the title of the HTML document. It is required in all HTML documents and is placed in the <head> section. The title appears in the browser tab, bookmarks, and search engine results.',
+    description: 'The <title> tag defines the title of the HTML document shown in browser tabs.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title Tag Example | Tech In My Style</title>
+  <title>Title Tag Example | Tech Academy</title>
 </head>
 <body>
-  <h2>Title Tag Example:</h2>
-  <p>The title tag in this page's head is: <strong>"Title Tag Example | Tech In My Style"</strong></p>
-  <p>Look at your browser tab to see it in action!</p>
+  <h2>Title Tag Example</h2>
+  <p>The title tag in this page's head is: <strong>"Title Tag Example | Tech Academy"</strong></p>
+  <p>Look at your browser tab to see the title!</p>
 
-  <h3>Where the Title Appears:</h3>
+  <h3>Where Titles Appear:</h3>
   <ul>
-    <li><strong>Browser Tab</strong> — Shown at the top of the browser</li>
-    <li><strong>Bookmarks</strong> — Used as the default bookmark name</li>
-    <li><strong>Search Results</strong> — Displayed as the clickable link text in Google</li>
-    <li><strong>Social Media</strong> — Used when sharing the page</li>
-    <li><strong>Browser History</strong> — Shown in browsing history</li>
+    <li>Browser tab at top of window</li>
+    <li>Bookmarks when you save</li>
+    <li>Search results from Google</li>
+    <li>Social media when shared</li>
+    <li>Browser history</li>
   </ul>
 
-  <h3>Best Practices for Title Tags:</h3>
+  <h3>Best Practices:</h3>
   <ul>
-    <li>Keep titles between 50-60 characters</li>
-    <li>Include the main keyword near the beginning</li>
+    <li>Keep titles 50-60 characters</li>
+    <li>Put main keyword near start</li>
     <li>Make each page title unique</li>
-    <li>Use a format like: "Page Name | Site Name"</li>
-    <li>Avoid keyword stuffing</li>
+    <li>Use format: "Page Name | Site Name"</li>
   </ul>
 
-  <h3>Good Title Examples:</h3>
-  <ul>
-    <li>Home | Tech In My Style</li>
-    <li>HTML Tutorial for Beginners | Tech In My Style</li>
-    <li>Contact Us | Tech In My Style</li>
-  </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Title is crucial for SEO and user experience</mark>
 </body>
 </html>`
   },
   {
     tag: 'tr',
-    description: 'The <tr> tag defines a row in an HTML table. A table row contains one or more <th> (header) or <td> (data) elements. Rows are grouped in <thead>, <tbody>, or <tfoot> sections.',
+    description: 'The <tr> tag defines a row in a table containing one or more <th> or <td> elements.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3823,43 +4117,30 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tr Tag Example</title>
   <style>
-    table { border-collapse: collapse; width: 100%; max-width: 600px; margin: 15px 0; }
-    th, td { border: 1px solid #ddd; padding: 10px 14px; }
+    table { border-collapse: collapse; width: 100%; max-width: 600px; }
+    th, td { border: 1px solid #ddd; padding: 10px; }
     tr:first-child { background: #007bff; color: white; }
-    tr:nth-child(even) { background: #f8f9fa; }
-    tr:hover:not(:first-child) { background: #dde8ff; cursor: pointer; }
-    .highlight-row { background: #fff3cd !important; font-weight: bold; }
-    .danger-row { background: #f8d7da !important; }
-    .success-row { background: #d4edda !important; }
+    tr:hover { background: #f0f4ff; }
   </style>
 </head>
 <body>
   <h2>Tr (Table Row) Tag Example:</h2>
 
-  <h3>Basic Table Rows:</h3>
   <table>
-    <tr><th>Name</th><th>Department</th><th>Salary</th><th>Status</th></tr>
-    <tr class="success-row"><td>Alice Johnson</td><td>Engineering</td><td>$95,000</td><td>Active</td></tr>
-    <tr><td>Bob Smith</td><td>Design</td><td>$75,000</td><td>Active</td></tr>
-    <tr class="highlight-row"><td>Carol White</td><td>Marketing</td><td>$82,000</td><td>On Leave</td></tr>
-    <tr class="danger-row"><td>David Lee</td><td>Engineering</td><td>$62,000</td><td>Inactive</td></tr>
-    <tr><td>Eve Davis</td><td>HR</td><td>$70,000</td><td>Active</td></tr>
+    <tr><th>Name</th><th>Role</th><th>Salary</th><th>Status</th></tr>
+    <tr><td>Alice</td><td>Developer</td><td>$95,000</td><td>Active</td></tr>
+    <tr><td>Bob</td><td>Designer</td><td>$75,000</td><td>Active</td></tr>
+    <tr><td>Carol</td><td>Manager</td><td>$82,000</td><td>Active</td></tr>
+    <tr><td>David</td><td>Developer</td><td>$62,000</td><td>Inactive</td></tr>
   </table>
 
-  <h3>Rows with Spanning Cells:</h3>
-  <table>
-    <tr><th colspan="4" style="text-align:center">Q1 Sales Summary</th></tr>
-    <tr><th>Region</th><th>Jan</th><th>Feb</th><th>Mar</th></tr>
-    <tr><td>North</td><td>$12K</td><td>$15K</td><td>$18K</td></tr>
-    <tr><td>South</td><td>$9K</td><td>$11K</td><td>$14K</td></tr>
-  </table>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Tr contains table data or header cells</mark>
 </body>
 </html>`
   },
   {
     tag: 'track',
-    description: 'The <track> tag specifies text tracks for media elements (video and audio). It is used to provide subtitles, captions, descriptions, chapters, and metadata. The kind attribute specifies the type of track.',
+    description: 'The <track> tag specifies text tracks for <video> and <audio> (subtitles, captions, descriptions).',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3867,51 +4148,37 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Track Tag Example</title>
   <style>
-    video { display: block; margin: 10px 0; border-radius: 5px; background: #000; }
-    .info-box { background: #e8f4fd; border: 1px solid #bee5eb; border-radius: 5px; padding: 15px; margin: 15px 0; }
+    video { display: block; width: 100%; max-width: 600px; border-radius: 6px; margin: 15px 0; }
   </style>
 </head>
 <body>
   <h2>Track Tag Example:</h2>
 
-  <h3>Video with Subtitle Tracks:</h3>
-  <video controls width="500">
-    <source src="video.mp4" type="video/mp4">
-    <track kind="subtitles" src="subtitles-en.vtt" srclang="en" label="English" default>
-    <track kind="subtitles" src="subtitles-es.vtt" srclang="es" label="Spanish">
-    <track kind="subtitles" src="subtitles-fr.vtt" srclang="fr" label="French">
-    <track kind="captions" src="captions-en.vtt" srclang="en" label="English Captions">
-    <track kind="descriptions" src="descriptions.vtt" srclang="en" label="Audio Descriptions">
-    <track kind="chapters" src="chapters.vtt" srclang="en" label="Chapters">
-    Your browser does not support HTML video.
+  <p>Video with subtitle and caption support:</p>
+  <video controls width="600">
+    <source src="https://www.example.com/video.mp4" type="video/mp4">
+    <track kind="subtitles" src="https://www.example.com/en.vtt" srclang="en" label="English" default>
+    <track kind="subtitles" src="https://www.example.com/es.vtt" srclang="es" label="Spanish">
+    <track kind="captions" src="https://www.example.com/captions.vtt" srclang="en" label="English Captions">
+    Your browser does not support HTML5 video.
   </video>
 
-  <div class="info-box">
-    <h3>Track Kind Attribute Values:</h3>
-    <ul>
-      <li><strong>subtitles</strong> — Translations of the spoken dialogue</li>
-      <li><strong>captions</strong> — Transcription of dialogue and sound effects</li>
-      <li><strong>descriptions</strong> — Textual description of video for blind users</li>
-      <li><strong>chapters</strong> — Chapter titles for navigation</li>
-      <li><strong>metadata</strong> — Tracks for use by scripts (not displayed)</li>
-    </ul>
+  <h3>Track Kinds:</h3>
+  <ul>
+    <li><strong>subtitles</strong> - Translations of dialogue</li>
+    <li><strong>captions</strong> - Dialogue and sound descriptions</li>
+    <li><strong>descriptions</strong> - For blind users</li>
+    <li><strong>chapters</strong> - Navigation chapters</li>
+    <li><strong>metadata</strong> - For scripts (hidden)</li>
+  </ul>
 
-    <h3>Track Attributes:</h3>
-    <ul>
-      <li><strong>kind</strong> — Type of text track</li>
-      <li><strong>src</strong> — URL of the track file (.vtt format)</li>
-      <li><strong>srclang</strong> — Language of the track text</li>
-      <li><strong>label</strong> — User-visible title of the track</li>
-      <li><strong>default</strong> — Specifies the track to be enabled by default</li>
-    </ul>
-  </div>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Track adds accessibility and translations to video/audio</mark>
 </body>
 </html>`
   },
   {
     tag: 'u',
-    description: 'The <u> tag represents some text that is articulated and styled differently from normal text, rendered with an underline. It can be used for Chinese proper name marks, annotations, or misspelled words.',
+    description: 'The <u> tag represents underlined text for spellings, proper names, or annotations.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3920,40 +4187,35 @@ for (let i = 0; i &lt; 10; i++) {
   <title>U Tag Example</title>
   <style>
     .spelling-error { text-decoration: underline wavy red; }
-    .custom-underline { text-decoration: underline dotted blue; }
-    .thick-underline { text-decoration: underline 3px solid green; }
+    .custom { text-decoration: underline dotted blue; }
   </style>
 </head>
 <body>
-  <h2>U (Underline) Tag Example:</h2>
+  <h2>U (Underline) Tag Examples:</h2>
 
   <h3>Basic Underline:</h3>
   <p>This is <u>underlined text</u> using the u tag.</p>
 
-  <h3>Misspelling Annotation:</h3>
-  <p>The <u class="spelling-error">wrold</u> is a beautiful place to live.</p>
-  <p>I love to <u class="spelling-error">programe</u> websites.</p>
+  <h3>Misspelled Words:</h3>
+  <p>The <u class="spelling-error">wrold</u> is beautiful.</p>
+  <p>I enjoy <u class="spelling-error">progamming</u> websites.</p>
 
-  <h3>Proper Names (Chinese proper name mark):</h3>
-  <p>The author <u>J.K. Rowling</u> wrote the Harry Potter series.</p>
+  <h3>Proper Names:</h3>
+  <p>Author <u>J.K. Rowling</u> wrote the Harry Potter series.</p>
 
-  <h3>Custom Styled Underlines:</h3>
-  <p><u class="custom-underline">Dotted blue underline</u></p>
-  <p><u class="thick-underline">Thick green underline</u></p>
+  <h3>Custom Styling:</h3>
+  <p><u class="custom">Custom dotted underline</u></p>
 
-  <h3>Important Note:</h3>
-  <p>Avoid using the u tag just for visual decoration. Users may confuse underlined text with hyperlinks. Use CSS text-decoration instead for purely visual underlines:</p>
-  <p style="text-decoration: underline;">CSS underline via style attribute</p>
+  <h3>U vs Link:</h3>
+  <p><u>Underlined</u> text vs <a href="#">hyperlink</a> — they look similar!</p>
 
-  <h3>U vs Other Tags:</h3>
-  <p><u>Underlined (u tag)</u> vs <a href="#">Hyperlink (a tag)</a> — look similar but are different!</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <mark>Avoid using u for links; use it for annotations</mark>
 </body>
 </html>`
   },
   {
     tag: 'ul',
-    description: 'The <ul> tag defines an unordered (bulleted) list. An unordered list starts with the <ul> tag and each list item starts with the <li> tag. Bullet style can be customized with CSS list-style-type.',
+    description: 'The <ul> tag defines an unordered (bulleted) list of items.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3962,78 +4224,58 @@ for (let i = 0; i &lt; 10; i++) {
   <title>Unordered List Tag Example</title>
   <style>
     ul { margin: 10px 0; padding-left: 25px; }
-    li { margin: 5px 0; line-height: 1.7; }
-    .disc { list-style-type: disc; }
-    .circle { list-style-type: circle; }
-    .square { list-style-type: square; }
-    .none { list-style: none; padding: 0; }
-    .none li { padding: 6px 10px; background: #f0f4ff; border-left: 3px solid #007bff; margin-bottom: 5px; border-radius: 0 4px 4px 0; }
-    .custom-icon li::before { content: "✓ "; color: #28a745; font-weight: bold; }
-    .custom-icon { list-style: none; padding-left: 0; }
+    li { margin: 5px 0; line-height: 1.6; }
   </style>
 </head>
 <body>
-  <h2>Unordered List (ul) Tag Example:</h2>
+  <h2>Unordered List (ul) Tag Examples:</h2>
 
-  <h3>Default (disc bullets):</h3>
-  <ul class="disc">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
+  <h3>Default (bullet points):</h3>
+  <ul>
+    <li>Learn HTML structure</li>
+    <li>Master CSS styling</li>
+    <li>Build JavaScript skills</li>
+    <li>Create web projects</li>
   </ul>
 
-  <h3>Circle Bullets:</h3>
-  <ul class="circle">
-    <li>React</li>
-    <li>Vue</li>
-    <li>Angular</li>
+  <h3>Circle Bullets (type="circle"):</h3>
+  <ul style="list-style-type: circle;">
+    <li>React library</li>
+    <li>Vue.js framework</li>
+    <li>Angular platform</li>
   </ul>
 
-  <h3>Square Bullets:</h3>
-  <ul class="square">
-    <li>Node.js</li>
-    <li>Express</li>
-    <li>MongoDB</li>
+  <h3>Square Bullets (type="square"):</h3>
+  <ul style="list-style-type: square;">
+    <li>Node.js runtime</li>
+    <li>Express server</li>
+    <li>MongoDB database</li>
   </ul>
 
-  <h3>No Bullets (styled as cards):</h3>
-  <ul class="none">
-    <li>Step 1: Create the HTML file</li>
-    <li>Step 2: Add your content</li>
-    <li>Step 3: Style with CSS</li>
-  </ul>
-
-  <h3>Custom Icon List:</h3>
-  <ul class="custom-icon">
-    <li>Fast Performance</li>
-    <li>Mobile Responsive</li>
-    <li>SEO Friendly</li>
-    <li>Cross-browser Compatible</li>
-  </ul>
-
-  <h3>Nested Unordered List:</h3>
+  <h3>Nested List:</h3>
   <ul>
     <li>Frontend
       <ul>
         <li>HTML & CSS</li>
         <li>JavaScript</li>
-        <li>Frameworks (React, Vue)</li>
+        <li>Frameworks</li>
       </ul>
     </li>
     <li>Backend
       <ul>
         <li>Node.js</li>
-        <li>Python / Django</li>
+        <li>Python</li>
       </ul>
     </li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Ul creates bulleted lists</mark>
 </body>
 </html>`
   },
   {
     tag: 'var',
-    description: 'The <var> tag is used to define a variable in programming or in a mathematical expression. The content inside is typically rendered in italic. It is a semantic tag, not just visual.',
+    description: 'The <var> tag represents a variable in programming or mathematical expressions.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -4042,37 +4284,32 @@ for (let i = 0; i &lt; 10; i++) {
   <title>Var Tag Example</title>
   <style>
     var { font-style: italic; font-weight: bold; color: #6f42c1; }
-    .code-line { background: #f4f4f4; padding: 8px 12px; border-radius: 4px; font-family: monospace; margin: 5px 0; border-left: 3px solid #6f42c1; }
-    .math { background: #e8f4fd; padding: 10px; border-radius: 5px; font-size: 1.1em; }
+    .code { background: #f4f4f4; padding: 8px; border-radius: 4px; font-family: monospace; }
   </style>
 </head>
 <body>
-  <h2>Var (Variable) Tag Example:</h2>
+  <h2>Var (Variable) Tag Examples:</h2>
 
   <h3>Programming Variables:</h3>
-  <p>Declare a variable using: <var>let</var>, <var>const</var>, or <var>var</var>.</p>
-  <div class="code-line">let <var>name</var> = "Alice";</div>
-  <div class="code-line">const <var>PI</var> = 3.14159;</div>
-  <div class="code-line">var <var>count</var> = 0;</div>
+  <p>Declare variables using: <var>let</var>, <var>const</var>, or <var>var</var>.</p>
+  <p class="code">let <var>name</var> = "Alice";</p>
+  <p class="code">const <var>PI</var> = 3.14159;</p>
 
-  <h3>Mathematical Expressions:</h3>
-  <div class="math">
-    <p>The formula: <var>E</var> = <var>m</var><var>c</var><sup>2</sup></p>
-    <p>Area of a circle: <var>A</var> = &pi;<var>r</var><sup>2</sup></p>
-    <p>Slope formula: <var>m</var> = (<var>y</var><sub>2</sub> - <var>y</var><sub>1</sub>) / (<var>x</var><sub>2</sub> - <var>x</var><sub>1</sub>)</p>
-  </div>
+  <h3>Mathematical Variables:</h3>
+  <p>Formula: <var>E</var> = <var>m</var><var>c</var><sup>2</sup></p>
+  <p>Area: <var>A</var> = &pi;<var>r</var><sup>2</sup></p>
 
   <h3>In Documentation:</h3>
-  <p>The function accepts two parameters: <var>width</var> and <var>height</var>.</p>
-  <p>Pass the <var>userId</var> to retrieve the user's profile data.</p>
-  <p>The loop uses <var>i</var> as the counter variable.</p>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+  <p>The function accepts <var>width</var> and <var>height</var> parameters.</p>
+  <p>Pass <var>userId</var> to retrieve user data.</p>
+
+  <mark>Var represents program or math variables</mark>
 </body>
 </html>`
   },
   {
     tag: 'video',
-    description: 'The <video> tag is used to embed video content in a document. It may contain one or more <source> elements with different video formats. It supports controls, autoplay, loop, muted, and poster attributes.',
+    description: 'The <video> tag embeds video content with playback controls.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -4080,52 +4317,46 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Tag Example</title>
   <style>
-    video { display: block; border-radius: 8px; margin: 10px 0; background: #000; }
-    .video-wrapper { max-width: 600px; }
+    video { border-radius: 6px; width: 100%; max-width: 600px; display: block; margin: 15px 0; background: #000; }
   </style>
 </head>
 <body>
   <h2>Video Tag Example:</h2>
 
-  <div class="video-wrapper">
-    <h3>Basic Video with Controls:</h3>
-    <video controls width="500">
-      <source src="video.mp4" type="video/mp4">
-      <source src="video.webm" type="video/webm">
-      <source src="video.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-    </video>
+  <h3>Basic Video with Controls:</h3>
+  <video controls width="600">
+    <source src="https://www.example.com/video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
 
-    <h3>Video with Poster Image:</h3>
-    <video controls width="500" poster="thumbnail.jpg">
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <h3>Video with Poster:</h3>
+  <video controls width="600" poster="https://via.placeholder.com/600x300">
+    <source src="https://www.example.com/video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
 
-    <h3>Autoplay, Muted, and Loop (Background Video):</h3>
-    <video autoplay muted loop width="500" playsinline>
-      <source src="background-video.mp4" type="video/mp4">
-    </video>
-  </div>
+  <h3>Autoplay Muted Video:</h3>
+  <video autoplay muted loop width="600">
+    <source src="https://www.example.com/video.mp4" type="video/mp4">
+  </video>
 
   <h3>Video Attributes:</h3>
   <ul>
-    <li><strong>controls</strong> - Show play/pause, volume, and fullscreen</li>
-    <li><strong>autoplay</strong> - Video plays automatically on load</li>
-    <li><strong>loop</strong> - Replays the video after it ends</li>
-    <li><strong>muted</strong> - Audio is muted by default</li>
-    <li><strong>poster</strong> - Image shown before the video plays</li>
-    <li><strong>preload</strong> - How the video should be loaded (auto, metadata, none)</li>
-    <li><strong>playsinline</strong> - Play inline on iOS Safari</li>
-    <li><strong>width / height</strong> - Dimensions of the video player</li>
+    <li><strong>controls</strong> - Show player controls</li>
+    <li><strong>autoplay</strong> - Play automatically</li>
+    <li><strong>loop</strong> - Repeat playback</li>
+    <li><strong>muted</strong> - Mute audio by default</li>
+    <li><strong>poster</strong> - Thumbnail image</li>
+    <li><strong>playsinline</strong> - Play inline on mobile</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>Video tag provides native HTML5 video playback</mark>
 </body>
 </html>`
   },
   {
     tag: 'wbr',
-    description: 'The <wbr> tag specifies where in a text it would be acceptable to add a line break. It is useful for long URLs or words that should break at specific points to prevent overflow in narrow containers.',
+    description: 'The <wbr> tag specifies where text can break to the next line in narrow containers.',
     code: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -4133,43 +4364,37 @@ for (let i = 0; i &lt; 10; i++) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WBR Tag Example</title>
   <style>
-    .narrow-box { width: 200px; border: 2px solid #007bff; padding: 10px; border-radius: 5px; background: #f8f9fa; margin: 10px 0; overflow-wrap: normal; word-break: normal; }
-    .url { font-family: monospace; font-size: 0.9em; color: #007bff; }
-    .wide-box { max-width: 100%; border: 2px solid #28a745; padding: 10px; border-radius: 5px; background: #f8f9fa; margin: 10px 0; }
-    code { background: #e9ecef; padding: 2px 6px; border-radius: 3px; }
+    .narrow { width: 200px; border: 2px solid #007bff; padding: 10px; border-radius: 4px; background: #f8f9fa; }
+    .url { font-family: monospace; color: #007bff; }
   </style>
 </head>
 <body>
-  <h2>WBR (Word Break Opportunity) Tag Example:</h2>
+  <h2>WBR (Word Break) Tag Example:</h2>
 
   <h3>Long URL Without WBR (may overflow):</h3>
-  <div class="narrow-box">
-    <p class="url">https://www.example.com/very/long/path/to/some/resource</p>
+  <div class="narrow">
+    <p class="url">https://www.example.com/very/long/path/to/resource</p>
   </div>
 
   <h3>Long URL With WBR (breaks nicely):</h3>
-  <div class="narrow-box">
-    <p class="url">https://www.<wbr>example.<wbr>com/<wbr>very/<wbr>long/<wbr>path/<wbr>to/<wbr>some/<wbr>resource</p>
+  <div class="narrow">
+    <p class="url">https://www.<wbr>example.<wbr>com/<wbr>very/<wbr>long/<wbr>path/<wbr>to/<wbr>resource</p>
   </div>
 
   <h3>Long Technical Term:</h3>
-  <div class="narrow-box">
-    <p>Super<wbr>Califragilistic<wbr>Expiali<wbr>docious</p>
-  </div>
-
-  <h3>Long Variable Names in Documentation:</h3>
-  <div class="wide-box">
-    <p>Use the function <code>getUser<wbr>Authentication<wbr>Token</code> to retrieve the user's auth token from the session.</p>
+  <div class="narrow">
+    <p>Super<wbr>califragilistic<wbr>expialidocious</p>
   </div>
 
   <h3>When to Use WBR:</h3>
   <ul>
     <li>Long URLs in narrow containers</li>
-    <li>Long technical terms or compound words</li>
-    <li>Long code identifiers or variable names</li>
-    <li>File paths on small screens</li>
+    <li>Long technical terms</li>
+    <li>Long code identifiers</li>
+    <li>Long file paths on mobile</li>
   </ul>
-  <mark>If the above code is not working, copy and run it in the compiler.</mark>
+
+  <mark>WBR allows flexible line breaking</mark>
 </body>
 </html>`
   }
