@@ -121,6 +121,7 @@ export default function PropertyPage() {
   const [copyLabel, setCopyLabel] = useState("Copy");
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+  const [activeTab, setActiveTab] = useState("html"); // Add tab state
 
   const iframeRef = useRef(null);
   const editorRef = useRef(null);
@@ -130,9 +131,26 @@ export default function PropertyPage() {
   const details = getPropertyDetails(property);
 
   const defaultCode = useMemo(() => {
+    if (example?.htmlCode && example?.cssCode) {
+      // Combine HTML and CSS into a complete document
+      const htmlWithoutClosingTag = example.htmlCode.replace('</body>', '');
+      return `${htmlWithoutClosingTag}
+<style>
+${example.cssCode}
+</style>
+</body>`;
+    }
     if (example?.code) return example.code;
     return buildDefaultCode(property || "");
   }, [example, property]);
+
+  const htmlCode = useMemo(() => {
+    return example?.htmlCode || buildDefaultCode(property || "");
+  }, [example, property]);
+
+  const cssCode = useMemo(() => {
+    return example?.cssCode || "";
+  }, [example]);
 
   const rawDescription = useMemo(() => {
     if (example?.description) return example.description;
@@ -169,24 +187,43 @@ export default function PropertyPage() {
 
   /* ── Run code → inject into iframe ── */
   function runCode() {
-    const code = editorRef.current ? editorRef.current.getValue() : defaultCode;
+    // Always get the current HTML and CSS values from editor
+    let currentHtmlCode = htmlCode;
+    let currentCssCode = cssCode;
+
+    // If editor is active, get the edited value
+    if (editorRef.current) {
+      if (activeTab === "html") {
+        currentHtmlCode = editorRef.current.getValue();
+      } else if (activeTab === "css") {
+        currentCssCode = editorRef.current.getValue();
+      }
+    }
+
+    // Always combine HTML and CSS for output
+    const htmlWithoutClosingTag = currentHtmlCode.replace('</body>', '');
+    const finalCode = `${htmlWithoutClosingTag}
+<style>
+${currentCssCode}
+</style>
+</body>`;
 
     if (!iframeRef.current) return;
 
     try {
       const doc = iframeRef.current.contentWindow.document;
       doc.open();
-      doc.write(code);
+      doc.write(finalCode);
       doc.close();
     } catch {
       /* cross-origin fallback — use srcdoc */
-      iframeRef.current.srcdoc = code;
+      iframeRef.current.srcdoc = finalCode;
     }
   }
 
   /* ── Copy code ── */
   const handleCopy = useCallback(async () => {
-    const code = editorRef.current ? editorRef.current.getValue() : defaultCode;
+    const code = editorRef.current ? editorRef.current.getValue() : (activeTab === "html" ? htmlCode : cssCode);
 
     try {
       await navigator.clipboard.writeText(code);
@@ -209,7 +246,7 @@ export default function PropertyPage() {
       }
       document.body.removeChild(ta);
     }
-  }, [defaultCode]);
+  }, [htmlCode, cssCode, activeTab]);
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
@@ -321,7 +358,40 @@ export default function PropertyPage() {
             {/* Panel header bar */}
             <div className="css-editor-panel-header">
               <div className="css-editor-panel-header-left">
-                <span className="css-editor-lang-badge">HTML</span>
+                {/* HTML and CSS Tab Buttons */}
+                <button
+                  className={`css-editor-lang-badge ${activeTab === "html" ? "active" : ""}`}
+                  onClick={() => setActiveTab("html")}
+                  style={{
+                    background: activeTab === "html" ? "#264de4" : "transparent",
+                    color: activeTab === "html" ? "white" : "#9ca3af",
+                    border: "none",
+                    padding: "0.5rem 1rem",
+                    borderRadius: "4px",
+                    cursor: "pointer",
+                    fontWeight: "600",
+                    marginRight: "0.5rem",
+                    transition: "all 0.2s",
+                  }}
+                >
+                  HTML
+                </button>
+                <button
+                  className={`css-editor-lang-badge ${activeTab === "css" ? "active" : ""}`}
+                  onClick={() => setActiveTab("css")}
+                  style={{
+                    background: activeTab === "css" ? "#264de4" : "transparent",
+                    color: activeTab === "css" ? "white" : "#9ca3af",
+                    border: "none",
+                    padding: "0.5rem 1rem",
+                    borderRadius: "4px",
+                    cursor: "pointer",
+                    fontWeight: "600",
+                    transition: "all 0.2s",
+                  }}
+                >
+                  CSS
+                </button>
                 <span className="css-editor-label-text">Editable Code</span>
               </div>
               <div className="css-editor-dots">
@@ -338,8 +408,9 @@ export default function PropertyPage() {
             >
               <Editor
                 height="100%"
-                defaultLanguage="html"
-                defaultValue={defaultCode}
+                defaultLanguage={activeTab === "html" ? "html" : "css"}
+                defaultValue={activeTab === "html" ? htmlCode : cssCode}
+                key={activeTab}
                 theme="vs-dark"
                 onMount={handleEditorMount}
                 options={{
